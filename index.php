@@ -101,18 +101,18 @@
                 <!-- end social-media -->
 
                 <ul class="nav navbar-nav">
+
+                    <li><a href="Covid19.html">COVID-19</a></li>
+
                     <li><a href="index.php">Home</a></li>
 
-                    <li><a href="medicina.php">Medicina</a>
+                    <li><a href="medicina.php">Exames</a>
                         <ul><!-- menu suspenso dentro do menu original-->
-                            <li><a href="gallery.html">Galeria</a></li>
-                            <li><a href="404.html">404 page</a></li>
-                            <li><a href="500.html">500 page</a></li>
+                            <li><a href="gallery.html">Análises Clínicas</a></li>
+                            <li><a href="404.html">Estudos Genéticos</a></li>
                         </ul>
                         <!-- end dropdown -->
                     </li>
-
-                    <li><a href="doctors.html">Doutores</a></li>
 
                     <li><a href="departments.html">Departamentos</a>
                         <ul><!-- menu suspenso dentro do menu original-->
