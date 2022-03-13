@@ -53,7 +53,9 @@
         <!-- end col-3 -->
         <div class="col-md-6 col-sm-5 hidden-xs">
           <form>
-            <input type="text" placeholder="Posso ajudar?">
+            <label>
+              <input type="text" placeholder="Posso ajudar?">
+            </label>
             <input type="submit" value="BUSCAR">
           </form>
           <!-- end form -->
@@ -84,7 +86,9 @@
       <!-- end navbar-header -->
       <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
         <form class="visible-xs">
-          <input type="text" placeholder="Type a word to find">
+          <label>
+            <input type="text" placeholder="Type a word to find">
+          </label>
           <input type="submit" value="SEARCH">
         </form>
         <!-- end form -->
@@ -248,14 +252,14 @@
           <h1 class="title-bottom-line">FORMULARIO DE <strong>CONTATO</strong></h1>
           <p>nao sei oque por nao, preenche ae.</p>
           <form id="contact-form">
-            <input type="text" name="name" id="name" placeholder="Seu Nome">
-            <input type="text" name="surname" id="surname"  placeholder="SobreNome">
-            <input type="text" name="phone" id="phone" placeholder="Celular">
-            <input type="text" name="email" id="email" placeholder="E-mail">
-            <input type="text" name="city" id="city" placeholder="Cidade">
-            <input type="text" name="state" id="state" placeholder="Estado">
-            <input type="text" name="subject" id="subject" placeholder="Motivo do seu contato" class="subject">
-            <textarea name="message" id="message" placeholder="Sua mensagem"></textarea>
+            <label for="name"></label><input type="text" name="name" id="name" placeholder="Seu Nome">
+            <label for="surname"></label><input type="text" name="surname" id="surname" placeholder="SobreNome">
+            <label for="phone"></label><input type="text" name="phone" id="phone" placeholder="Celular">
+            <label for="email"></label><input type="text" name="email" id="email" placeholder="E-mail">
+            <label for="city"></label><input type="text" name="city" id="city" placeholder="Cidade">
+            <label for="state"></label><input type="text" name="state" id="state" placeholder="Estado">
+            <label for="subject"></label><input type="text" name="subject" id="subject" placeholder="Motivo do seu contato" class="subject">
+            <label for="message"></label><textarea name="message" id="message" placeholder="Sua mensagem"></textarea>
             <input type="submit" name="submit" value="ENVIAR">
           </form>
           <div id="success">
@@ -320,7 +324,9 @@
         <form>
           <h4>NOVIDADES</h4>
           <p>att...</p>
-          <input type="text" placeholder="Insira seu Email">
+          <label>
+            <input type="text" placeholder="Insira seu Email">
+          </label>
           <input type="submit" value="Junte-se a nos">
         </form>
       </div>
