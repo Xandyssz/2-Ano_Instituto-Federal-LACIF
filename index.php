@@ -58,7 +58,9 @@
                 <!-- end col-3 -->
                 <div class="col-md-6 col-sm-5 hidden-xs">
                     <form>
-                        <input type="text" placeholder="Posso ajudar?">
+                        <label>
+                            <input type="text" placeholder="Posso ajudar?">
+                        </label>
                         <input type="submit" value="BUSCAR">
                     </form>
                     <!-- end form -->
@@ -89,7 +91,9 @@
             <!-- end navbar-header -->
             <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
                 <form class="visible-xs">
-                    <input type="text" placeholder="Type a word to find">
+                    <label>
+                        <input type="text" placeholder="Type a word to find">
+                    </label>
                     <input type="submit" value="SEARCH">
                 </form>
                 <!-- end form -->
@@ -215,17 +219,21 @@
             <form>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label>Nome do Paciente</label>
-                    <input type="text">
+                    <label>
+                        <input type="text">
+                    </label>
                 </div>
                 <!-- end col-4 -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label>Telefone</label>
-                    <input type="text" id="phone">
+                    <label for="phone"></label><input type="text" id="phone">
                 </div>
                 <!-- end col-4 -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label>E-mail</label>
-                    <input type="text">
+                    <label>
+                        <input type="text">
+                    </label>
                 </div>
                 <!-- end col-4 -->
                 <div class="col-xs-12">
@@ -234,20 +242,28 @@
                 <!-- end col-12 -->
                 <div class="col-md-4 col-sm-6 col-xs-12 date">
                     <label>Selecione a data</label>
-                    <input type="text" class="datepicker" data-date-format="dd/mm/yy" placeholder="dd/mm/yy" maxlength="8">
+                    <label>
+                        <input type="text" class="datepicker" data-date-format="dd/mm/yy" placeholder="dd/mm/yy" maxlength="8">
+                    </label>
                 </div>
                 <!-- end col-3 -->
                 <div class="col-md-4 col-sm-6 col-xs-10 department">
                     <label>Department</label>
-                    <select>
-                        <option>Cardiologia</option>
-                    </select>
+                    <label>
+                        <select>
+                            <option>Cardiologia</option>
+                        </select>
+                    </label>
                 </div>
                 <!-- end col-3 -->
                 <div class="col-md-4 col-sm-12 col-xs-12 gender">
-                    <input type="radio" checked>
+                    <label>
+                        <input type="radio" checked>
+                    </label>
                     <label>Homem</label>
-                    <input type="radio">
+                    <label>
+                        <input type="radio">
+                    </label>
                     <label>Mulher</label>
                     <input type="submit" value="Confirmar">
                 </div>
@@ -467,7 +483,9 @@
                 <form>
                     <h4>NOVIDADES</h4>
                     <p>att...</p>
-                    <input type="text" placeholder="Insira seu Email">
+                    <label>
+                        <input type="text" placeholder="Insira seu Email">
+                    </label>
                     <input type="submit" value="Junte-se a nos">
                 </form>
             </div>
