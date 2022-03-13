@@ -106,10 +106,10 @@
 
                     <li><a href="index.php">Home</a></li>
 
-                    <li><a href="medicina.php">Exames</a>
+                    <li><a href="#">Exames</a>
                         <ul><!-- menu suspenso dentro do menu original-->
-                            <li><a href="gallery.html">Análises Clínicas</a></li>
-                            <li><a href="404.html">Estudos Genéticos</a></li>
+                            <li><a href="AnaliseClinica.html">Análises Clínicas</a></li>
+                            <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
                         </ul>
                         <!-- end dropdown -->
                     </li>
@@ -453,23 +453,7 @@
 </section>
 <!-- end logos -->
 <section class="footer-bar">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2><i class="ion-iphone"></i> +55 (18) 3281-9599 </h2>
-                <ul>
-                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-                </ul>
-                <!-- end ul -->
-                <h4>Sigam nossas redes sociais!!</h4>
-            </div>
-            <!-- end col-12 -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
+    <div class="container"></div>
 </section>
 <!-- end footer-bar -->
 <footer>
@@ -491,13 +475,12 @@
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Medicina</a></li>
-                    <li><a href="#">Departments</a></li>
-                    <li><a href="#">Doctors</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Faq</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="Covid19.html">COVID19</a></li>
+                    <li><a href="AnaliseClinica.html">Análises Clinicas</a></li>
+                    <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="contact-us.html">Contact us</a></li>
                 </ul>
             </div>
             <!-- end col-2 -->
