@@ -94,9 +94,9 @@
                 </form>
                 <!-- end form -->
                 <ul class="social-media hidden-sm">
-                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a></li>
+                    <li><a href="https://twitter.com/xandyszz"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="https://github.com/Xandyssz"><i class="ion-social-github"></i></a></li>
                 </ul>
                 <!-- end social-media -->
 
