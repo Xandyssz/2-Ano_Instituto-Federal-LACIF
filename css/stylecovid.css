@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #ef233c;
+  background-color: #00ffea;
 }
 
 h1,
@@ -62,27 +62,27 @@ button:hover {
 }
 
 h1 {
-  color: #248277;
+  color: #84858b; /* COR FIQUE EM CASA COVID */
   font-size: 3em;
 }
 
 h2 {
-  color: #248277;
+  color: #84858b; /* SUBTITULOS E COR DOS NUMEROS */
   font-size: 2.2em;
 }
 
 h3 {
-  color: #ef233c;
+  color: #23efd0; /* ALERTA / LETRAS DA COR CONTAGIO COVID */
   font-size: 1.4em;
 }
 
 h4 {
-  color: #ef233c;
+  color: #23efd0; /* COR DE TODOS OS TITULOS*/
   font-size: 1.2em;
 }
 
 h5 {
-  color: #747474;
+  color: #747474; /* COR NÃO HÁ MEDICAMENTO COVID */
   font-weight: 500;
   font-size: 1.15em;
   letter-spacing: 0.05rem;
@@ -90,22 +90,18 @@ h5 {
 }
 
 p {
-  color: #747474;
+  color: #84858b;     /* COR DOS TEXTOS */
   font-size: 1.1em;
   letter-spacing: 0.04em;
   line-height: 1.5em;
 }
 
 a {
-  color: #248277;
+  color: #747474; /* CORES DOS LINKS DA BORDA */
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   font-size: 1.3em;
   margin: 0 2em;
-}
-
-a:hover {
-  color: #ef233c;
 }
 
 .info .title {
@@ -129,32 +125,13 @@ ul {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background-image: url("../assets/preloader.gif");
+  background-image: url("images/preloader.gif");
   background-size: 10rem;
   background-position: center center;
   background-repeat: no-repeat;
   position: fixed;
-  background-color: white;
+  background-color: white; /* CSS NÃO ESTÁ PRA NADA */
   z-index: 5;
-}
-
-.scrollToTop {
-  height: 5rem;
-  width: 5rem;
-  background-color: #fce0e3;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  background-image: url("../assets/virus.png");
-  background-position: center center;
-  background-size: 3rem;
-  background-repeat: no-repeat;
-  border-radius: 4rem;
-  position: fixed;
-  bottom: 10px;
-  right: 25px;
-  cursor: pointer;
-  display: none;
-  z-index: 4;
 }
 
 nav {
@@ -197,13 +174,12 @@ nav .container .brand .responsive-toggle {
 }
 
 nav .container .links ul li:nth-child(1) a {
-  color: #ef233c;
+  color: #84858b;  /* O QUE É COVID */
 }
 
 nav .container .links ul li button {
-  background-color: white;
-  border: 0.1rem solid #ef233c;
-  color: #ef233c;
+  background-color: #ffffff; /* BOTÃO HOME */
+  border: 0.1rem solid #1dd2c8; /* BORDA BOTÃO HOME */
 }
 
 .starter {
@@ -238,11 +214,6 @@ nav .container .links ul li button {
           align-items: center;
   margin: 2rem 4rem;
   gap: 5rem;
-}
-
-.about button {
-  background-color: #ffe6e8;
-  color: #ef233c;
 }
 
 .about .image img {
@@ -316,7 +287,7 @@ nav .container .links ul li button {
           justify-content: center;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid white; /* BORDAS CONTAGIO */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -341,7 +312,7 @@ nav .container .links ul li button {
 .contagion .cards .card:hover {
   -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
           box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  border-bottom: 0.2rem solid #ef233c;
+  border-bottom: 0.2rem solid #ef233c; /* BORAS CONTAGIO */
 }
 
 .symptoms {
@@ -473,8 +444,8 @@ nav .container .links ul li button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffe6e8;
-  color: #ef233c;
+  background-color: #ffe6e8; /* COR DA BORDA DOS NUMEROS */
+  color: #ef233c; /* COR DOS NUMEROS */
   font-size: 2em;
   border-radius: 100%;
   height: 5rem;
@@ -487,168 +458,6 @@ nav .container .links ul li button {
 
 .solutions .content .solution .image img {
   height: 30rem;
-}
-
-.map {
-  margin: 0rem 3rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-}
-
-.map .image-container {
-  position: relative;
-}
-
-.map .image-container .image img {
-  height: 30rem;
-}
-
-.map .image-container .map-search {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-  cursor: pointer;
-}
-
-.map .image-container .map-search i {
-  color: #ef233c;
-  font-size: 1.4rem;
-}
-
-.map .image-container .map-options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 2rem;
-  position: absolute;
-  padding: 1rem;
-  background-color: white;
-  top: 0;
-  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-  cursor: pointer;
-}
-
-.map .image-container .map-options i {
-  color: #494949;
-}
-
-.map .image-container .map-options .arrows {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 1rem 0;
-}
-
-.map .image-container .map-options .arrows i {
-  line-height: 0;
-  padding: 0;
-  margin: 0;
-  font-size: 2.4rem;
-}
-
-.map .image-container .map-options .arrows i:nth-of-type(1) {
-  color: #ef233c;
-}
-
-.map .image-container .map-options .arrows i:nth-of-type(2) {
-  color: gray;
-}
-
-.map .reports {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  width: 20rem;
-  padding: 2rem;
-}
-
-.map .reports .title-container {
-  margin-bottom: 1rem;
-}
-
-.map .reports .report-container .report {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 0.6rem;
-}
-
-.map .reports .report-container .report .country {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1rem;
-}
-
-.map .reports .report-container .report .country h3 {
-  color: #248277;
-}
-
-.map .reports .report-container .report .country img {
-  height: 3rem;
-}
-
-.map .reports .report-container .report .numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1rem;
-}
-
-.map .reports .report-container .report .numbers h4 {
-  color: #248277;
-}
-
-.map .reports .report-container .report .numbers i {
-  font-size: 2rem;
-}
-
-.map .reports .report-container .report .numbers .fa-sort-up {
-  margin-top: 0.8rem;
-  color: #ef233c;
-}
-
-.map .reports .report-container .report .numbers .fa-sort-down {
-  margin-bottom: 0.8rem;
-  color: #248277;
 }
 
 .contact {
@@ -728,7 +537,7 @@ footer .social-links i:hover {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1rem 0;
-  color: #248277;
+  color: #248277; /* COR DO COPYRIGHT */
 }
 
 @media (max-width: 480px) {
@@ -764,7 +573,7 @@ footer .social-links i:hover {
     top: -40rem;
     left: 0;
     margin-top: 10rem;
-    background-color: white;
+    background-color: white; /* CSS INUTILIZAVEL */
     width: 100%;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
@@ -1059,4 +868,3 @@ footer .social-links i:hover {
     gap: 1rem;
   }
 }
-/*# sourceMappingURL=style.css.map */

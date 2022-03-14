@@ -326,9 +326,6 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 .title-box h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../images/title-bg.jpg) center bottom no-repeat; margin:0; padding-bottom:20px;}
 .title-box h5{ margin-bottom:60px; margin-top:10px; display:inline-block;}
 
-
-
-
 /* Home Services */
 .home-services{ width:100%;}
 .home-services *{-moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;}
@@ -348,8 +345,8 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 
 
 
-	
-/* Box Content */	
+
+/* Box Content */
 .box-content{ padding-top:0; color:#fff;}
 .box-content .first-box{ background:#42b3e5; width:100%; float:left; padding:20px;}
 .box-content .first-box a:hover{ color:#42b3e5;}
@@ -393,7 +390,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 
 
 /* Gallery */
-.gallery{ width:100%; padding-bottom:0;}	
+.gallery{ width:100%; padding-bottom:0;}
 .gallery h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../images/title-bg.jpg) center bottom no-repeat; padding-bottom:20px;}
 .gallery h5{ margin-bottom:60px; margin-top:10px; display:inline-block;}
 .gallery .thumb{ width:100%; height:100%; float:left; overflow:hidden; position:relative; border:1px solid #fff; position:relative;}
