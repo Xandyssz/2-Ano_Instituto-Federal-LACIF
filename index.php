@@ -39,13 +39,8 @@
         <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
     </noscript>
 
-
-    <!-- HTML5 shim e Respond.js para suporte ao IE8 de elementos HTML5 e consultas de mídia -->
-    <!-- AVISO: Respond.js não funciona se você visualizar a página via file:// -->
-    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 <body>
@@ -68,6 +63,7 @@
                 <!-- end col-6 -->
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
+                        <li><a href="login.html">LOGIN</a></li>
                         <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
                     </ul>
                     <!-- end language -->
@@ -118,15 +114,6 @@
                         <!-- end dropdown -->
                     </li>
 
-                    <li><a href="departments.html">Departamentos</a>
-                        <ul><!-- menu suspenso dentro do menu original-->
-                            <li><a href="#">Cardiovascular</a></li>
-                            <li><a href="#">Laboratorial</a></li>
-                            <li><a href="#">Pediatria</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="doctors.html">Doutores</a></li>
                     <li><a href="news.html">Noticias</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact-us.html">Contato</a></li>
@@ -149,8 +136,8 @@
                     <div class="sl-slide-inner">
                         <div class="bg-img bg-img-1"></div>
                         <div class="content">
-                            <h2>Nós temos mais <u>+100</u><br>
-                                médicos para cuidar de você</h2>
+                            <h2>??<u>??</u><br>
+                                ??</h2>
                             <img src="images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                         <!-- end content -->
@@ -209,72 +196,72 @@
     <!-- end demo2 -->
 </section>
 <!-- end slider -->
-<section class="appointment">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2>Compromissos</h2>
-            </div>
-            <!-- end col-12 -->
-            <form>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <label>Nome do Paciente</label>
-                    <label>
-                        <input type="text">
-                    </label>
-                </div>
-                <!-- end col-4 -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <label>Telefone</label>
-                    <label for="phone"></label><input type="text" id="phone">
-                </div>
-                <!-- end col-4 -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <label>E-mail</label>
-                    <label>
-                        <input type="text">
-                    </label>
-                </div>
-                <!-- end col-4 -->
+    <section class="appointment">
+        <div class="container">
+            <div class="row">
                 <div class="col-xs-12">
-                    <hr>
+                    <h2>Compromissos</h2>
                 </div>
                 <!-- end col-12 -->
-                <div class="col-md-4 col-sm-6 col-xs-12 date">
-                    <label>Selecione a data</label>
-                    <label>
-                        <input type="text" class="datepicker" data-date-format="dd/mm/yy" placeholder="dd/mm/yy" maxlength="8">
-                    </label>
-                </div>
-                <!-- end col-3 -->
-                <div class="col-md-4 col-sm-6 col-xs-10 department">
-                    <label>Department</label>
-                    <label>
-                        <select>
-                            <option>Cardiologia</option>
-                        </select>
-                    </label>
-                </div>
-                <!-- end col-3 -->
-                <div class="col-md-4 col-sm-12 col-xs-12 gender">
-                    <label>
-                        <input type="radio" checked>
-                    </label>
-                    <label>Homem</label>
-                    <label>
-                        <input type="radio">
-                    </label>
-                    <label>Mulher</label>
-                    <input type="submit" value="Confirmar">
-                </div>
-                <!-- end col-4 -->
-            </form>
-            <!-- end form -->
+                <form>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <label>Nome do Paciente</label>
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                    <!-- end col-4 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <label>Telefone</label>
+                        <label for="phone"></label><input type="text" id="phone">
+                    </div>
+                    <!-- end col-4 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <label>E-mail</label>
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                    <!-- end col-4 -->
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
+                    <!-- end col-12 -->
+                    <div class="col-md-4 col-sm-6 col-xs-12 date">
+                        <label>Selecione a data</label>
+                        <label>
+                            <input type="text" class="datepicker" data-date-format="dd/mm/yy" placeholder="dd/mm/yy" maxlength="8">
+                        </label>
+                    </div>
+                    <!-- end col-3 -->
+                    <div class="col-md-4 col-sm-6 col-xs-10 department">
+                        <label>Department</label>
+                        <label>
+                            <select>
+                                <option>Cardiologia</option>
+                            </select>
+                        </label>
+                    </div>
+                    <!-- end col-3 -->
+                    <div class="col-md-4 col-sm-12 col-xs-12 gender">
+                        <label>
+                            <input type="radio" checked>
+                        </label>
+                        <label>Homem</label>
+                        <label>
+                            <input type="radio">
+                        </label>
+                        <label>Mulher</label>
+                        <input type="submit" value="Confirmar">
+                    </div>
+                    <!-- end col-4 -->
+                </form>
+                <!-- end form -->
+            </div>
+            <!-- end row -->
         </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
+        <!-- end container -->
+    </section>
 <!-- end appointment -->
 <section class="home-services text-center">
     <div class="container">
@@ -344,7 +331,7 @@
                 <div class="first-box">
                     <div class="icon"><img src="images/icon1.png" alt="Icon"></div>
                     <div class="content">
-                        <h3>LAB SCHEDULE</h3>
+                        <h3>AGENDAMENTO</h3>
                         <p>Call emergency appointment number for emergency service.</p>
                         <a href="#" class="btn-ghost-md">ABOUT MORE</a> </div>
                     <!-- end content -->
