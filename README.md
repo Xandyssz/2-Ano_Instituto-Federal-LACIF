@@ -12,4 +12,4 @@ Projeto (PRW-PRI)
 
 #- Alterar TELAS de [ALTERAR FUNDO DE LOGIN]
 
-#- Alterar BOOSTRAP de [PÁGINA COVID]
+#- Alterar BOOSTRAP de [PÁGINA COVID],
