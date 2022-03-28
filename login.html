@@ -2,34 +2,28 @@
 <html lang="en">
 <head>
     <title>Login Paciente</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Login.css">
     <script src="js/validar.js"></script>
 
 
 </head>
-<body style="background-color: #000000">
-<br><br><br>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-            <div class="panel panel-danger">
-                <div class="panel panel-heading">Login Usuario</div>
-                <div class="panel panel-body">
-                    <form id="frmRegistro">
-                        <label>Usuario</label>
-                        <label for="usuario"></label><input type="text" class="form-control input-sm" name="usuario" id="usuario">
-                        <p></p>
-                        <label>Senha</label>
-                        <label for="senha"></label><input type="password" class="form-control input-sm" name="senha" id="senha">
-                        <p></p>
-                        <span class="btn btn-primary" id="logar">Logar</span>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4"></div>
+<body>
+<div class="login">
+    <div class="logo" align="center">
+        <img src="images/logo.png" alt=""/>
+        <p></p>
     </div>
+    <form method="post">
+        <label>
+            <input type="text" name="usuario" placeholder="Usuario" required="required" />
+        </label>
+
+        <label>
+            <input type="password" name="senha" placeholder="Senha" required="required" />
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Entrar.</button>
+    </form>
 </div>
 </body>
 </html>
