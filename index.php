@@ -55,8 +55,8 @@
                     <form>
                         <label>
                             <input type="text" placeholder="Posso ajudar?">
+                            <input type="submit" value="BUSCAR">
                         </label>
-                        <input type="submit" value="BUSCAR">
                     </form>
                     <!-- end form -->
                 </div>
@@ -114,7 +114,7 @@
                         <!-- end dropdown -->
                     </li>
 
-                    <li><a href="news.html">Noticias</a></li>
+                    <li><a href="teste.html">Noticias</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact-us.html">Contato</a></li>
                 </ul>
