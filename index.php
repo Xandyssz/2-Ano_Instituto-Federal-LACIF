@@ -107,7 +107,6 @@
                     <li><a href="#">Exames</a>
                         <ul><!-- menu suspenso dentro do menu original-->
                             <li><a href="AnaliseClinica.html">Análises Clínicas</a></li>
-                            <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
                         </ul>
                         <!-- end dropdown -->
                     </li>
