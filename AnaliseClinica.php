@@ -8,12 +8,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
 
-  <!-- titulo da pagina-->
+  <!-- TITULO DA PÁGINA -->
   <title>LACIF</title>
+  <meta name="IFSP" content="...">
 
-  <meta name="author" content="...">
-
-  <!-- ARQUIVOS FAVICON -->
+  <!-- LOGOS EM DIMENSÕES DIFERENTES -->
   <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
   <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
   <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
@@ -26,7 +25,7 @@
   <link href="css/owl.carousel.css" rel="stylesheet">
   <link href="css/datepicker.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet" type="text/css"  />
+  <link href="css/custom.css" rel="stylesheet" type="text/css"/>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -34,51 +33,63 @@
     <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
   </noscript>
 
-
-  <!-- HTML5 shim e Respond.js para suporte ao IE8 de elementos HTML5 e consultas de mídia -->
-  <!-- AVISO: Respond.js não funciona se você visualizar a página via file:// -->
-  <!--[if lt IE 9]>
+  <!-- ARQUIVOS JAVASCRIPT -->
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <script type='text/javascript' src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/jquery.stellar.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/queryloader2.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/jquery.ba-cond.min.js" type="text/javascript" ></script>
+  <script src="js/jquery.slitslider.js" type="text/javascript" ></script>
+  <script src="js/slider-settings.js"></script>
+  <script src="js/medicina.js"></script>
 
 </head>
 <body>
 <header>
-  <!-- menu cabeçalho -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-5"></div>
-        <!-- end col-3 -->
-        <div class="col-md-6 col-sm-5 hidden-xs">
-          <form>
-            <label>
-              <input type="text" placeholder="Posso ajudar?">
-              <input type="submit" value="BUSCAR">
-            </label>
-          </form>
-          <!-- end form -->
+
+  <!-- INICIO - BARRA DO TOPO [BARRA DE PESQUISA, LOGIN, BANDEIRA] -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-5"></div>
+          <!-- end col-3 -->
+          <div class="col-md-6 col-sm-5 hidden-xs">
+            <form>
+              <label>
+                <input type="text" placeholder="Posso ajudar?">
+                <input type="submit" value="BUSCAR">
+              </label>
+            </form>
+            <!-- end form -->
+          </div>
+          <!-- end col-6 -->
+          <div class="col-md-3 col-sm-4 col-xs-7">
+            <ul class="language">
+              <li><a href="login.php">LOGIN</a></li>
+              <li><a href="CrudAgendamento.php">Consulta</a></li>
+              <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+            </ul>
+            <!-- end language -->
+          </div>
+          <!-- end col-3 -->
         </div>
-        <!-- end col-6 -->
-        <div class="col-md-3 col-sm-4 col-xs-7">
-          <ul class="language">
-            <li><a href="login.html">LOGIN</a></li>
-            <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
-          </ul>
-          <!-- end language -->
-        </div>
-        <!-- end col-3 -->
+        <!-- end row -->
       </div>
-      <!-- end row -->
+      <!-- end container -->
     </div>
-    <!-- end container -->
-  </div>
-  <!-- end top-bar -->
+  <!-- FIM - BARRA DO TOPO [BARRA DE PESQUISA, LOGIN, BANDEIRA] -->
 
 
 
-  <!-- Inicio Menu -->
+  <!-- INICIO DO MENU [LOGO, COVID19, HOME, EXAMES, NOTICIAS, FAQ, CONTATO / INSTAGRAM, TWITTER, GITHUB]  -->
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -106,35 +117,33 @@
 
           <li><a href="#">Exames</a>
             <ul><!-- menu suspenso dentro do menu original-->
-              <li><a href="AnaliseClinica.html">Análises Clínicas</a></li>
+              <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
             </ul>
             <!-- end dropdown -->
           </li>
 
-          <li><a href="teste.html">Noticias</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact-us.html">Contato</a></li>
+
+          <li><a href="noticias.php">Noticias</a></li>
+          <li><a href="faq.php">FAQ</a></li>
+          <li><a href="contact-us.php">Contato</a></li>
         </ul>
-        <!-- FINAL MENU -->
         <!-- end nav -->
       </div>
       <!-- end navbar-collapse -->
     </div>
     <!-- end container -->
   </nav>
-  <!-- end navbar -->
+  <!-- FIM DO MENU [LOGO, COVID19, HOME, EXAMES, NOTICIAS, FAQ, CONTATO / INSTAGRAM, TWITTER, GITHUB]  -->
+
 </header>
 <!-- end header -->
 
-
-
-
-<!-- FAQ -->
+<!-- INICIO SESSÃO DE PERGUNTAS E RESPOSTAS FREQUENTES [FAQ] -->
 <section class="inner-content">
   <div class="container">
-    <h1 class="title-bottom-line">PERGUNTAS <strong>FREQUENTES</strong> </h1>
+    <h1 class="title-bottom-line">QUAIS SÃO OS EXAMES DE ANÁLISES <strong>CLININICA</strong> </h1>
     <p> Dúvidas são bastante comuns na hora de realizar um exame. Caso você tenha alguma, veja se ela está na lista abaixo.</p>
-    <p>Caso a sua questão não seja solucionada por aqui, entre em contato pelo <a href="contact-us.html">Fale Conosco</a></p>
+    <p>Caso a sua questão não seja solucionada por aqui, entre em contato pelo <a href="contact-us.php">Fale Conosco</a></p>
     <br>
     <br>
 
@@ -226,18 +235,14 @@
     </div>
   </div>
 </section>
-
-<!-- final faq -->
-
-
-
-
-
+<!-- FINAL DA SESSÃO DE PERGUNTAS E RESPOSTAS FREQUENTES [FAQ] -->
 <!-- end logos -->
+
+<!-- INICIO DO RODAPÉ -->
+<!-- INICIO DOS TEXTOS DO RODAPÉ -->
 <section class="footer-bar">
   <div class="container"></div>
-</section>
-<!-- end footer-bar -->
+  </section>
 <footer>
   <div class="container">
     <div class="row">
@@ -245,6 +250,7 @@
         <p class="copyright">Copyright © 2022 , IFSP</p>
       </div>
       <!-- end col-2 -->
+
       <div class="col-md-4 col-sm-12 col-xs-12">
         <form>
           <h4>NOVIDADES</h4>
@@ -261,10 +267,10 @@
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a href="Covid19.html">COVID19</a></li>
-          <li><a href="AnaliseClinica.html">Análises Clinicas</a></li>
+          <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
           <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
-          <li><a href="faq.html">Faq</a></li>
-          <li><a href="contact-us.html">Contact us</a></li>
+          <li><a href="faq.php">Faq</a></li>
+          <li><a href="contact-us.php">Contact us</a></li>
         </ul>
       </div>
       <!-- end col-2 -->
@@ -296,20 +302,7 @@
   <!-- end container -->
 </footer>
 <!-- end footer -->
-
-<script type='text/javascript' src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/jquery.stellar.js"></script>
-<script src="js/smooth-scroll.js"></script>
-<script src="js/queryloader2.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery.maskedinput.js"></script>
-<script src="js/jquery.ba-cond.min.js" type="text/javascript" ></script>
-<script src="js/jquery.slitslider.js" type="text/javascript" ></script>
-<script src="js/slider-settings.js"></script>
-<script src="js/medicina.js"></script>
+<!-- FIM DOS TEXTOS DO RODAPÉ -->
+<!-- FIM DO RODAPÉ -->
 </body>
 </html>

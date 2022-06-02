@@ -29,18 +29,16 @@
   <link href="css/custom.css" rel="stylesheet" type="text/css"  />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/teste.css" rel="stylesheet">
   <script type="text/javascript" src="js/modernizr.custom.js"></script>
   <noscript>
     <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
   </noscript>
 
 
-  <!-- HTML5 shim e Respond.js para suporte ao IE8 de elementos HTML5 e consultas de mídia -->
-  <!-- AVISO: Respond.js não funciona se você visualizar a página via file:// -->
-  <!--[if lt IE 9]>
+
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 
 </head>
 <body>
@@ -63,8 +61,9 @@
         <!-- end col-6 -->
         <div class="col-md-3 col-sm-4 col-xs-7">
           <ul class="language">
-            <li><a href="login.html">LOGIN</a></li>
-            <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+            <li><a href="login.php">LOGIN</a></li>
+              <li><a href="CrudAgendamento.php">Consulta</a></li>
+              <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
           </ul>
           <!-- end language -->
         </div>
@@ -106,15 +105,14 @@
 
           <li><a href="#">Exames</a>
             <ul><!-- menu suspenso dentro do menu original-->
-              <li><a href="AnaliseClinica.html">Análises Clínicas</a></li>
+              <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
             </ul>
             <!-- end dropdown -->
           </li>
 
-
-          <li><a href="teste.html">Noticias</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact-us.html">Contato</a></li>
+          <li><a href="noticias.php">Noticias</a></li>
+          <li><a href="faq.php">FAQ</a></li>
+          <li><a href="contact-us.php">Contato</a></li>
         </ul>
         <!-- FINAL MENU -->
         <!-- end nav -->
@@ -130,174 +128,74 @@
 
 
 
-<!-- INICIO SCRIPT CONTATO -->
-
-<script type="text/javascript">
-
-  // validate contact form
-  $(function() {
-    $("#contact-form").validate({
-      rules: {
-        name: {
-          required: true,
-          minlength: 2
-        },
-        surname: {
-          required: true,
-          minlength: 2
-        },
-        phone: {
-          required: true,
-          minlength: 2
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        city: {
-          required: true,
-          minlength: 2
-        },
-        state: {
-          required: true,
-          minlength: 2
-        },
-        subject: {
-          required: true
-        },
-        message: {
-          required: true
-        }
-      },
-      messages: {
-        name: {
-          required: "Please type your name",
-          minlength: "Please type your name correctly"
-        },
-        surname: {
-          required: "Please type your surname",
-          minlength: "Please type your surname correctly"
-        },
-        phone: {
-          required: "Please type your phone number",
-          minlength: "Please type your phone number correctly"
-        },
-        email: {
-          required: "Please type your e-mail correctly"
-        },
-        city: {
-          required: "Please type your city",
-          minlength: "Please type your city correctly"
-        },
-        state: {
-          required: "Please type your state",
-          minlength: "Please type your state correctly"
-        },
-        subject: {
-          required: "Please type about subject",
-          minlength: "To short subject"
-        },
-        message: {
-          required: "Please type your message",
-          minlength: "To short message"
-        }
-      },
-      submitHandler: function(form) {
-        $(form).ajaxSubmit({
-          type:"POST",
-          data: $(form).serialize(),
-          url:"process.php",
-          success: function() {
-            $('#contact-form :input').attr('disabled', 'disabled');
-            $('#contact-form').fadeTo( "slow", 0, function() {
-              $(this).find(':input').attr('disabled', 'disabled');
-              $(this).find('label').css('cursor','default');
-              $('#success').fadeIn();
-            });
-          },
-          error: function() {
-            $('#contact-form').fadeTo( "slow", 0, function() {
-              $('#error').fadeIn();
-            });
-          }
-        });
-      }
-    });
-  });
-</script>
-
-
-
-<!-- FINAL SCRIPT CONTATO -->
-
-
-
 <!-- FAQ -->
+<section class="blogs" id="blogs">
 
-<!-- end inner header -->
-<section class="inner-content">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-sm-8 col-xs-12">
-        <div class="left-side">
-          <h1 class="title-bottom-line">FORMULARIO DE <strong>CONTATO</strong></h1>
-          <p>nao sei oque por nao, preenche ae.</p>
-          <form id="contact-form">
-            <label for="name"></label><input type="text" name="name" id="name" placeholder="Seu Nome">
-            <label for="surname"></label><input type="text" name="surname" id="surname" placeholder="SobreNome">
-            <label for="phone"></label><input type="text" name="phone" id="phone" placeholder="Celular">
-            <label for="email"></label><input type="text" name="email" id="email" placeholder="E-mail">
-            <label for="city"></label><input type="text" name="city" id="city" placeholder="Cidade">
-            <label for="state"></label><input type="text" name="state" id="state" placeholder="Estado">
-            <label for="subject"></label><input type="text" name="subject" id="subject" placeholder="Motivo do seu contato" class="subject">
-            <label for="message"></label><textarea name="message" id="message" placeholder="Sua mensagem"></textarea>
-            <input type="submit" name="submit" value="ENVIAR">
-          </form>
-          <div id="success">
-            <p>Sua mensagem foi enviada com sucesso! Entraremos em contato assim que pudermos.</p>
-          </div>
-          <div id="error">
-            <p>Algo deu errado, tente atualizar e enviar o formulário novamente.</p>
-          </div>
-        </div>
+  <h1 class="heading"> ULTIMAS <span>NOTICIAS</span> </h1>
+
+  <div class="box-container">
+
+    <!-- PRIMEIRA CAIXA DE NOTICIAS-->
+    <div class="box">
+      <div class="image">
+        <img src="images/blog-1.jpg" alt="">
       </div>
-      <!-- end left side -->
-      <div class="col-md-4 col-sm-4 col-xs-12">
-        <div class="side-bar">
-          <h1 class="title-bottom-line"><strong>SEDE</strong> OFICIAL</h1>
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Laboratório de Análises Clínicas - IF</a> </h4>
-              </div>
-              <div id="collapseOne" class="panel-collapse collapse">
-                <div class="panel-body gray-bg">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.869898831968!2d-52.11370228501676!3d-21.785295704290643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949198d8b971a46f%3A0xa778e28b9c04cf8b!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20de%20S%C3%A3o%20Paulo%2C%20C%C3%A2mpus%20Presidente%20Epit%C3%A1cio!5e0!3m2!1spt-BR!2sbr!4v1646855594129!5m2!1spt-BR!2sbr" style=" width:100%; height:140px; border:0"></iframe>
-                  <p><strong>LACIF</strong></p>
-                  <p>R. José Ramos Júnior, 27-50 - Jardim Tropical, Pres. Epitácio - SP, 19470-000<br>
-                    SP</p>
-                  <h3>+55 (18) 3281-9599</h3>
-                </div>
-              </div>
-            </div>
-
-
-
-          </div>
+      <div class="content">
+        <div class="icon">
+          <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+          <a href="#"> <i class="fas fa-user"></i> by admin </a>
         </div>
+        <h3>vacinas do COVID-19</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+        <a href="#" class="btn"> saiba mais <span class="fas fa-chevron-right"></span> </a>
+          <a href="#" class="btn"> Editar <span class="fas fa-chevron-right"></span> </a>
+
       </div>
-      <!-- end right side -->
     </div>
-    <!-- end row -->
+
+    <!-- SEGUNDA CAIXA DE NOTICIAS-->
+    <div class="box">
+      <div class="image">
+        <img src="images/blog-2.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="icon">
+          <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+          <a href="#"> <i class="fas fa-user"></i> by admin </a>
+        </div>
+        <h3>a situação da telemedicina no mundo</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+        <a href="#" class="btn"> Saiba Mais <span class="fas fa-chevron-right"></span> </a>
+          <a href="#" class="btn"> Editar <span class="fas fa-chevron-right"></span> </a>
+
+
+      </div>
+    </div>
+
+    <!-- TERCEIRA CAIXA DE NOTICIAS-->
+    <div class="box">
+      <div class="image">
+        <img src="images/blog-3.jpg" alt="">
+      </div>
+      <div class="content">
+        <div class="icon">
+          <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+          <a href="#"> <i class="fas fa-user"></i> by admin </a>
+        </div>
+        <h3>como a insulina combate a diabete</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+        <a href="#" class="btn"> saiba mais <span class="fas fa-chevron-right"></span> </a>
+          <a href="#" class="btn"> Editar <span class="fas fa-chevron-right"></span> </a>
+
+      </div>
+    </div>
+    <!-- QUARTA CAIXA DE NOTICIAS-->
+
   </div>
+
 </section>
 
-
-<!-- finalFAQ -->
-
-
-
-
+<!-- final faq -->
 
 <!-- end logos -->
 <section class="footer-bar">
@@ -326,11 +224,10 @@
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.php">Home</a></li>
-          <li><a href="Covid19.html">COVID19</a></li>
-          <li><a href="AnaliseClinica.html">Análises Clinicas</a></li>
+          <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
           <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
-          <li><a href="faq.html">Faq</a></li>
-          <li><a href="contact-us.html">Contact us</a></li>
+          <li><a href="faq.php">Faq</a></li>
+          <li><a href="contact-us.php">Contact us</a></li>
         </ul>
       </div>
       <!-- end col-2 -->

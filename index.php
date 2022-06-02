@@ -63,7 +63,8 @@
                 <!-- end col-6 -->
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
-                        <li><a href="login.html">LOGIN</a></li>
+                        <li><a href="login.php">LOGIN</a></li>
+                        <li><a href="CrudAgendamento.php">Consulta</a></li>
                         <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
                     </ul>
                     <!-- end language -->
@@ -106,14 +107,14 @@
 
                     <li><a href="#">Exames</a>
                         <ul><!-- menu suspenso dentro do menu original-->
-                            <li><a href="AnaliseClinica.html">Análises Clínicas</a></li>
+                            <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
                         </ul>
                         <!-- end dropdown -->
                     </li>
 
-                    <li><a href="teste.html">Noticias</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact-us.html">Contato</a></li>
+                    <li><a href="noticias.php">Noticias</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
+                    <li><a href="contact-us.php">Contato</a></li>
                 </ul>
                 <!-- FINAL MENU -->
                 <!-- end nav -->
@@ -479,10 +480,10 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="Covid19.html">COVID19</a></li>
-                    <li><a href="AnaliseClinica.html">Análises Clinicas</a></li>
+                    <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
                     <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
-                    <li><a href="faq.html">Faq</a></li>
-                    <li><a href="contact-us.html">Contact us</a></li>
+                    <li><a href="faq.php">Faq</a></li>
+                    <li><a href="contact-us.php">Contact us</a></li>
                 </ul>
             </div>
             <!-- end col-2 -->
