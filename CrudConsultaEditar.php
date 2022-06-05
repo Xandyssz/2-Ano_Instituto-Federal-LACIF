@@ -50,107 +50,99 @@ if(isset($_GET['id'])){
                 <?php
                 if ($tiposanguineo == "O-") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-"selected>O-</option>
-                    <option value="O+">O+</option>
+                    <option value="O">O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB">AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B+">B+</option>
+                    <option value="B">B+</option>
                     <option value="A-">A-</option>
-                    <option value="A+">A+</option>
+                    <option value="A">A+</option>
 
                 <?php
-                } elseif ($tiposanguineo == "O+") {
+                } elseif ($tiposanguineo == "O") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O+"selected>O+</option>
+                    <option value="O"selected>O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB">AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B+">B+</option>
+                    <option value="B">B+</option>
                     <option value="A-">A-</option>
-                    <option value="A+">A+</option>
+                    <option value="A">A+</option>
 
                     <?php
                 } elseif ($tiposanguineo == "AB-") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O+">O+</option>
+                    <option value="O">O+</option>
                     <option value="AB-"selected>AB-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB">AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B+">B+</option>
+                    <option value="B">B+</option>
                     <option value="A-">A-</option>
-                    <option value="A+">A+</option>
+                    <option value="A">A+</option>
 
                     <?php
-                } elseif ($tiposanguineo == "AB+") {
+                } elseif ($tiposanguineo == "AB") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O+">O+</option>
+                    <option value="O">O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB+"selected>AB+</option>
+                    <option value="AB"selected>AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B+">B+</option>
+                    <option value="B">B+</option>
                     <option value="A-">A-</option>
-                    <option value="A+">A+</option>
+                    <option value="A">A+</option>
 
 
                     <?php
                 } elseif ($tiposanguineo == "B-") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O+">O+</option>
+                    <option value="O">O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB">AB+</option>
                     <option value="B-"selected>B-</option>
-                    <option value="B+">B+</option>
+                    <option value="B">B+</option>
                     <option value="A-">A-</option>
-                    <option value="A+">A+</option>
+                    <option value="A">A+</option>
 
                     <?php
-                } elseif ($tiposanguineo == "B+") {
+                } elseif ($tiposanguineo == "B") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O+">O+</option>
+                    <option value="O">O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB">AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B+"selected>B+</option>
+                    <option value="B"selected>B+</option>
                     <option value="A-">A-</option>
-                    <option value="A+">A+</option>
+                    <option value="A">A+</option>
 
                     <?php
                 } elseif ($tiposanguineo == "A-") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O+">O+</option>
+                    <option value="O">O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB">AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B+">B+</option>
+                    <option value="B">B+</option>
                     <option value="A-"selected>A-</option>
-                    <option value="A+">A+</option>
+                    <option value="A">A+</option>
 
                     <?php
-                } elseif ($tiposanguineo == "A+") {
+                } elseif ($tiposanguineo == "A") {
                     ?>
-                    <option value="">Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O+">O+</option>
+                    <option value="O">O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB">AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B+">B+</option>
+                    <option value="B">B+</option>
                     <option value="A-">A-</option>
-                    <option value="A+"selected>A+</option>
+                    <option value="A"selected>A+</option>
 
                     <?php
                 }

@@ -30,15 +30,15 @@
             <input type="time"  name="horario_cons" class="box">
 
             <select name="tiposanguineo" class="box">
-                <option value="" selected>Selecione o tipo sanguineo...</option>
+                <option value=""selected>Selecione o tipo sanguineo...</option>
                 <option value="O-">O-</option>
-                <option value="O+">O+</option>
+                <option value="O">O+</option>
                 <option value="AB-">AB-</option>
-                <option value="AB+">AB+</option>
+                <option value="AB">AB+</option>
                 <option value="B-">B-</option>
-                <option value="B+">B+</option>
+                <option value="B">B+</option>
                 <option value="A-">A-</option>
-                <option value="A+">A+</option>
+                <option value="A">A+</option>
             </select>
 
             <select name="sexo" class="box">
