@@ -262,9 +262,7 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="Covid19.html">COVID19</a></li>
                     <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
-                    <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
                     <li><a href="faq.php">Faq</a></li>
                     <li><a href="contact-us.php">Contact us</a></li>
                 </ul>

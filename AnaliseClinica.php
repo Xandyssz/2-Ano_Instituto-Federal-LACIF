@@ -74,12 +74,13 @@
           <div class="col-md-3 col-sm-4 col-xs-7">
             <ul class="language">
               <li><a href="login.php">LOGIN</a></li>
-              <li><a href="CrudAgendamento.php">Consulta</a></li>
+              <li><a href="CrudConsultaAgendamento.php">Consulta</a></li>
               <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
             </ul>
             <!-- end language -->
           </div>
           <!-- end col-3 -->
+
         </div>
         <!-- end row -->
       </div>
@@ -266,9 +267,7 @@
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.php">Home</a></li>
-          <li><a href="Covid19.html">COVID19</a></li>
           <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
-          <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
           <li><a href="faq.php">Faq</a></li>
           <li><a href="contact-us.php">Contact us</a></li>
         </ul>

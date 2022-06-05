@@ -1,8 +1,3 @@
-<?php
-
-?>
-
-
 <!DOCTYPE html>
 <!--ALTERAR COR DO SITE EM STYLE.CSS -->
 <html lang="en">
@@ -64,7 +59,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
                         <li><a href="login.php">LOGIN</a></li>
-                        <li><a href="CrudAgendamento.php">Consulta</a></li>
+                        <li><a href="CrudConsultaAgendamento.php">Consulta</a></li>
                         <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
                     </ul>
                     <!-- end language -->
@@ -193,73 +188,6 @@
     </div>
     <!-- end demo2 -->
 </section>
-<!-- end slider -->
-    <section class="appointment">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Compromissos</h2>
-                </div>
-                <!-- end col-12 -->
-                <form>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <label>Nome do Paciente</label>
-                        <label>
-                            <input type="text">
-                        </label>
-                    </div>
-                    <!-- end col-4 -->
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <label>Telefone</label>
-                        <label for="phone"></label><input type="text" id="phone">
-                    </div>
-                    <!-- end col-4 -->
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <label>E-mail</label>
-                        <label>
-                            <input type="text">
-                        </label>
-                    </div>
-                    <!-- end col-4 -->
-                    <div class="col-xs-12">
-                        <hr>
-                    </div>
-                    <!-- end col-12 -->
-                    <div class="col-md-4 col-sm-6 col-xs-12 date">
-                        <label>Selecione a data</label>
-                        <label>
-                            <input type="text" class="datepicker" data-date-format="dd/mm/yy" placeholder="dd/mm/yy" maxlength="8">
-                        </label>
-                    </div>
-                    <!-- end col-3 -->
-                    <div class="col-md-4 col-sm-6 col-xs-10 department">
-                        <label>Department</label>
-                        <label>
-                            <select>
-                                <option>Cardiologia</option>
-                            </select>
-                        </label>
-                    </div>
-                    <!-- end col-3 -->
-                    <div class="col-md-4 col-sm-12 col-xs-12 gender">
-                        <label>
-                            <input type="radio" checked>
-                        </label>
-                        <label>Homem</label>
-                        <label>
-                            <input type="radio">
-                        </label>
-                        <label>Mulher</label>
-                        <input type="submit" value="Confirmar">
-                    </div>
-                    <!-- end col-4 -->
-                </form>
-                <!-- end form -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
 <!-- end appointment -->
 <section class="home-services text-center">
     <div class="container">
@@ -314,8 +242,6 @@
                 <!-- end content -->
             </div>
             <!-- end col-3 -->
-            <div class="col-xs-12"> <a href="#" class="btn-turquaz-md">Ver Outros</a> </div>
-            <!-- end col-12 -->
         </div>
         <!-- end row -->
     </div>
@@ -331,7 +257,7 @@
                     <div class="content">
                         <h3>AGENDAMENTO</h3>
                         <p>Call emergency appointment number for emergency service.</p>
-                        <a href="#" class="btn-ghost-md">ABOUT MORE</a> </div>
+                        <a href="faq.php" class="btn-ghost-md">SAIBA MAIS</a> </div>
                     <!-- end content -->
                 </div>
                 <!-- end first-box -->
@@ -343,7 +269,7 @@
                     <div class="content">
                         <h3>CHECK UP</h3>
                         <p>Call emergency appointment number for emergency service.</p>
-                        <a href="#" class="btn-ghost-md">ABOUT MORE</a> </div>
+                        <a href="faq.php" class="btn-ghost-md">SAIBA MAIS</a> </div>
                     <!-- end content -->
                 </div>
                 <!-- end second-box -->
@@ -355,7 +281,7 @@
                     <div class="content">
                         <h3>OTHER CLINICS</h3>
                         <p>Call emergency appointment number for emergency service.</p>
-                        <a href="#" class="btn-ghost-md">ABOUT MORE</a> </div>
+                        <a href="contact-us.php" class="btn-ghost-md">ENTRE EM CONTATO</a> </div>
                     <!-- end content -->
                 </div>
                 <!-- end third-box -->
@@ -385,7 +311,7 @@
                     <h3>TRATAMENTO <strong>ESPECIAL</strong> </h3>
                     <small>Postado <strong>28 de março </strong>by ADM</small>
                     <p>ainda nao sei oque escrever </p>
-                    <a href="#" class="btn-turquaz-md">LEIA MAIS</a> </div>
+                    <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
                 <!-- end left -->
             </div>
             <!-- end col-6 -->
@@ -396,7 +322,7 @@
                     <h3>CENTRO DE <strong>DOENÇAS</strong></h3>
                     <small>Postado <strong>28 de março </strong>by ADM</small>
                     <p>ainda nao sei oque escrever </p>
-                    <a href="#" class="btn-turquaz-md">LEIA MAIS</a> </div>
+                    <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
                 <!-- end right -->
             </div>
             <!-- end col-6 -->
@@ -412,7 +338,7 @@
             <div class="col-xs-12 no-padding"> <img src="images/icon4.png" alt="Image">
                 <h2>Check-up mensais</h2>
                 <h4>Combine o seu Check-up no Nosso Hospital !</h4>
-                <a href="#" class="btn-ghost-lg">SAIBA MAIS</a> </div>
+                <a href="faq.php" class="btn-ghost-lg">SAIBA MAIS</a> </div>
             <!-- end col-12 -->
         </div>
         <!-- end row -->
@@ -479,9 +405,7 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="Covid19.html">COVID19</a></li>
                     <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
-                    <li><a href="EstudoGenetico.html">Estudos Genéticos</a></li>
                     <li><a href="faq.php">Faq</a></li>
                     <li><a href="contact-us.php">Contact us</a></li>
                 </ul>
