@@ -23,10 +23,11 @@ if ($cpf == CPF_Correto && $password == password_correta && $nivelAcesso == nive
     $_SESSION['sessiontime'] = time() * 1 * 1;
     header("location: ../PacienteAutenticado/index.php");
 }
-elseif (!empty($_POST) and (empty('email')) or !empty($_POST['password'])) {
+
+elseif (!empty($_POST) and (empty('cpf')) or !empty($_POST['password'])) {
     echo "<div align='center'>
     </div>";
-    echo "<meta http-equiv='refresh' content='5; URL=../erro404.php'>";
+    echo "<meta http-equiv='refresh' content='2; URL=../erro404.php'>";
 
 }
 

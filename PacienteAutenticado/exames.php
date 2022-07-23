@@ -68,9 +68,15 @@
                 <!-- end col-6 -->
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
-                        <li><a href="exames.php">Meus Exames</a></li>
-                        <li><a href="../CrudConsultaAgendamento.php">Consulta</a></li>
-                        <li><a href="#"><img src="../images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                        <li><a href="exames.php">Exames</a></li>
+                        <li><a href="../Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                        <li><a><?php
+                                if(isset($_SESSION['logado'])){
+                                    session_destroy();
+                                    header("Location:index.php");
+                                }
+                                echo " <a href='../index.php'>Sair</a>";
+                                ?></a></li>
                     </ul>
                     <!-- end language -->
                 </div>

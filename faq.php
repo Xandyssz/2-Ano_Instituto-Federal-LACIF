@@ -20,6 +20,7 @@
     <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
     <link href="ico/favicon.png" rel="shortcut icon">
 
+
     <!-- ARQUIVOS CSS -->
     <link href="css/ionicons.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">

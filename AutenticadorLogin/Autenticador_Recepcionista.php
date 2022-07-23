@@ -4,10 +4,10 @@ $cpf = $_POST['cpf'];
 $password = $_POST['password'];
 $nivelAcesso = $_POST['nivelAcesso'];
 
-define("CPF_Correto", "0");
+define("CPF_Correto", "243");
 // $Email_Correto = "seco.ricardo@ifsp.edu.br";
 
-define("password_correta", "0");
+define("password_correta", "243");
 // $Senha_Correta = "123";
 
 define("nivelAcesso_correto", "Recepcionista");
@@ -23,10 +23,11 @@ if ($cpf == CPF_Correto && $password == password_correta && $nivelAcesso == nive
     $_SESSION['sessiontime'] = time() * 1 * 1;
     header("location: ../PacienteAutenticado/index.php");
 }
-elseif (!empty($_POST) and (empty('email')) or !empty($_POST['password'])) {
+
+elseif (!empty($_POST) and (empty('cpf')) or !empty($_POST['password'])) {
     echo "<div align='center'>
     </div>";
-    echo "<meta http-equiv='refresh' content='5; URL=../erro404.php'>";
+    echo "<meta http-equiv='refresh' content='2; URL=../erro404.php'>";
 
 }
 

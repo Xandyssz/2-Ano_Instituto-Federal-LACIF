@@ -14,27 +14,27 @@
     <meta name="author" content="...">
 
     <!-- ARQUIVOS FAVICON -->
-    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="ico/favicon.png" rel="shortcut icon">
+    <link href="../ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="../ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="../ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="../ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="../ico/favicon.png" rel="shortcut icon">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- ARQUIVOS CSS -->
-    <link href="css/ionicons.min.css" rel="stylesheet">
-    <link href="css/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/datepicker.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet" type="text/css"  />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <link href="../css/ionicons.min.css" rel="stylesheet">
+    <link href="../css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../css/owl.carousel.css" rel="stylesheet">
+    <link href="../css/datepicker.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet" type="text/css"  />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/modernizr.custom.js"></script>
     <noscript>
-        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+        <link rel="stylesheet" type="text/css" href="../css/styleNoJS.css" />
     </noscript>
 
 

@@ -241,9 +241,10 @@
         <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="left-side">
+
                     <h1 class="title-bottom-line">FORMULARIO DE <strong>CONTATO</strong></h1>
                     <p>nao sei oque por nao, preenche ae.</p>
-                    <form id="contact-form">
+                    <form action="contact-us-enviar.php" method="POST" id="contact-form">
                         <label for="name"></label><input type="text" name="name" id="name" placeholder="Seu Nome">
                         <label for="surname"></label><input type="text" name="surname" id="surname" placeholder="SobreNome">
                         <label for="phone"></label><input type="text" name="phone" id="phone" placeholder="Celular">

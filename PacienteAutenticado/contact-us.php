@@ -21,7 +21,7 @@
     <link href="../ico/favicon.png" rel="shortcut icon">
 
     <!-- ARQUIVOS CSS -->
-    <link href=../"css/ionicons.min.css" rel="stylesheet">
+    <link href="../css/ionicons.min.css" rel="stylesheet">
     <link href="../css/jquery.fancybox.css" rel="stylesheet">
     <link href="../css/owl.carousel.css" rel="stylesheet">
     <link href="../css/datepicker.css" rel="stylesheet">
@@ -63,10 +63,15 @@
                 <!-- end col-6 -->
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
-                        <li><a href="exames.php">Meus Exames</a></li>
-                        <li><a href="../CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-
-                        <li><a href="#"><img src="../images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                        <li><a href="exames.php">Exames</a></li>
+                        <li><a href="../Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                        <li><a><?php
+                                if(isset($_SESSION['logado'])){
+                                    session_destroy();
+                                    header("Location:index.php");
+                                }
+                                echo " <a href='../index.php'>Sair</a>";
+                                ?></a></li>
                     </ul>
                     <!-- end language -->
                 </div>
@@ -242,9 +247,10 @@
         <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="left-side">
+
                     <h1 class="title-bottom-line">FORMULARIO DE <strong>CONTATO</strong></h1>
                     <p>nao sei oque por nao, preenche ae.</p>
-                    <form id="contact-form">
+                    <form action="" method="POST" id="contact-form">
                         <label for="name"></label><input type="text" name="name" id="name" placeholder="Seu Nome">
                         <label for="surname"></label><input type="text" name="surname" id="surname" placeholder="SobreNome">
                         <label for="phone"></label><input type="text" name="phone" id="phone" placeholder="Celular">

@@ -18,13 +18,18 @@
         <div class="image">
             <img src="images/book2-img.svg" alt="">
         </div>
-        <form class="user" method="post" action="AutenticadorLogin/Autenticador_Usuario.php">
+        <form class="user" method="post" action="AutenticadorLogin/Autenticador_Paciente.php">
             <h3>LOGIN</h3>
             <input type="number" name="cpf"  placeholder="Digite o CPF" class="box" required>
             <input type="password"  name="password" placeholder="Digite a senha" class="box" required>
+            <select name="nivelAcesso" class="box" >
+                <option value="Paciente">Paciente</option>
+                <option value="Recepcionista">Recepcionista</option>
+                <option value="Doutor">Doutor</option>
+            </select>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-user btn-block">Conecte-se</button>
-                <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
+                <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='Crud_Usuario/CrudUsuarioCadastrar.php'"/>
             </div>
         </form>
     </div>

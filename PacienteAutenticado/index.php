@@ -58,9 +58,15 @@
                 <!-- end col-6 -->
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
-                        <li><a href="exames.php">Meus Exames</a></li>
-                        <li><a href="../CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-                        <li><a href="#"><img src="../images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                        <li><a href="exames.php">Exames</a></li>
+                        <li><a href="../Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                        <li><a><?php
+                                if(isset($_SESSION['logado'])){
+                                    session_destroy();
+                                    header("Location:index.php");
+                                }
+                                echo " <a href='../index.php'>Sair</a>";
+                                ?></a></li>
                     </ul>
                     <!-- end language -->
                 </div>
@@ -189,115 +195,14 @@
     <!-- end demo2 -->
 </section>
 <!-- end appointment -->
-<section class="home-services text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="title-box">
-                    <h2>Especialistas</h2>
-                    <h5>Consulte nossos especialistas</h5>
-                </div>
-                <!-- end title-box -->
-            </div>
-            <!-- end col-12 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="content">
-                    <div class="line">
-                        <div class="icon"><img src="../images/icon1.png" alt="Icon"> </div>
-                    </div>
-                    <h3>Cardiologista</h3>
-                    <p>Cardiologista...</p>
-                </div>
-                <!-- end content -->
-            </div>
-            <!-- end col-3 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="content">
-                    <div class="line">
-                        <div class="icon"><img src="../images/icon2.png" alt="Icon"></div>
-                    </div>
-                    <h3>oftalmologista</h3>
-                    <p>Coftalmologista...</p>
-                </div>
-                <!-- end content -->
-            </div>
-            <!-- end col-3 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="content">
-                    <div class="line">
-                        <div class="icon"><img src="../images/icon3.png" alt="Icon"></div>
-                    </div>
-                    <h3>Neurologista</h3>
-                    <p>Neurologista...</p>
-                </div>
-                <!-- end content -->
-            </div>
-            <!-- end col-3 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="content">
-                    <div class="icon"><img src="../images/icon4.png" alt="Icon"></div>
-                    <h3>Dermatologista</h3>
-                    <p>Dermatologista...</p>
-                </div>
-                <!-- end content -->
-            </div>
-            <!-- end col-3 -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
-<!-- end home-services -->
-<section class="box-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-                <div class="first-box">
-                    <div class="icon"><img src="../images/icon1.png" alt="Icon"></div>
-                    <div class="content">
-                        <h3>AGENDAMENTO</h3>
-                        <p>Call emergency appointment number for emergency service.</p>
-                        <a href="faq.php" class="btn-ghost-md">SAIBA MAIS</a> </div>
-                    <!-- end content -->
-                </div>
-                <!-- end first-box -->
-            </div>
-            <!-- end col-4 -->
-            <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-                <div class="second-box">
-                    <div class="icon"><img src="../images/icon2.png" alt="Icon"></div>
-                    <div class="content">
-                        <h3>CHECK UP</h3>
-                        <p>Call emergency appointment number for emergency service.</p>
-                        <a href="faq.php" class="btn-ghost-md">SAIBA MAIS</a> </div>
-                    <!-- end content -->
-                </div>
-                <!-- end second-box -->
-            </div>
-            <!-- end col-4 -->
-            <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-                <div class="third-box">
-                    <div class="icon"><img src="../images/icon3.png" alt="Icon"></div>
-                    <div class="content">
-                        <h3>OTHER CLINICS</h3>
-                        <p>Call emergency appointment number for emergency service.</p>
-                        <a href="contact-us.php" class="btn-ghost-md">ENTRE EM CONTATO</a> </div>
-                    <!-- end content -->
-                </div>
-                <!-- end third-box -->
-            </div>
-            <!-- end col-4 -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
-<!-- end box-content -->
 <section class="latest-news">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
+
                 <div class="title-box">
+                    <br>
+                    <br>
                     <h2>ULTIMAS NOTICIAS</h2>
                     <h5>SEI LA OQUE ESCREVER</h5>
                 </div>
@@ -306,22 +211,22 @@
             <!-- end col-12 -->
             <div class="col-md-6 col-xs-12">
                 <div class="left">
-                    <div class="article-image"><img src="../images/image8.jpg" alt="Image"> </div>
+                    <div class="article-image"><img src="../images/noticias/noticia1.webp" alt="Image"> </div>
                     <img src="../images/rated-article.png" alt="Image" class="rated-article">
-                    <h3>TRATAMENTO <strong>ESPECIAL</strong> </h3>
-                    <small>Postado <strong>28 de março </strong>by ADM</small>
-                    <p>ainda nao sei oque escrever </p>
+                    <h3>EM: <strong>CORONAVÍRUS</strong> </h3>
+                    <small>Postado <strong>01 de Agosto </strong>by ADM</small>
+                    <p>Covid: em que situações devo fazer check-up após infecção?</p>
                     <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
                 <!-- end left -->
             </div>
             <!-- end col-6 -->
             <div class="col-md-6 col-xs-12">
-                <div class="right">
-                    <div class="article-image"><img src="../images/image9.jpg" alt="Image"></div>
+                <div class="left">
+                    <div class="article-image"><img src="../images/noticias/noticia2.webp" alt="Image"> </div>
                     <img src="../images/rated-article.png" alt="Image" class="rated-article">
-                    <h3>CENTRO DE <strong>DOENÇAS</strong></h3>
-                    <small>Postado <strong>28 de março </strong>by ADM</small>
-                    <p>ainda nao sei oque escrever </p>
+                    <h3>EM: <strong>MUNDO</strong> </h3>
+                    <small>Postado <strong>01 de Agosto </strong>by ADM</small>
+                    <p>Mundo: OMS alerta para nova onda de covid na Europa</p>
                     <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
                 <!-- end right -->
             </div>
@@ -331,13 +236,14 @@
     </div>
     <!-- end container -->
 </section>
+<!-- end home-services -->
+
 <!-- end latest-news -->
 <section class="frase overlay text-center">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 no-padding"> <img src="../images/icon4.png" alt="Image">
                 <h2>Check-up mensais</h2>
-                <h4>Combine o seu Check-up no Nosso Hospital !</h4>
                 <a href="faq.php" class="btn-ghost-lg">SAIBA MAIS</a> </div>
             <!-- end col-12 -->
         </div>
@@ -355,7 +261,6 @@
             <div class="col-xs-12 text-center">
                 <div class="title-box">
                     <h2>Patrocinadores</h2>
-                    <h5>faça sua propaganda</h5>
                 </div>
                 <!-- end title-box -->
             </div>
@@ -365,10 +270,10 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="owl-logos">
-                    <div class="item"> <img src="../images/partner-logo1.jpg" alt="Image"> </div>
-                    <div class="item"> <img src="../images/partner-logo2.jpg" alt="Image"> </div>
-                    <div class="item"> <img src="../images/partner-logo3.jpg" alt="Image"> </div>
-                    <div class="item"> <img src="../images/partner-logo4.jpg" alt="Image"> </div>
+                    <div class="item1"> <img src="../images/patrocinadores/unimed.png" alt=""> </div>
+                    <div class="item2"> <img src="../images/patrocinadores/Allianz.png" alt=""> </div>
+                    <div class="item3"> <img src="../images/patrocinadores/bradesco.png" alt=""> </div>
+                    <div class="item4"> <img src="../images/patrocinadores/prevent_senior.png" alt=""> </div>
                 </div>
                 <!-- end owl-logos -->
             </div>
