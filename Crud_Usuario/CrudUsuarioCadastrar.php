@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Registrar-se </title>
 
-    <link rel="stylesheet" href="css/tabelacss.css">
+    <link rel="stylesheet" href="../css/tabelacss.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <div class="row">
 
         <div class="image">
-            <img src="images/book2-img.svg" alt="">
+            <img src="../images/book2-img.svg" alt="">
         </div>
 
         <form action="CrudUsuarioListar.php" method="POST">

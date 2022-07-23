@@ -14,24 +14,24 @@
     <meta name="author" content="...">
 
     <!-- ARQUIVOS FAVICON -->
-    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="ico/favicon.png" rel="shortcut icon">
+    <link href="../ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="../ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="../ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="../ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="../ico/favicon.png" rel="shortcut icon">
 
     <!-- ARQUIVOS CSS -->
-    <link href="css/ionicons.min.css" rel="stylesheet">
-    <link href="css/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/datepicker.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <link href="../css/ionicons.min.css" rel="stylesheet">
+    <link href="../css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../css/owl.carousel.css" rel="stylesheet">
+    <link href="../css/datepicker.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/modernizr.custom.js"></script>
     <noscript>
-        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+        <link rel="stylesheet" type="text/css" href="../css/styleNoJS.css" />
     </noscript>
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -58,8 +58,9 @@
                 <!-- end col-6 -->
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
-                        <li><a href="login.php">LOGIN</a></li>
-                        <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                        <li><a href="exames.php">Meus Exames</a></li>
+                        <li><a href="../CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                        <li><a href="#"><img src="../images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
                     </ul>
                     <!-- end language -->
                 </div>
@@ -78,7 +79,7 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
+                <a class="navbar-brand" href="index.php"><img src="../images/logo.png" alt="Image"></a> </div>
             <!-- end navbar-header -->
             <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
                 <form class="visible-xs">
@@ -130,7 +131,7 @@
                         <div class="content">
                             <h2>??<u>??</u><br>
                                 ??</h2>
-                            <img src="images/pulse.png" alt="Image"><br>
+                            <img src="../images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                         <!-- end content -->
                     </div>
@@ -143,7 +144,7 @@
                         <div class="content">
                             <h2>Nossa sala de <u>MRI</u> <br>
                                 Foi renovada para nossos pacientes</h2>
-                            <img src="images/pulse.png" alt="Image"><br>
+                            <img src="../images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                         <!-- end content -->
                     </div>
@@ -156,7 +157,7 @@
                         <div class="content">
                             <h2>Suporte <u>online</u> muito<br>
                                 fácil de obter em nosso novo site</h2>
-                            <img src="images/pulse.png" alt="Image"><br>
+                            <img src="../images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                         <!-- end content -->
                     </div>
@@ -169,7 +170,7 @@
                         <div class="content">
                             <h2>30% <u>de desconto</u> para <br>
                                 pacientes de tratamento especial</h2>
-                            <img src="images/pulse.png" alt="Image"><br>
+                            <img src="../images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                         <!-- end content -->
                     </div>
@@ -188,14 +189,115 @@
     <!-- end demo2 -->
 </section>
 <!-- end appointment -->
+<section class="home-services text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="title-box">
+                    <h2>Especialistas</h2>
+                    <h5>Consulte nossos especialistas</h5>
+                </div>
+                <!-- end title-box -->
+            </div>
+            <!-- end col-12 -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="line">
+                        <div class="icon"><img src="../images/icon1.png" alt="Icon"> </div>
+                    </div>
+                    <h3>Cardiologista</h3>
+                    <p>Cardiologista...</p>
+                </div>
+                <!-- end content -->
+            </div>
+            <!-- end col-3 -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="line">
+                        <div class="icon"><img src="../images/icon2.png" alt="Icon"></div>
+                    </div>
+                    <h3>oftalmologista</h3>
+                    <p>Coftalmologista...</p>
+                </div>
+                <!-- end content -->
+            </div>
+            <!-- end col-3 -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="line">
+                        <div class="icon"><img src="../images/icon3.png" alt="Icon"></div>
+                    </div>
+                    <h3>Neurologista</h3>
+                    <p>Neurologista...</p>
+                </div>
+                <!-- end content -->
+            </div>
+            <!-- end col-3 -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <div class="icon"><img src="../images/icon4.png" alt="Icon"></div>
+                    <h3>Dermatologista</h3>
+                    <p>Dermatologista...</p>
+                </div>
+                <!-- end content -->
+            </div>
+            <!-- end col-3 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end home-services -->
+<section class="box-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                <div class="first-box">
+                    <div class="icon"><img src="../images/icon1.png" alt="Icon"></div>
+                    <div class="content">
+                        <h3>AGENDAMENTO</h3>
+                        <p>Call emergency appointment number for emergency service.</p>
+                        <a href="faq.php" class="btn-ghost-md">SAIBA MAIS</a> </div>
+                    <!-- end content -->
+                </div>
+                <!-- end first-box -->
+            </div>
+            <!-- end col-4 -->
+            <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                <div class="second-box">
+                    <div class="icon"><img src="../images/icon2.png" alt="Icon"></div>
+                    <div class="content">
+                        <h3>CHECK UP</h3>
+                        <p>Call emergency appointment number for emergency service.</p>
+                        <a href="faq.php" class="btn-ghost-md">SAIBA MAIS</a> </div>
+                    <!-- end content -->
+                </div>
+                <!-- end second-box -->
+            </div>
+            <!-- end col-4 -->
+            <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                <div class="third-box">
+                    <div class="icon"><img src="../images/icon3.png" alt="Icon"></div>
+                    <div class="content">
+                        <h3>OTHER CLINICS</h3>
+                        <p>Call emergency appointment number for emergency service.</p>
+                        <a href="contact-us.php" class="btn-ghost-md">ENTRE EM CONTATO</a> </div>
+                    <!-- end content -->
+                </div>
+                <!-- end third-box -->
+            </div>
+            <!-- end col-4 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end box-content -->
 <section class="latest-news">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-
                 <div class="title-box">
-                    <br>
-                    <br>
                     <h2>ULTIMAS NOTICIAS</h2>
                     <h5>SEI LA OQUE ESCREVER</h5>
                 </div>
@@ -204,22 +306,22 @@
             <!-- end col-12 -->
             <div class="col-md-6 col-xs-12">
                 <div class="left">
-                    <div class="article-image"><img src="images/noticias/noticia1.webp" alt="Image"> </div>
-                    <img src="images/rated-article.png" alt="Image" class="rated-article">
-                    <h3>EM: <strong>CORONAVÍRUS</strong> </h3>
-                    <small>Postado <strong>01 de Agosto </strong>by ADM</small>
-                    <p>Covid: em que situações devo fazer check-up após infecção?</p>
+                    <div class="article-image"><img src="../images/image8.jpg" alt="Image"> </div>
+                    <img src="../images/rated-article.png" alt="Image" class="rated-article">
+                    <h3>TRATAMENTO <strong>ESPECIAL</strong> </h3>
+                    <small>Postado <strong>28 de março </strong>by ADM</small>
+                    <p>ainda nao sei oque escrever </p>
                     <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
                 <!-- end left -->
             </div>
             <!-- end col-6 -->
             <div class="col-md-6 col-xs-12">
-                <div class="left">
-                    <div class="article-image"><img src="images/noticias/noticia2.webp" alt="Image"> </div>
-                    <img src="images/rated-article.png" alt="Image" class="rated-article">
-                    <h3>EM: <strong>MUNDO</strong> </h3>
-                    <small>Postado <strong>01 de Agosto </strong>by ADM</small>
-                    <p>Mundo: OMS alerta para nova onda de covid na Europa</p>
+                <div class="right">
+                    <div class="article-image"><img src="../images/image9.jpg" alt="Image"></div>
+                    <img src="../images/rated-article.png" alt="Image" class="rated-article">
+                    <h3>CENTRO DE <strong>DOENÇAS</strong></h3>
+                    <small>Postado <strong>28 de março </strong>by ADM</small>
+                    <p>ainda nao sei oque escrever </p>
                     <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
                 <!-- end right -->
             </div>
@@ -229,14 +331,13 @@
     </div>
     <!-- end container -->
 </section>
-<!-- end home-services -->
-
 <!-- end latest-news -->
 <section class="frase overlay text-center">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 no-padding"> <img src="images/icon4.png" alt="Image">
+            <div class="col-xs-12 no-padding"> <img src="../images/icon4.png" alt="Image">
                 <h2>Check-up mensais</h2>
+                <h4>Combine o seu Check-up no Nosso Hospital !</h4>
                 <a href="faq.php" class="btn-ghost-lg">SAIBA MAIS</a> </div>
             <!-- end col-12 -->
         </div>
@@ -254,6 +355,7 @@
             <div class="col-xs-12 text-center">
                 <div class="title-box">
                     <h2>Patrocinadores</h2>
+                    <h5>faça sua propaganda</h5>
                 </div>
                 <!-- end title-box -->
             </div>
@@ -263,10 +365,10 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="owl-logos">
-                    <div class="item1"> <img src="images/patrocinadores/unimed.png" alt=""> </div>
-                    <div class="item2"> <img src="images/patrocinadores/Allianz.png" alt=""> </div>
-                    <div class="item3"> <img src="images/patrocinadores/bradesco.png" alt=""> </div>
-                    <div class="item4"> <img src="images/patrocinadores/prevent_senior.png" alt=""> </div>
+                    <div class="item"> <img src="../images/partner-logo1.jpg" alt="Image"> </div>
+                    <div class="item"> <img src="../images/partner-logo2.jpg" alt="Image"> </div>
+                    <div class="item"> <img src="../images/partner-logo3.jpg" alt="Image"> </div>
+                    <div class="item"> <img src="../images/partner-logo4.jpg" alt="Image"> </div>
                 </div>
                 <!-- end owl-logos -->
             </div>
@@ -284,7 +386,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-sm-12 col-xs-12"> <img src="images/logo-white.png" alt="Image" class="pull-left">
+            <div class="col-md-2 col-sm-12 col-xs-12"> <img src="../images/logo-white.png" alt="Image" class="pull-left">
                 <p class="copyright">Copyright © 2022 , IFSP</p>
             </div>
             <!-- end col-2 -->
@@ -319,19 +421,19 @@
 </footer>
 <!-- end footer -->
 
-<script type='text/javascript' src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/jquery.stellar.js"></script>
-<script src="js/smooth-scroll.js"></script>
-<script src="js/queryloader2.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery.maskedinput.js"></script>
-<script src="js/jquery.ba-cond.min.js" type="text/javascript" ></script>
-<script src="js/jquery.slitslider.js" type="text/javascript" ></script>
-<script src="js/slider-settings.js"></script>
-<script src="js/medicina.js"></script>
+<script type='text/javascript' src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.js"></script>
+<script src="../js/wow.js"></script>
+<script src="../js/jquery.stellar.js"></script>
+<script src="../js/smooth-scroll.js"></script>
+<script src="../js/queryloader2.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/jquery.fancybox.js"></script>
+<script src="../js/jquery.maskedinput.js"></script>
+<script src="../js/jquery.ba-cond.min.js" type="text/javascript" ></script>
+<script src="../js/jquery.slitslider.js" type="text/javascript" ></script>
+<script src="../js/slider-settings.js"></script>
+<script src="../js/medicina.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ if(isset($_GET['id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> LACIF </title>
 
-    <link rel="stylesheet" href="css/tabelacss.css">
+    <link rel="stylesheet" href="../css/tabelacss.css">
 </head>
 <body>
 
@@ -33,7 +33,7 @@ if(isset($_GET['id'])){
     <div class="row">
 
         <div class="image">
-            <img src="images/book-img.svg" alt="">
+            <img src="../images/book-img.svg" alt="">
         </div>
 
         <form action="CrudUsuarioListar.php" method="POST">

@@ -13,43 +13,43 @@
   <meta name="IFSP" content="...">
 
   <!-- LOGOS EM DIMENSÕES DIFERENTES -->
-  <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-  <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-  <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-  <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-  <link href="ico/favicon.png" rel="shortcut icon">
+  <link href="../ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+  <link href="../ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+  <link href="../ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+  <link href="../ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+  <link href="../ico/favicon.png" rel="shortcut icon">
 
   <!-- ARQUIVOS CSS -->
-  <link href="css/ionicons.min.css" rel="stylesheet">
-  <link href="css/jquery.fancybox.css" rel="stylesheet">
-  <link href="css/owl.carousel.css" rel="stylesheet">
-  <link href="css/datepicker.css" rel="stylesheet">
-  <link href="css/animate.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet" type="text/css"/>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+  <link href="../css/ionicons.min.css" rel="stylesheet">
+  <link href="../css/jquery.fancybox.css" rel="stylesheet">
+  <link href="../css/owl.carousel.css" rel="stylesheet">
+  <link href="../css/datepicker.css" rel="stylesheet">
+  <link href="../css/animate.css" rel="stylesheet">
+  <link href="../css/custom.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="../js/modernizr.custom.js"></script>
   <noscript>
-    <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styleNoJS.css" />
   </noscript>
 
   <!-- ARQUIVOS JAVASCRIPT -->
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <script type='text/javascript' src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.js"></script>
-  <script src="js/wow.js"></script>
-  <script src="js/jquery.stellar.js"></script>
-  <script src="js/smooth-scroll.js"></script>
-  <script src="js/queryloader2.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.fancybox.js"></script>
-  <script src="js/jquery.maskedinput.js"></script>
-  <script src="js/jquery.ba-cond.min.js" type="text/javascript" ></script>
-  <script src="js/jquery.slitslider.js" type="text/javascript" ></script>
-  <script src="js/slider-settings.js"></script>
-  <script src="js/medicina.js"></script>
+  <script type='text/javascript' src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.js"></script>
+  <script src="../js/wow.js"></script>
+  <script src="../js/jquery.stellar.js"></script>
+  <script src="../js/smooth-scroll.js"></script>
+  <script src="../js/queryloader2.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap-datepicker.js"></script>
+  <script src="../js/jquery.fancybox.js"></script>
+  <script src="../js/jquery.maskedinput.js"></script>
+  <script src="../js/jquery.ba-cond.min.js" type="text/javascript" ></script>
+  <script src="../js/jquery.slitslider.js" type="text/javascript" ></script>
+  <script src="../js/slider-settings.js"></script>
+  <script src="../js/medicina.js"></script>
 
 </head>
 <body>
@@ -73,8 +73,9 @@
           <!-- end col-6 -->
           <div class="col-md-3 col-sm-4 col-xs-7">
             <ul class="language">
-              <li><a href="login.php">LOGIN</a></li>
-              <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                <li><a href="exames.php">Meus Exames</a></li>
+                <li><a href="../CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                <li><a href="#"><img src="../images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
             </ul>
             <!-- end language -->
           </div>
@@ -94,7 +95,7 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
+        <a class="navbar-brand" href="index.php"><img src="../images/logo.png" alt="Image"></a> </div>
       <!-- end navbar-header -->
       <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
         <form class="visible-xs">
@@ -246,7 +247,7 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-2 col-sm-12 col-xs-12"> <img src="images/logo-white.png" alt="Image" class="pull-left">
+      <div class="col-md-2 col-sm-12 col-xs-12"> <img src="../images/logo-white.png" alt="Image" class="pull-left">
         <p class="copyright">Copyright © 2022 , IFSP</p>
       </div>
       <!-- end col-2 -->

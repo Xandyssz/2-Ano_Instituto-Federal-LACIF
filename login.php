@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login Paciente</title>
-    <link rel="stylesheet" type="text/css" href="css/Login.css">
-    <script src="js/validar.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LACIF | Login </title>
 
-
+    <link rel="stylesheet" href="css/tabelacss.css">
 </head>
 <body>
-<div class="login">
-    <div class="logo" align="center">
-        <img src="images/logo.png" alt=""/>
-        <p></p>
+
+<section class="book" id="book">
+
+    <h1 class="heading"> <span>REALIZAR</span>-LOGIN</h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="images/book2-img.svg" alt="">
+        </div>
+        <form class="user" method="post" action="AutenticadorLogin/Autenticador_Usuario.php">
+            <h3>LOGIN</h3>
+            <input type="number" name="cpf"  placeholder="Digite o CPF" class="box" required>
+            <input type="password"  name="password" placeholder="Digite a senha" class="box" required>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-user btn-block">Conecte-se</button>
+                <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
+            </div>
+        </form>
     </div>
-    <form method="post">
-        <label>
-            <input type="text" name="CPF" placeholder="CPF" required="required" />
-        </label>
 
-        <label>
-            <input type="password" name="senha" placeholder="Senha" required="required" />
-        </label>
-
-        <label>
-            <input type="" required="required">
-         </label>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Entrar.</button>
-    </form>
-</div>
+</section>
 </body>
 </html>
