@@ -18,7 +18,7 @@
         <div class="image">
             <img src="images/book2-img.svg" alt="">
         </div>
-        <form class="user" method="post" action="AutenticadorLogin/Autenticador_Paciente.php">
+        <form class="user" method="post" action="AutenticadorLogin/Autenticador.php">
             <h3>LOGIN</h3>
             <input type="number" name="cpf"  placeholder="Digite o CPF" class="box" required>
             <input type="password"  name="password" placeholder="Digite a senha" class="box" required>
