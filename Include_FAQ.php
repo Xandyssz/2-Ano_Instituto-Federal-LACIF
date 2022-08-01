@@ -1,7 +1,7 @@
 <div class="container">
-    <h1 class="title-bottom-line">QUAIS SÃO OS EXAMES DE ANÁLISES <strong>CLININICA</strong> </h1>
+    <h1 class="title-bottom-line">PERGUNTAS <strong>FREQUENTES</strong> </h1>
     <p> Dúvidas são bastante comuns na hora de realizar um exame. Caso você tenha alguma, veja se ela está na lista abaixo.</p>
-    <p>Caso a sua questão não seja solucionada por aqui, entre em contato pelo <a href="../contact-us.php">Fale Conosco</a></p>
+    <p>Caso a sua questão não seja solucionada por aqui, entre em contato pelo <a href="contact-us.php">Fale Conosco</a></p>
     <br>
     <br>
 

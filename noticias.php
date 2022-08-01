@@ -43,155 +43,13 @@
 </head>
 <body>
 <header>
-  <!-- menu cabeçalho -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-5"></div>
-        <!-- end col-3 -->
-        <div class="col-md-6 col-sm-5 hidden-xs">
-          <form>
-            <label>
-              <input type="text" placeholder="Posso ajudar?">
-              <input type="submit" value="BUSCAR">
-            </label>
-          </form>
-          <!-- end form -->
-        </div>
-        <!-- end col-6 -->
-        <div class="col-md-3 col-sm-4 col-xs-7">
-          <ul class="language">
-            <li><a href="login.php">LOGIN</a></li>
-              <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
-          </ul>
-          <!-- end language -->
-        </div>
-        <!-- end col-3 -->
-      </div>
-      <!-- end row -->
-    </div>
-    <!-- end container -->
-  </div>
-  <!-- end top-bar -->
-
-
-
-  <!-- Inicio Menu -->
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
-      <!-- end navbar-header -->
-      <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
-        <form class="visible-xs">
-          <label>
-            <input type="text" placeholder="Type a word to find">
-          </label>
-          <input type="submit" value="SEARCH">
-        </form>
-        <!-- end form -->
-        <ul class="social-media hidden-sm">
-          <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a></li>
-          <li><a href="https://twitter.com/xandyszz"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="https://github.com/Xandyssz"><i class="ion-social-github"></i></a></li>
-        </ul>
-        <!-- end social-media -->
-
-        <ul class="nav navbar-nav">
-
-          <li><a href="index.php">Home</a></li>
-
-          <li><a href="#">Exames</a>
-            <ul><!-- menu suspenso dentro do menu original-->
-              <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
-            </ul>
-            <!-- end dropdown -->
-          </li>
-
-          <li><a href="noticias.php">Noticias</a></li>
-          <li><a href="faq.php">FAQ</a></li>
-          <li><a href="contact-us.php">Contato</a></li>
-        </ul>
-        <!-- FINAL MENU -->
-        <!-- end nav -->
-      </div>
-      <!-- end navbar-collapse -->
-    </div>
-    <!-- end container -->
-  </nav>
-  <!-- end navbar -->
+    <?php include_once('Include_Header.php');?>
 </header>
 <!-- end header -->
 
-
-
-
 <!-- FAQ -->
 <section class="blogs" id="blogs">
-
-  <h1 class="heading"> ULTIMAS <span>NOTICIAS</span> </h1>
-
-  <div class="box-container">
-
-    <!-- PRIMEIRA CAIXA DE NOTICIAS-->
-    <div class="box">
-      <div class="image">
-        <img src="images/noticias/noticia1.webp" alt="">
-      </div>
-      <div class="content">
-        <div class="icon">
-          <a href="#"> <i class="fas fa-calendar"></i> 1st August, 2022 </a>
-          <a href="#"> <i class="fas fa-user"></i> by admin </a>
-        </div>
-        <h3>Check-up após infecção</h3>
-        <p>Médicos apontam que não existe 'receita de bolo', que sirva de orientação para todo mundo que teve doença. Mas há três situações que podem exigir uma avaliação médica mais aprofundada.</p>
-          <a href="#" class="btn"> Editar <span class="fas fa-chevron-right"></span> </a>
-
-      </div>
-    </div>
-
-    <!-- SEGUNDA CAIXA DE NOTICIAS-->
-    <div class="box">
-      <div class="image">
-        <img src="images/noticias/noticia2.webp" alt="">
-      </div>
-      <div class="content">
-        <div class="icon">
-          <a href="#"> <i class="fas fa-calendar"></i> 1st August, 2022 </a>
-          <a href="#"> <i class="fas fa-user"></i> by admin </a>
-        </div>
-        <h3>Nova onda de COVID-19</h3>
-        <p>A Organização Mundial da Saúde (OMS) alertou para escalada de casos e hospitalizações por covid-19 na Europa,
-            semelhante à situação de 2021. Dessa vez, a nova onda está sendo impulsionada por sublinhagens da
-            variante Ômicron, principalmente BA.2 e BA.5.</p>
-          <a href="#" class="btn"> Editar <span class="fas fa-chevron-right"></span> </a>
-
-
-      </div>
-    </div>
-
-    <!-- TERCEIRA CAIXA DE NOTICIAS-->
-    <div class="box">
-      <div class="image">
-        <img src="images/noticias/noticia3.jpg" alt="">
-      </div>
-      <div class="content">
-        <div class="icon">
-          <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
-          <a href="#"> <i class="fas fa-user"></i> by admin </a>
-        </div>
-        <h3>Anvisa mantém proibição do cigarro eletrônico no Brasil</h3>
-        <p>A Anvisa manteve a proibição do cigarro eletrônico no Brasil e defendeu a
-            fiscalização rígida do comércio ilegal.</p>
-          <a href="#" class="btn"> Editar <span class="fas fa-chevron-right"></span> </a>
-
-      </div>
-    </div>
-    <!-- QUARTA CAIXA DE NOTICIAS-->
-
-  </div>
-
+    <?php include_once('Include_NewsPrincipal.php');?>
 </section>
 
 <!-- final faq -->
@@ -202,39 +60,7 @@
 </section>
 <!-- end footer-bar -->
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 col-sm-12 col-xs-12"> <img src="images/logo-white.png" alt="Image" class="pull-left">
-        <p class="copyright">Copyright © 2022 , IFSP</p>
-      </div>
-      <!-- end col-2 -->
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <form>
-      </div>
-      <!-- end col-4 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
-          <li><a href="faq.php">Faq</a></li>
-          <li><a href="contact-us.php">Contact us</a></li>
-        </ul>
-      </div>
-      <!-- end col-2 -->
-        <div class="col-md-2 col-sm-4 col-xs-12">
-            <h4>Social Media</h4>
-            <ul>
-                <li><a href="https://www.instagram.com/xanddy._/">Instagram</a></li>
-                <li><a href="https://twitter.com/xandyszz">Twitter</a></li>
-                <li><a href="https://github.com/Xandyssz">GitHub</a></li>
-            </ul>
-        </div>
-      <!-- end col-2 -->
-    </div>
-    <!-- end row -->
-  </div>
-  <!-- end container -->
+    <?php include_once('Include_Footer.php');?>
 </footer>
 <!-- end footer -->
 

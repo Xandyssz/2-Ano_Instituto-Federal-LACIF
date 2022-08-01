@@ -16,8 +16,8 @@
             <!-- end col-6 -->
             <div class="col-md-3 col-sm-4 col-xs-7">
                 <ul class="language">
-                    <li><a href="../login.php">LOGIN</a></li>
-                    <li><a href="#"><img src="../images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
                 </ul>
                 <!-- end language -->
             </div>
@@ -36,7 +36,7 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand" href="../index.php"><img src="../images/logo.png" alt="Image"></a> </div>
+            <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
         <!-- end navbar-header -->
         <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
             <form class="visible-xs">
@@ -55,18 +55,18 @@
 
             <ul class="nav navbar-nav">
 
-                <li><a href="../index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
 
                 <li><a href="#">Exames</a>
                     <ul><!-- menu suspenso dentro do menu original-->
-                        <li><a href="../AnaliseClinica.php">Análises Clínicas</a></li>
+                        <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
                     </ul>
                     <!-- end dropdown -->
                 </li>
 
-                <li><a href="../noticias.php">Noticias</a></li>
-                <li><a href="../faq.php">FAQ</a></li>
-                <li><a href="../contact-us.php">Contato</a></li>
+                <li><a href="noticias.php">Noticias</a></li>
+                <li><a href="faq.php">FAQ</a></li>
+                <li><a href="contact-us.php">Contato</a></li>
             </ul>
             <!-- FINAL MENU -->
             <!-- end nav -->

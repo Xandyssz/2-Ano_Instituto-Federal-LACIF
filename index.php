@@ -40,15 +40,15 @@
 <body>
 
 <header>
-    <?php include_once('Includes/header.php');?>
+    <?php include_once('Include_Header.php');?>
 </header>
 
 <section class="slider">
-    <?php include_once('Includes/carrousel.php');?>
+    <?php include_once('Include_Carrossel.php');?>
 </section>
 
 <section class="latest-news">
-    <?php include_once('Includes/news.php');?>
+    <?php include_once('Include_NewsCard.php');?>
 </section>
 
 <section class="frase overlay text-center">
@@ -63,7 +63,7 @@
 
 
 <section class="logos">
-    <?php include_once('Includes/sponsor.php');?>
+    <?php include_once('Include_Sponsor.php');?>
 </section>
 
 
@@ -72,7 +72,7 @@
 </section>
 
 <footer>
-    <?php include_once('Includes/footer.php');?>
+    <?php include_once('Include_Footer.php');?>
 </footer>
 
 <script type='text/javascript' src="js/jquery.min.js"></script>

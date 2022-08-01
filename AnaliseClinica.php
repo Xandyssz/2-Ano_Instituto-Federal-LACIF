@@ -54,29 +54,20 @@
 </head>
 <body>
 <header>
-    <?php include_once('Includes/header.php');?>
+    <?php include_once('Include_Header.php');?>
 </header>
-<!-- end header -->
 
-<!-- INICIO SESSÃO DE PERGUNTAS E RESPOSTAS FREQUENTES [FAQ] -->
 <section class="inner-content">
-    <?php include_once('Includes/AnaliseC.php');?>
+    <?php include_once('Include_AnaliseC.php');?>
 </section>
-<!-- FINAL DA SESSÃO DE PERGUNTAS E RESPOSTAS FREQUENTES [FAQ] -->
 
-<!-- end logos -->
-
-<!-- INICIO DO RODAPÉ -->
-<!-- INICIO DOS TEXTOS DO RODAPÉ -->
 <section class="footer-bar">
   <div class="container"></div>
   </section>
 
 <footer>
-    <?php include_once('Includes/footer.php');?>
+    <?php include_once('Include_Footer.php');?>
 </footer>
-<!-- end footer -->
-<!-- FIM DOS TEXTOS DO RODAPÉ -->
-<!-- FIM DO RODAPÉ -->
+
 </body>
 </html>

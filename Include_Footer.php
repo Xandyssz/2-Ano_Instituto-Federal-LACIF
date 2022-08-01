@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-2 col-sm-12 col-xs-12"> <img src="../images/logo-white.png" alt="Image" class="pull-left">
+        <div class="col-md-2 col-sm-12 col-xs-12"> <img src="images/logo-white.png" alt="Image" class="pull-left">
             <p class="copyright">Copyright © 2022 , IFSP</p>
         </div>
         <!-- end col-2 -->
@@ -11,10 +11,10 @@
         <div class="col-md-2 col-sm-4 col-xs-6">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../AnaliseClinica.php">Análises Clinicas</a></li>
-                <li><a href="../faq.php">Faq</a></li>
-                <li><a href="../contact-us.php">Contact us</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
+                <li><a href="faq.php">Faq</a></li>
+                <li><a href="contact-us.php">Contact us</a></li>
             </ul>
         </div>
 
