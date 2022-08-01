@@ -7,7 +7,7 @@
                     <div class="content">
                         <h2>??<u>??</u><br>
                             ??</h2>
-                        <img src="images/pulse.png" alt="Image"><br>
+                        <img src="../images/pulse.png" alt="Image"><br>
                         <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     <!-- end content -->
                 </div>
@@ -20,7 +20,7 @@
                     <div class="content">
                         <h2>Nossa sala de <u>MRI</u> <br>
                             Foi renovada para nossos pacientes</h2>
-                        <img src="images/pulse.png" alt="Image"><br>
+                        <img src="../images/pulse.png" alt="Image"><br>
                         <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     <!-- end content -->
                 </div>
@@ -33,7 +33,7 @@
                     <div class="content">
                         <h2>Suporte <u>online</u> muito<br>
                             fácil de obter em nosso novo site</h2>
-                        <img src="images/pulse.png" alt="Image"><br>
+                        <img src="../images/pulse.png" alt="Image"><br>
                         <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     <!-- end content -->
                 </div>
@@ -46,7 +46,7 @@
                     <div class="content">
                         <h2>30% <u>de desconto</u> para <br>
                             pacientes de tratamento especial</h2>
-                        <img src="images/pulse.png" alt="Image"><br>
+                        <img src="../images/pulse.png" alt="Image"><br>
                         <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     <!-- end content -->
                 </div>

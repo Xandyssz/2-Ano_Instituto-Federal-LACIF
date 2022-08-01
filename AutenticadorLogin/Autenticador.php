@@ -20,7 +20,7 @@ if (!empty($_POST) && (empty($_POST['cpf'])|| empty ($_POST['password']))){
     $_SESSION['password'] = $password;
     $_SESSION['sessiontime'] = time() + 60*30; // tempo de expiração da pagina
 
-    header("location: ../PacienteAutenticado/index.php");
+    header("location: ../PacienteAutenticado/home.php");
 
 }else {
     echo "<div align = 'center'> <h1> Usuario e/ou senha invalido(s)! </h1> </div>";

@@ -6,7 +6,7 @@
     <!-- PRIMEIRA CAIXA DE NOTICIAS-->
     <div class="box">
         <div class="image">
-            <img src="images/noticias/noticia1.webp" alt="">
+            <img src="../images/noticias/noticia1.webp" alt="">
         </div>
         <div class="content">
             <div class="icon">
@@ -23,7 +23,7 @@
     <!-- SEGUNDA CAIXA DE NOTICIAS-->
     <div class="box">
         <div class="image">
-            <img src="images/noticias/noticia2.webp" alt="">
+            <img src="../images/noticias/noticia2.webp" alt="">
         </div>
         <div class="content">
             <div class="icon">
@@ -43,7 +43,7 @@
     <!-- TERCEIRA CAIXA DE NOTICIAS-->
     <div class="box">
         <div class="image">
-            <img src="images/noticias/noticia3.jpg" alt="">
+            <img src="../images/noticias/noticia3.jpg" alt="">
         </div>
         <div class="content">
             <div class="icon">

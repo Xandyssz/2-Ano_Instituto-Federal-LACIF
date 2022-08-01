@@ -13,8 +13,8 @@
         <!-- end col-12 -->
         <div class="col-md-6 col-xs-12">
             <div class="left">
-                <div class="article-image"><img src="images/noticias/noticia1.webp" alt="Image"> </div>
-                <img src="images/rated-article.png" alt="Image" class="rated-article">
+                <div class="article-image"><img src="../images/noticias/noticia1.webp" alt="Image"> </div>
+                <img src="../images/rated-article.png" alt="Image" class="rated-article">
                 <h3>EM: <strong>CORONAVÍRUS</strong> </h3>
                 <small>Postado <strong>01 de Agosto </strong>by ADM</small>
                 <p>Covid: em que situações devo fazer check-up após infecção?</p>
@@ -24,8 +24,8 @@
         <!-- end col-6 -->
         <div class="col-md-6 col-xs-12">
             <div class="left">
-                <div class="article-image"><img src="images/noticias/noticia2.webp" alt="Image"> </div>
-                <img src="images/rated-article.png" alt="Image" class="rated-article">
+                <div class="article-image"><img src="../images/noticias/noticia2.webp" alt="Image"> </div>
+                <img src="../images/rated-article.png" alt="Image" class="rated-article">
                 <h3>EM: <strong>MUNDO</strong> </h3>
                 <small>Postado <strong>01 de Agosto </strong>by ADM</small>
                 <p>Mundo: OMS alerta para nova onda de covid na Europa</p>
