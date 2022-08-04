@@ -9,19 +9,38 @@
                     <!-- end form -->
                 </div>
                 <!-- end col-6 -->
+                <?php
+                if ($exibirTipodeAcesso == "Administrador"){
+
+                ?>
                 <div class="menuzinho">
                     <ul class="language">
-                        <li><a href="exames.php">Exames</a></li>
-                        <li><a href="exames.php">Admin</a></li>
+                        <li><a href="PacienteAutenticado/exames.php">Meus Exames</a></li>
                         <li><a href="Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-                        <?php echo "CPF:" . $_SESSION['cpf'] ?>
-                        <li><a><?php
-                                if(isset($_SESSION['logado'])){
-                                    session_destroy();
-                                    header("Location:index.php");
-                                }
-                                echo " <a href='index.php'>Sair</a>";
-                                ?></a></li>
+                        <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                        <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+
+                        <?php
+                        } elseif($exibirTipodeAcesso == "Paciente"){
+                            ?>
+                            <li class="nav-item"><a href="#" class="nav-link">Funções Básicas do Cliente</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Funções Fundamentais do Cliente</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Funções de Saídas do Cliente</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">teste stes testeCliente</a></li>
+
+                            <?php
+                        } elseif ($exibirTipodeAcesso == "Recepcionista"){
+                            ?>
+                            <li class="nav-item"><a href="#" class="nav-link">Funções Básicas do Vendedor</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Funções  do Vendedor</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Funções de VENDdor do Vendedor</a></li>
+                            <?php
+                        }
+                        ?>
+
+                        <li><a href="sair.php" class="nav-link"><i class="fa fa-sign-out fa-1x"></i> Sair</a></li>
+
+
                     </ul>
                     <!-- end language -->
                 </div>
