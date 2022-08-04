@@ -6,39 +6,52 @@
                 <div class="col-md-3 col-sm-3 col-xs-5"></div>
                 <!-- end col-3 -->
                 <div class="col-md-6 col-sm-5 hidden-xs">
+
                     <!-- end form -->
                 </div>
                 <!-- end col-6 -->
-                <?php
-                if ($exibirTipodeAcesso == "Administrador"){
 
-                ?>
                 <div class="menuzinho">
-                    <ul class="language">
-                        <li><a href="PacienteAutenticado/exames.php">Meus Exames</a></li>
-                        <li><a href="Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-                        <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                        <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
 
+                    <ul class="language">
                         <?php
+                        if ($exibirTipodeAcesso == "Administrador"){
+
+                            ?>
+
+                            <li><a href="PacienteAutenticado/exames.php">Meus Exames</a></li>
+                            <li><a href="Crud_Consulta/CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+
+                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+
+                            <?php
                         } elseif($exibirTipodeAcesso == "Paciente"){
                             ?>
-                            <li class="nav-item"><a href="#" class="nav-link">Funções Básicas do Cliente</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Funções Fundamentais do Cliente</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Funções de Saídas do Cliente</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">teste stes testeCliente</a></li>
+                            <li><a href="PacienteAutenticado/exames.php">Meus Exames</a></li>
+                            <li><a href="Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+
+                            <?php
+                        }elseif($exibirTipodeAcesso == "Doutor"){
+                            ?>
+                            <li><a href="PacienteAutenticado/exames.php">Visualizar Exames</a></li>
+                            <li><a href="Crud_Consulta/CrudConsultaListar.php">Visualizar Consulta</a></li>
+                            <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
 
                             <?php
                         } elseif ($exibirTipodeAcesso == "Recepcionista"){
                             ?>
-                            <li class="nav-item"><a href="#" class="nav-link">Funções Básicas do Vendedor</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Funções  do Vendedor</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Funções de VENDdor do Vendedor</a></li>
-                            <?php
-                        }
+                            <li><a href="Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a>
+                            </li>
+                            <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="Crud_Consulta/CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+                        <?php  }
                         ?>
+                        <li><a href="sair.php">Sair</a></li>
 
-                        <li><a href="sair.php" class="nav-link"><i class="fa fa-sign-out fa-1x"></i> Sair</a></li>
 
 
                     </ul>
@@ -58,10 +71,13 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
             <!-- end navbar-header -->
-            <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
+                 id="bs-example-navbar-collapse-1">
                 <form class="visible-xs">
                     <label>
                         <input type="text" placeholder="Type a word to find">
@@ -70,7 +86,8 @@
                 </form>
                 <!-- end form -->
                 <ul class="social-media hidden-sm">
-                    <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a></li>
+                    <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a>
+                    </li>
                     <li><a href="https://twitter.com/xandyszz"><i class="ion-social-twitter"></i></a></li>
                     <li><a href="https://github.com/Xandyssz"><i class="ion-social-github"></i></a></li>
                 </ul>
@@ -81,7 +98,8 @@
                     <li><a href="index.php">Home</a></li>
 
                     <li><a href="#">Exames</a>
-                        <ul><!-- menu suspenso dentro do menu original-->
+                        <ul>
+                            <!-- menu suspenso dentro do menu original-->
                             <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
                         </ul>
                         <!-- end dropdown -->

@@ -24,7 +24,6 @@
             <input type="senha"  name="senha" placeholder="Digite a senha" class="box" required>
             <select name="nivelAcesso" class="box" >
                 <option value="Paciente">Paciente</option>
-                <option value="Recepcionista">Recepcionista</option>
                 <option value="Doutor">Doutor</option>
                 <option value="Administrador">Administrador</option>
             </select>

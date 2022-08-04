@@ -5,12 +5,6 @@
                 <div class="col-md-3 col-sm-3 col-xs-5"></div>
                 <!-- end col-3 -->
                 <div class="col-md-6 col-sm-5 hidden-xs">
-                    <form>
-                        <label>
-                            <input type="text" placeholder="Posso ajudar?">
-                            <input type="submit" value="BUSCAR">
-                        </label>
-                    </form>
                     <!-- end form -->
                 </div>
                 <!-- end col-6 -->

@@ -149,7 +149,7 @@
 
 
 <!-- INICIO - CONTATO -->
-<?php include_once('contato.php');?>
+<?php include_once('IncludeContato.php');?>
 
 <!-- FIM - CONTATO -->
 
