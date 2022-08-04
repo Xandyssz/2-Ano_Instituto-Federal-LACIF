@@ -18,14 +18,15 @@
         <div class="image">
             <img src="images/book2-img.svg" alt="">
         </div>
-        <form class="user" method="post" action="AutenticadorLogin/Autenticador.php">
+        <form class="user" method="post" action="Autenticador.php">
             <h3>LOGIN</h3>
             <input type="number" name="cpf"  placeholder="Digite o CPF" class="box" required>
-            <input type="password"  name="password" placeholder="Digite a senha" class="box" required>
+            <input type="senha"  name="senha" placeholder="Digite a senha" class="box" required>
             <select name="nivelAcesso" class="box" >
                 <option value="Paciente">Paciente</option>
                 <option value="Recepcionista">Recepcionista</option>
                 <option value="Doutor">Doutor</option>
+                <option value="Administrador">Administrador</option>
             </select>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-user btn-block">Conecte-se</button>

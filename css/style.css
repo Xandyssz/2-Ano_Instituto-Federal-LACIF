@@ -622,3 +622,10 @@ footer form input[type="submit"]{ margin-top:0; margin-left:8px;}
 .footer-bar h2{ font-size:24px;}
 footer form input[type="text"]{ max-width:220px;}
 footer ul{ margin-bottom:40px;}
+
+
+}
+
+.menuzinho{
+    display: flex;
+}
