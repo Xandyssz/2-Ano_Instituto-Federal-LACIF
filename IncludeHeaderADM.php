@@ -19,34 +19,34 @@
 
                             ?>
 
-                            <li><a href="PacienteAutenticado/exames.php">Meus Exames</a></li>
-                            <li><a href="Crud_Consulta/CrudConsultaListar.php">Gerenciar Consulta</a></li>
-                            <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="exames.php">Meus Exames</a></li>
+                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
 
                             <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
 
                             <?php
                         } elseif($exibirTipodeAcesso == "Paciente"){
                             ?>
-                            <li><a href="PacienteAutenticado/exames.php">Meus Exames</a></li>
-                            <li><a href="Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                            <li><a href="exames.php">Meus Exames</a></li>
+                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
                             <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
 
                             <?php
                         }elseif($exibirTipodeAcesso == "Doutor"){
                             ?>
-                            <li><a href="PacienteAutenticado/exames.php">Visualizar Exames</a></li>
-                            <li><a href="Crud_Consulta/CrudConsultaListar.php">Visualizar Consulta</a></li>
-                            <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="exames.php">Visualizar Exames</a></li>
+                            <li><a href="CrudConsultaListar.php">Visualizar Consulta</a></li>
+                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                             <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
 
                             <?php
                         } elseif ($exibirTipodeAcesso == "Recepcionista"){
                             ?>
-                            <li><a href="Crud_Consulta/CrudConsultaAgendamento.php">Agendar Consulta</a>
+                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a>
                             </li>
-                            <li><a href="Crud_Usuario/CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                            <li><a href="Crud_Consulta/CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
                             <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
                         <?php  }
                         ?>

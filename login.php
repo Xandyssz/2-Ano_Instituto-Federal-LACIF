@@ -29,7 +29,7 @@
             </select>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-user btn-block">Conecte-se</button>
-                <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='Crud_Usuario/CrudUsuarioCadastrar.php'"/>
+                <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
             </div>
         </form>
     </div>
