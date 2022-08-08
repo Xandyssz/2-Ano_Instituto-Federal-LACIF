@@ -20,7 +20,7 @@
             <img src="images/book2-img.svg" alt="">
         </div>
 
-        <form action="CrudUsuarioListar.php" method="POST">
+        <form action="CrudUsuariozListar.php" method="POST">
             <h3>Cadastro</h3>
             <input type="text"  id="nome" name="nome" placeholder="Digite o Nome Completo" class="box">
             <input type="email"  name="email" placeholder="Digite o email" class="box">

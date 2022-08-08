@@ -1,8 +1,4 @@
-<?php
-session_start();
-include_once('sessao.php');
-$exibirTipodeAcesso = $_SESSION['tipo_acesso'];
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +44,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 <body>
 
 <!-- INICIO - MENU CABEÇALHO -->
-<?php include_once('IncludeHeaderADM.php');?>
+<?php include_once('IncludeHeader.php');?>
 <!-- FIM - MENU CABEÇALHO!! -->
 
 

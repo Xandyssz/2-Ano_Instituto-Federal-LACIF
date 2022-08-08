@@ -5,41 +5,53 @@
     <div class="cards">
 
         <div class="card card-1">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h2 class="card__title">xxxxxxxxxxxxxxxxx</h2>
-        </div>
+            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
+            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
+            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
+            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
+
+
+    </div>
 
         <div class="card card-2">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h2 class="card__title">xxxxxxxxxxxxxxxxx</h2>
+            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
+            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
+            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
+            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
+
         </div>
 
         <div class="card card-3">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h2 class="card__title">xxxxxxxxxx</h2>
+            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
+            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
+            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
+            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
 
         </div>
+
         <div class="card card-4">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h2 class="card__title">xxxxxxxxxxxxxxxxxx.</h2>
-            </p>
+            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
+            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
+            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
+            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
+
         </div>
+
         <div class="card card-5">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h2 class="card__title">xxxxxxxxxxxxx</h2>
+            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
+            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
+            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
+            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
 
-            </p>
         </div>
+
         <div class="card card-1">
-            <div class="card__icon"><i class="fas fa-bolt"></i></div>
-            <p class="card__exit"><i class="fas fa-times"></i></p>
-            <h2 class="card__title">xxxxxxxxxxxxxxx</h2>
+            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
+            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
+            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
+            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
 
         </div>
+
     </div>
 </div>

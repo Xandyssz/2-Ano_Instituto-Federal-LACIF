@@ -42,7 +42,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <noscript>
-        <link rel="stylesheet" type="text/css" href="../css/styleNoJS.css" />
+        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
     </noscript>
 
 
@@ -80,14 +80,14 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
 
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
                             <?php
                         } elseif($exibirTipodeAcesso == "Paciente"){
                             ?>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
                             <?php
                         }elseif($exibirTipodeAcesso == "Doutor"){
@@ -95,7 +95,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             <li><a href="exames.php">Visualizar Exames</a></li>
                             <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
                             <?php
                         } elseif ($exibirTipodeAcesso == "Recepcionista"){
@@ -104,7 +104,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             </li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                             <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
                         <?php  }
                         ?>
                         <li><a href="sair.php">Sair</a></li>
@@ -127,7 +127,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
 
 <!-- FAQ -->
-<section class="inner-content">
+<section class="container-fluid">
     <div class="form-group col-md-12">
         <input type="button" name="Cadastrar" class="btn btn-info" value="Cadastrar" onclick="window.location.href='CrudConsultaAgendamento.php'"/>
         <input type="button" name="imprmir" class="btn btn-info" value="Imprimir" onclick="window.print();">
@@ -143,11 +143,12 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                 <th>CPF</th>
                 <th>Celular</th>
                 <th>Convenio</th>
-                <th>Tipo da Consulta </th>
                 <th>Data da Consulta</th>
+                <th>Tipo da Consulta </th>
                 <th>Horario da Consulta</th>
                 <th>Tipo Sanguineo</th>
                 <th>Sexo do Paciente</th>
+                <th>Status do Exame</th>
                 <th>Acoes</th>
                 </thead>
 
@@ -161,7 +162,6 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                         <td><?php echo $cpf = $_POST['cpf']; ?></td>
                         <td><?php echo $celular = $_POST['celular']; ?></td>
                         <td><?php echo $convenio = $_POST['convenio']; ?></td>
-                        <td><?php echo $tipo = $_POST['tipo']; ?></td>
                         <td>
                             <?php
                             // transformar a data do estilo dos EUA em BR
@@ -169,9 +169,11 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             echo $data_brasil = date_format(date_create($data_usa), 'd/m/Y');
                             ?>
                         </td>
+                        <td><?php echo $tipo = $_POST['tipo']; ?></td>
                         <td><?php echo $horario_cons = $_POST['horario_cons']; ?></td>
                         <td><?php echo $tiposanguineo = $_POST['tiposanguineo']?></td>
                         <td><?php echo $sexo = $_POST['sexo']?></td>
+                        <td></td>
                     <td>
                         <?php
                         echo "<a href='CrudConsultaEditar.php?id="

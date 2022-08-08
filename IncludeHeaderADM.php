@@ -22,15 +22,16 @@
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
 
                             <?php
                         } elseif($exibirTipodeAcesso == "Paciente"){
                             ?>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+
 
                             <?php
                         }elseif($exibirTipodeAcesso == "Doutor"){
@@ -38,18 +39,12 @@
                             <li><a href="exames.php">Visualizar Exames</a></li>
                             <li><a href="CrudConsultaListar.php">Visualizar Consulta</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+
 
                             <?php
-                        } elseif ($exibirTipodeAcesso == "Recepcionista"){
+                        }
                             ?>
-                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a>
-                            </li>
-                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
-                            <li><a><?php echo "CPF DA SESSSÃO:" . $_SESSION['cpf'] ?></a></li>
-                        <?php  }
-                        ?>
                         <li><a href="sair.php">Sair</a></li>
 
 
@@ -78,12 +73,14 @@
             <!-- end navbar-header -->
             <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
                  id="bs-example-navbar-collapse-1">
+
                 <form class="visible-xs">
                     <label>
                         <input type="text" placeholder="Type a word to find">
                     </label>
                     <input type="submit" value="SEARCH">
                 </form>
+
                 <!-- end form -->
                 <ul class="social-media hidden-sm">
                     <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a>

@@ -51,7 +51,7 @@
 
                     <li><a href="index.php">Home</a></li>
 
-                    <li><a href="#">Exames</a>
+                    <li><a href="">Exames</a>
                         <ul><!-- menu suspenso dentro do menu original-->
                             <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
                         </ul>
