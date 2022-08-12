@@ -135,7 +135,7 @@
 <!-- FAQ -->
 <section class="inner-content">
     <div class="form-group col-md-12">
-        <input type="button" name="Cadastrar" class="btn btn-info" value="Cadastrar" onclick="window.location.href='../crudAgendamento.php'"/>
+        <input type="button" name="Cadastrar" class="btn btn-info" value="Cadastrar" onclick="window.location.href='crudUsuarioAgendamento.php'"/>
         <input type="button" name="imprmir" class="btn btn-info" value="Imprimir" onclick="window.print();">
     </div>
 

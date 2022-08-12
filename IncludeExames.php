@@ -50,8 +50,6 @@
             <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
             <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
             <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
-
         </div>
-
     </div>
 </div>

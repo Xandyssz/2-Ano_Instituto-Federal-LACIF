@@ -8,6 +8,7 @@ if(isset($_GET['id'])){
     $convenio   = $_GET['convenio'];
     $tipo         = $_GET['tipo'];
     $sexo         = $_GET['sexo'];
+    $status       = $_GET['status'];
     $data_usa   = $_GET['data_usa'];
     $horario_cons = $_GET['horario_cons'];
     $tiposanguineo = $_GET['tiposanguineo'];
@@ -211,7 +212,27 @@ if(isset($_GET['id'])){
                 }
                 ?>
             </select>
-            <input type="submit" name="Atualizar" class="btn btn-danger" value="Atualizar" onclick="window.location.href='CrudListar.php'"/>
+
+            <select name="status" class="box" value="<?php echo $status; ?>">
+                <?php
+                if ($status == "Pendente") {
+                    ?>
+                    <option value="Pendente"selected>Pendente</option>
+                    <option value="Finalizado">Finalizado</option>
+
+                    <?php
+                }
+                elseif ($status == "Finalizado") {
+                    ?>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Finalizado"selected>Finalizado</option>
+                    <?php
+                }
+                ?>
+
+
+
+                <input type="submit" name="Atualizar" class="btn btn-danger" value="Atualizar" onclick="window.location.href='CrudListar.php'"/>
         </form>
     </div>
 

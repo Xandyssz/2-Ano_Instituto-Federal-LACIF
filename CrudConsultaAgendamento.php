@@ -53,7 +53,11 @@
                 <option value="CheckuP">Check-Up</option>
                 <option value="Sangue">Sangue</option>
                 <option value="Fezes">Fezes</option>
-            </select>z
+            </select>
+
+            <select name="status" class="box" >
+                <option value="Pendente"selected>Pendente</option>
+            </select>
 
             <input type="submit" name="agendar" class="btn btn-danger" value="Agendar"/>
         </form>

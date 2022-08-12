@@ -1,43 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Registrar-se </title>
+<?php
+session_start();
+include_once('conexao.php');  // se ele clicou no botão salvar
+?>
 
-    <link rel="stylesheet" href="css/tabelacss.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Registrar-se </title>
 
-<section class="book" id="book">
+        <link rel="stylesheet" href="css/tabelacss.css">
 
-    <h1 class="heading"> <span>REALIZAR</span>-CADASTRO</h1>
+        <script src="js/funcoes.js"></script>
 
-    <div class="row">
+    </head>
+    <body>
 
-        <div class="image">
-            <img src="images/book2-img.svg" alt="">
+    <section class="book" id="book">
+
+        <h1 class="heading"> <span>REALIZAR</span>-CADASTRO</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/book2-img.svg" alt="">
+            </div>
+
+            <form action="#" method="POST">
+                <h3>Cadastro</h3>
+                <input type="text"  name="nome" id="nome" placeholder="Digite o Nome Completo" class="box">
+                <input type="number" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box">
+                <input type="email"  name="email" id="email" placeholder="Digite o email" class="box">
+                <input type="password"  name="senha" id="senha" placeholder="Digite a senha" class="box">
+                <input type="number" name="celular" id="celular" placeholder="Digite Numero de Contato" class="box">
+                <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box">
+                <input type="date"  name="datanasc" id="datanasc" class="box">
+
+                <input type="button" name="salvar" id="salvar" class="btn btn-danger" onclick="location.href='IncludeHome.php'" value="Cancelar">
+                <input type="submit" name="salvar" id="salvar" class="btn btn-danger" value="salvar">
+            </form>
         </div>
+    </section>
 
-        <form action="CrudUsuariozListar.php" method="POST">
-            <h3>Cadastro</h3>
-            <input type="text"  id="nome" name="nome" placeholder="Digite o Nome Completo" class="box">
-            <input type="email"  name="email" placeholder="Digite o email" class="box">
-            <input type="number" name="cpf"  placeholder="Digite o CPF" class="box">
-            <input type="password"  name="password" placeholder="Digite a senha" class="box">
-            <input type="date"  name="data_cons" class="box">
-            <input type="number" name="celular" placeholder="Digite Numero de Contato" class="box">
-            <input type="text" name="endereco" placeholder="Digite o endereco" class="box">
-            <select name="nivelAcesso" class="box" >
-                <option value="Paciente"selected>Paciente</option>
-            </select>
+    </body>
+    </html>
 
-            <input type="submit" name="cadastrar" class="btn btn-danger" value="Cadastrar"/>
 
-        </form>
-    </div>
+<?php
 
-</section>
-</body>
-</html>
+if (isset($_POST['salvar'])){
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $celular = $_POST['celular'];
+    $endereco = $_POST['endereco'];
+    $datanasc = $_POST['datanasc'];
+
+    // Fazer o insert  no banco de dados
+
+    $query = "SELECT nome, cpf, email, senha, celular, endereco, datanasc FROM ifsp_lacif.estado
+        WHERE nome = '$nome'
+        AND cpf = '$cpf'
+        AND email = '$email'
+        AND senha = '$senha'
+        AND celular = '$celular'
+        AND endereco = '$endereco'
+        AND datanasc = '$datanasc'";
+
+    $row = mysqli_query($conn, $query);
+
+    if(mysqli_num_rows($row) > 0)
+    {
+        echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
+    }
+
+    else
+    {
+        $result = "INSERT INTO ifsp_lacif.estado (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
+        $row = mysqli_query($conn, $result);
+        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
+        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=listestado.php">';
+    }
+
+}
+?>

@@ -173,7 +173,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                         <td><?php echo $horario_cons = $_POST['horario_cons']; ?></td>
                         <td><?php echo $tiposanguineo = $_POST['tiposanguineo']?></td>
                         <td><?php echo $sexo = $_POST['sexo']?></td>
-                        <td></td>
+                        <td><?php echo $status = $_POST['status']?></td>
                     <td>
                         <?php
                         echo "<a href='CrudConsultaEditar.php?id="
@@ -187,6 +187,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             "&horario_cons=" . $horario_cons .
                             "&tiposanguineo=" . $tiposanguineo .
                             "&sexo=" . $sexo .
+                            "&status=" . $status .
                             "'  title='Clique para alterar.'><i class='fa fa-edit fa-1x'></i></a>";
                         ?>
                         <?php

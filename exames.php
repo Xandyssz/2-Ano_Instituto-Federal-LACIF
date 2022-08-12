@@ -1,8 +1,4 @@
-<?php
-session_start();
-include_once('sessao.php');
-$exibirTipodeAcesso = $_SESSION['tipo_acesso'];
-?>
+
 
 <!DOCTYPE html>
 <!--ALTERAR COR DO SITE EM STYLE.CSS -->
@@ -37,6 +33,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css"  />
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <link href="css/style.css" rel="stylesheet">
     <link href="css/teste.css" rel="stylesheet">
     <script type="text/javascript" src="js/modernizr.custom.js"></script>

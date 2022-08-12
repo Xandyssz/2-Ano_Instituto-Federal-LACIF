@@ -1,15 +1,44 @@
 function confirmacaoExclusao() {
-	var resposta = confirm("Deseja remover esse registro?");
+    var resposta = confirm("Deseja remover esse registro?");
     if (resposta == true) {
-		window.location.href = "listar_funcionario.php";
+        window.location.href = "listar_funcionario.php";
     }
 }
-function SessaoExpirada(){
-  alert("WebSite diz: \nSua sessão foi expirada!");
+
+function SessaoExpirada() {
+    alert("WebSite diz: \nSua Sessão foi Expirada!");
 }
 
 function loginMensagem(){
-    alert(' Usuario e/ou senha invalido(s)!');
-    window.location.href = "login.php";
+    alert('Usuario e/ou senha invalido(s)!');
+    window.location.href = "index.php";
+}
+
+function OpcaoMensagens($id){
+    if ($id === 1)
+    {
+        window.alert('Registro salvo com sucesso!');
+    }
+
+    if ($id === 2)
+    {
+        window.alert('Registro alterado com sucesso!');
+    }
+
+    if ($id === 3)
+    {
+        window.alert('Registro excluido com sucesso!');
+    }
+
+
+    if ($id === 4)
+    {
+        window.alert('Registro já cadastrado!');
+    }
+
+    if ($id === 5)
+    {
+        window.alert('Ocorreu um erro!');
+    }
 
 }
