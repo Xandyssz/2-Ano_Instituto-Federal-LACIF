@@ -22,7 +22,7 @@
             </div>
 
             <!-- end col-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-12">
+            <div class="col-xs-12">
                 <h4>Social Media</h4>
                 <ul>
                     <li><a href="https://www.instagram.com/xanddy._/">Instagram</a></li>

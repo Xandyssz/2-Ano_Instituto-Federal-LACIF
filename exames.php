@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+include_once('sessao.php');
+$exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+?>
 
 <!DOCTYPE html>
 <!--ALTERAR COR DO SITE EM STYLE.CSS -->

@@ -1,70 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> LACIF </title>
+<?php
+session_start();
+include_once('conexao.php');  // se ele clicou no botão agendar
+?>
 
-    <link rel="stylesheet" href="css/tabelacss.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> LACIF </title>
 
-<section class="book" id="book">
+        <link rel="stylesheet" href="css/tabelacss.css">
+        <script src="js/funcoes.js"></script>
 
-    <h1 class="heading"> <span>Agende</span> Agora </h1>
+    </head>
+    <body>
 
-    <div class="row">
+    <section class="book" id="book">
 
-        <div class="image">
-            <img src="images/book-img.svg" alt="">
+        <h1 class="heading"> <span>Agende</span> Agora </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/book-img.svg" alt="">
+            </div>
+
+            <form action="" method="POST">
+                <h3>Agende sua consulta</h3>
+                <input type="text"   id="nome"         name="nome"  placeholder="Digite o Nome Completo" class="box">
+                <input type="number" id="cpf"         name="cpf"    placeholder="Digite o CPF" class="box">
+                <input type="number" id="celular"     name="celular"    placeholder="Digite Numero de Contato" class="box">
+                <input type="text"   id="convenio"      name="convenio" placeholder="Digite o Convenio" class="box">
+                <input type="date"   id="data_cons"    name="data_cons" class="box">
+                <input type="time"   id="horario_cons" name="horario_cons" class="box">
+
+                <select id="tiposanguineo "name="tiposanguineo" class="box">
+                    <option value=""selected>Selecione o tipo sanguineo...</option>
+                    <option value="O-">O-</option>
+                    <option value="O">O+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="AB">AB+</option>
+                    <option value="B-">B-</option>
+                    <option value="B">B+</option>
+                    <option value="A-">A-</option>
+                    <option value="A">A+</option>
+                </select>
+
+                <select id="sexo" name="sexo" class="box">
+                    <option value="" selected>Selecione o sexo...</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+
+                <select id="tipo" name="tipo" class="box">
+                    <option value="" selected>Selecione o Tipo do exame...</option>
+                    <option value="Covid19">Covid 19 </option>
+                    <option value="CheckuP">Check-Up</option>
+                    <option value="Sangue">Sangue</option>
+                    <option value="Fezes">Fezes</option>
+                </select>
+
+                <input type="submit" name="agendar" class="btn btn-danger" value="agendar"/>
+            </form>
+
         </div>
 
-        <form action="CrudConsultaListar.php" method="POST">
-            <h3>Agende sua consulta</h3>
-            <input type="text"  id="nome" name="nome" placeholder="Digite o Nome Completo" class="box">
-            <input type="number" name="cpf"  placeholder="Digite o CPF" class="box">
-            <input type="number" name="celular" placeholder="Digite Numero de Contato" class="box">
-            <input type="text" name="convenio" placeholder="Digite o Convenio" class="box">
-            <input type="date"  name="data_cons" class="box">
-            <input type="time"  name="horario_cons" class="box">
+    </section>
+    <script src="js/validar.js"></script>
+    </body>
+    </html>
 
-            <select name="tiposanguineo" class="box">
-                <option value=""selected>Selecione o tipo sanguineo...</option>
-                <option value="O-">O-</option>
-                <option value="O">O+</option>
-                <option value="AB-">AB-</option>
-                <option value="AB">AB+</option>
-                <option value="B-">B-</option>
-                <option value="B">B+</option>
-                <option value="A-">A-</option>
-                <option value="A">A+</option>
-            </select>
 
-            <select name="sexo" class="box">
-                <option value="" selected>Selecione o sexo...</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Feminino">Feminino</option>
-            </select>
+<?php
 
-            <select name="tipo" class="box">
-                <option value="" selected>Selecione o Tipo do exame...</option>
-                <option value="Covid19">Covid 19 </option>
-                <option value="CheckuP">Check-Up</option>
-                <option value="Sangue">Sangue</option>
-                <option value="Fezes">Fezes</option>
-            </select>
+if (isset($_POST['agendar'])){
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $celular = $_POST['celular'];
+    $convenio = $_POST['convenio'];
+    $data_cons = $_POST['data_cons'];
+    $horario_cons = $_POST['horario_cons'];
+    $tiposanguineo = $_POST['tiposanguineo'];
+    $sexo = $_POST['sexo'];
+    $tipo = $_POST['tipo'];
 
-            <select name="status" class="box" >
-                <option value="Pendente"selected>Pendente</option>
-            </select>
 
-            <input type="submit" name="agendar" class="btn btn-danger" value="Agendar"/>
-        </form>
+    // Fazer o insert  no banco de dados
+    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons WHERE cons.nome = '$nome' AND cons.cpf = '$cpf'";
+    $row = mysqli_query($conn, $query);
 
-    </div>
-
-</section>
-        <script src="js/validar.js"></script>
-</body>
-</html>
+    if(mysqli_num_rows($row) > 0) {
+        echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
+    } else {
+        $result = "INSERT INTO ifsp_lacif.consultas (nome, cpf, celular, convenio, data_cons, horario_cons, tiposanguineo, sexo, tipo) VALUES ('$nome', '$cpf', '$celular', '$convenio', '$data_cons', '$horario_cons', '$tiposanguineo', '$sexo', '$tipo')";
+        mysqli_query($conn, $result);
+        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
+        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+    }
+}
+?>

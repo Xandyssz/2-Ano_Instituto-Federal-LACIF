@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
     $nome       = $_GET['nome'];
     $email       = $_GET['email'];
     $cpf        = $_GET['cpf'];
-    $password   = $_GET['password'];
+    $senha   = $_GET['senha'];
     $data_usa   = $_GET['data_usa'];
     $celular    = $_GET['celular'];
     $endereco   = $_GET['endereco'];
@@ -44,7 +44,7 @@ if(isset($_GET['id'])){
 
             <input type="number" name="cpf"  placeholder="Digite o CPF" class="box" value="<?php echo $cpf ?>">
 
-            <input type="password"  name="password" placeholder="Digite a senha" class="box" value="<?php echo $password ?>">
+            <input type="password"  name="senha" placeholder="Digite a senha" class="box" value="<?php echo $senha ?>">
 
             <input type="date"  name="data_cons" class="box" value="<?php echo $data_usa ?>">
 
@@ -52,34 +52,7 @@ if(isset($_GET['id'])){
 
             <input type="text" name="endereco" placeholder="Digite o endereco" class="box" value="<?php echo $endereco ?>">
 
-            <select name="nivelAcesso" class="box" value="<?php echo $nivelAcesso ?>">
-                <?php
-                if ($nivelAcesso == "Administrador") {
-                    ?>
-                    <option value="">Selecione o Tipo do exame...</option>
-                    <option value="Administrador"selected>Administrador</option>
-                    <option value="Laboratorista">Laboratorista</option>
-                    <option value="Paciente">Paciente</option>
 
-                    <?php
-                } elseif ($nivelAcesso == "Laboratorista") {
-                    ?>
-                    <option value="">Selecione o Tipo do exame...</option>
-                    <option value="Administrador">Administrador</option>
-                    <option value="Laboratorista"selected>Laboratorista</option>
-                    <option value="Paciente">Paciente</option>
-
-                    <?php
-                } elseif ($nivelAcesso == "Paciente") {
-                    ?>
-                    <option value="">Selecione o Tipo do exame...</option>
-                    <option value="Administrador">Administrador</option>
-                    <option value="Laboratorista">Laboratorista</option>
-                    <option value="Paciente"selected>Paciente</option>
-
-                    <?php
-                }
-                ?>
 
             <input type="submit" name="Atualizar" class="btn btn-danger" value="Atualizar" onclick="window.location.href='CrudUsuarioListar.php'"/>
         </form>

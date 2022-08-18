@@ -28,7 +28,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
                 <img src="images/book2-img.svg" alt="">
             </div>
 
-            <form action="#" method="POST">
+            <form action="" method="POST"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se não não grava no BANCO -->
                 <h3>Cadastro</h3>
                 <input type="text"  name="nome" id="nome" placeholder="Digite o Nome Completo" class="box">
                 <input type="number" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box">
@@ -61,14 +61,8 @@ if (isset($_POST['salvar'])){
 
     // Fazer o insert  no banco de dados
 
-    $query = "SELECT nome, cpf, email, senha, celular, endereco, datanasc FROM ifsp_lacif.estado
-        WHERE nome = '$nome'
-        AND cpf = '$cpf'
-        AND email = '$email'
-        AND senha = '$senha'
-        AND celular = '$celular'
-        AND endereco = '$endereco'
-        AND datanasc = '$datanasc'";
+    $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.nome = '$nome' AND users.cpf = '$cpf'";
+
 
     $row = mysqli_query($conn, $query);
 
@@ -79,10 +73,10 @@ if (isset($_POST['salvar'])){
 
     else
     {
-        $result = "INSERT INTO ifsp_lacif.estado (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
+        $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=listestado.php">';
+        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
     }
 
 }

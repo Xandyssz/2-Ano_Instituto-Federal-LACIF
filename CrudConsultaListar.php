@@ -173,27 +173,29 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                         <td><?php echo $horario_cons = $_POST['horario_cons']; ?></td>
                         <td><?php echo $tiposanguineo = $_POST['tiposanguineo']?></td>
                         <td><?php echo $sexo = $_POST['sexo']?></td>
-                        <td><?php echo $status = $_POST['status']?></td>
+
                     <td>
-                        <?php
-                        echo "<a href='CrudConsultaEditar.php?id="
-                            . $cont .
-                            "&nome=" . $nome .
-                            "&cpf=" . $cpf.
-                            "&celular=" . $celular .
-                            "&convenio=" . $convenio .
-                            "&tipo=" . $tipo .
-                            "&data_usa=" . $data_usa .
-                            "&horario_cons=" . $horario_cons .
-                            "&tiposanguineo=" . $tiposanguineo .
-                            "&sexo=" . $sexo .
-                            "&status=" . $status .
-                            "'  title='Clique para alterar.'><i class='fa fa-edit fa-1x'></i></a>";
-                        ?>
-                        <?php
-                        echo "<a href='' onclick='confirmacaoExclusao();' title='Clique para excluir.'><i class='fa fa-trash fa-1x'></i></a>";
-                        ?>
+                            <!-- <td> AQUI VAI O STATUS</td> -->
                     </td>
+                        <td>
+                            <?php
+                            echo "<a href='CrudConsultaEditar.php?id="
+                                . $cont .
+                                "&nome=" . $nome .
+                                "&cpf=" . $cpf.
+                                "&celular=" . $celular .
+                                "&convenio=" . $convenio .
+                                "&tipo=" . $tipo .
+                                "&data_usa=" . $data_usa .
+                                "&horario_cons=" . $horario_cons .
+                                "&tiposanguineo=" . $tiposanguineo .
+                                "&sexo=" . $sexo .
+                                "'  title='Clique para alterar.'><i class='fa fa-edit fa-1x'></i></a>";
+                            ?>
+                            <?php
+                            echo "<a href='' onclick='confirmacaoExclusao();' title='Clique para excluir.'><i class='fa fa-trash fa-1x'></i></a>";
+                            ?>
+                        </td>
                         <?php
                     }
                     ?>

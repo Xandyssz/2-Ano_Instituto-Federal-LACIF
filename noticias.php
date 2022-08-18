@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +51,7 @@
 
 
 <!-- INICIO - FAQ!! -->
+
 <?php include_once('IncludeCaixaNoticias.php');?>
 
 <!-- FIM - FAQ!! -->

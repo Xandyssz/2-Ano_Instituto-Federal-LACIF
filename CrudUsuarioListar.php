@@ -1,3 +1,9 @@
+<?php
+session_start();
+include_once('sessao.php');
+$exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+?>
+
 <!DOCTYPE html>
 <!--ALTERAR COR DO SITE EM STYLE.CSS -->
 <html lang="en">
@@ -48,26 +54,61 @@
 </head>
 <body>
 <header>
-    <!-- menu cabeçalho -->
+
     <div class="top-bar">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-5"></div>
                 <!-- end col-3 -->
                 <div class="col-md-6 col-sm-5 hidden-xs">
-                    <form>
-                        <label>
-                            <input type="text" placeholder="Posso ajudar?">
-                            <input type="submit" value="BUSCAR">
-                        </label>
-                    </form>
+
                     <!-- end form -->
                 </div>
                 <!-- end col-6 -->
-                <div class="col-md-3 col-sm-4 col-xs-7">
+
+                <div class="menuzinho">
+
                     <ul class="language">
-                        <li><a href="login.php">LOGIN</a></li>
-                        <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                        <?php
+                        if ($exibirTipodeAcesso == "Administrador"){
+
+                            ?>
+
+                            <li><a href="exames.php">Meus Exames</a></li>
+                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+
+                            <?php
+                        } elseif($exibirTipodeAcesso == "Paciente"){
+                            ?>
+                            <li><a href="exames.php">Meus Exames</a></li>
+                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+
+                            <?php
+                        }elseif($exibirTipodeAcesso == "Doutor"){
+                            ?>
+                            <li><a href="exames.php">Visualizar Exames</a></li>
+                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+
+                            <?php
+                        } elseif ($exibirTipodeAcesso == "Recepcionista"){
+                            ?>
+                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a>
+                            </li>
+                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+                        <?php  }
+                        ?>
+                        <li><a href="sair.php">Sair</a></li>
+
+
+
                     </ul>
                     <!-- end language -->
                 </div>
@@ -77,55 +118,6 @@
         </div>
         <!-- end container -->
     </div>
-    <!-- end top-bar -->
-
-
-
-    <!-- Inicio Menu -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
-            <!-- end navbar-header -->
-            <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
-                <form class="visible-xs">
-                    <label>
-                        <input type="text" placeholder="Type a word to find">
-                    </label>
-                    <input type="submit" value="SEARCH">
-                </form>
-                <!-- end form -->
-                <ul class="social-media hidden-sm">
-                    <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a></li>
-                    <li><a href="https://twitter.com/xandyszz"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="https://github.com/Xandyssz"><i class="ion-social-github"></i></a></li>
-                </ul>
-                <!-- end social-media -->
-
-                <ul class="nav navbar-nav">
-
-                    <li><a href="index.php">Home</a></li>
-
-                    <li><a href="#">Exames</a>
-                        <ul><!-- menu suspenso dentro do menu original-->
-                            <li><a href="AnaliseClinica.php">Análises Clínicas</a></li>
-                        </ul>
-                        <!-- end dropdown -->
-                    </li>
-
-                    <li><a href="noticias.php">Noticias</a></li>
-                    <li><a href="faq.php">FAQ</a></li>
-                    <li><a href="contact-us.php">Contato</a></li>
-                </ul>
-                <!-- FINAL MENU -->
-                <!-- end nav -->
-            </div>
-            <!-- end navbar-collapse -->
-        </div>
-        <!-- end container -->
-    </nav>
-    <!-- end navbar -->
 </header>
 <!-- end header -->
 
@@ -133,9 +125,9 @@
 
 
 <!-- FAQ -->
-<section class="inner-content">
+<section class="container-fluid">
     <div class="form-group col-md-12">
-        <input type="button" name="Cadastrar" class="btn btn-info" value="Cadastrar" onclick="window.location.href='crudUsuarioAgendamento.php'"/>
+        <input type="button" name="Cadastrar" class="btn btn-info" value="Cadastrar" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
         <input type="button" name="imprmir" class="btn btn-info" value="Imprimir" onclick="window.print();">
     </div>
 
@@ -152,6 +144,7 @@
                 <th>NumeroContato</th>
                 <th>Endereco</th>
                 <th>Nivel de Acesso</th>
+                <th>Acoes</th>
                 </thead>
                 <?php
 
@@ -170,35 +163,34 @@
                     <td><?php echo $nome = $_POST['nome']; ?></td>
                     <td><?php echo $email = $_POST['email']; ?></td>
                     <td><?php echo $cpf = $_POST['cpf']; ?></td>
-                    <td><?php echo $password = $_POST['password']; ?></td>
+                    <td><?php echo $senha = $_POST['senha']; ?></td>
                     <td>
                         <?php
                         // transformar a data do estilo dos EUA em BR
-                        $data_usa = $_POST['data_cons'];
-                        echo $data_brasil = date_format(date_create($data_usa), 'd/m/Y');
+                        echo $data_brasil = date_format(date_create(), 'd/m/Y');
                         ?>
                     <td><?php echo $celular = $_POST['celular']?></td>
 
                     <td><?php echo $endereco = $_POST['endereco']?></td>
 
-                    <td><?php echo $nivelAcesso = $_POST['nivelAcesso']?></td>
+                    <!-- </td> -->
+                    <td>
+                        <!-- NIVEL DE ACESSO AQUI -->
+                    </td>
                     <td>
                         <?php echo "<a href='CrudUsuarioEditar.php?id=" .
                             "&nome=" . $nome .
                             "&email=" . $email.
-                            "&password=" . $password .
+                            "&senha=" . $senha .
                             "&cpf=" . $cpf .
-                            "&data_usa=" . $data_usa .
+                            "&data_usa=" . $data_brasil .
                             "&celular=" . $celular .
                             "&endereco=" . $endereco .
-                            "&nivelAcesso=" . $nivelAcesso .
+                            // "&nivelAcesso=" . $nivelAcesso .
                             "' 
                                     title='Alterar'><i class='fa fa-edit fa-2x'></i></a>" ?>
 
                         <?php echo "<a href='' onclic='corfirmarExclusaoFuncionario()' title='Excluir'><i class='fa fa-trash fa-2x'></i></a>" ?>
-
-                    </td>
-
                     </td>
                 </tr>
                 </tbody>
@@ -223,62 +215,8 @@
     <div class="container"></div>
 </section>
 <!-- end footer-bar -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-sm-12 col-xs-12"> <img src="images/logo-white.png" alt="Image" class="pull-left">
-                <p class="copyright">Copyright © 2022 , IFSP</p>
-            </div>
-            <!-- end col-2 -->
-            <div class="col-md-4 col-sm-12 col-xs-12">
-                <form>
-                    <h4>NOVIDADES</h4>
-                    <p>att...</p>
-                    <label>
-                        <input type="text" placeholder="Insira seu Email">
-                    </label>
-                    <input type="submit" value="Junte-se a nos">
-                </form>
-            </div>
-            <!-- end col-4 -->
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="AnaliseClinica.php">Análises Clinicas</a></li>
-                    <li><a href="faq.php">Faq</a></li>
-                    <li><a href="contact-us.php">Contact us</a></li>
-                </ul>
-            </div>
-            <!-- end col-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <h4>Our Sercices</h4>
-                <ul>
-                    <li><a href="#">Cardiovascular</a></li>
-                    <li><a href="#">Ophthalmology</a></li>
-                    <li><a href="#">Dermatology</a></li>
-                    <li><a href="#">General Surgery</a></li>
-                    <li><a href="#">Consultative</a></li>
-                    <li><a href="#">Diagnostic</a></li>
-                </ul>
-            </div>
-            <!-- end col-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-12">
-                <h4>Social Medicana</h4>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Google Plus</a></li>
-                    <li><a href="#">Linkedin</a></li>
-                </ul>
-            </div>
-            <!-- end col-2 -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</footer>
-<!-- end footer -->
+
+<?php include_once('IncludeRodaPe.php');?>
 
 <script type='text/javascript' src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
