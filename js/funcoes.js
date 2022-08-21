@@ -11,7 +11,7 @@ function SessaoExpirada() {
 
 function loginMensagem(){
     alert('Usuario e/ou senha invalido(s)!');
-    window.location.href = "index.php";
+    window.location.href = "IndexCalendario22.php";
 }
 
 function OpcaoMensagens($id){

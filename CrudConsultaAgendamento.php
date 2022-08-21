@@ -88,7 +88,7 @@ if (isset($_POST['agendar'])){
 
 
     // Fazer o insert  no banco de dados
-    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons WHERE cons.nome = '$nome' AND cons.cpf = '$cpf'";
+    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons WHERE cons.nome = '$nome' AND cons.cpf = '$cpf' AND cons.horario_cons";
     $row = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($row) > 0) {

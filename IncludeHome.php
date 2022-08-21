@@ -47,6 +47,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
 <!-- INICIO - MENU CABEÇALHO -->
 <?php include_once('IncludeHeaderADM.php');?>
+
 <!-- FIM - MENU CABEÇALHO -->
 
 

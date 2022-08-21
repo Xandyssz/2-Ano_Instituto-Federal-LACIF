@@ -20,7 +20,7 @@
                             ?>
 
                             <li><a href="exames.php">Meus Exames</a></li>
-                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a href="IndexCalendario22.php">Gerenciar Consulta</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                             <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 

@@ -10,13 +10,13 @@
  theme.
 
  This files contents are outlined below.
- 
-  
+
+
 
 // Table of contents //
 
 	1. Body
-		1.1 Main section 
+		1.1 Main section
 		1.2 Spacing
 		1.3 Tools
 		1.4 Overlay
@@ -24,35 +24,35 @@
 		1.6 Links - Buttons
 		1.7 Form Elements
 		1.8 Form Placeholders
-		
-		
-	2. Header 
-		2.1 Top Bar 
+
+
+	2. Header
+		2.1 Top Bar
 		2.1.1 Top Bar - Phone
 		2.1.2 Top Bar - Language
 		2.1.3 Top Bar - Search
-		
+
 		2.2 Nav Bar
 		2.2.1 Navbar Nav
 		2.2.2 Social Media
-		
-		
+
+
 	3. Slider
 		3.1 Element of Slider
-		
-		
+
+
 	4. Appointment Form
 		4.1 Elements of form
 		4.2 Datepicker
-		
-	
+
+
 	5. Home Services
 		5.1 Elements of services
 		5.2 Content
 		5.3 Icons
 		5.4 Lines
-		
-		
+
+
 	6. Box Content
 		6.1 Elements of box content
 		6.2 First Box
@@ -60,87 +60,87 @@
 		6.4 Third Box
 		6.5 Icon
 		6.6 Content
-		
-		
+
+
 	7.Latest News
 		7.1 Elements of news
 		7.2 Headlines
 		7.3 Rated article ribbon
-		
-		
+
+
 	8.Frase
 		8.1 Elements of frase
 		8.2 Headlines
-		
-		
+
+
 	9.Gallery
 		9.1 Elements of gallery
 		9.2 Headlines
 		9.3 Thumb
-		
-		
+
+
 	10.Departments
 		10.1 Elements of departments
 		10.2 Content Box
 		10.3 Headlines
-		
-		
+
+
 	11.Logos
 		11.1 Elements of logos
 		11.2 Headlines
 		11.3 Item
-		
-		
+
+
 	12.Inner Header
 		12.1 Elements of inner header
-		
-	
+
+
 	13.Inner Content
 		13.1 Elements of inner content
 		13.2 Headlines
 		13.3 Side Bar
-			
-	
+
+
 	14. News List
 		14.1 Elements of news list
 		14.2 Headlines
 		14.3 HR
-		
-		
+
+
 	15. FAQ
 		15.1 Elements of FAQ
-		
-		
+
+
 	16. Contact Form
 		16.1 Elements of contact form
 		16.2 Success
 		16.3 Error
-		
-		
+
+
 	17. Footer Bar
 		17.1 Elements of footer bar
 		17.2 Headlines
 		17.3 Social Media
-		
-		
+
+
 	18. Footer
 		18.1 Elements of footer
 		18.2 Headlines
 		18.3 Newsletter
 		18.4 Footer menu
-		
-		
+
+
 	19. Error Pages
 		19.1 Elements of Error Pages
-		
-	
+
+
 	20. Acordeon
-		20.1 Elements of acordeon 
-		
-		
+		20.1 Elements of acordeon
+
+
 */
-	
-	
+
+
 
 
 /* Body - Google Font */
@@ -194,7 +194,7 @@ ul li{ margin:0; padding:0; list-style-position:inside;}
 
 
 /* Site Links - Buttons */
-a{color:#1dd2c8;}
+a{color: #000000;}
 a{ -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;}
 a:hover{color:#1dd2c8; text-decoration:underline;}
 
@@ -446,7 +446,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 
 /* Doctors */
 .specialists{ background:#fff;}
-.specialists a{color:#999; border-bottom:2px solid #999; padding:6px 0; font-weight:700; display:inline-block;} 
+.specialists a{color:#999; border-bottom:2px solid #999; padding:6px 0; font-weight:700; display:inline-block;}
 .specialists a:hover{ text-decoration:none; color:#1dd2c8; border-bottom:2px solid #1dd2c8;}
 .specialists .members{ width:100%; float:left; padding:0 10px; margin-bottom:40px; border:1px solid #eee; position:relative;}
 .specialists .members .desc{ width:100%; height:100%; float:left; background:#1dd2c8; color:#fff; position:absolute; left:0; top:0; opacity:0; padding:20px; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;}
@@ -475,7 +475,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 
 
 
-/* Contact Form */ 
+/* Contact Form */
 #contact-form{ width:100%; float:left; margin:20px 0;}
 #contact-form input[type="text"]{ width:340px; height:40px; margin:0; margin-bottom:5px; padding:0 10px; border:1px solid #CFEFED;}
 #contact-form select{ width:340px; height:40px; margin-bottom:5px; padding:0 10px; border:1px solid #CFEFED;}
@@ -485,13 +485,13 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 #contact-form input[type="submit"]{ color:#fff; padding:10px 20px; font-size:20px; font-weight:700; background:#1dd2c8;}
 #success, #error {display:none; color:rgb(236, 52, 52);;}
 #success p, #error p {margin-top:20px; float:left; color:#1dd2c8; font-weight:800;}
-label{ font-size:13px; color:rgb(52, 211, 236);}
+label{ font-size:13px; color: rgb(0, 0, 0);}
 #error p {color:#c0392b}
 
 
 
 /* Footer Bar */
-.footer-bar{ height:80px; float:left; padding:20px 0; background:#1dd2c8;} 
+.footer-bar{ height:80px; float:left; padding:20px 0; background:#1dd2c8;}
 .footer-bar h2{ float:left; color:#fff; margin:0; line-height:40px; font-weight:700;}
 .footer-bar h2 i{ float:left; margin-right:12px;}
 .footer-bar h4{ float:right; color:#fff; font-weight:700; margin-top:11px;}
@@ -538,7 +538,7 @@ footer ul li a:hover{ color:#1dd2c8;}
 @media only screen and (max-width: 1199px), only screen and (max-device-width: 1199px) {
 .appointment label{ font-size:15px;}
 .appointment .department select{ width:174px;}
-.appointment .gender input[type="submit"]{ padding:0 12px; padding-right:40px;}	
+.appointment .gender input[type="submit"]{ padding:0 12px; padding-right:40px;}
 .box-content .icon{ width:23%;}
 .box-content .content{ width:77%;}
 .boxed-image-feature .content-box h3{ margin-top:15px; font-size:20px;}
@@ -624,4 +624,32 @@ footer form input[type="text"]{ max-width:220px;}
 footer ul{ margin-bottom:40px;}
 
 
+}
+
+
+
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menuhorizontal ul {
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+}
+
+.menuhorizontal ul li {
+    display: inline;
+}
+
+.menuhorizontal ul li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
 }

@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once('sessao.php');
+?>
 
 <!DOCTYPE html>
 <!--ALTERAR COR DO SITE EM STYLE.CSS -->
@@ -57,7 +61,17 @@
 
 
 <!-- INICIO - MENU CABEÇALHO -->
-<?php include_once('IncludeHeader.php');?>
+<?php
+
+if (isset($_SESSION['cpf'])){
+
+    $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+    include_once('IncludeHeaderADM.php');
+
+} else {
+    include_once('IncludeHeader.php');
+}
+?>
 <!-- FIM - MENU CABEÇALHO -->
 
 
