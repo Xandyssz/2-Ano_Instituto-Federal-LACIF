@@ -10,7 +10,7 @@ if(!isset($_SESSION['cpf']) && !isset($_SESSION['senha'])){
         if(isset($_SESSION['sessiontime'])< time ()){
             unset($_SESSION ['cpf']);
             unset ($_SESSION ['senha']);
-            header ("location: IndexCalendario22.php");
+            header ("location: PainelAdmin.php");
             echo"<script type = 'text/javascript'>SessaonExpirada();</script>";
         }else {
             $_SESSION ["sessiontime"] = time() +60*30;
@@ -21,7 +21,7 @@ if(!isset($_SESSION['cpf']) && !isset($_SESSION['senha'])){
         session_destroy();
         unset($_SESSION ['cpf']);
         unset ($_SESSION ['senha']);
-        header ("location: IndexCalendario22.php");
+        header ("location: PainelAdmin.php");
         echo"<script type = 'text/javascript'>SessaonExpirada();</script>";
 
     }
