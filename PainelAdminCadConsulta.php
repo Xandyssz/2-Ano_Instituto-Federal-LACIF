@@ -1,9 +1,9 @@
 
 <?php
-// session_start();
-// include_once('sessao.php');
-// include_once('conexao.php');  // se ele clicou no botão salvar
-// $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+ session_start();
+ include_once('sessao.php');
+ include_once('conexao.php');  // se ele clicou no botão salvar
+ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
 
 ?>
@@ -91,9 +91,6 @@
                         <li>
                             <a href="PainelAdminCadConsulta.php">Cadastrar Consulta</a>
                         </li>
-                        <li>
-                            <a href="PainelAdminCadNoticia.php">Cadastrar Noticia</a>
-                        </li>
                     </ul>
                 </li>
 
@@ -132,20 +129,20 @@
 
                         <ul class="language">
                             <?php
-                            //
-                            //if ($exibirTipodeAcesso == "Administrador"){
-                            //
+
+                            if ($exibirTipodeAcesso == "Administrador"){
+
                             ?>
 
-                            <!--     <li><a href="exames.php">Meus Exames</a></li>
-                                 <li><a href="IndexCalendario22.php">Gerenciar Consulta</a></li>
+                                 <li><a href="exames.php">Meus Exames</a></li>
+                                <li><a href="PainelAdmin.php">Gerenciar Consulta</a></li>
                                  <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                                  <li><a href="sair.php">Sair</a></li>
-                                 <li><a> --> <?php // echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?> <!--</a></li> -->
+                                 <li><a>  <?php  echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?> </a></li>
 
 
                             <?php
-                            //  }
+                             }
                             ?>
 
                         </ul>

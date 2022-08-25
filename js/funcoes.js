@@ -42,3 +42,11 @@ function OpcaoMensagens($id){
     }
 
 }
+function confirmacaoExclusaoEstado(id) {
+    var resposta = confirm("Confima Exclusão Usuario??");
+    if (resposta == true) {
+      //window.location.href = path+"/contact-us.php/CrudUsuarioDeletar.php?id="+id
+
+        window.location.href = "./CrudUsuarioDeletar.php?id=" + id;
+    }
+}

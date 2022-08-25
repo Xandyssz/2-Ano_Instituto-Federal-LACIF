@@ -31,6 +31,8 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-user btn-block">Conecte-se</button>
                 <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
+                <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='index.php'" value="Voltar">
+
             </div>
         </form>
     </div>

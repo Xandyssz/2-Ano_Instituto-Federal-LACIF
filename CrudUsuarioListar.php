@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once('sessao.php');
+include_once('conexao.php');
 $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 ?>
 
@@ -29,6 +30,12 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
     <!-- ARQUIVOS CSS -->
     <link href="css/ionicons.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
@@ -39,6 +46,8 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <script src="js/funcoes.js"></script>
     <noscript>
         <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
     </noscript>
@@ -75,7 +84,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             ?>
 
                             <li><a href="exames.php">Meus Exames</a></li>
-                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                            <li><a href="PainelAdmin.php">Gerenciar Consulta</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
 
                             <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
@@ -132,76 +141,56 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     </div>
 
     <br>
+
     <div class="row">
         <div class="col-sm-12">
-            <table class="table table-striped table-bordered table-hover">
-                <thead>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>CPF</th>
-                <th>Senha</th>
-                <th>Data Nascimento</th>
-                <th>NumeroContato</th>
-                <th>Endereco</th>
-                <th>Nivel de Acesso</th>
-                <th>Acoes</th>
-                </thead>
-                <?php
 
-                $pesquisar = filter_input(INPUT_POST, 'Pesquisar', FILTER_SANITIZE_STRING);
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                    <th>Celular</th>
+                    <th>Endereco</th>
+                    <th>Data de Nascimento</th>
+                    <th>Nivel de Acesso</th>
+                    <th>Acoes</th>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $query = "SELECT * FROM ifsp_lacif.usuarios order by idusuario";
+                    $dados = mysqli_query($conn, $query ); // comando transação bd
 
-
-                //para negar algo se usa !
-                if(!isset($Pesquisar)){
-                    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-                    if(isset($nome)){
+                    while ($linha = mysqli_fetch_assoc($dados)){
 
                         ?>
-                <tbody style="font-size:12px">
-                <tr>
-
-                    <td><?php echo $nome = $_POST['nome']; ?></td>
-                    <td><?php echo $email = $_POST['email']; ?></td>
-                    <td><?php echo $cpf = $_POST['cpf']; ?></td>
-                    <td><?php echo $senha = $_POST['senha']; ?></td>
-                    <td>
+                        <tr>
+                            <td><?php  echo $linha['idusuario']; ?></td>
+                            <td><?php  echo $linha['nome']; ?></td>
+                            <td><?php  echo $linha['cpf']; ?></td>
+                            <td><?php  echo $linha['email']; ?></td>
+                            <td><?php  echo $linha['senha']; ?></td>
+                            <td><?php  echo $linha['celular']; ?></td>
+                            <td><?php  echo $linha['endereco']; ?></td>
+                            <td><?php  echo $linha['datanasc']; ?></td>
+                            <td><?php  echo $linha['nivelAcesso'];?></td>
+                            <td>
+                                <?php
+                                echo "<a href='CrudUsuarioEditar.php?id=".$linha['idusuario']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";
+                                echo " ";
+                                $id = $linha['idusuario'];
+                                echo "<a href='#' title='Excluir' onclick='confirmacaoExclusaoEstado($id);'><i class='fa fa-trash'></i></a>";
+                                ?>
+                            </td>
+                        </tr>
                         <?php
-                        // transformar a data do estilo dos EUA em BR
-                        echo $data_brasil = date_format(date_create(), 'd/m/Y');
-                        ?>
-                    <td><?php echo $celular = $_POST['celular']?></td>
-
-                    <td><?php echo $endereco = $_POST['endereco']?></td>
-
-                    <!-- </td> -->
-                    <td>
-                        <!-- NIVEL DE ACESSO AQUI -->
-                    </td>
-                    <td>
-                        <?php echo "<a href='CrudUsuarioEditar.php?id=" .
-                            "&nome=" . $nome .
-                            "&email=" . $email.
-                            "&senha=" . $senha .
-                            "&cpf=" . $cpf .
-                            "&data_usa=" . $data_brasil .
-                            "&celular=" . $celular .
-                            "&endereco=" . $endereco .
-                            // "&nivelAcesso=" . $nivelAcesso .
-                            "' 
-                                    title='Alterar'><i class='fa fa-edit fa-2x'></i></a>" ?>
-
-                        <?php echo "<a href='' onclic='corfirmarExclusaoFuncionario()' title='Excluir'><i class='fa fa-trash fa-2x'></i></a>" ?>
-                    </td>
-                </tr>
-                </tbody>
-                <?php
                     }
-                }
-                ?>
-                </td>
-                </tr>
-
-            </table>
+                    ?>
+                    </tbody>
+                </table>
 </section>
 
 <!-- final faq -->
@@ -232,5 +221,10 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 <script src="js/jquery.slitslider.js" type="text/javascript" ></script>
 <script src="js/slider-settings.js"></script>
 <script src="js/medicina.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="js/demo/datatables-demo.js"></script>
 </body>
 </html>

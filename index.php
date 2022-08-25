@@ -1,3 +1,8 @@
+<?php
+session_start();
+include_once('sessao.php');
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -39,9 +44,17 @@
 </head>
 <body>
 
-<!-- INICIO - MENU CABEÇALHO -->
-<?php include_once('IncludeHeader.php');?>
-<!-- FIM - MENU CABEÇALHO -->
+<?php
+
+if (isset($_SESSION['cpf'])){
+
+    $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+    include_once('IncludeHeaderADM.php');
+
+} else {
+    include_once('IncludeHeader.php');
+}
+?>
 
 
 

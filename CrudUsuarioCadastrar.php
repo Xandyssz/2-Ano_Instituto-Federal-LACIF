@@ -38,7 +38,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
                 <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box">
                 <input type="date"  name="datanasc" id="datanasc" class="box">
 
-                <input type="button" name="salvar" id="salvar" class="btn btn-danger" onclick="location.href='IncludeHome.php'" value="Cancelar">
+                <input type="button" name="salvar" id="salvar" class="btn btn-danger" onclick="location.href='CrudUsuarioListar.php'" value="Cancelar">
                 <input type="submit" name="salvar" id="salvar" class="btn btn-danger" value="salvar">
             </form>
         </div>
@@ -76,7 +76,7 @@ if (isset($_POST['salvar'])){
         $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
     }
 
 }

@@ -193,6 +193,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                                 "'  title='Clique para alterar.'><i class='fa fa-edit fa-1x'></i></a>";
                             ?>
                             <?php
+
                             echo "<a href='' onclick='confirmacaoExclusao();' title='Clique para excluir.'><i class='fa fa-trash fa-1x'></i></a>";
                             ?>
                         </td>

@@ -1,9 +1,9 @@
-<!--
+
 <?php
-// session_start();
-// include_once('sessao.php');
-// $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
-?> --?
+ session_start();
+ include_once('sessao.php');
+ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+?>
 
 <!doctype html>
 <html lang="en">
@@ -66,7 +66,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3><img src="img/logo.png" class="img-fluid"/><span>LACIF</span></h3>
+                <h3><img src="images/logo.png" class="img-fluid"/><span>LACIF</span></h3>
             </div>
             <ul class="list-unstyled components">
                 <li  class="active">
@@ -86,9 +86,6 @@
                         </li>
                         <li>
                             <a href="PainelAdminCadConsulta.php">Cadastrar Consulta</a>
-                        </li>
-                        <li>
-                            <a href="#">Cadastrar Noticia</a>
                         </li>
                     </ul>
                 </li>
@@ -128,20 +125,20 @@
 
                         <ul class="language">
                             <?php
-                            //
-                            //if ($exibirTipodeAcesso == "Administrador"){
-                            //
+
+                            if ($exibirTipodeAcesso == "Administrador"){
+
                             ?>
 
-                            <!--     <li><a href="exames.php">Meus Exames</a></li>
-                                 <li><a href="IndexCalendario22.php">Gerenciar Consulta</a></li>
+                                <li><a href="exames.php">Meus Exames</a></li>
+                                 <li><a href="PainelAdmin.php">Gerenciar Consulta</a></li>
                                  <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                                  <li><a href="sair.php">Sair</a></li>
-                                 <li><a> --> <?php // echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?></a></li>
+                                 <li><a>  <?php  echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?></a></li>
 
 
                             <?php
-                            //  }
+                              }
                             ?>
 
                         </ul>
