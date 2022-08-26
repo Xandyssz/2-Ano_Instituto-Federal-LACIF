@@ -160,6 +160,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                     <th>Acoes</th>
                     </thead>
                     <tbody>
+
                     <?php
                     $query = "SELECT * FROM ifsp_lacif.usuarios order by idusuario";
                     $dados = mysqli_query($conn, $query ); // comando transação bd
@@ -194,10 +195,6 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 </section>
 
 <!-- final faq -->
-
-
-
-
 
 <!-- end logos -->
 <section class="footer-bar">

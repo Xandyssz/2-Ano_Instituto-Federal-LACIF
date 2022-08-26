@@ -11,7 +11,7 @@ function SessaoExpirada() {
 
 function loginMensagem(){
     alert('Usuario e/ou senha invalido(s)!');
-    window.location.href = "PainelAdmin.php";
+    window.location.href = "login.php";
 }
 
 function OpcaoMensagens($id){
@@ -23,6 +23,7 @@ function OpcaoMensagens($id){
     if ($id === 2)
     {
         window.alert('Registro alterado com sucesso!');
+
     }
 
     if ($id === 3)

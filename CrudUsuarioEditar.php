@@ -50,11 +50,24 @@ if ($id > 0) {
             <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box" value="<?php echo $linhaUnica['endereco']?>">
             <input type="date"  name="datanasc" id="datanasc" class="box" value="<?php echo $linhaUnica['datanasc']?>">
 
+            <select name="nivelAcesso" id="nivelAcesso" class="box" value="<?php echo $linhaUnica['nivelAcesso']?>">
+                <option value="" selected>Selecione...</option>
+                <?php
+                if ($linhaUnica['nivelAcesso'] == $linhaUnica['nivelAcesso']) {
+                    ?>
+                    <option value="<?php echo $linhaUnica['nivelAcesso'];?>" selected>
+                        <?php echo $linhaUnica['nivelAcesso'];?>
+                        <?php echo $linhaUnica['nivelAcesso'] == 'Administrador';?>
+                    </option>
 
-            <input type="button" name="cancelar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='CrudUsuarioListar.php'">
+                    <?php
+                }
+                ?>
+            </select>
+
             <input type="submit" id="alterar" name="alterar" class="btn btn-primary pull-right" value="alterar">
         </form>
-    <script src="js/formulario.js"></script>
+        <script src="js/formulario.js"></script>
 </section>
 </body>
 </html>
@@ -68,22 +81,20 @@ if (isset($_POST['alterar'])) {
     $senha = $_POST['senha'];
     $celular = $_POST['celular'];
     $endereco = $_POST['endereco'];
-    $data_usa = $_POST['data_usa'];
+    $datanasc = $_POST['datanasc'];
+    $nivelAcesso = $_POST['nivelAcesso'];
+
 //    $nivelAcesso = $_POST['nivelAcesso'];
 
 
 //Fazer o update no banco de dados
-    $result = "UPDATE ifsp_lacif.usuarios 
-SET nome = '$nome',
-    email = '$email', 
-    cpf = '$cpf', 
-    senha = '$senha', 
-    celular = '$celular', 
-    endereco = '$endereco',
-    datanasc = '$data_usa',
-WHERE idusuario = $id";
+
+$result = "UPDATE ifsp_lacif.usuarios SET nome = '$nome', email = '$email', cpf = '$cpf', senha = '$senha', celular = '$celular', endereco = '$endereco', datanasc = '$datanasc', nivelAcesso = '$nivelAcesso' WHERE idusuario = $id";
+
     $row = mysqli_query($conn, $result);
     echo "<script type='text/javascript'>OpcaoMensagens(2);</script>";
     echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
 }
 ?>
+
+

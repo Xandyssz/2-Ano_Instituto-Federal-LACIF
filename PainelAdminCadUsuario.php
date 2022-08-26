@@ -214,7 +214,7 @@
                         </div>
 
                         <div>
-                            <input type="submit" name="salvar" id="salvar" class="btn btn-primary"  value="salvar">
+                            <input type="submit" name="cadastrar" id="cadastrar" class="btn btn-primary"  value="cadastrar">
                         </div>
 
                     </form>
@@ -250,35 +250,35 @@
 
 
 <?php
-//
-//if (isset($_POST['salvar'])){
-//    $nome = $_POST['nome'];
-//    $cpf = $_POST['cpf'];
-//    $email = $_POST['email'];
-//    $senha = $_POST['senha'];
-//    $celular = $_POST['celular'];
-//    $endereco = $_POST['endereco'];
-//    $datanasc = $_POST['datanasc'];
-//
-//    // Fazer o insert  no banco de dados
-//
-//    $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.nome = '$nome' AND users.cpf = '$cpf'";
-//
-//
-//    $row = mysqli_query($conn, $query);
-//
-//    if(mysqli_num_rows($row) > 0)
-//    {
-//        echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
-//    }
-//
-//    else
-//    {
-//        $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
-//        $row = mysqli_query($conn, $result);
-//        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-//        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
-//    }
-//
-//}
+
+if (isset($_POST['cadastrar'])){
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $celular = $_POST['celular'];
+    $endereco = $_POST['endereco'];
+    $datanasc = $_POST['datanasc'];
+
+ // Fazer o insert  no banco de dados
+
+    $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.nome = '$nome' AND users.cpf = '$cpf'";
+
+
+    $row = mysqli_query($conn, $query);
+
+    if(mysqli_num_rows($row) > 0)
+    {
+        echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
+    }
+
+    else
+    {
+        $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
+        $row = mysqli_query($conn, $result);
+        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
+        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
+    }
+
+}
 ?>
