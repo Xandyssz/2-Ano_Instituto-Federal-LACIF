@@ -60,14 +60,9 @@ if (isset($_SESSION['cpf'])){
 <!-- FIM - MENU CABEÇALHO!! -->
 
 
-
-
-
-<!-- INICIO - FAQ!! -->
-
+<!-- INICIO - CAIXA DE NOTICIAS!! -->
 <?php include_once('IncludeCaixaNoticias.php');?>
-
-<!-- FIM - FAQ!! -->
+<!-- FIM - CAIXA DE NOTICIAS!! -->
 
 
 <!-- INICIO - BARRA DO RODA PÉ -->
@@ -76,11 +71,13 @@ if (isset($_SESSION['cpf'])){
 </section>
 <!-- FIM - BARRA DO RODA PÉ -->
 
+
 <!-- INICIO - RODA PÉ -->
 <?php include_once('IncludeRodaPe.php');?>
-
 <!-- FIM - RODA PÉ -->
 
+
+<!-- ARQUIVOS SCRIPT -->
 <script type='text/javascript' src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>

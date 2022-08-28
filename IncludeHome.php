@@ -14,6 +14,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
 
+    <!-- TITULO DA PAGINA -->
     <title>LACIF</title>
 
     <meta name="author" content="...">
@@ -47,10 +48,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
 <!-- INICIO - MENU CABEÇALHO -->
 <?php include_once('IncludeHeaderADM.php');?>
-
 <!-- FIM - MENU CABEÇALHO -->
-
-
 
 
 <!-- INICIO - CARROSEL -->
@@ -58,12 +56,9 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 <!-- FIM- CARROSSEL -->
 
 
-
-
 <!-- INICIO - ULTIMAS NOTICIAS -->
 <?php include_once('IncludeUltimasNoticias.php');?>
 <!-- FIM- ULTIMAS NOTICIAS -->
-
 
 
 <!-- INICIO CHECK-UP MENSAL -->
@@ -79,12 +74,8 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 <!-- FIM- CHECK-UP MENSAL -->
 
 
-
-
-
 <!-- INICIO - CARROSSEL PATROCINIOS -->
 <?php include_once('IncludePatrocinios.php');?>
-
 <!-- FIM- CARROSSEL PATROCINIOS -->
 
 
@@ -94,9 +85,12 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 </section>
 <!-- FIM - BARRA DO RODA PÉ -->
 
+
+<!-- INICIO - RODA PÉ -->
 <?php include_once('IncludeRodaPe.php');?>
+<!-- FIM - RODA PÉ -->
 
-
+<!-- ARQUIVOS SCRIPT -->
 <script type='text/javascript' src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>

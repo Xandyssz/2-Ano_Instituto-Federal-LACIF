@@ -33,7 +33,9 @@ include_once('sessao.php');
   <link href="css/custom.css" rel="stylesheet" type="text/css"/>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <!-- ARQUIVOS SCRIPT -->
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
   <noscript>
     <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
   </noscript>

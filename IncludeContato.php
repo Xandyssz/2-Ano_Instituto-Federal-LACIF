@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <!-- end left side -->
+
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="side-bar">
                     <h1 class="title-bottom-line"><strong>SEDE</strong> OFICIAL</h1>
@@ -44,14 +44,9 @@
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
-            <!-- end right side -->
         </div>
-        <!-- end row -->
     </div>
 </section>

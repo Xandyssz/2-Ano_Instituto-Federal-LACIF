@@ -9,9 +9,7 @@
                     <h2>ULTIMAS NOTICIAS</h2>
                     <h5>SEI LA OQUE ESCREVER</h5>
                 </div>
-                <!-- end title-box -->
             </div>
-            <!-- end col-12 -->
             <div class="col-md-6 col-xs-12">
                 <div class="left">
                     <div class="article-image"><img src="/images/noticias/noticia1.webp" alt="Image"> </div>
@@ -20,9 +18,7 @@
                     <small>Postado <strong>01 de Agosto </strong>by ADM</small>
                     <p>Covid: em que situações devo fazer check-up após infecção?</p>
                     <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
-                <!-- end left -->
             </div>
-            <!-- end col-6 -->
             <div class="col-md-6 col-xs-12">
                 <div class="left">
                     <div class="article-image"><img src="images/noticias/noticia2.webp" alt="Image"> </div>
@@ -31,11 +27,7 @@
                     <small>Postado <strong>01 de Agosto </strong>by ADM</small>
                     <p>Mundo: OMS alerta para nova onda de covid na Europa</p>
                     <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
-                <!-- end right -->
             </div>
-            <!-- end col-6 -->
         </div>
-        <!-- end row -->
     </div>
-    <!-- end container -->
 </section>

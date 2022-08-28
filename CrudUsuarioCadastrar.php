@@ -9,10 +9,14 @@ include_once('conexao.php');  // se ele clicou no botão salvar
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- TITULO DA PAGINA -->
         <title> Registrar-se </title>
 
+        <!-- ARQUIVOS CSS -->
         <link rel="stylesheet" href="css/tabelacss.css">
 
+        <!-- ARQUIVOS JAVA SCRIPT -->
         <script src="js/funcoes.js"></script>
 
     </head>

@@ -5,7 +5,6 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 ?>
 
 <!DOCTYPE html>
-<!--ALTERAR COR DO SITE EM STYLE.CSS -->
 <html lang="en">
 
 <head>
@@ -25,9 +24,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
     <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
     <link href="ico/favicon.png" rel="shortcut icon">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-- ARQUIVOS CSS -->
     <link href="css/ionicons.min.css" rel="stylesheet">
@@ -37,56 +34,43 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css"  />
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link href="css/style.css" rel="stylesheet">
     <link href="css/teste.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- ARQUIVOS SCRIPT -->
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <noscript>
         <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
     </noscript>
-
-
-    <!-- HTML5 shim e Respond.js para suporte ao IE8 de elementos HTML5 e consultas de mídia -->
-    <!-- AVISO: Respond.js não funciona se você visualizar a página via file:// -->
-    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 
 </head>
 <body>
 
-
 <!-- end header -->
-
 <?php include_once('IncludeHeaderADM.php'); ?>
-
 <!-- end header -->
 
-
-
-
-
-<!-- FAQ -->
-<!-- 
-
-GRADIENT BANNER DESIGN BY SIMON LURWER ON DRIBBBLE:
-https://dribbble.com/shots/14101951-Banners
-
--->
 <?php include_once('IncludeExames.php'); ?>
 <!-- final faq -->
 
-<!-- end logos -->
 
+<!-- INICIO - BARRA DO RODA PÉ -->
 <section class="footer-bar">
     <div class="container"></div>
 </section>
+<!-- FIM - BARRA DO RODA PÉ -->
 
 <!-- end footer-bar -->
 <?php include_once('IncludeRodaPe.php');?>
 <!-- end footer -->
 
+<!-- ARQUIVOS SCRIPT -->
 <script type='text/javascript' src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>

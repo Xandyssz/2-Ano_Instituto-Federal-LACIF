@@ -9,9 +9,14 @@ include_once('conexao.php');  // se ele clicou no botão agendar
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- TITULO DA PAGINA-->
         <title> LACIF </title>
 
+        <!-- ARQUIVOS JAVA SCRIPT -->
         <link rel="stylesheet" href="css/tabelacss.css">
+
+
+        <!-- ARQUIVOS JAVA SCRIPT -->
         <script src="js/funcoes.js"></script>
 
     </head>
@@ -29,12 +34,12 @@ include_once('conexao.php');  // se ele clicou no botão agendar
 
             <form action="" method="POST">
                 <h3>Agende sua consulta</h3>
-                <input type="text"   id="nome"         name="nome"  placeholder="Digite o Nome Completo" class="box">
-                <input type="number" id="cpf"         name="cpf"    placeholder="Digite o CPF" class="box">
-                <input type="number" id="celular"     name="celular"    placeholder="Digite Numero de Contato" class="box">
-                <input type="text"   id="convenio"      name="convenio" placeholder="Digite o Convenio" class="box">
-                <input type="date"   id="data_cons"    name="data_cons" class="box">
-                <input type="time"   id="horario_cons" name="horario_cons" class="box">
+                <input type="text"   id="nome"          name="nome"         placeholder="Digite o Nome Completo"    class="box">
+                <input type="number" id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box">
+                <input type="number" id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box">
+                <input type="text"   id="convenio"      name="convenio"     placeholder="Digite o Convenio"         class="box">
+                <input type="date"   id="data_cons"     name="data_cons"                                            class="box">
+                <input type="time"   id="horario_cons"  name="horario_cons"                                         class="box">
 
                 <select id="tiposanguineo "name="tiposanguineo" class="box">
                     <option value=""selected>Selecione o tipo sanguineo...</option>
@@ -68,7 +73,10 @@ include_once('conexao.php');  // se ele clicou no botão agendar
         </div>
 
     </section>
+
+    <!-- ARQUIVOS JAVA SCRIPT -->
     <script src="js/validar.js"></script>
+
     </body>
     </html>
 
@@ -98,13 +106,13 @@ if (isset($_POST['agendar'])){
     {
         echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
     } else
-        {
+    {
         $result = "INSERT INTO ifsp_lacif.consultas 
             (nome, cpf, celular, convenio, data_cons, horario_cons, tiposanguineo, sexo, tipo) 
             VALUES ('$nome', '$cpf', '$celular', '$convenio', '$data_cons', '$horario_cons', '$tiposanguineo', '$sexo', '$tipo')";
-            $row = mysqli_query($conn, $result);
-            echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-            echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
-        }
+        $row = mysqli_query($conn, $result);
+        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+    }
 }
 ?>

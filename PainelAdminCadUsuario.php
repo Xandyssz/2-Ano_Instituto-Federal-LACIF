@@ -1,9 +1,9 @@
 
 <?php
- session_start();
- include_once('sessao.php');
- include_once('conexao.php');  // se ele clicou no botão salvar
- $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+session_start();
+include_once('sessao.php');
+include_once('conexao.php');  // se ele clicou no botão salvar
+$exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
 
 ?>
@@ -15,19 +15,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>
-        Painel Administrador
-    </title>
-    <!-- Bootstrap CSS -->
-    <!----css3---->
-    <link rel="stylesheet" href="css/customADM.css">
+    <!-- titulo da pagina-->
+    <title>Painel Administrador</title>
 
 
-    <link href='css/calendar/core/main.min.css' rel='stylesheet' />
-    <link href='css/calendar/daygrid/main.min.css' rel='stylesheet' />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/calendar/personalizado.css">
-
+    <!-- ARQUIVOS JAVASCRIPT -->
     <script src='js/calendar/core/main.min.js'></script>
     <script src='js/calendar/interaction/main.min.js'></script>
     <script src='js/calendar/daygrid/main.min.js'></script>
@@ -38,11 +30,17 @@
     <script src="js/calendar/personalizado.js"></script>
     <script src="js/funcoes.js"></script>
 
+    <!-- ARQUIVOS FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-
+    <!-- ARQUIVOS CSS -->
+    <link rel="stylesheet" href="css/customADM.css">
+    <link href='css/calendar/core/main.min.css' rel='stylesheet' />
+    <link href='css/calendar/daygrid/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/calendar/personalizado.css">
     <link href="css/ionicons.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
@@ -50,6 +48,8 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css"  />
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- ARQUIVOS SCRIPT -->
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <noscript>
         <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
@@ -132,17 +132,17 @@
 
                             if ($exibirTipodeAcesso == "Administrador"){
 
-                            ?>
+                                ?>
 
-                                 <li><a href="exames.php">Meus Exames</a></li>
+                                <li><a href="exames.php">Meus Exames</a></li>
                                 <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
-                                 <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                                 <li><a href="sair.php">Sair</a></li>
-                                 <li><a> <?php echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?> </a></li>
+                                <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                                <li><a href="sair.php">Sair</a></li>
+                                <li><a> <?php echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?> </a></li>
 
 
-                            <?php
-                              }
+                                <?php
+                            }
                             ?>
 
                         </ul>
@@ -223,10 +223,11 @@
             </div>
         </div>
 
+        <!-- INICIO - RODA PÉ -->
         <?php include_once('Rodape.php');?>
+        <!-- FIM - RODA PÉ -->
 
-
-        <!-- VERIFICADO, NÃO É ISTO-->
+        <!-- SCRIPT PARA O SIDEBAR FUNCIONAR-->
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#sidebarCollapse').on('click', function () {
@@ -241,7 +242,7 @@
             });
 
         </script>
-        <!-- VERIFICADO, NÃO É ISTO-->
+        <!-- SCRIPT PARA O SIDEBAR FUNCIONAR-->
 
 </body>
 
@@ -260,7 +261,7 @@ if (isset($_POST['cadastrar'])){
     $endereco = $_POST['endereco'];
     $datanasc = $_POST['datanasc'];
 
- // Fazer o insert  no banco de dados
+    // Fazer o insert  no banco de dados
 
     $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.nome = '$nome' AND users.cpf = '$cpf'";
 

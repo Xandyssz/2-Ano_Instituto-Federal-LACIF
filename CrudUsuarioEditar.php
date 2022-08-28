@@ -21,17 +21,20 @@ if ($id > 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/funcoes.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
+    <!-- TITULO DA PAGINA-->
     <title> LACIF </title>
 
+    <!-- ARQUIVOS CSS -->
     <link rel="stylesheet" href="css/tabelacss.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- ARQUIVOS JAVA SCRIPT-->
+    <script src="js/funcoes.js"></script>
+
 </head>
 <body>
 
 <section class="book" id="book">
-
     <h1 class="heading"> <span>ALTERAÇÃO DE CADASTRO</span></h1>
 
     <div class="row">

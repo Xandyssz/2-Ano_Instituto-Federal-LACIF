@@ -110,9 +110,10 @@ if (isset($_SESSION['cpf'])){
 
 <!-- INICIO - RODA PÉ -->
 <?php include_once('IncludeRodaPe.php');?>
-
 <!-- FIM - RODA PÉ -->
 
+
+<!-- ARQUIVOS SCRIPT -->
 <script type='text/javascript' src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>

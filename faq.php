@@ -36,24 +36,18 @@ include_once('sessao.php');
     <link href="css/custom.css" rel="stylesheet" type="text/css"  />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- ARQUIVOS SCRIPT -->
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <noscript>
         <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
     </noscript>
-
-
-    <!-- HTML5 shim e Respond.js para suporte ao IE8 de elementos HTML5 e consultas de mídia -->
-    <!-- AVISO: Respond.js não funciona se você visualizar a página via file:// -->
-    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 <body>
 <!-- INICIO - MENU CABEÇALHO -->
-<!-- FIM - MENU CABEÇALHO -->
-
 <?php
 
 if (isset($_SESSION['cpf'])){
@@ -65,11 +59,12 @@ if (isset($_SESSION['cpf'])){
     include_once('IncludeHeader.php');
 }
 ?>
+<!-- FIM - MENU CABEÇALHO -->
+
 
 <!-- INICIO - FAQ!! -->
 <?php include_once('IncludeQuestoesFaq.php');?>
 <!-- FIM - FAQ!! -->
-
 
 
 <!-- INICIO - BARRA DO RODA PÉ -->
@@ -79,12 +74,11 @@ if (isset($_SESSION['cpf'])){
 <!-- FIM - BARRA DO RODA PÉ -->
 
 
-
 <!-- INICIO - RODA PÉ -->
 <?php include_once('IncludeRodaPe.php');?>
-
 <!-- FIM - RODA PÉ -->
 
+<!-- ARQUIVOS SCRIPT -->
 <script type='text/javascript' src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>

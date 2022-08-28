@@ -26,14 +26,10 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
     <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
     <link href="ico/favicon.png" rel="shortcut icon">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+    <!-- ARQUIVOS FONTES -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 
     <!-- ARQUIVOS CSS -->
@@ -46,19 +42,19 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- ARQUIVOS JAVA SCRIPT -->
     <script src="js/funcoes.js"></script>
     <noscript>
         <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
     </noscript>
-
-
-    <!-- HTML5 shim e Respond.js para suporte ao IE8 de elementos HTML5 e consultas de mídia -->
-    <!-- AVISO: Respond.js não funciona se você visualizar a página via file:// -->
-    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 
 </head>
 <body>
@@ -68,12 +64,9 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-5"></div>
-                <!-- end col-3 -->
                 <div class="col-md-6 col-sm-5 hidden-xs">
 
-                    <!-- end form -->
                 </div>
-                <!-- end col-6 -->
 
                 <div class="menuzinho">
 
@@ -133,7 +126,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
 
 
-<!-- FAQ -->
+<!-- inicio tabela -->
 <section class="container-fluid">
     <div class="form-group col-md-12">
         <input type="button" name="Cadastrar" class="btn btn-info" value="Cadastrar" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
@@ -193,17 +186,20 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                     </tbody>
                 </table>
 </section>
+<!-- final tabela -->
 
-<!-- final faq -->
-
-<!-- end logos -->
+<!-- INICIO - BARRA DO RODA PÉ -->
 <section class="footer-bar">
     <div class="container"></div>
 </section>
-<!-- end footer-bar -->
+<!-- FIM - BARRA DO RODA PÉ -->
 
+
+<!-- INICIO - RODA PÉ -->
 <?php include_once('IncludeRodaPe.php');?>
+<!-- FIM - RODA PÉ -->
 
+<!-- ARQUIVOS SCRIPT -->
 <script type='text/javascript' src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>
