@@ -131,7 +131,7 @@
                             ?>
 
                                  <li><a href="exames.php">Meus Exames</a></li>
-                                <li><a href="PainelAdmin.php">Gerenciar Consulta</a></li>
+                                <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
                                  <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                                  <li><a href="sair.php">Sair</a></li>
                                  <li><a>  <?php  echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?></a></li>

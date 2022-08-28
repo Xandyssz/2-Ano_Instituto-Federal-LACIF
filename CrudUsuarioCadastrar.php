@@ -40,6 +40,9 @@ include_once('conexao.php');  // se ele clicou no botão salvar
 
                 <input type="button" name="salvar" id="salvar" class="btn btn-danger" onclick="location.href='CrudUsuarioListar.php'" value="Cancelar">
                 <input type="submit" name="cadastrar" id="cadastrar" class="btn btn-danger" value="cadastrar">
+                <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='index.php'" value="Voltar">
+
+
             </form>
         </div>
     </section>

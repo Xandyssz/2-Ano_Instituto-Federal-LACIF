@@ -86,18 +86,25 @@ if (isset($_POST['agendar'])){
     $sexo = $_POST['sexo'];
     $tipo = $_POST['tipo'];
 
-
     // Fazer o insert  no banco de dados
-    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons WHERE cons.nome = '$nome' AND cons.cpf = '$cpf' AND cons.horario_cons";
+    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
+    WHERE cons.nome = '$nome' 
+    AND cons.cpf = '$cpf' 
+    AND cons.horario_cons";
+
     $row = mysqli_query($conn, $query);
 
-    if(mysqli_num_rows($row) > 0) {
+    if(mysqli_num_rows($row) > 0)
+    {
         echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
-    } else {
-        $result = "INSERT INTO ifsp_lacif.consultas (nome, cpf, celular, convenio, data_cons, horario_cons, tiposanguineo, sexo, tipo) VALUES ('$nome', '$cpf', '$celular', '$convenio', '$data_cons', '$horario_cons', '$tiposanguineo', '$sexo', '$tipo')";
-        mysqli_query($conn, $result);
-        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
-    }
+    } else
+        {
+        $result = "INSERT INTO ifsp_lacif.consultas 
+            (nome, cpf, celular, convenio, data_cons, horario_cons, tiposanguineo, sexo, tipo) 
+            VALUES ('$nome', '$cpf', '$celular', '$convenio', '$data_cons', '$horario_cons', '$tiposanguineo', '$sexo', '$tipo')";
+            $row = mysqli_query($conn, $result);
+            echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
+            echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+        }
 }
 ?>

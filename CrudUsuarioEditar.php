@@ -89,7 +89,16 @@ if (isset($_POST['alterar'])) {
 
 //Fazer o update no banco de dados
 
-$result = "UPDATE ifsp_lacif.usuarios SET nome = '$nome', email = '$email', cpf = '$cpf', senha = '$senha', celular = '$celular', endereco = '$endereco', datanasc = '$datanasc', nivelAcesso = '$nivelAcesso' WHERE idusuario = $id";
+$result = "UPDATE ifsp_lacif.usuarios 
+SET nome = '$nome', 
+    email = '$email',
+    cpf = '$cpf', 
+    senha = '$senha', 
+    celular = '$celular', 
+    endereco = '$endereco', 
+    datanasc = '$datanasc', 
+    nivelAcesso = '$nivelAcesso' 
+WHERE idusuario = $id";
 
     $row = mysqli_query($conn, $result);
     echo "<script type='text/javascript'>OpcaoMensagens(2);</script>";

@@ -183,7 +183,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                                 echo "<a href='CrudUsuarioEditar.php?id=".$linha['idusuario']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";
                                 echo " ";
                                 $id = $linha['idusuario'];
-                                echo "<a href='#' title='Excluir' onclick='confirmacaoExclusaoEstado($id);'><i class='fa fa-trash'></i></a>";
+                                echo "<a href='#' title='Excluir' onclick='confirmacaoExclusaoUsuario($id);'><i class='fa fa-trash'></i></a>";
                                 ?>
                             </td>
                         </tr>
