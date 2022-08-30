@@ -103,6 +103,9 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                     <a href="PainelAdminCalendario.php"><i class="material-icons">library_books</i><span>Agenda</span></a>
                 </li>
 
+                <li  class="">
+                    <a href="IncludeHome.php"><i class="material-icons">home constant</i><span></span></a>
+                </li>
 
             </ul>
 

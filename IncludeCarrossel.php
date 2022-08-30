@@ -17,8 +17,8 @@
                     <div class="sl-slide-inner">
                         <div class="bg-img bg-img-2"></div>
                         <div class="content">
-                            <h2>Nossa sala de <u>MRI</u> <br>
-                                Foi renovada para nossos pacientes</h2>
+                            <h2><u></u> <br>
+                                </h2>
                             <img src="images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
@@ -27,8 +27,8 @@
                     <div class="sl-slide-inner">
                         <div class="bg-img bg-img-3"></div>
                         <div class="content">
-                            <h2>Suporte <u>online</u> muito<br>
-                                fácil de obter em nosso novo site</h2>
+                            <h2> <u></u> <br>
+                                </h2>
                             <img src="/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
@@ -37,8 +37,8 @@
                     <div class="sl-slide-inner">
                         <div class="bg-img bg-img-4"></div>
                         <div class="content">
-                            <h2>30% <u>de desconto</u> para <br>
-                                pacientes de tratamento especial</h2>
+                            <h2> <u> </u>  <br>
+                                   </h2>
                             <img src="images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>

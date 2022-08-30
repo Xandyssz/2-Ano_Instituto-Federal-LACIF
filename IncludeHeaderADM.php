@@ -18,6 +18,8 @@
                             <li><a href="PainelAdmin.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="CrudConsultaListar.php">Gerenciar Consultas</a></li>
+
                             <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
 
@@ -33,7 +35,7 @@
                         }elseif($exibirTipodeAcesso == "Doutor"){
                             ?>
                             <li><a href="exames.php">Visualizar Exames</a></li>
-                            <li><a href="CrudConsultaListar.php">Visualizar Consultas</a></li>
+                            <li><a href="PainelAdminCalendario.php">Visualizar Consultas</a></li>
                             <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
 
@@ -58,13 +60,6 @@
                 <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
             <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
                  id="bs-example-navbar-collapse-1">
-
-                <form class="visible-xs">
-                    <label>
-                        <input type="text" placeholder="Type a word to find">
-                    </label>
-                    <input type="submit" value="SEARCH">
-                </form>
 
                 <ul class="social-media hidden-sm">
                     <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a>

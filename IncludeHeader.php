@@ -21,12 +21,6 @@
                 <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
             <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
-                <form class="visible-xs">
-                    <label>
-                        <input type="text" placeholder="Type a word to find">
-                    </label>
-                    <input type="submit" value="SEARCH">
-                </form>
                 <ul class="social-media hidden-sm">
                     <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a></li>
                     <li><a href="https://twitter.com/xandyszz"><i class="ion-social-twitter"></i></a></li>

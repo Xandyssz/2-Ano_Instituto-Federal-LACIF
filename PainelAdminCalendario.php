@@ -89,6 +89,10 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                     <a href="#"><i class="material-icons">library_books</i><span>Agenda</span></a>
                 </li>
 
+                <li  class="">
+                    <a href="IncludeHome.php"><i class="material-icons">home constant</i><span></span></a>
+                </li>
+
             </ul>
 
         </nav>
@@ -104,7 +108,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                         <span class="material-icons">arrow_back_ios</span>
                     </button>
 
-                    <a class="navbar-brand" href="#"> Painel Administrador </a>
+                    <a class="navbar-brand" href="#"> Agenda </a>
                     <div class="menuhorizontal">
 
                         <ul class="language">

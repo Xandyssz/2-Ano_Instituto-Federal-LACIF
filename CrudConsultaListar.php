@@ -74,12 +74,13 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                         if ($exibirTipodeAcesso == "Administrador"){
 
                             ?>
-
+                            <li><a href="PainelAdmin.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
-                            <li><a href="PainelAdmin.php">Gerenciar Consulta</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="CrudConsultaListar.php">Gerenciar Consultas</a></li>
 
                             <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+
 
                             <?php
                         } elseif($exibirTipodeAcesso == "Paciente"){
@@ -88,23 +89,17 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
                             <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
+
                             <?php
                         }elseif($exibirTipodeAcesso == "Doutor"){
                             ?>
                             <li><a href="exames.php">Visualizar Exames</a></li>
-                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
-                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="CrudConsultaListar.php">Visualizar Consultas</a></li>
                             <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
 
+
                             <?php
-                        } elseif ($exibirTipodeAcesso == "Recepcionista"){
-                            ?>
-                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a>
-                            </li>
-                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                            <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
-                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
-                        <?php  }
+                        }
                         ?>
                         <li><a href="sair.php">Sair</a></li>
 

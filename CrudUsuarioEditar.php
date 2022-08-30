@@ -26,7 +26,6 @@ if ($id > 0) {
 
     <!-- ARQUIVOS CSS -->
     <link rel="stylesheet" href="css/tabelacss.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- ARQUIVOS JAVA SCRIPT-->
     <script src="js/funcoes.js"></script>
@@ -53,16 +52,32 @@ if ($id > 0) {
             <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box" value="<?php echo $linhaUnica['endereco']?>">
             <input type="date"  name="datanasc" id="datanasc" class="box" value="<?php echo $linhaUnica['datanasc']?>">
 
-            <select name="nivelAcesso" id="nivelAcesso" class="box" value="<?php echo $linhaUnica['nivelAcesso']?>">
-                <option value="" selected>Selecione...</option>
-                <?php
-                if ($linhaUnica['nivelAcesso'] == $linhaUnica['nivelAcesso']) {
-                    ?>
-                    <option value="<?php echo $linhaUnica['nivelAcesso'];?>" selected>
-                        <?php echo $linhaUnica['nivelAcesso'];?>
-                        <?php echo $linhaUnica['nivelAcesso'] == 'Administrador';?>
-                    </option>
 
+
+            <select name="nivelAcesso" nivelAcesso class="box" value="<?php echo $linhaUnica['nivelAcesso']; ?>">
+
+                <?php
+                if ($linhaUnica['nivelAcesso'] == "Paciente") {
+                    ?>
+                    <option value="Paciente"selected>Paciente</option>
+                    <option value="Laboratorista">Laboratorista</option>
+                    <option value="Doutor">Doutor</option>
+
+
+                    <?php
+                }
+                elseif ($linhaUnica['nivelAcesso'] == "Laboratorista") {
+                    ?>
+                    <option value="Paciente">Paciente</option>
+                    <option value="Laboratorista"selected>Laboratorista</option>
+                    <option value="Doutor">Doutor</option>
+
+                    <?php
+                } elseif ($linhaUnica['nivelAcesso'] == "Doutor") {
+                    ?>
+                    <option value="Paciente">Paciente</option>
+                    <option value="Laboratorista">Laboratorista</option>
+                    <option value="Doutor"selected>Doutor</option>
                     <?php
                 }
                 ?>

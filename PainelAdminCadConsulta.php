@@ -102,6 +102,10 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                 </li>
 
 
+                <li  class="">
+                    <a href="IncludeHome.php"><i class="material-icons">home constant</i><span></span></a>
+                </li>
+
             </ul>
 
 

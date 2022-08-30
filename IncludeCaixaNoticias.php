@@ -15,17 +15,10 @@
                 </div>
                 <h3>Check-up após infecção</h3>
                 <p>Médicos apontam que não existe 'receita de bolo', que sirva de orientação para todo mundo que teve doença. Mas há três situações que podem exigir uma avaliação médica mais aprofundada.</p>
-                <?php
-                if ($exibirTipodeAcesso == "Administrador"){
-
-                    ?>
 
                     <a href="#" onclick="window.location.href='#'" class="btn"> Cadastrar Noticia <span class="fas fa-chevron-right"></span> </a>
                     <a href="#" class="btn"> Editar Noticia <span class="fas fa-chevron-right"></span> </a>
 
-                    <?php
-                }
-                ?>
             </div>
         </div>
 
@@ -43,17 +36,10 @@
                 <p>A Organização Mundial da Saúde (OMS) alertou para escalada de casos e hospitalizações por covid-19 na Europa,
                     semelhante à situação de 2021. Dessa vez, a nova onda está sendo impulsionada por sublinhagens da
                     variante Ômicron, principalmente BA.2 e BA.5.</p>
-                <?php
-                if ($exibirTipodeAcesso == "Administrador"){
 
-                    ?>
+                <a href="#" onclick="window.location.href='#'" class="btn"> Cadastrar Noticia <span class="fas fa-chevron-right"></span> </a>
+                <a href="#" class="btn"> Editar Noticia <span class="fas fa-chevron-right"></span> </a>
 
-                    <a href="#" onclick="window.location.href='#'" class="btn"> Cadastrar Noticia <span class="fas fa-chevron-right"></span> </a>
-                    <a href="#" class="btn"> Editar Noticia <span class="fas fa-chevron-right"></span> </a>
-
-                    <?php
-                }
-                ?>
             </div>
         </div>
 
@@ -71,17 +57,11 @@
                 <p>A Organização Mundial da Saúde (OMS) alertou para escalada de casos e hospitalizações por covid-19 na Europa,
                     semelhante à situação de 2021. Dessa vez, a nova onda está sendo impulsionada por sublinhagens da
                     variante Ômicron, principalmente BA.2 e BA.5.</p>
-                <?php
-                if ($exibirTipodeAcesso == "Administrador"){
 
-                    ?>
 
                     <a href="#" onclick="window.location.href='#'" class="btn"> Cadastrar Noticia <span class="fas fa-chevron-right"></span> </a>
                     <a href="#" class="btn"> Editar Noticia <span class="fas fa-chevron-right"></span> </a>
 
-                    <?php
-                }
-                ?>
             </div>
         </div>
 
