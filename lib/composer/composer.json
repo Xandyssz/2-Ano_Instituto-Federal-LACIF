@@ -1,0 +1,16 @@
+{
+    "name": "wef/calendar",
+    "description": "Calendario de Consultas LACIF",
+    "authors": [
+        {
+            "name": "Xandy"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "../../class",
+            "Models\\": "../../model"
+        }
+    }
+}

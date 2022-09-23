@@ -45,10 +45,10 @@ if ($id > 0) {
         <form action="#" method="POST">
             <h3>Alterar Cadastro</h3>
             <input type="text"  name="nome" id="nome" placeholder="Digite o Nome Completo" class="box" value="<?php echo $linhaUnica['nome']?>">
-            <input type="number" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box"  value="<?php echo $linhaUnica['cpf']?>">
+            <input type="text" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box"  value="<?php echo $linhaUnica['cpf']?>">
             <input type="email"  name="email" id="email" placeholder="Digite o email" class="box" value="<?php echo $linhaUnica['email']?>">
             <input type="password"  name="senha" id="senha" placeholder="Digite a senha" class="box" value="<?php echo $linhaUnica['senha']?>">
-            <input type="number" name="celular" id="celular" placeholder="Digite Numero de Contato" class="box" value="<?php echo $linhaUnica['celular']?>">
+            <input type="text" name="celular" id="celular" placeholder="Digite Numero de Contato" class="box" value="<?php echo $linhaUnica['celular']?>">
             <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box" value="<?php echo $linhaUnica['endereco']?>">
             <input type="date"  name="datanasc" id="datanasc" class="box" value="<?php echo $linhaUnica['datanasc']?>">
 
@@ -86,6 +86,17 @@ if ($id > 0) {
             <input type="submit" id="alterar" name="alterar" class="btn btn-primary pull-right" value="alterar">
         </form>
         <script src="js/formulario.js"></script>
+        <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <script>
+            $("#celular").mask("(99) 99999-9999");
+            $("#cpf").mask("999.999.999-99");
+        </script>
+        <script>
+            $(#celular).mask("(99) 99999-9999");
+            $(#cpf).mask("999.999.999-99");
+        </script>
 </section>
 </body>
 </html>

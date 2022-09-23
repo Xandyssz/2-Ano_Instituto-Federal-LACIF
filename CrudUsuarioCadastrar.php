@@ -35,21 +35,32 @@ include_once('conexao.php');  // se ele clicou no botão salvar
             <form action="" method="POST"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se não não grava no BANCO -->
                 <h3>Cadastro</h3>
                 <input type="text"  name="nome" id="nome" placeholder="Digite o Nome Completo" class="box" required>
-                <input type="number" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box" required>
+                <input type="text" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box" required>
                 <input type="email"  name="email" id="email" placeholder="Digite o email" class="box" required>
                 <input type="password"  name="senha" id="senha" placeholder="Digite a senha" class="box" required>
-                <input type="number" name="celular" id="celular" placeholder="Digite Numero de Contato" class="box" required>
+                <input type="text" name="celular" id="celular" placeholder="Digite Numero de Contato" class="box" required>
                 <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box" required>
                 <input type="date"  name="datanasc" id="datanasc" class="box" required>
-
-                <input type="button" name="salvar" id="salvar" class="btn btn-danger" onclick="location.href='CrudUsuarioListar.php'" value="Cancelar">
-                <input type="submit" name="cadastrar" id="cadastrar" class="btn btn-danger" value="cadastrar">
                 <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='index.php'" value="Voltar">
+                <input type="submit" name="cadastrar" id="cadastrar" class="btn btn-danger" value="cadastrar">
 
 
             </form>
         </div>
     </section>
+
+    <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script>
+        $("#celular").mask("(99) 99999-9999");
+        $("#cpf").mask("999.999.999-99");
+    </script>
+    <script>
+        $(#celular).mask("(99) 99999-9999");
+        $(#cpf).mask("999.999.999-99");
+    </script>
+
 
     </body>
     </html>
@@ -66,9 +77,11 @@ if (isset($_POST['cadastrar'])){
     $endereco = $_POST['endereco'];
     $datanasc = $_POST['datanasc'];
 
+
+    $dataBrasil = implode('-', array_reverse(explode('/', $datanasc)));
     // Fazer o insert  no banco de dados
 
-    $query = "SELECT users.* FROM ifsp_lacif.usuarios users 
+    $query = "SELECT * FROM ifsp_lacif.usuarios users 
     WHERE users.nome = '$nome' 
     AND users.cpf = '$cpf'";
 
@@ -84,10 +97,10 @@ if (isset($_POST['cadastrar'])){
     {
         $result = "INSERT INTO ifsp_lacif.usuarios 
         (nome, cpf, email, senha, celular, endereco, datanasc) 
-        VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
+        VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$dataBrasil')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=IncludeHome.php">';
     }
 
 }

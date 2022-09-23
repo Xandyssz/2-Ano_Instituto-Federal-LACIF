@@ -6,7 +6,7 @@ include_once('conexao.php');
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM ifsp_lacif.consultas WHERE idconsulta = $id";
+    $query = "SELECT * FROM ifsp_lacif.consultas WHERE id = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -44,14 +44,15 @@ if ($id > 0) {
 
         <form action="#" method="POST">
             <h3>Alterar Agendamento</h3>
-            <input type="text"  name="nome" id="nome" placeholder="Digite o Nome Completo" class="box" value="<?php echo $linhaUnica['nome']?>">
-            <input type="number" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box"  value="<?php echo $linhaUnica['cpf']?>">
-            <input type="number"  name="celular" id="celular" placeholder="Digite o numero de Contato" class="box" value="<?php echo $linhaUnica['celular']?>">
-            <input type="text"  name="convenio" id="convenio" placeholder="Digite o Convenio" class="box" value="<?php echo $linhaUnica['convenio']?>">
-            <input type="date" name="data_cons" id="data_cons"        class="box" value="<?php echo $linhaUnica['data_cons']?>">
-            <input type="time" name="horario_cons" id="horario_cons"  class="box" value="<?php echo $linhaUnica['horario_cons']?>">
+            <input type="text"              id="title"         name="title"         placeholder="Digite o Nome Completo"   class="box" value="<?php echo $linhaUnica['title']?>">
+            <input type="text"              id="description"   name="description"   placeholder="Digite a Descricao"        class="box" value="<?php echo $linhaUnica['description']?>">
+            <input type="date"              id="start"         name="start"                                                class="box" value="<?php echo $linhaUnica['start']?>">
+            <input type="date"              id="end"           name="end"                                                  class="box" value="<?php echo $linhaUnica['end']?>">
+            <input type="text"              id="convenio"      name="convenio"     placeholder="Digite o Convenio"         class="box" value="<?php echo $linhaUnica['convenio']?>">
+            <input type="text"              id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box" value="<?php echo $linhaUnica['celular']?>">
+            <input type="text"              id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box" value="<?php echo $linhaUnica['cpf']?>">
 
-            <select  name="tiposanguineo" id="tiposanguineo" class="box" value="<?php echo $linhaUnica['tiposanguineo']?>">
+            <select  name="tiposanguineo"   id="tiposanguineo" class="box" value="<?php echo $linhaUnica['tiposanguineo']?>">
                 <?php
                 if ($linhaUnica['tiposanguineo'] == "O-") {
                     ?>
@@ -150,23 +151,6 @@ if ($id > 0) {
                 ?>
             </select>
 
-            <select  name="sexo" id="sexo" class="box" value="<?php echo $linhaUnica['sexo']?>">
-                <?php
-                if ($linhaUnica['sexo'] == "Masculino") {
-                    ?>
-                    <option value="Masculino"selected>Masculino</option>
-                    <option value="Feminino">Feminino</option>
-                    <?php
-                }
-                elseif ($linhaUnica['sexo'] == "Feminino") {
-                    ?>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Feminino"selected>Feminino</option>
-                    <?php
-                }
-                ?>
-            </select>
-
             <select  name="tipo" id="tipo" class="box" value="<?php echo $linhaUnica['tipo']?>">
                 <?php
                 if ($linhaUnica['tipo'] == "Covid19") {
@@ -202,74 +186,106 @@ if ($id > 0) {
                 ?>
             </select>
 
+            <select  name="sexo" id="sexo" class="box" value="<?php echo $linhaUnica['sexo']?>">
+                <?php
+                if ($linhaUnica['sexo'] == "Masculino") {
+                    ?>
+                    <option value="Masculino"selected>Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <?php
+                }
+                elseif ($linhaUnica['sexo'] == "Feminino") {
+                    ?>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino"selected>Feminino</option>
+                    <?php
+                }
+                ?>
+            </select>
+
             <select  name="status" id="status" class="box" value="<?php echo $linhaUnica['status']?>">
                 <?php
                 if ($linhaUnica['status'] == "Pendente") {
                     ?>
                     <option value="Pendente"selected>Pendente</option>
-                    <option value="AguardandoResultado">Aguardando Resultado</option>
+                    <option value="Analise">Sobre Análise</option>
                     <option value="Finalizado">Finalizado</option>
                     <?php
                 }
-                elseif ($linhaUnica['status'] == "AguardandoResultado") {
+                elseif ($linhaUnica['status'] == "Analise") {
                     ?>
                     <option value="Pendente">Pendente</option>
-                    <option value="AguardandoResultado"selected>Aguardando Resultado</option>
+                    <option value="Analise"selected>Sobre Análise</option>
                     <option value="Finalizado">Finalizado</option>
                     <?php
                 } elseif ($linhaUnica['status'] == "Finalizado") {
                     ?>
                     <option value="Pendente">Pendente</option>
-                    <option value="AguardandoResultado">Aguardando Resultado</option>
+                    <option value="Analise">Sobre Análise</option>
                     <option value="Finalizado"selected>Finalizado</option>
                     <?php
                 }
                 ?>
             </select>
 
-
             <input type="submit" id="alterar" name="alterar" class="btn btn-primary pull-right" value="alterar">
         </form>
         <script src="js/formulario.js"></script>
+
+        <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <script>
+            $("#celular").mask("(99) 99999-9999");
+            $("#cpf").mask("999.999.999-99");
+        </script>
+
 </section>
 </body>
 </html>
 
+
 <?php
 //se ele clicou no botão alterar
 if (isset($_POST['alterar'])) {
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $celular = $_POST['celular'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $start = $_POST['start'];
+    $end = $_POST['end'];
     $convenio = $_POST['convenio'];
-    $data_cons = $_POST['data_cons'];
-    $horario_cons = $_POST['horario_cons'];
+    $celular = $_POST['celular'];
+    $cpf = $_POST['cpf'];
     $tiposanguineo = $_POST['tiposanguineo'];
-    $sexo = $_POST['sexo'];
     $tipo = $_POST['tipo'];
+    $sexo = $_POST['sexo'];
     $status = $_POST['status'];
 
-//    $nivelAcesso = $_POST['nivelAcesso'];
+    //Fazer o update no banco de dados
 
 
 //Fazer o update no banco de dados
 
     $result = "UPDATE ifsp_lacif.consultas 
-    SET nome = '$nome',
-    cpf = '$cpf',
-    celular = '$celular',
+    SET title = '$title',
+    description = '$description',
+    start = '$start',
+    end = '$end',
     convenio = '$convenio',
-    data_cons = '$data_cons',
-    horario_cons = '$horario_cons',
+    celular = '$celular',
+    cpf = '$cpf',
     tiposanguineo = '$tiposanguineo',
-    sexo = '$sexo',
     tipo = '$tipo',
+    sexo = '$sexo',
     status = '$status'
-        WHERE idconsulta = $id";
+        WHERE id = $id";
 
     $row = mysqli_query($conn, $result);
     echo "<script type='text/javascript'>OpcaoMensagens(2);</script>";
     echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
 }
 ?>
+
+
+
+
 

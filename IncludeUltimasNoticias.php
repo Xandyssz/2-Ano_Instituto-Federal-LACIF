@@ -18,6 +18,7 @@
                     <small>Postado <strong>01 de Agosto </strong>by ADM</small>
                     <p>Covid: em que situações devo fazer check-up após infecção?</p>
                     <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
+
             </div>
             <div class="col-md-6 col-xs-12">
                 <div class="left">

@@ -44,7 +44,7 @@ function OpcaoMensagens($id){
 
 }
 function confirmacaoExclusaoUsuario(id) {
-    var resposta = confirm("Confima Exclusão Usuario??");
+    var resposta = confirm("Confirma Exclusão Usuario??");
     if (resposta == true) {
       //window.location.href = path+"/contact-us.php/CrudUsuarioDeletar.php?id="+id
 
@@ -52,11 +52,20 @@ function confirmacaoExclusaoUsuario(id) {
     }
 }
 
-function confirmacaoExclusaoConsulta(idconsulta) {
-    var resposta = confirm("Confima Exclusão Usuario??");
+function confirmacaoExclusaoNoticia(id) {
+    var resposta = confirm("Confirma Exclusão da Noticia??");
     if (resposta == true) {
         //window.location.href = path+"/contact-us.php/CrudUsuarioDeletar.php?id="+id
 
-        window.location.href = "./CrudConsultaDeletar.php?id=" + idconsulta;
+        window.location.href = "./CrudNoticiaDeletar.php?id=" + id;
+    }
+}
+
+function confirmacaoExclusaoConsulta(id) {
+    var resposta = confirm("Confirma Exclusão??");
+    if (resposta == true) {
+        //window.location.href = path+"/contact-us.php/CrudUsuarioDeletar.php?id="+id
+
+        window.location.href = "./CrudConsultaDeletar.php?id=" + id;
     }
 }

@@ -8,20 +8,19 @@ include_once("conexao.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TITULO DA PAGINA -->
-    <title>Consulta Delete</title>
 
+    <!-- TITULO DA PAGINA -->
+    <title>Usario Delete</title>
 
     <!-- ARQUIVOS JAVA SCRIPT -->
     <script src="js/funcoes.js"></script>
 
 </head>
 <body>
-
 <?php
-$idconsulta = $_GET['id'];
-if ($idconsulta > 0) {
-    $query = "DELETE FROM ifsp_lacif.consultas WHERE idconsulta = $idconsulta";
+$id = $_GET['id'];
+if ($id > 0) {
+    $query = "DELETE FROM ifsp_lacif.consultas WHERE id = $id";
     $dados = mysqli_query($conn, $query);
     echo "<script>OpcaoMensagens(3);</script>";
     echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';

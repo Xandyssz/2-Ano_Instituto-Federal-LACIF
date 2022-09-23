@@ -1,7 +1,14 @@
 <?php
 session_start();
 include_once('sessao.php');
-$exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+$exibirTipodeAcesso="";
+if (!isset($_SESSION['tipo_acesso'])){
+    header('location: index.php');
+    exit;
+}
+else{
+    $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
+}
 ?>
 
 <!DOCTYPE html>

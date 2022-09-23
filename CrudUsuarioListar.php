@@ -75,6 +75,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                         if ($exibirTipodeAcesso == "Administrador"){
 
                             ?>
+                            <li><a href="IncludeHome.php">Home</a></li>
                             <li><a href="PainelAdmin.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
@@ -135,25 +136,14 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Email</th>
-                    <th>Senha</th>
-                    <th>Celular</th>
-                    <th>Endereco</th>
-                    <th>Data de Nascimento</th>
-                    <th>Nivel de Acesso</th>
-                    <th>Acoes</th>
-                    </thead>
-                    <tbody>
+a
 
                     <?php
                     $query = "SELECT * FROM ifsp_lacif.usuarios order by idusuario";
                     $dados = mysqli_query($conn, $query ); // comando transação bd
 
                     while ($linha = mysqli_fetch_assoc($dados)){
+                        $dataBrasil = implode('/', array_reverse(explode('-', $linha['datanasc'])));
 
                         ?>
                         <tr>
@@ -164,7 +154,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                             <td><?php  echo $linha['senha']; ?></td>
                             <td><?php  echo $linha['celular']; ?></td>
                             <td><?php  echo $linha['endereco']; ?></td>
-                            <td><?php  echo $linha['datanasc']; ?></td>
+                            <td><?php  echo $dataBrasil; ?></td>
                             <td><?php  echo $linha['nivelAcesso'];?></td>
                             <td>
                                 <?php

@@ -34,12 +34,14 @@ include_once('conexao.php');  // se ele clicou no botão agendar
 
             <form action="" method="POST">
                 <h3>Agende sua consulta</h3>
-                <input type="text"   id="nome"          name="nome"         placeholder="Digite o Nome Completo"    class="box">
-                <input type="number" id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box">
-                <input type="number" id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box">
-                <input type="text"   id="convenio"      name="convenio"     placeholder="Digite o Convenio"         class="box">
-                <input type="date"   id="data_cons"     name="data_cons"                                            class="box">
-                <input type="time"   id="horario_cons"  name="horario_cons"                                         class="box">
+                <input type="text"              id="title"         name="title"         placeholder="Digite o Nome Completo"   class="box">
+                <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box">
+                <input type="date"              id="start"         name="start"                                                class="box">
+                <input type="date"              id="end"           name="end"                                                  class="box">
+                <input type="text"              id="convenio"      name="convenio"     placeholder="Digite o Convenio"         class="box">
+                <input type="text"              id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box">
+                <input type="text"              id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box">
+
 
                 <select id="tiposanguineo "name="tiposanguineo" class="box">
                     <option value=""selected>Selecione o tipo sanguineo...</option>
@@ -77,6 +79,17 @@ include_once('conexao.php');  // se ele clicou no botão agendar
     <!-- ARQUIVOS JAVA SCRIPT -->
     <script src="js/validar.js"></script>
 
+    <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script>
+        $("#celular").mask("(99) 99999-9999");
+        $("#cpf").mask("999.999.999-99");
+    </script>
+    <script>
+        $(#celular).mask("(99) 99999-9999");
+        $(#cpf).mask("999.999.999-99");
+    </script>
     </body>
     </html>
 
@@ -84,22 +97,25 @@ include_once('conexao.php');  // se ele clicou no botão agendar
 <?php
 
 if (isset($_POST['agendar'])){
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $celular = $_POST['celular'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $start = $_POST['start'];
+    $end = $_POST['end'];
     $convenio = $_POST['convenio'];
-    $data_cons = $_POST['data_cons'];
-    $horario_cons = $_POST['horario_cons'];
+    $celular = $_POST['celular'];
+    $cpf = $_POST['cpf'];
     $tiposanguineo = $_POST['tiposanguineo'];
-    $sexo = $_POST['sexo'];
     $tipo = $_POST['tipo'];
+    $sexo = $_POST['sexo'];
+
+//    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
+//    $FimdataBrasil = implode('-', array_reverse(explode('/', $end)));
 
     // Fazer o insert  no banco de dados
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
-    WHERE cons.nome = '$nome' 
-    AND cons.cpf = '$cpf' 
-    AND cons.horario_cons";
-
+    WHERE cons.start = '$start' 
+    AND cons.end = '$end' 
+    AND cons.cpf = '$cpf'";
     $row = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($row) > 0)
@@ -108,11 +124,14 @@ if (isset($_POST['agendar'])){
     } else
     {
         $result = "INSERT INTO ifsp_lacif.consultas 
-            (nome, cpf, celular, convenio, data_cons, horario_cons, tiposanguineo, sexo, tipo) 
-            VALUES ('$nome', '$cpf', '$celular', '$convenio', '$data_cons', '$horario_cons', '$tiposanguineo', '$sexo', '$tipo')";
+            (title, description, start, end, convenio, celular, cpf, tiposanguineo, tipo, sexo) 
+            VALUES ('$title', '$description', '$start', '$end', '$convenio', '$celular', '$cpf', '$tiposanguineo', '$tipo', '$sexo')";
+
+        var_dump($result);
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+
     }
 }
 ?>

@@ -5,6 +5,7 @@ include_once('conexao.php');
 $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 ?>
 
+
 <!DOCTYPE html>
 <!--ALTERAR COR DO SITE EM STYLE.CSS -->
 <html lang="en">
@@ -37,12 +38,14 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/datepicker.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet" type="text/css"  />
+    <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> importante
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -67,6 +70,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
                 </div>
 
+
                 <div class="menuzinho">
 
                     <ul class="language">
@@ -74,6 +78,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                         if ($exibirTipodeAcesso == "Administrador"){
 
                             ?>
+                            <li><a href="IncludeHome.php">Home</a></li>
                             <li><a href="PainelAdmin.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
@@ -130,46 +135,51 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                    <th>Codigo</th>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Celular</th>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Descrição</th>
+                    <th>Data Inicio</th>
+                    <th>Data Fim</th>
                     <th>Convenio</th>
-                    <th>Data da Consulta</th>
-                    <th>Horario da Consulta</th>
+                    <th>Celular</th>
+                    <th>CPF</th>
                     <th>Tipo Sanguineo</th>
-                    <th>Sexo do Paciente</th>
-                    <th>Tipo da Consulta </th>
-                    <th>Status do Exame</th>
-                    <th>Acoes</th>
+                    <th>Tipo da Consulta</th>
+                    <th>Sexo</th>
+                    <th>Status</th>
+                    <th>Ações</th>
                     </thead>
                     <tbody>
 
                     <?php
-                    $query = "SELECT * FROM ifsp_lacif.consultas order by idconsulta";
+                    $query = "SELECT * FROM ifsp_lacif.consultas order by id";
                     $dados = mysqli_query($conn, $query ); // comando transação bd
 
                     while ($linha = mysqli_fetch_assoc($dados)){
+//                        $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
+//                        $FimdataBrasil = implode('-', array_reverse(explode('/', $end)));
 
                         ?>
                         <tr>
-                            <td><?php  echo $linha['idconsulta']; ?></td>
-                            <td><?php  echo $linha['nome']; ?></td>
-                            <td><?php  echo $linha['cpf']; ?></td>
-                            <td><?php  echo $linha['celular']; ?></td>
+                            <td><?php  echo $linha['id']; ?></td>
+                            <td><?php  echo $linha['title']; ?></td>
+                            <td><?php  echo $linha['description']; ?></td>
+                            <td><?php  echo $linha['start']; ?></td>
+                            <td><?php  echo $linha['end']; ?></td>
                             <td><?php  echo $linha['convenio']; ?></td>
-                            <td><?php  echo $linha['data_cons']; ?></td>
-                            <td><?php  echo $linha['horario_cons']; ?></td>
+                            <td><?php  echo $linha['celular']; ?></td>
+                            <td><?php  echo $linha['cpf']; ?></td>
                             <td><?php  echo $linha['tiposanguineo']; ?></td>
-                            <td><?php  echo $linha['sexo'];?></td>
-                            <td><?php  echo $linha['tipo'];?></td>
-                            <td><?php  echo $linha['status'];?></td>
+                            <td><?php  echo $linha['tipo']; ?></td>
+                            <td><?php  echo $linha['sexo']; ?></td>
+                            <td><?php  echo $linha['status']; ?></td>
+
 
                             <td>
                                 <?php
-                                echo "<a href='CrudConsultaEditar.php?id=".$linha['idconsulta']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";
+                                echo "<a href='CrudConsultaEditar.php?id=".$linha['id']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";
                                 echo " ";
-                                $id = $linha['idconsulta'];
+                                $id = $linha['id'];
                                 echo "<a href='#' title='Excluir' onclick='confirmacaoExclusaoConsulta($id);'><i class='fa fa-trash'></i></a>";
                                 ?>
                             </td>
