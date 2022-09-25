@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +18,14 @@
         <div class="image">
             <img src="images/book2-img.svg" alt="">
         </div>
-        <form class="user" method="post" action="Autenticador.php">
+        <form class="user" action="Autenticador.php" method="post" >
             <h3>LOGIN</h3>
-            <input type="number" name="cpf"  placeholder="Digite o CPF" class="box" required>
-            <input type="senha"  name="senha" placeholder="Digite a senha" class="box" required>
-            <select name="nivelAcesso" class="box" >
-                <option value="Paciente">Paciente</option>
-                <option value="Doutor">Doutor</option>
-                <option value="Administrador">Administrador</option>
-            </select>
+            <input type="text"    name="email" id="email"  placeholder="Digite o CPF" class="box" required>
+            <input type="password"  name="senha" id="senha" placeholder="Digite a senha" class="box" required>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-user btn-block">Conecte-se</button>
-                <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
-                <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='index.php'" value="Voltar">
+                <button type="submit" name="login" id="login" class="btn btn-primary btn-user btn-block">Conecte-se</button>
+                <input type="button"  name="Registrar-se" class="btn btn-info" value="Registrar-se" onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
+                <input type="button"  name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='index.php'" value="Voltar">
 
             </div>
         </form>

@@ -12,31 +12,31 @@
 
                     <ul class="language">
                         <?php
-                        if ($exibirTipodeAcesso == "Administrador"){
+                        if ($_SESSION["nivelAcesso"] == "Administrador"){
 
                             ?>
-                            <li><a href="PainelAdmin.php">Painel Admin</a></li>
+                            <li><a href="PainelAdminAgenda.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
-                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                            <li><a href="CrudConsultaListar.php">Gerenciar Consultas</a></li>
+                            <li><a href="PainelAdminAcoesUsuario.php">Gerenciar Usuarios</a></li>
+                            <li><a href="PainelAdminAcoesConsulta.php">Gerenciar Consultas</a></li>
 
-                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+                            <!--                            <li><a>--><?php //echo "Acesso:" . $exibirTipodeAcesso ?><!--</a></li>-->
 
 
                             <?php
-                        } elseif($exibirTipodeAcesso == "Paciente"){
+                        } elseif($_SESSION["nivelAcesso"] == "Paciente"){
                             ?>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+                            <!--                            <li><a>--><?php //echo "Acesso:" . $exibirTipodeAcesso ?><!--</a></li>-->
 
 
                             <?php
-                        }elseif($exibirTipodeAcesso == "Doutor"){
+                        }elseif($_SESSION["nivelAcesso"] == "Laboratorista"){
                             ?>
                             <li><a href="exames.php">Visualizar Exames</a></li>
-                            <li><a href="PainelAdminCalendario.php">Visualizar Consultas</a></li>
-                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+                            <li><a href="Arquivado/PainelAdm/PainelAdminCalendario.php">Visualizar Consultas</a></li>
+                            <!--                            <li><a>--><?php //echo "Acesso:" . $exibirTipodeAcesso ?><!--</a></li>-->
 
 
                             <?php

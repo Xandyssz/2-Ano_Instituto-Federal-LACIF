@@ -1,28 +1,43 @@
-<script src="js/funcoes.js"></script>
 <?php
+include("conexao.php");
+session_start();
 
-$cpf = $_POST ['cpf'];
-$senha = $_POST ['senha'];
-$tipo_acesso = $_POST['nivelAcesso']; // aqui eu testo os meus niveis de acesso
-define("Cpf_Correto", "123");
-define("Senha_Correta", "123");
+$email = $_POST['email'];
+$senha = $_POST['senha'];
 
+$email = stripslashes($email);
+$senha = stripslashes($senha);
+$email = mysqli_real_escape_string($conn,$email);
+$senha = mysqli_real_escape_string($conn,$senha);
 
+$result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.usuarios WHERE email='$email' AND senha='$senha'");
 
-if (!empty($_POST) && (empty($_POST['cpf'])|| empty ($_POST['senha']))){
-        echo "<script>loginMensagem();</script>";
-}elseif ($cpf == Cpf_Correto && $senha == Senha_Correta){
-    session_start();
-    $_SESSION['tipo_acesso'] = $tipo_acesso;
-    $_SESSION['cpf'] = $cpf;// inserindo os dados na sessão
-    $_SESSION['senha'] = $senha;
-    $_SESSION['sessiontime'] = time() + 60*30; // tempo de expiração da pagina
+if(mysqli_num_rows($result) != 1){
+    echo "<script>alert(' Email ou Senha Errado | Acesso Negado !!! Tente Novamente');
+      window.location='index.php';
+      </script>";
+}else
+{
+    $row = mysqli_fetch_assoc($result);
+    $_SESSION['nivelAcesso'] = $row['nivelAcesso'];
 
-    header("location: IncludeHome.php");
-
-}else {
-        echo "<script>loginMensagem();</script>";
-
+    if($row['nivelAcesso'] == "Paciente")
+    {
+        header('location: IncludeHome.php');
+    }
+    else if($row['nivelAcesso'] == "Laboratorista" )
+    {
+        header("Location: IncludeHome.php");
+    }
+    else if($row['nivelAcesso'] == "Administrador")
+    {
+        header("Location: IncludeHome.php");
+    }
+    else{
+        echo "<script>alert('Email ou Senha Errado | Acesso Negado !!! Tente Novamente');
+      window.location='index.php';
+      </script>";
+    }
 }
 
 ?>
