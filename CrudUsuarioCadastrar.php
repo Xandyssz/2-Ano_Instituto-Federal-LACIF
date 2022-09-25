@@ -100,7 +100,7 @@ if (isset($_POST['cadastrar'])){
         VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$dataBrasil')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=IncludeHome.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=login.php">';
     }
 
 }
