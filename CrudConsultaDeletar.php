@@ -23,10 +23,10 @@ if ($id > 0) {
     $query = "DELETE FROM ifsp_lacif.consultas WHERE id = $id";
     $dados = mysqli_query($conn, $query);
     echo "<script>OpcaoMensagens(3);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarConsulta.php">';
 } else {
     echo "<script>OpcaoMensagens(5);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarConsulta.php">';
 }
 ?>
 </body>

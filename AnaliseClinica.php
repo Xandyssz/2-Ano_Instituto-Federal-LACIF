@@ -74,7 +74,7 @@ if (isset($_SESSION['cpf'])){
     include_once('IncludeHeader.php');
 }
 ?>
-<!-- FIM - MENU CABEÇALHO -->
+<!-- FIM - MENU CABEÇALHO!! -->
 
 
 <!-- INICIO - FAQ DE EXAMES -->

@@ -79,7 +79,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
                             ?>
                             <li><a href="IncludeHome.php">Home</a></li>
-                            <li><a href="PainelAdmin.php">Painel Admin</a></li>
+                            <li><a href="PainelAdminAgenda.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                             <li><a href="CrudConsultaListar.php">Gerenciar Consultas</a></li>

@@ -260,13 +260,14 @@ if (isset($_POST['cadastrar'])){
     $cpf = $_POST['cpf'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
     $celular = $_POST['celular'];
     $endereco = $_POST['endereco'];
     $datanasc = $_POST['datanasc'];
 
     // Fazer o insert  no banco de dados
 
-    $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.nome = '$nome' AND users.cpf = '$cpf'";
+    $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.email = '$email'";
 
 
     $row = mysqli_query($conn, $query);
@@ -278,7 +279,7 @@ if (isset($_POST['cadastrar'])){
 
     else
     {
-        $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
+        $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$datanasc')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
         // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';

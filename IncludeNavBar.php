@@ -13,15 +13,15 @@
 
                     <ul class="language">
                         <?php
-                        if ($exibirTipodeAcesso == "Administrador"){
+                        if ($tipo_acesso == "Administrador"){
 
                             ?>
 
                             <li><a href="exames.php">Meus Exames</a></li>
-                            <li><a href="PainelAdmin.php">Gerenciar Consulta</a></li>
-                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
+                            <li><a href="Arquivado/PainelAdm/PainelAdmin.php">Gerenciar Consulta</a></li>
+                            <li><a href="PainelAdminListarUsuario.php">Gerenciar Usuarios</a></li>
                             <li><a href="sair.php">Sair</a></li>
-                            <li><a><?php echo "Acesso:" . $exibirTipodeAcesso ?></a></li>
+                            <li><a><?php echo "Acesso:" . $tipo_acesso ?></a></li>
 
 
 

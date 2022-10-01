@@ -11,7 +11,7 @@ if ($id > 0) {
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
     echo "<script>OpcaoMensagens(5);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarUsuario.php">';
 }
 ?>
 
@@ -131,7 +131,7 @@ WHERE idusuario = $id";
 
     $row = mysqli_query($conn, $result);
     echo "<script type='text/javascript'>OpcaoMensagens(2);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarUsuario.php">';
 }
 ?>
 

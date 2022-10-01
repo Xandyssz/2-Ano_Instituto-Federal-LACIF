@@ -76,7 +76,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
                             ?>
                             <li><a href="IncludeHome.php">Home</a></li>
-                            <li><a href="PainelAdmin.php">Painel Admin</a></li>
+                            <li><a href="PainelAdminAgenda.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                             <li><a href="CrudConsultaListar.php">Gerenciar Consultas</a></li>
@@ -136,7 +136,19 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-a
+                    <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                    <th>Celular</th>
+                    <th>Endereco</th>
+                    <th>Data Nascimento</th>
+                    <th>Nivel Acesso</th>
+                    <th>Ações</th>
+                    </thead>
+                    <tbody>
 
                     <?php
                     $query = "SELECT * FROM ifsp_lacif.usuarios order by idusuario";

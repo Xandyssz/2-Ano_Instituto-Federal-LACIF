@@ -12,31 +12,32 @@
 
                     <ul class="language">
                         <?php
-                        if ($_SESSION["nivelAcesso"] == "Administrador"){
+                        if ($_SESSION["tipo_acesso"] == "Administrador"){
 
                             ?>
                             <li><a href="PainelAdminAgenda.php">Painel Admin</a></li>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="PainelAdminAcoesUsuario.php">Gerenciar Usuarios</a></li>
                             <li><a href="PainelAdminAcoesConsulta.php">Gerenciar Consultas</a></li>
+                            <li><a href="PainelAdminAcoesNoticia.php">Gerenciar Noticias</a></li>
 
-                            <!--                            <li><a>--><?php //echo "Acesso:" . $exibirTipodeAcesso ?><!--</a></li>-->
+                            <li><a><?php echo "Acesso:" . $_SESSION['tipo_acesso']; ?></a></li>
 
 
                             <?php
-                        } elseif($_SESSION["nivelAcesso"] == "Paciente"){
+                        } elseif($_SESSION["tipo_acesso"] == "Paciente"){
                             ?>
                             <li><a href="exames.php">Meus Exames</a></li>
                             <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
-                            <!--                            <li><a>--><?php //echo "Acesso:" . $exibirTipodeAcesso ?><!--</a></li>-->
+                            <li><a><?php echo "Acesso:" . $_SESSION['tipo_acesso']; ?></a></li>
 
 
                             <?php
-                        }elseif($_SESSION["nivelAcesso"] == "Laboratorista"){
+                        }elseif($_SESSION["tipo_acesso"] == "Laboratorista"){
                             ?>
                             <li><a href="exames.php">Visualizar Exames</a></li>
                             <li><a href="Arquivado/PainelAdm/PainelAdminCalendario.php">Visualizar Consultas</a></li>
-                            <!--                            <li><a>--><?php //echo "Acesso:" . $exibirTipodeAcesso ?><!--</a></li>-->
+                            <li><a><?php echo "Acesso:" . $_SESSION['tipo_acesso']; ?></a></li>
 
 
                             <?php
@@ -57,7 +58,7 @@
                 <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span
                             class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Image"></a> </div>
+                <a class="navbar-brand" href="IncludeHome.php"><img src="images/logo.png" alt="Image"></a> </div>
             <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
                  id="bs-example-navbar-collapse-1">
 
@@ -70,7 +71,7 @@
 
                 <ul class="nav navbar-nav">
 
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="IncludeHome.php">Home</a></li>
 
                     <li><a href="#">Exames</a>
                         <ul>

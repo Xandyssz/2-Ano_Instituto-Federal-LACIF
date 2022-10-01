@@ -1,0 +1,10 @@
+{
+    "name": "wef/calendar",
+    "description": "Calendario Agenda de Exames",
+    "authors": [
+        {
+            "name": "LACIF"
+        }
+    ],
+    "require": {}
+}

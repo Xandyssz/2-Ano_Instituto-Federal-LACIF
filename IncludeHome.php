@@ -1,10 +1,9 @@
 <?php
 session_start();
 // Verifica se existe os dados da sessão de login
-if(!isset($_SESSION["nivelAcesso"]))
+if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
-    header("Location: login.html");
     exit;
 }
 ?>

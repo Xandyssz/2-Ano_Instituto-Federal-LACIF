@@ -1,16 +1,16 @@
 {
     "name": "wef/calendar",
-    "description": "Calendario de Consultas LACIF",
+    "description": "Calendario Agenda de Exames",
     "authors": [
         {
-            "name": "Xandy"
+            "name": "LACIF"
         }
     ],
     "require": {},
-    "autoload": {
-        "psr-4": {
-            "Classes\\": "../../class",
-            "Models\\": "../../model"
-        }
-    }
+	"autoload": {
+		"psr-4": {
+			"Classes\\": "../../class",
+			"Models\\": "../../model"
+		}
+	}
 }

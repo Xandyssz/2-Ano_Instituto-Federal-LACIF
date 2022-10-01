@@ -53,7 +53,13 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 <body>
 
 <!-- end header -->
-<?php include_once('IncludeHeaderADM.php'); ?>
+<?php
+if ($_SESSION["tipo_acesso"] == "Administrador") {
+    include_once('IncludeHeaderADM.php');
+} else {
+    include_once('IncludeHeader.php');
+}
+?>
 <!-- end header -->
 
 <?php include_once('IncludeExames.php'); ?>

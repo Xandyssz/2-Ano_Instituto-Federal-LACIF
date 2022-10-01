@@ -11,7 +11,7 @@ if ($id > 0) {
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
     echo "<script>OpcaoMensagens(5);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarConsulta.php">';
 }
 ?>
 
@@ -281,7 +281,7 @@ if (isset($_POST['alterar'])) {
 
     $row = mysqli_query($conn, $result);
     echo "<script type='text/javascript'>OpcaoMensagens(2);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudConsultaListar.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarConsulta.php">';
 }
 ?>
 

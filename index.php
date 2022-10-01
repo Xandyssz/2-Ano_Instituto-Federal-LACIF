@@ -1,7 +1,17 @@
 <?php
-session_start();
-include_once('sessao.php');
-
+include_once('conexao.php');
+$sqlUser = "SELECT COUNT(*) AS qtd FROM ifsp_lacif.usuarios";
+$result = mysqli_query($conn, $sqlUser);
+$rowBusca = mysqli_fetch_assoc($result);
+$qntBD = $rowBusca['qtd'];
+if ($qntBD == 0) {
+    $senha = "123";
+    $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
+    $sqlInsereUser = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc, tipo_acesso)
+VALUES ('admin', '123', 'admin', '$senhaCript', '123', 'avenida', '2022-05-12', 'Administrador')";
+    echo "<br>";
+    mysqli_query($conn, $sqlInsereUser);
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +57,7 @@ include_once('sessao.php');
 
 <?php
 
-if (isset($_SESSION['cpf'])){
+if (isset($_SESSION['tipo_acesso'])){
 
     $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     include_once('IncludeHeaderADM.php');
@@ -81,7 +91,7 @@ if (isset($_SESSION['cpf'])){
         <div class="row">
             <div class="col-xs-12 no-padding"> <img src="images/icon4.png" alt="Image">
                 <h2>Check-up mensais</h2>
-                <a href="faq.php" class="btn-ghost-lg">SAIBA MAIS</a> </div>
+                <a href="AnaliseClinica.php" class="btn-ghost-lg">SAIBA MAIS</a> </div>
         </div>
     </div>
 </section>
