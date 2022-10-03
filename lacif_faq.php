@@ -15,7 +15,7 @@ include_once('sessao.php');
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- titulo da pagina-->
-    <title>LACIF</title>
+    <title>LACIF - FAQ</title>
 
     <meta name="author" content="...">
 
@@ -29,28 +29,19 @@ include_once('sessao.php');
 
     <!-- ARQUIVOS CSS -->
     <link href="css/ionicons.min.css" rel="stylesheet">
-    <link href="css/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/datepicker.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet" type="text/css"  />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- ARQUIVOS SCRIPT -->
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <noscript>
-        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
-    </noscript>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </head>
 <body>
 <!-- INICIO - MENU CABEÇALHO -->
 <?php
 
-if (isset($_SESSION['cpf'])){
+if (isset($_SESSION['cpf'])) {
 
     $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     include_once('IncludeHeaderADM.php');
@@ -63,7 +54,7 @@ if (isset($_SESSION['cpf'])){
 
 
 <!-- INICIO - FAQ!! -->
-<?php include_once('IncludeQuestoesFaq.php');?>
+<?php include_once('IncludeQuestoesFaq.php'); ?>
 <!-- FIM - FAQ!! -->
 
 
@@ -75,23 +66,10 @@ if (isset($_SESSION['cpf'])){
 
 
 <!-- INICIO - RODA PÉ -->
-<?php include_once('IncludeRodaPe.php');?>
+<?php include_once('IncludeRodaPe.php'); ?>
 <!-- FIM - RODA PÉ -->
 
 <!-- ARQUIVOS SCRIPT -->
-<script type='text/javascript' src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/jquery.stellar.js"></script>
-<script src="js/smooth-scroll.js"></script>
-<script src="js/queryloader2.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery.maskedinput.js"></script>
-<script src="js/jquery.ba-cond.min.js" type="text/javascript" ></script>
-<script src="js/jquery.slitslider.js" type="text/javascript" ></script>
-<script src="js/slider-settings.js"></script>
 <script src="js/medicina.js"></script>
 </body>
 </html>

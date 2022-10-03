@@ -17,7 +17,7 @@
 
                             ?>
 
-                            <li><a href="exames.php">Meus Exames</a></li>
+                            <li><a href="lacif_exames.php">Meus Exames</a></li>
                             <li><a href="Arquivado/PainelAdm/PainelAdmin.php">Gerenciar Consulta</a></li>
                             <li><a href="PainelAdminListarUsuario.php">Gerenciar Usuarios</a></li>
                             <li><a href="sair.php">Sair</a></li>

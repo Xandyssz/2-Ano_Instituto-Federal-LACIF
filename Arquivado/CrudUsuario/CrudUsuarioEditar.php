@@ -25,10 +25,10 @@ if ($id > 0) {
     <title> LACIF </title>
 
     <!-- ARQUIVOS CSS -->
-    <link rel="stylesheet" href="css/tabelacss.css">
+    <link rel="stylesheet" href="../../css/tabelacss.css">
 
     <!-- ARQUIVOS JAVA SCRIPT-->
-    <script src="js/funcoes.js"></script>
+    <script src="../../js/funcoes.js"></script>
 
 </head>
 <body>
@@ -39,7 +39,7 @@ if ($id > 0) {
     <div class="row">
 
         <div class="image">
-            <img src="images/book-img.svg" alt="">
+            <img src="../../images/book-img.svg" alt="">
         </div>
 
         <form action="#" method="POST">
@@ -85,7 +85,7 @@ if ($id > 0) {
 
             <input type="submit" id="alterar" name="alterar" class="btn btn-primary pull-right" value="alterar">
         </form>
-        <script src="js/formulario.js"></script>
+        <script src="../../js/formulario.js"></script>
         <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>

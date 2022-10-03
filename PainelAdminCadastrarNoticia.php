@@ -7,7 +7,6 @@ include('assets/configs/checklogin.php');
 <!DOCTYPE html>
 <html lang="en">
 <!-- ARQUIVOS JAVA SCRIPT -->
-<link rel="stylesheet" href="css/foto.css">
 
 <script src="js/funcoes.js"></script>
 <!--Header-->

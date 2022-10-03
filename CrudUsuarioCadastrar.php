@@ -11,7 +11,14 @@ include_once('conexao.php');  // se ele clicou no botão salvar
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- TITULO DA PAGINA -->
-        <title> Registrar-se </title>
+        <title> LACIF | Registro Usuario </title>
+
+        <!-- ARQUIVOS FAVICON -->
+        <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+        <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+        <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+        <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+        <link href="ico/favicon.png" rel="shortcut icon">
 
         <!-- ARQUIVOS CSS -->
         <link rel="stylesheet" href="css/tabelacss.css">

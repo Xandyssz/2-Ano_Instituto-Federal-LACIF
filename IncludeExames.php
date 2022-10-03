@@ -18,7 +18,7 @@
                     <p class="card__exit"><?php echo "<font color='black'>Data do Exame: " . $row['start'] . "</font>"; ?></p>
 
                     <h2 class="card__title"><?php echo "<font color='black'>Status do Exame: " . $row['status'] . "</font>"; ?></h2>
-                    <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
+                    <a href="lacif_noticias.php" class="navbar-btn">LEIA MAIS</a>
                 </div>
             </div>
 

@@ -13,20 +13,20 @@ include_once("conexao.php");
     <title>Usario Delete</title>
 
     <!-- ARQUIVOS JAVA SCRIPT -->
-    <script src="js/funcoes.js"></script>
+    <script src="../../js/funcoes.js"></script>
 
 </head>
 <body>
 <?php
 $id = $_GET['id'];
 if ($id > 0) {
-    $query = "DELETE FROM ifsp_lacif.consultas WHERE id = $id";
+    $query = "DELETE FROM ifsp_lacif.usuarios WHERE idusuario = $id";
     $dados = mysqli_query($conn, $query);
     echo "<script>OpcaoMensagens(3);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarConsulta.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarUsuario.php">';
 } else {
     echo "<script>OpcaoMensagens(5);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarConsulta.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarUsuario.php">';
 }
 ?>
 </body>

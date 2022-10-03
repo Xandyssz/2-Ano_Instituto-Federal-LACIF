@@ -46,7 +46,7 @@ function OpcaoMensagens($id){
 function confirmacaoExclusaoUsuario(id) {
     var resposta = confirm("Confirma Exclusão Usuario??");
     if (resposta == true) {
-      //window.location.href = path+"/contact-us.php/CrudUsuarioDeletar.php?id="+id
+      //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
 
         window.location.href = "./CrudUsuarioDeletar.php?id=" + id;
     }
@@ -55,7 +55,7 @@ function confirmacaoExclusaoUsuario(id) {
 function confirmacaoExclusaoNoticia(id) {
     var resposta = confirm("Confirma Exclusão da Noticia??");
     if (resposta == true) {
-        //window.location.href = path+"/contact-us.php/CrudUsuarioDeletar.php?id="+id
+        //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
 
         window.location.href = "./CrudNoticiaDeletar.php?id=" + id;
     }
@@ -64,7 +64,7 @@ function confirmacaoExclusaoNoticia(id) {
 function confirmacaoExclusaoConsulta(id) {
     var resposta = confirm("Confirma Exclusão??");
     if (resposta == true) {
-        //window.location.href = path+"/contact-us.php/CrudUsuarioDeletar.php?id="+id
+        //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
 
         window.location.href = "./CrudConsultaDeletar.php?id=" + id;
     }

@@ -13,7 +13,7 @@ include_once('sessao.php');
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- titulo da pagina-->
-    <title>LACIF</title>
+    <title>LACIF - CONTATO</title>
 
     <meta name="author" content="...">
 
@@ -26,21 +26,12 @@ include_once('sessao.php');
 
     <!-- ARQUIVOS CSS -->
     <link href="css/ionicons.min.css" rel="stylesheet">
-    <link href="css/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/datepicker.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet" type="text/css"  />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- ARQUIVOS SCRIPT -->
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <noscript>
-        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
-    </noscript>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 
 </head>
@@ -49,7 +40,7 @@ include_once('sessao.php');
 <!-- INICIO - MENU CABEÇALHO -->
 <?php
 
-if (isset($_SESSION['cpf'])){
+if (isset($_SESSION['cpf'])) {
 
     $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     include_once('IncludeHeaderADM.php');
@@ -61,11 +52,10 @@ if (isset($_SESSION['cpf'])){
 <!-- FIM - MENU CABEÇALHO -->
 
 
-
 <!-- INICIO SCRIPT CONTATO -->
 <script type="text/javascript">
     // validate contact form
-    $(function() {
+    $(function () {
         $("#contact-form").validate({
             rules: {
                 name: {
@@ -132,21 +122,21 @@ if (isset($_SESSION['cpf'])){
                     minlength: "To short message"
                 }
             },
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $(form).ajaxSubmit({
-                    type:"POST",
+                    type: "POST",
                     data: $(form).serialize(),
-                    url:"process.php",
-                    success: function() {
+                    url: "process.php",
+                    success: function () {
                         $('#contact-form :input').attr('disabled', 'disabled');
-                        $('#contact-form').fadeTo( "slow", 0, function() {
+                        $('#contact-form').fadeTo("slow", 0, function () {
                             $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor','default');
+                            $(this).find('label').css('cursor', 'default');
                             $('#success').fadeIn();
                         });
                     },
-                    error: function() {
-                        $('#contact-form').fadeTo( "slow", 0, function() {
+                    error: function () {
+                        $('#contact-form').fadeTo("slow", 0, function () {
                             $('#error').fadeIn();
                         });
                     }
@@ -158,9 +148,8 @@ if (isset($_SESSION['cpf'])){
 <!-- FINAL SCRIPT CONTATO -->
 
 
-
 <!-- INICIO - CONTATO -->
-<?php include_once('IncludeContato.php');?>
+<?php include_once('IncludeContato.php'); ?>
 <!-- FIM - CONTATO -->
 
 
@@ -171,25 +160,10 @@ if (isset($_SESSION['cpf'])){
 <!-- FIM - BARRA DO RODA PÉ -->
 
 
-
 <!-- INICIO - RODA PÉ -->
-<?php include_once('IncludeRodaPe.php');?>
+<?php include_once('IncludeRodaPe.php'); ?>
 <!-- FIM - RODA PÉ -->
 
-<!-- ARQUIVOS SCRIPT -->
-<script type='text/javascript' src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/jquery.stellar.js"></script>
-<script src="js/smooth-scroll.js"></script>
-<script src="js/queryloader2.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery.maskedinput.js"></script>
-<script src="js/jquery.ba-cond.min.js" type="text/javascript" ></script>
-<script src="js/jquery.slitslider.js" type="text/javascript" ></script>
-<script src="js/slider-settings.js"></script>
-<script src="js/medicina.js"></script>
+
 </body>
 </html>

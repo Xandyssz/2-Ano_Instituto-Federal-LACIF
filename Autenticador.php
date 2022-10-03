@@ -39,7 +39,7 @@ if (!empty($_POST) && (empty($_POST['email']) || empty($_POST['senha']))) {
             $_SESSION['datanasc']  = $nivel['datanasc'];
             $_SESSION['tipo_acesso'] = $nivel['tipo_acesso'];
             $_SESSION['sessiontime'] = time() + 60 * 30;
-            header("location: IncludeHome.php"); // TUDO OK
+            header("location: lacif_home.php"); // TUDO OK
         } else {
             echo "<script>loginMensagem();</script>";
             session_destroy();

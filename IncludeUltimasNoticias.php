@@ -24,7 +24,7 @@
                         <h3>EM: <strong><?php echo $row['titulo'];?></strong> </h3>
                         <small>Post <strong><?php echo $row['dataNoticia'];?></strong> by ADM</small>
                         <p><?php echo $row['descricao'];?></p>
-                        <a href="noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
+                        <a href="lacif_noticias.php" class="btn-turquaz-md">LEIA MAIS</a> </div>
                 </div>
                 <?php
             }

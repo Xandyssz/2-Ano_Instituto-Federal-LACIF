@@ -1,6 +1,6 @@
 <?php
 
-include 'conexaoCalendario.php';
+include 'calendario_conexao.php';
 
 $query_events = "SELECT id, title, color, start, end FROM ifsp_lacif.events";
 $resultado_events = $conn->prepare($query_events);

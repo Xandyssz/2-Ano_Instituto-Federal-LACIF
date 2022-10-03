@@ -36,7 +36,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- ARQUIVOS CSS -->
-    <link rel="stylesheet" href="../../css/customADM.css">
+    <link rel="stylesheet" href="css/customADM.css">
     <link href='../../css/calendar/core/main.min.css' rel='stylesheet' />
     <link href='../../css/calendar/daygrid/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -44,7 +44,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <link href="../../css/ionicons.min.css" rel="stylesheet">
     <link href="../../css/jquery.fancybox.css" rel="stylesheet">
     <link href="../../css/owl.carousel.css" rel="stylesheet">
-    <link href="../../css/datepicker.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
     <link href="../../css/animate.css" rel="stylesheet">
     <link href="../../css/custom.css" rel="stylesheet" type="text/css"  />
     <link href="../../css/style.css" rel="stylesheet">
@@ -52,7 +52,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     <!-- ARQUIVOS SCRIPT -->
     <script type="text/javascript" src="../../js/modernizr.custom.js"></script>
     <noscript>
-        <link rel="stylesheet" type="text/css" href="../../css/styleNoJS.css" />
+        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
     </noscript>
 
     <!--google material icon-->
@@ -104,7 +104,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
                 </li>
 
                 <li  class="">
-                    <a href="../../IncludeHome.php"><i class="material-icons">home</i><span>Home</span></a>
+                    <a href="../../lacif_home.php"><i class="material-icons">home</i><span>Home</span></a>
                 </li>
 
             </ul>
@@ -137,9 +137,9 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 
                                 ?>
 
-                                <li><a href="../../exames.php">Meus Exames</a></li>
-                                <li><a href="../../PainelAdminListarConsulta.php">Gerenciar Consulta</a></li>
-                                <li><a href="../../PainelAdminListarUsuario.php">Gerenciar Usuarios</a></li>
+                                <li><a href="../../lacif_exames.php">Meus Exames</a></li>
+                                <li><a href="CrudConsultaListar.php">Gerenciar Consulta</a></li>
+                                <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
                                 <li><a href="../../sair.php">Sair</a></li>
                                 <li><a> <?php echo  "<font color='#FF0000'> Acesso: $exibirTipodeAcesso  </font>"?> </a></li>
 
@@ -227,7 +227,7 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
         </div>
 
         <!-- INICIO - RODA PÉ -->
-        <?php include_once('Rodape.php');?>
+        <?php include_once('IncludeRodaPe2.php');?>
         <!-- FIM - RODA PÉ -->
 
         <!-- SCRIPT PARA O SIDEBAR FUNCIONAR-->
@@ -260,13 +260,14 @@ if (isset($_POST['cadastrar'])){
     $cpf = $_POST['cpf'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
     $celular = $_POST['celular'];
     $endereco = $_POST['endereco'];
     $datanasc = $_POST['datanasc'];
 
     // Fazer o insert  no banco de dados
 
-    $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.nome = '$nome' AND users.cpf = '$cpf'";
+    $query = "SELECT users.* FROM ifsp_lacif.usuarios users WHERE users.email = '$email'";
 
 
     $row = mysqli_query($conn, $query);
@@ -278,10 +279,10 @@ if (isset($_POST['cadastrar'])){
 
     else
     {
-        $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$datanasc')";
+        $result = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, datanasc) VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$datanasc')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarUsuario.php">';
+        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudUsuarioListar.php">';
     }
 
 }
