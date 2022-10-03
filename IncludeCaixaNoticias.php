@@ -1,6 +1,7 @@
 <section class="blogs" id="blogs">
 
     <h1 class="heading"> ULTIMAS <span>NOTICIAS</span> </h1>
+
     <div class="box-container">
         <?php
             include 'conexao.php';

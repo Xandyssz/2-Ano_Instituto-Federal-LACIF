@@ -1,6 +1,8 @@
 <?php
 session_start();
-include_once('conexao.php');  // se ele clicou no botão agendar
+include_once('conexao.php');
+include_once('sessao.php');
+// se ele clicou no botão agendar
 ?>
 
     <!DOCTYPE html>
@@ -34,7 +36,7 @@ include_once('conexao.php');  // se ele clicou no botão agendar
 
             <form action="" method="POST">
                 <h3>Agende sua consulta</h3>
-                <input type="text"              id="title"         name="title"         placeholder="Digite o Nome Completo"   class="box">
+                <input type="text"              id="title"         name="title"        placeholder="Digite o Nome Completo"   class="box">
                 <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box">
                 <input type="date"              id="start"         name="start"                                                class="box">
                 <input type="date"              id="end"           name="end"                                                  class="box">
@@ -70,6 +72,8 @@ include_once('conexao.php');  // se ele clicou no botão agendar
                 </select>
 
                 <input type="submit" name="agendar" class="btn btn-danger" value="agendar"/>
+                <input type="button"  name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='IncludeHome.php'" value="Voltar">
+
             </form>
 
         </div>
@@ -114,8 +118,7 @@ if (isset($_POST['agendar'])){
     // Fazer o insert  no banco de dados
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
-    AND cons.end = '$end' 
-    AND cons.cpf = '$cpf'";
+    AND cons.end = '$end'";
     $row = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($row) > 0)

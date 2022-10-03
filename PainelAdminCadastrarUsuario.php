@@ -180,6 +180,7 @@ if (isset($_POST['add_outpatient'])){
     $cpf = $_POST['cpf'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
     $celular = $_POST['celular'];
     $endereco = $_POST['endereco'];
     $datanasc = $_POST['datanasc'];
@@ -189,8 +190,7 @@ if (isset($_POST['add_outpatient'])){
     // Fazer o insert  no banco de dados
 
     $query = "SELECT * FROM ifsp_lacif.usuarios users 
-    WHERE users.nome = '$nome' 
-    AND users.cpf = '$cpf'";
+    WHERE users.cpf = '$cpf'";
 
 
     $row = mysqli_query($mysqli, $query);
@@ -204,7 +204,7 @@ if (isset($_POST['add_outpatient'])){
     {
         $result = "INSERT INTO ifsp_lacif.usuarios 
         (nome, cpf, email, senha, celular, endereco, datanasc) 
-        VALUES ('$nome', '$cpf', '$email', '$senha', '$celular', '$endereco', '$dataBrasil')";
+        VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$dataBrasil')";
         $row = mysqli_query($mysqli, $result);
         $msg = "Patient Details Add";
 

@@ -58,8 +58,7 @@ if (isset($_SESSION['cpf'])){
     include_once('IncludeHeader.php');
 }
 ?>
-<!-- FIM - MENU CABEÇALHO!! -->
-
+<!-- FIM - MENU CABEÇALHO -->
 
 <!-- INICIO - CAIXA DE NOTICIAS!! -->
 <?php include_once('IncludeCaixaNoticias.php');?>

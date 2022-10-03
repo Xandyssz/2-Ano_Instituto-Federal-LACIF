@@ -4,52 +4,28 @@
     </div>
     <div class="cards">
 
-        <div class="card card-1">
-            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
-            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
-            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
-            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
+        <?php
+        include 'conexao.php';
+        $query = "SELECT * FROM ifsp_lacif.consultas order by id DESC";
+        $resultado = mysqli_query($conn, $query);
+        while($row = mysqli_fetch_assoc($resultado)) {
+            ?>
 
+            <div class="box">
+                <div class="card card-1">
+                    <div class="card__icon"><?php echo "<font color='black'>Tipo do Exame: " . $row['tipo'] . "</font>"; ?></div>
 
-    </div>
+                    <p class="card__exit"><?php echo "<font color='black'>Data do Exame: " . $row['start'] . "</font>"; ?></p>
 
-        <div class="card card-2">
-            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
-            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
-            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
-            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
+                    <h2 class="card__title"><?php echo "<font color='black'>Status do Exame: " . $row['status'] . "</font>"; ?></h2>
+                    <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
+                </div>
+            </div>
 
-        </div>
+            <?php
+        }
+        ?>
 
-        <div class="card card-3">
-            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
-            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
-            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
-            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
-
-        </div>
-
-        <div class="card card-4">
-            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
-            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
-            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
-            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
-
-        </div>
-
-        <div class="card card-5">
-            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
-            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
-            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
-            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
-
-        </div>
-
-        <div class="card card-1">
-            <div class="card__icon"><?php echo "Tipo do Exame: " . $cont = 1; ?></div>
-            <p class="card__exit"><?php echo "Data do Exame: " . $cont = 1; ?></p>
-            <h2 class="card__title"><?php echo "Status do Exame: " . $cont = 1; ?></h2>
-            <a href="noticias.php" class="navbar-btn">LEIA MAIS</a>
-        </div>
     </div>
 </div>
+

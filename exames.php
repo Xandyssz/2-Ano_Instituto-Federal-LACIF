@@ -1,8 +1,8 @@
 <?php
 session_start();
 include_once('sessao.php');
-$exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,15 +52,18 @@ $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
 </head>
 <body>
 
-<!-- end header -->
 <?php
-if ($_SESSION["tipo_acesso"] == "Administrador") {
+
+if (isset($_SESSION['cpf'])){
+
+    $exibirTipodeAcesso = $_SESSION['tipo_acesso'];
     include_once('IncludeHeaderADM.php');
+
 } else {
     include_once('IncludeHeader.php');
 }
 ?>
-<!-- end header -->
+<!-- FIM - MENU CABEÇALHO -->
 
 <?php include_once('IncludeExames.php'); ?>
 <!-- final faq -->
