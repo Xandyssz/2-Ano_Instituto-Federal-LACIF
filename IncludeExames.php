@@ -1,12 +1,14 @@
 <div class="main-container">
     <div class="heading">
-        <h1 class="heading__title">Visualizar Enxames</h1>
+        <h1 class="heading__title">Visualizar Exames</h1>
     </div>
     <div class="cards">
 
         <?php
         include 'conexao.php';
-        $query = "SELECT * FROM ifsp_lacif.consultas order by id DESC";
+//                $query = "SELECT * FROM ifsp_lacif.consultas order by id DESC";
+        $query = "SELECT * FROM ifsp_lacif.consultas WHERE consultas.cpf ='". $_SESSION['cpf']."' order by id";
+        //        $query = "SELECT * FROM ifsp_lacif.consultas, ifsp_lacif.usuarios WHERE consultas.cpf = usuarios.cpf";
         $resultado = mysqli_query($conn, $query);
         while($row = mysqli_fetch_assoc($resultado)) {
             ?>

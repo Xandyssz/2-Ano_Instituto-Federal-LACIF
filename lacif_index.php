@@ -84,9 +84,12 @@ if (isset($_SESSION['tipo_acesso'])) {
 <section class="frase overlay text-center">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 no-padding"><img src="images/icon4.png" alt="Image">
+            <div class="col-xs-12 no-padding"><img src="img/images/icon4.png" alt="Image">
                 <h2>Check-up mensais</h2>
+                <div class="container"></div>
                 <a href="lacif_AnaliseClinica.php" class="btn-ghost-lg">SAIBA MAIS</a></div>
+
+
         </div>
     </div>
 </section>

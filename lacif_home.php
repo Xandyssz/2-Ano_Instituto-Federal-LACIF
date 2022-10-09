@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
-    exit;
+    header("location: lacif_index.php");
 }
 ?>
 
@@ -74,14 +74,13 @@ if(!isset($_SESSION["tipo_acesso"]))
 <section class="frase overlay text-center">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 no-padding"> <img src="images/icon4.png" alt="Image">
+            <div class="col-xs-12 no-padding"><img src="img/images/icon4.png" alt="Image">
                 <h2>Check-up mensais</h2>
-                <a href="lacif_faq.php" class="btn-ghost-lg">SAIBA MAIS</a> </div>
+                <a href="lacif_AnaliseClinica.php" class="btn-ghost-lg">SAIBA MAIS</a></div>
         </div>
     </div>
 </section>
 <!-- FIM- CHECK-UP MENSAL -->
-
 
 <!-- INICIO - CARROSSEL PATROCINIOS -->
 <?php include_once('IncludePatrocinios.php');?>

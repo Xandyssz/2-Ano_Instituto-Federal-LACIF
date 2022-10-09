@@ -8,7 +8,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-7">
                     <ul class="language">
                         <li><a href="login.php">LOGIN</a></li>
-                        <li><a href="#"><img src="images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
+                        <li><a href="#"><img src="img/images/flag-brazil.png" alt="Image">PORTUGUES</a></li>
                     </ul>
                 </div>
             </div>
@@ -19,11 +19,10 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="lacif_index.php"><img src="images/logo.png" alt="Image"></a> </div>
+                <a class="navbar-brand" href="lacif_index.php"><img src="img/images/logo.png" alt="Image"></a> </div>
             <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
                 <ul class="social-media hidden-sm">
                     <li><a href="https://www.instagram.com/xanddy._/"><i class="ion-social-instagram-outline"></i></a></li>
-                    <li><a href="https://twitter.com/xandyszz"><i class="ion-social-twitter"></i></a></li>
                     <li><a href="https://github.com/Xandyssz"><i class="ion-social-github"></i></a></li>
                 </ul>
 

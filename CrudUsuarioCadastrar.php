@@ -36,7 +36,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
         <div class="row">
 
             <div class="image">
-                <img src="images/book2-img.svg" alt="">
+                <img src="img/images/book2-img.svg" alt="">
             </div>
 
             <form action="" method="POST"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se não não grava no BANCO -->
@@ -48,7 +48,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
                 <input type="text" name="celular" id="celular" placeholder="Digite Numero de Contato" class="box" required>
                 <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box" required>
                 <input type="date"  name="datanasc" id="datanasc" class="box" required>
-                <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='index.php'" value="Voltar">
+                <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='lacif_home.php'" value="Voltar">
                 <input type="submit" name="cadastrar" id="cadastrar" class="btn btn-danger" value="cadastrar">
 
 

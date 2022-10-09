@@ -1,6 +1,6 @@
                     <nav class="navbar navbar-expand fixed-top be-top-header">
                             <div class="container-fluid">
-                              <div class="be-navbar-header"><a class="navbar-brand" href="IncludeHome.php"></a>
+                              <div class="be-navbar-header"><a class="navbar-brand" href="lacif_home.php"></a>
                               </div>
                               <div class="be-right-navbar">
                                 <ul class="nav navbar-nav float-right be-user-nav">

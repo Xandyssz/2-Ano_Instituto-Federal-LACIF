@@ -1,9 +1,28 @@
 <?php
 session_start();
-include("config/config.php");
 include('assets/configs/config.php');
-include('assets/configs/checklogin.php');
+include("config/config.php");
+
+//// Verifica se existe os dados da sessão de login
+//$accessType = $_SESSION["tipo_acesso"];
+//if ($accessType == "Administrador")
+//{
+//    header("location: PainelAdminAgenda.php");
+//}
+//else
+//{
+//    header("location: lacif_home.php");
+//}
+
+// Verifica se existe os dados da sessão de login
+if(!isset($_SESSION["tipo_acesso"]))
+{
+// Usuário não logado! Redireciona para a página de login
+    header("location: lacif_index.php");
+}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="<?php echo DIRPAGE.'lib/css/style.css'; ?>">

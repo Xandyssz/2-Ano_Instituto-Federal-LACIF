@@ -9,7 +9,7 @@
                         <div class="content">
                             <h2>??<u>??</u><br>
                                 ??</h2>
-                            <img src="images/pulse.png" alt="Image"><br>
+                            <img src="img/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                         <div class="content">
                             <h2><u></u> <br>
                                 </h2>
-                            <img src="images/pulse.png" alt="Image"><br>
+                            <img src="img/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <div class="content">
                             <h2> <u></u> <br>
                                 </h2>
-                            <img src="/images/pulse.png" alt="Image"><br>
+                            <img src="/img/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         <div class="content">
                             <h2> <u> </u>  <br>
                                    </h2>
-                            <img src="images/pulse.png" alt="Image"><br>
+                            <img src="img/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
                 </div>

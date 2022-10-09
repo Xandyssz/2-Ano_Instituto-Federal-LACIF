@@ -12,11 +12,11 @@
 
                 <div class="box">
                     <div class="image">
-                        <img src="images/<?php echo $row['imagem']?>" alt="">
+                        <img src="img/<?php echo $row['img_user']?>" alt="">
                     </div>
                     <div class="content">
                         <div class="icon">
-                            <a href="#"> <i class="fas fa-calendar"></i><?php echo $row['dataNoticia'];?></a>
+                            <small>Post <strong><?php echo $row['dataNoticia'];?></strong> by ADM</small>
                         </div>
                         <h3><?php echo $row['titulo'];?></h3>
                         <p><?php echo $row['descricao'];?></p>

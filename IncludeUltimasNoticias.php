@@ -7,7 +7,7 @@
                     <br>
                     <br>
                     <h2>ULTIMAS NOTICIAS</h2>
-                    <h5>SEI LA OQUE ESCREVER</h5>
+                    <h5>[Texto Gerado] → Lorem ipsum dolor sit amet.</h5>
                 </div>
             </div>
 
@@ -19,8 +19,8 @@
                 ?>
                 <div class="col-md-6 col-xs-12">
                     <div class="left">
-                        <div class="article-image"><img src="images/<?php echo $row['imagem']?>" alt=""></div>
-                        <img src="images/rated-article.png" alt="Image" class="rated-article">
+                        <div class="article-image"><img src="img/<?php echo $row['img_user']?>" alt=""></div>
+                        <img src="img/images/rated-article.png" alt="Image" class="rated-article">
                         <h3>EM: <strong><?php echo $row['titulo'];?></strong> </h3>
                         <small>Post <strong><?php echo $row['dataNoticia'];?></strong> by ADM</small>
                         <p><?php echo $row['descricao'];?></p>

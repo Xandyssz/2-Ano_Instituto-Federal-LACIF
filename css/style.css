@@ -182,7 +182,7 @@ ul li{ margin:0; padding:0; list-style-position:inside;}
 /* Overlay */
 .overlay{position:relative;}
 .overlay:after{content:''; width:100%; height:100%; float:left; position:absolute; left:0; top:0; opacity:0.8; background:#1dd2c8;}
-.queryloader__overlay{font-weight:800; font-size:0px; background-image:url(../images/logo-white.png); background-position:center; background-repeat:no-repeat; color:#1dd2c8;}
+.queryloader__overlay{font-weight:800; font-size:0px; background-image:url(../img/images/logo-white.png); background-position:center; background-repeat:no-repeat; color:#1dd2c8;}
 
 
 
@@ -249,7 +249,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 .top-bar .language li img{ float:left; margin-top:12px; margin-right:6px;}
 .top-bar .language li a{float:left; color:#fff; font-weight:800; font-size:12px;}
 .top-bar form{ float:right;}
-.top-bar form input[type="text"]{ width:350px; height:40px; float:left; border:none; background:url(../images/search-icon.png) 7px 7px no-repeat #54e2da; border-radius:2px; margin-top:4px; color:#fff; padding:0 10px; padding-left:40px;}
+.top-bar form input[type="text"]{ width:350px; height:40px; float:left; border:none; background:url(../img/images/search-icon.png) 7px 7px no-repeat #54e2da; border-radius:2px; margin-top:4px; color:#fff; padding:0 10px; padding-left:40px;}
 .top-bar form input[type="submit"]{ background:none; color:#fff; padding:12px 0 0 20px; font-size:18px; padding-right:0;}
 .top-bar form input[type="text"]::-webkit-input-placeholder { color:#fff; }
 .top-bar form input[type="text"]::-moz-placeholder { color:#fff; } /* firefox 19+ */
@@ -302,15 +302,15 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 .appointment input[type="text"]:focus{ box-shadow:0 0 10px #fff;}
 .appointment .date{ float:left;}
 .appointment .date label{ width:auto; margin-right:14px;}
-.appointment .date input[type="text"]{ width:150px; padding-right:40px; background:url(../images/icon-date.jpg) 120px 9px no-repeat #fff; position:relative;}
+.appointment .date input[type="text"]{ width:150px; padding-right:40px; background:url(../img/images/icon-date.jpg) 120px 9px no-repeat #fff; position:relative;}
 .appointment .department{ float:left;}
 .appointment .department label{ width:auto; margin-right:14px;}
-.appointment .department select{ width:216px; height:40px; border-radius:2px; background:url(../images/select-arrow.jpg) right no-repeat #fff; padding-left:10px; color:#1dd2c8;}
+.appointment .department select{ width:216px; height:40px; border-radius:2px; background:url(../img/images/select-arrow.jpg) right no-repeat #fff; padding-left:10px; color:#1dd2c8;}
 .appointment .gender{ float:left;}
 .appointment .gender label{ width:auto; margin-right:14px;}
 .appointment .gender input[type="radio"]{ margin-top:11px; background:#fff; transition:none; }
-.appointment .gender input[type="radio"]:checked{ background:url(../images/radio-checked.png) center no-repeat #fff;}
-.appointment .gender input[type="submit"]{ height:40px; float:right; padding:0 20px; padding-right:48px; background:url(../images/submit-arrow.png) right no-repeat #1dd2c8; color:#fff; border:1px solid #fff;}
+.appointment .gender input[type="radio"]:checked{ background:url(../img/images/radio-checked.png) center no-repeat #fff;}
+.appointment .gender input[type="submit"]{ height:40px; float:right; padding:0 20px; padding-right:48px; background:url(../img/images/submit-arrow.png) right no-repeat #1dd2c8; color:#fff; border:1px solid #fff;}
 
 /* Datepicker Elements */
 .dropdown-menu.datepicker{ box-shadow:none; padding:5px 10px; border-radius:2px; border:1px solid #D7F0EF;}
@@ -323,7 +323,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 .datepicker .icon-arrow-left:after{content:"\f106"; width:16px; height:22px; float:left;font-family:Ionicons; font-size:17px;}
 
 .title-box{ width:100%; float:left;}
-.title-box h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../images/title-bg.jpg) center bottom no-repeat; margin:0; padding-bottom:20px;}
+.title-box h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../img/images/title-bg.jpg) center bottom no-repeat; margin:0; padding-bottom:20px;}
 .title-box h5{ margin-bottom:60px; margin-top:10px; display:inline-block;}
 
 /* Home Services */
@@ -364,7 +364,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 
 /* Latest News */
 .latest-news{ float:left; padding-top:0;}
-.latest-news h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../images/title-bg.jpg) center bottom no-repeat; padding-bottom:20px;}
+.latest-news h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../img/images/title-bg.jpg) center bottom no-repeat; padding-bottom:20px;}
 .latest-news h3{ color:#1dd2c8; font-weight:300; margin-bottom:0; padding-bottom:20px; position:relative; font-size:30px;}
 .latest-news h3:after{content:''; width:50px; height:1px; float:left; background:#1dd2c8; position:absolute; left:0; bottom:0px;}
 .latest-news h5{ margin-bottom:60px; margin-top:10px; display:inline-block;}
@@ -382,7 +382,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 
 
 /* Frase */
-.frase{width:100%;  float:left; background:url(../images/hero1.jpg); background-size:100%; color:#fff;}
+.frase{width:100%;  float:left; background:url(../img/images/hero1.jpg); background-size:100%; color:#fff;}
 .frase .container{ position:relative; z-index:2;}
 .frase h2{ font-size:44px; font-weight:800;}
 .frase h4{ font-size:20px; margin-bottom:40px;}
@@ -391,7 +391,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 
 /* Gallery */
 .gallery{ width:100%; padding-bottom:0;}
-.gallery h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../images/title-bg.jpg) center bottom no-repeat; padding-bottom:20px;}
+.gallery h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../img/images/title-bg.jpg) center bottom no-repeat; padding-bottom:20px;}
 .gallery h5{ margin-bottom:60px; margin-top:10px; display:inline-block;}
 .gallery .thumb{ width:100%; height:100%; float:left; overflow:hidden; position:relative; border:1px solid #fff; position:relative;}
 .gallery .thumb .desc{ width:100%; height:100%; position:absolute; left:0; top:0; z-index:2; background:rgba(29,210,200,0); opacity:0; padding-top:10px; color:#fff; font-size:20px; text-align:center;}
@@ -420,7 +420,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 /* Sponsors */
 .logos{ width:100%; padding:50px 0; border-top:1px solid #eee;}
 .logos .container {position:relative; z-index:2;}
-.logos h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../images/title-bg.jpg) center bottom no-repeat; padding-bottom:20px;}
+.logos h2{ font-size:40px; font-weight:700; color:#1dd2c8; background:url(../img/images/title-bg.jpg) center bottom no-repeat; padding-bottom:20px;}
 .logos h5{ margin-bottom:60px; margin-top:10px; display:inline-block;}
 .logos .item{border-right:1px solid #eee;}
 .logos img{ width:100%; float:left;}
@@ -479,7 +479,7 @@ header .navbar{ min-width:100%; height:83px; float:left; margin:0; position:rela
 #contact-form{ width:100%; float:left; margin:20px 0;}
 #contact-form input[type="text"]{ width:340px; height:40px; margin:0; margin-bottom:5px; padding:0 10px; border:1px solid #CFEFED;}
 #contact-form select{ width:340px; height:40px; margin-bottom:5px; padding:0 10px; border:1px solid #CFEFED;}
-#contact-form select { background:url(../images/select-arrow.jpg) right no-repeat #fff; padding-left:10px; color:#7a7b86;}
+#contact-form select { background:url(../img/images/select-arrow.jpg) right no-repeat #fff; padding-left:10px; color:#7a7b86;}
 #contact-form textarea{ width:684px; max-width:100%; height:100px; padding:10px; border:1px solid #CFEFED; color:#7a7b86;}
 #contact-form .subject{ width:684px !important; max-width:100%;}
 #contact-form input[type="submit"]{ color:#fff; padding:10px 20px; font-size:20px; font-weight:700; background:#1dd2c8;}
@@ -503,7 +503,7 @@ label{ font-size:13px; color: rgb(0, 0, 0);}
 
 
  /* Footer */
-footer{ float:left; padding:40px 0; background:url(../images/world-map.png) center no-repeat #7a7b86; color:#fff;}
+footer{ float:left; padding:150px 0; background:url(../img/images/world-map.png) center no-repeat #7a7b86; color:#fff;}
 footer .copyright{ float:right; font-size:12px; text-align:right; margin-top:6px;}
 footer h4{ font-size:17px; font-weight:800; margin-top:6px; position:relative; margin-bottom:40px;}
 footer h4:after{content:''; width:50px; height:1px; background:#fff; position:absolute; left:0; bottom:-20px;}
