@@ -47,6 +47,25 @@ include_once('conexao.php');  // se ele clicou no botão salvar
                 <input type="password"  name="senha" id="senha" placeholder="Digite a senha" class="box" required>
                 <input type="text" name="celular" id="celular" placeholder="Digite Numero de Contato" class="box" required>
                 <input type="text" name="endereco" id="endereco" placeholder="Digite o endereco" class="box" required>
+
+                <select id="tiposanguineo "name="tiposanguineo" class="box">
+                    <option value=""selected>Selecione o tipo sanguineo...</option>
+                    <option value="O-">O-</option>
+                    <option value="O">O+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="AB">AB+</option>
+                    <option value="B-">B-</option>
+                    <option value="B">B+</option>
+                    <option value="A-">A-</option>
+                    <option value="A">A+</option>
+                </select>
+
+                <select id="sexo" name="sexo" class="box">
+                    <option value="" selected>Selecione o sexo...</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+
                 <input type="date"  name="datanasc" id="datanasc" class="box" required>
                 <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='lacif_home.php'" value="Voltar">
                 <input type="submit" name="cadastrar" id="cadastrar" class="btn btn-danger" value="cadastrar">
@@ -83,6 +102,8 @@ if (isset($_POST['cadastrar'])){
     $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
     $celular = $_POST['celular'];
     $endereco = $_POST['endereco'];
+    $tiposanguineo = $_POST['tiposanguineo'];
+    $sexo = $_POST['sexo'];
     $datanasc = $_POST['datanasc'];
 
 
@@ -103,8 +124,8 @@ if (isset($_POST['cadastrar'])){
     else
     {
         $result = "INSERT INTO ifsp_lacif.usuarios 
-        (nome, cpf, email, senha, celular, endereco, datanasc) 
-        VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$dataBrasil')";
+        (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc) 
+        VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$tiposanguineo', '$sexo', '$dataBrasil')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=login.php">';

@@ -48,7 +48,7 @@ function confirmacaoExclusaoUsuario(id) {
     if (resposta == true) {
       //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
 
-        window.location.href = "./CrudUsuarioDeletar.php?id=" + id;
+        window.location.href = "PainelAdminUsuarioDeletar.php?id=" + id;
     }
 }
 
@@ -57,7 +57,7 @@ function confirmacaoExclusaoNoticia(id) {
     if (resposta == true) {
         //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
 
-        window.location.href = "./CrudNoticiaDeletar.php?id=" + id;
+        window.location.href = "PainelAdminNoticiaDeletar.php?id=" + id;
     }
 }
 
@@ -66,6 +66,6 @@ function confirmacaoExclusaoConsulta(id) {
     if (resposta == true) {
         //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
 
-        window.location.href = "./CrudConsultaDeletar.php?id=" + id;
+        window.location.href = "PainelAdminConsultaDeletar.php?id=" + id;
     }
 }

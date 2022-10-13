@@ -17,9 +17,9 @@
                             ?>
                             <li><a href="PainelAdminAgenda.php">Painel Admin</a></li>
                             <li><a href="lacif_exames.php">Meus Exames</a></li>
-                            <li><a href="CrudUsuarioListar.php">Gerenciar Usuarios</a></li>
-                            <li><a href="CrudConsultaListar.php">Gerenciar Consultas</a></li>
-                            <li><a href="CrudNoticiaListar.php">Gerenciar Noticias</a></li>
+                            <li><a href="PainelAdminAcoesUsuario.php">Gerenciar Usuarios</a></li>
+                            <li><a href="PainelAdminAcoesConsulta.php">Gerenciar Consultas</a></li>
+                            <li><a href="PainelAdminAcoesNoticia.php">Gerenciar Noticias</a></li>
 
                             <li><a><?php echo "Acesso:" . $_SESSION['tipo_acesso']; ?></a></li>
 

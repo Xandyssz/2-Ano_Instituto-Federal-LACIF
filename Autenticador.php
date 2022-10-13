@@ -36,7 +36,9 @@ if (!empty($_POST) && (empty($_POST['email']) || empty($_POST['senha']))) {
             $_SESSION['senha'] = $nivel['senha'];
             $_SESSION['celular']  = $nivel['celular'];
             $_SESSION['endereco']  = $nivel['endereco'];
-            $_SESSION['datanasc']  = $nivel['datanasc'];
+            $_SESSION['tiposanguineo']  = $nivel['tiposanguineo'];
+            $_SESSION['endereco']  = $nivel['endereco'];
+            $_SESSION['sexo']  = $nivel['sexo'];
             $_SESSION['tipo_acesso'] = $nivel['tipo_acesso'];
             $_SESSION['sessiontime'] = time() + 60 * 30;
             header("location: lacif_home.php"); // TUDO OK
@@ -50,6 +52,8 @@ if (!empty($_POST) && (empty($_POST['email']) || empty($_POST['senha']))) {
             unset($_SESSION['senha']);
             unset($_SESSION['celular']);
             unset($_SESSION['endereco']);
+            unset($_SESSION['tiposanguineo']);
+            unset($_SESSION['sexo']);
             unset($_SESSION['datanasc']);
             unset($_SESSION['tipo_acesso']);
             echo '<meta HTTP-EQUIV="refresh" CONTENT="0; URL=sair.php">';

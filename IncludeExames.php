@@ -21,7 +21,9 @@
 
                     <h2 class="card__title"><?php echo "<font color='black'>Status do Exame: " . $row['status'] . "</font>"; ?></h2>
                     <a href="lacif_noticias.php" class="navbar-btn">LEIA MAIS</a>
+
                 </div>
+
             </div>
 
             <?php

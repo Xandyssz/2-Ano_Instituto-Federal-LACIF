@@ -27,15 +27,14 @@
         </div>
         <form class="user" action="Autenticador.php" method="post">
             <h3>LOGIN</h3>
-            <input type="text" name="email" id="email" placeholder="Digite o CPF" class="box" required>
+            <input type="text" name="email" id="email" placeholder="Digite o Email" class="box" required>
             <input type="password" name="senha" id="senha" placeholder="Digite a senha" class="box" required>
             <div class="form-group">
                 <button type="submit" name="login" id="login" class="btn btn-primary btn-user btn-block">Conecte-se
                 </button>
                 <input type="button" name="Registrar-se" class="btn btn-info" value="Registrar-se"
                        onclick="window.location.href='CrudUsuarioCadastrar.php'"/>
-                <input type="button" name="cancelar" id="cancelar" class="btn btn-danger"
-                       onclick="location.href='lacif_index.php'" value="Voltar">
+                <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='lacif_index.php'" value="Voltar">
 
             </div>
         </form>

@@ -19,7 +19,7 @@
 
                             <li><a href="lacif_exames.php">Meus Exames</a></li>
                             <li><a href="Arquivado/PainelAdm - ANTIGO/PainelAdmin.php">Gerenciar Consulta</a></li>
-                            <li><a href="Arquivado/Painel ADM (Novo) - CrudUsuario/PainelAdminListarUsuario.php">Gerenciar Usuarios</a></li>
+                            <li><a href="PainelAdminListarUsuario.php">Gerenciar Usuarios</a></li>
                             <li><a href="sair.php">Sair</a></li>
                             <li><a><?php echo "Acesso:" . $tipo_acesso ?></a></li>
 
