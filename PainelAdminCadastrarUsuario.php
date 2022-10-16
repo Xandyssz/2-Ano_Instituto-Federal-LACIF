@@ -181,7 +181,47 @@ if(!isset($_SESSION["tipo_acesso"]))
     });
 </script>
 
+<!-- JANELA MODAL -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+<div id="msgInsert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-center">
+                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Registro cadastrado com sucesso!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="msgErro" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-center">
+                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ocorreu um erro!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 
@@ -212,7 +252,7 @@ if (isset($_POST['add_outpatient'])){
 
     if(mysqli_num_rows($row) > 0)
     {
-        echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
+        echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
     }
 
     else
@@ -221,9 +261,8 @@ if (isset($_POST['add_outpatient'])){
         (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc) 
         VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$tiposanguineo', '$sexo', '$dataBrasil')";
         $row = mysqli_query($conn, $result);
-        $msg = "Patient Details Add";
 
-        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
+        echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarUsuario.php">';
     }
 

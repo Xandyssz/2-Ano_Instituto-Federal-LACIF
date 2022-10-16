@@ -1,45 +1,72 @@
-<?php
-session_start();
-include_once("conexao.php");
-// Verifica se existe os dados da sessão de login
-if (!isset($_SESSION["tipo_acesso"])) {
-// Usuário não logado! Redireciona para a página de login
-    header("location: lacif_index.php");
-}
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ARQUIVOS FAVICON -->
-    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="ico/favicon.png" rel="shortcut icon">
-
-    <!-- TITULO DA PAGINA -->
-    <title>Usario Delete</title>
-
-    <!-- ARQUIVOS JAVA SCRIPT -->
-    <script src="js/funcoes.js"></script>
-
+    <meta charset="utf-8">
+    <script language="javascript" src="js/funcao.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/janccccelasModais.js"></script>
 </head>
 <body>
 <?php
+session_start();
+include 'sessao.php';
+include_once("conexao.php");
 $id = $_GET['id'];
-if ($id > 0) {
-    $query = "DELETE FROM ifsp_lacif.consultas WHERE id = $id";
-    $dados = mysqli_query($conn, $query);
-    echo "<script>OpcaoMensagens(3);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAcoesConsulta.php">';
+
+if (!empty($id)) {
+    $result_usuario = "DELETE FROM ifsp_lacif.consultas WHERE id = $id";
+    mysqli_query($conn, $result_usuario);
+
+    if (mysqli_affected_rows($conn)) {
+        echo "<script>$(document).ready(function() { $('#msgDelete').modal(); })</script>";
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=PainelAdminListarConsulta.php">';
+    } else {
+        echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=PainelAdminListarConsulta.php">';
+    }
 } else {
-    echo "<script>OpcaoMensagens(5);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAcoesConsulta.php">';
+    echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=PainelAdminListarConsulta.php">';
 }
 ?>
+<div id="msgDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-center">
+                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Registro alterado com sucesso!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="msgErro" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-center">
+                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ocorreu um erro!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
