@@ -42,7 +42,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="PainelAdminAgenda.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="#">Exames</a></li>
+                            <li class="breadcrumb-item"><a href="#">Exame</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Gerenciar Exames</li>
                         </ol>
                     </nav>

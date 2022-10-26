@@ -16,7 +16,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 <!-- ARQUIVOS JAVA SCRIPT -->
 <script src="js/funcoes.js"></script>
 <!--Header-->
-<title>LACIF - Visualizar Noticia</title>
+<title>LACIF - Visualizar Patrocinadores</title>
 
 <?php include('includes/header.php'); ?>
 <!--End Header-->
@@ -37,13 +37,13 @@ if(!isset($_SESSION["tipo_acesso"]))
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="PainelAdminAgenda.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="#">Noticia</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Visualizar Noticias</li>
+                            <li class="breadcrumb-item"><a href="#">Patrocinadores</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Visualizar Patrocinador</li>
                         </ol>
                     </nav>
                     <div class="card card-table">
                         <div class="card-header">
-                            <div class="title">Registro Geral de Noticias</div>
+                            <div class="title">Registro Geral dos Patrocinadores</div>
                         </div>
                         <div class="card-body table-responsive">
                             <table class="table table-striped table-borderless">
@@ -52,14 +52,14 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <th style="width:20%;">ID</th>
                                     <th style="width:20%;">Titulo</th>
                                     <th style="width:20%;">Descricao</th>
-                                    <th style="width:20%;">Data Noticia</th>
+                                    <th style="width:20%;">Ativo</th>
                                     <th style="width:20%;">Imagem</th>
 
 
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM ifsp_lacif.noticias order by idNoticia";
+                                $query = "SELECT * FROM ifsp_lacif.carrossel order by idCarrossel";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
@@ -67,12 +67,12 @@ if(!isset($_SESSION["tipo_acesso"]))
 
                                     ?>
                                     <tr>
-                                        <td><?php  echo $linha['idNoticia']; ?></td>
+                                        <td><?php  echo $linha['idCarrossel']; ?></td>
                                         <td><?php  echo $linha['titulo']; ?></td>
                                         <td><?php  echo $linha['descricao']; ?></td>
-                                        <td><?php  echo $linha['dataNoticia']; ?></td>
+                                        <td><?php  echo $linha['ativo']; ?></td>
                                         <td>
-                                            <img src="img/<?php echo $linha['img_user'];?>"
+                                            <img src="img/<?php echo $linha['img_nome'];?>"
                                                  alt="Imagem" width="120px" heigth="120px">
                                         </td>
                                     </tr>

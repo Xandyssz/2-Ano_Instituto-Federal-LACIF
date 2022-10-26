@@ -61,11 +61,34 @@ function confirmacaoExclusaoNoticia(id) {
     }
 }
 
+function confirmacaoExclusaoConvenio(id) {
+    var resposta = confirm("Confirma Exclusão do Convênio??");
+    if (resposta == true) {
+        //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
+
+        window.location.href = "PainelAdminConvenioDeletar.php?id=" + id;
+    }
+}
+
 function confirmacaoExclusaoConsulta(id) {
     var resposta = confirm("Confirma Exclusão??");
     if (resposta == true) {
         //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
 
         window.location.href = "PainelAdminConsultaDeletar.php?id=" + id;
+    }
+}
+
+function confirmacaoExclusaoTipoExame(id){
+    var resposta = confirm("Confirma Exclusão do Tipo de Exame??");
+    if(resposta == true) {
+        window.location.href = "PainelAdminTipoExameDeletar.php?id=" + id;
+    }
+}
+
+function confirmacaoExclusaoCarrossel(id){
+    var resposta = confirm("Confirma Exclusão??");
+    if(resposta == true) {
+        window.location.href = "PainelAdminCarrosselDeletar.php?id=" + id;
     }
 }

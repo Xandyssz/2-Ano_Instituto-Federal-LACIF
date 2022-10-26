@@ -43,7 +43,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                     </nav>
                     <div class="card card-table">
                         <div class="card-header">
-                            <div class="title">Registro Geral de Usuarios</div>
+                            <div class="title">Registro Geral dos Usuarios</div>
                         </div>
                         <div class="card-body table-responsive">
                             <table class="table table-striped table-borderless">

@@ -48,16 +48,31 @@ include_once('sessao.php');
                 <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box">
                 <input type="date"              id="start"         name="start"                                                class="box">
                 <input type="date"              id="end"           name="end"                                                  class="box">
-                <input type="text"              id="convenio"      name="convenio"     placeholder="Digite o Convenio"         class="box">
+                <select name="convenio" id="convenio" class="box" required>
+                    <option value="" selected>Selecione o Convênio...</option>
+                    <?php
+                    $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
+                    $resultado = mysqli_query($conn, $query);
+                    while ($linha = mysqli_fetch_assoc($resultado)) {
+                        ?>
+                        <option value="<?php echo $linha['nomeConvenio'];?>"><?php echo $linha['nomeConvenio'];?></option>
+                        <?php
+                    }
+                    ?>
+                </select>
                 <input type="text"              id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box">
                 <input type="text"              id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box">
-
-                <select id="tipo" name="tipo" class="box">
-                    <option value="" selected>Selecione o Tipo do exame...</option>
-                    <option value="Covid19">Covid 19 </option>
-                    <option value="CheckuP">Check-Up</option>
-                    <option value="Sangue">Sangue</option>
-                    <option value="Fezes">Fezes</option>
+                <select name="tipo" id="tipo" class="box" required>
+                    <option value="" selected>Selecione o Tipo de Exame...</option>
+                    <?php
+                    $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
+                    $resultado = mysqli_query($conn, $query);
+                    while ($linha = mysqli_fetch_assoc($resultado)) {
+                        ?>
+                        <option value="<?php echo $linha['nomeExame'];?>"><?php echo $linha['nomeExame'];?></option>
+                        <?php
+                    }
+                    ?>
                 </select>
 
                 <input type="button"  name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='lacif_home.php'" value="Voltar">

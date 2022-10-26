@@ -2,19 +2,9 @@
 session_start();
 include('assets/configs/config.php');
 include("config/config.php");
+include_once('sessao.php');
+include_once('conexao.php');
 
-//// Verifica se existe os dados da sessão de login
-//$accessType = $_SESSION["tipo_acesso"];
-//if ($accessType == "Administrador")
-//{
-//    header("location: PainelAdminAgenda.php");
-//}
-//else
-//{
-//    header("location: lacif_home.php");
-//}
-
-// Verifica se existe os dados da sessão de login
 if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
@@ -27,6 +17,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 <html lang="en">
 <link rel="stylesheet" href="<?php echo DIRPAGE.'lib/css/style.css'; ?>">
 <link rel="stylesheet" href="<?php echo DIRPAGE.'lib/js/FullCalendar/main.min.css'; ?>">
+<title>LACIF - AGENDA</title>
 
 <!--Header-->
 <?php include('includes/header.php'); ?>

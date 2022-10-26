@@ -1,3 +1,13 @@
+create table carrossel
+(
+    idCarrossel int auto_increment
+        primary key,
+    titulo      varchar(50)   not null,
+    descricao   varchar(50)   not null,
+    ativo       int default 0 not null,
+    img_nome    text          not null
+);
+
 create table consultas
 (
     id          int auto_increment
@@ -10,8 +20,22 @@ create table consultas
     celular     varchar(40)                    not null,
     cpf         varchar(40)                    not null,
     tipo        varchar(50)                    not null,
-    resultado   text                           not null,
+    resultado   text                           null,
     status      varchar(50) default 'Pendente' not null
+);
+
+create table convenios
+(
+    idConvenio   int auto_increment
+        primary key,
+    nomeConvenio varchar(50) not null
+);
+
+create table exames
+(
+    idTipoExame int auto_increment
+        primary key,
+    nomeExame   varchar(50) not null
 );
 
 create table noticias

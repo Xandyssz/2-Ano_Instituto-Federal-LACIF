@@ -80,9 +80,20 @@ if ($id > 0) {
 
 
                                 <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="convenio">Digite o Convenio</label>
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Convênio: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="convenio" name="convenio" value="<?php  echo $linhaUnica['convenio']; ?>" type="text" required>
+                                        <select class="form-control" name="convenio" id="convenio" class="box" required>
+                                            <option value="" selected>Selecione o Convênio...</option>
+                                            <?php
+                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
+                                            $resultado = mysqli_query($conn, $query);
+                                            while ($linha = mysqli_fetch_assoc($resultado)) {
+                                                ?>
+                                                <option value="<?php echo $linha['nomeConvenio'];?>"><?php echo $linha['nomeConvenio'];?></option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -105,36 +116,14 @@ if ($id > 0) {
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Exame: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <select class="form-control" id="tipo" name="tipo" value="<?php  echo $linhaUnica['tipo']; ?>" required>
+                                        <select class="form-control" name="tipo" id="tipo" class="box" required>
+                                            <option value="" selected>Selecione o Tipo de Exame...</option>
                                             <?php
-                                            if ($linhaUnica['tipo'] == "Covid19") {
+                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
+                                            $resultado = mysqli_query($conn, $query);
+                                            while ($linha = mysqli_fetch_assoc($resultado)) {
                                                 ?>
-                                                <option value="Covid19"selected>Covid 19 </option>
-                                                <option value="CheckuP">Check-Up</option>
-                                                <option value="Sangue">Sangue</option>
-                                                <option value="Fezes">Fezes</option>
-                                                <?php
-                                            }
-                                            elseif ($linhaUnica['tipo'] == "CheckuP") {
-                                                ?>
-                                                <option value="Covid19">Covid 19 </option>
-                                                <option value="CheckuP"selected>Check-Up</option>
-                                                <option value="Sangue">Sangue</option>
-                                                <option value="Fezes">Fezes</option>
-                                                <?php
-                                            } elseif ($linhaUnica['tipo'] == "Sangue") {
-                                                ?>
-                                                <option value="Covid19">Covid 19 </option>
-                                                <option value="CheckuP">Check-Up</option>
-                                                <option value="Sangue"selected>Sangue</option>
-                                                <option value="Fezes">Fezes</option>
-                                                <?php
-                                            } elseif ($linhaUnica['tipo'] == "Fezes") {
-                                                ?>
-                                                <option value="Covid19">Covid 19 </option>
-                                                <option value="CheckuP">Check-Up</option>
-                                                <option value="Sangue">Sangue</option>
-                                                <option value="Fezes"selected>Fezes</option>
+                                                <option value="<?php echo $linha['nomeExame'];?>"><?php echo $linha['nomeExame'];?></option>
                                                 <?php
                                             }
                                             ?>
@@ -144,7 +133,7 @@ if ($id > 0) {
 
 
                                 <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="status">Tipo Exame: </label>
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="status">Status do Exame: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
                                         <select class="form-control" id="status" name="status" value="<?php  echo $linhaUnica['status']; ?>" required>
                                             <?php
