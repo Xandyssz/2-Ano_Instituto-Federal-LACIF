@@ -74,6 +74,3 @@ create table usuarios
     datanasc      date                           not null,
     tipo_acesso   varchar(45) default 'Paciente' not null
 );
-
-TEste edu
-asdasdsa
