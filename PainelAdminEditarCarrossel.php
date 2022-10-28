@@ -98,6 +98,7 @@ if ($id > 0) {
 
                                 <div class="col-sm-6">
                                     <p class="text-right">
+<!--                                        a-->
                                         <button class="btn btn-space btn-primary" name="Atualizar" type="submit">Atualizar</button>
                                         <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesCarrossel.php'" value="Voltar">
                                     </p>

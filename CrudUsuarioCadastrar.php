@@ -24,7 +24,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
         <link rel="stylesheet" href="css/tabelacss.css">
 
         <!-- ARQUIVOS JAVA SCRIPT -->
-        <script src="js/funcoes.js"></script>
+        <script src="js/dataRetograda.js"></script>
 
     </head>
     <body>
@@ -74,6 +74,27 @@ include_once('conexao.php');  // se ele clicou no botão salvar
             </form>
         </div>
     </section>
+
+    <!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+    var dtToday = new Date();
+
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+    month = '0' + month.toString();
+    if(day < 10)
+    day = '0' + day.toString();
+    var maxDate = year + '-' + month + '-' + day;
+
+    $('#datanasc').attr('min', maxDate);
+
+    });
+    </script>
+
 
     <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

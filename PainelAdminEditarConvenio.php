@@ -59,7 +59,7 @@ if ($id > 0) {
                                     <div class="col-sm-6">
                                         <p class="text-right">
                                             <button class="btn btn-space btn-primary" name="Atualizar" type="submit">Atualizar</button>
-                                            <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesNoticia.php'" value="Voltar">
+                                            <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesConvenio.php'" value="Voltar">
                                         </p>
                                     </div>
                             </div>

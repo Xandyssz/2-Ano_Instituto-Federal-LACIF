@@ -63,7 +63,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <div class="form-group row">
                                         <label class="col-12 col-sm-3 col-form-label text-sm-right" for="descricao">Digite a Data da Noticia</label>
                                         <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" type="text" id="data" name="data"  placeholder="Digite a Data da Noticia" required>
+                                            <input class="form-control" type="date" id="data" name="data"  placeholder="Digite a Data da Noticia" required>
                                         </div>
                                     </div>
 
@@ -95,6 +95,25 @@ if(!isset($_SESSION["tipo_acesso"]))
     </div>
     </div>
     </div>
+
+    <!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var dtToday = new Date();
+
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if(month < 10)
+                month = '0' + month.toString();
+            if(day < 10)
+                day = '0' + day.toString();
+            var maxDate = year + '-' + month + '-' + day;
+
+            $('#data').attr('min', maxDate);
+        });
+    </script>
 
 
     <!-- VISUALIZAR IMAGEM -->

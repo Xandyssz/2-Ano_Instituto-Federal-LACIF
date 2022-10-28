@@ -164,7 +164,7 @@ if ($id > 0) {
                                 <div class="col-sm-6">
                                     <p class="text-right">
                                         <button class="btn btn-space btn-primary" name="update_outappointment" type="submit">Registrar</button>
-                                        <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminEditarConsulta.php'" value="Voltar">
+                                        <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesConsulta.php'" value="Voltar">
                                     </p>
                                 </div>
                         </div>
@@ -175,6 +175,28 @@ if ($id > 0) {
         </div>
     </div>
 </div>
+
+<!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        var dtToday = new Date();
+
+        var month = dtToday.getMonth() + 1;
+        var day = dtToday.getDate();
+        var year = dtToday.getFullYear();
+        if(month < 10)
+            month = '0' + month.toString();
+        if(day < 10)
+            day = '0' + day.toString();
+        var maxDate = year + '-' + month + '-' + day;
+
+        $('#start').attr('min', maxDate);
+        $('#end').attr('min', maxDate);
+
+    });
+</script>
+
 
 <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

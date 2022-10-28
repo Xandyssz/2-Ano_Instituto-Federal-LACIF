@@ -63,8 +63,6 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
-//                                    $dataBrasil = implode('/', array_reverse(explode('-', $linha['datanasc'])));
-
                                     ?>
                                     <tr>
                                         <td><?php  echo $linha['idCarrossel']; ?></td>
