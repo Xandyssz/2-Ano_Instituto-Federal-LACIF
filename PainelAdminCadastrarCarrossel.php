@@ -225,7 +225,7 @@ if (isset($_POST['add_outappointment']))
     $img_nome          = $novotitulo;
 
     //Fazer o insert no banco de dados
-    $query = "SELECT titulo FROM ifsp_lacif.carrossel WHERE titulo = '$titulo'";
+    $query = "SELECT titulo FROM ifsp_lacif.patrocinadores WHERE titulo = '$titulo'";
     $row = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($row) > 0)
@@ -235,7 +235,7 @@ if (isset($_POST['add_outappointment']))
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudCarrossel_Cadastrar.php">';
     } else
     {
-        $result = "INSERT INTO ifsp_lacif.carrossel (titulo, descricao,  img_nome) 
+        $result = "INSERT INTO ifsp_lacif.patrocinadores (titulo, descricao,  img_nome) 
                 VALUES ('$titulo', '$descricao', '$img_nome')";
 
         $row = mysqli_query($conn, $result);

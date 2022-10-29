@@ -137,16 +137,16 @@ if(!isset($_SESSION["tipo_acesso"]))
 
 
     <script src="js/foto.js"></script>
-
-    <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script>
-        $("#data").mask("99/99/9999");
-    </script>
-    <script>
-        $(#data).mask("99/99/9999");
-    </script>
+<!---->
+<!--    <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>-->
+<!--    <script>-->
+<!--        $("#data").mask("99/99/9999");-->
+<!--    </script>-->
+<!--    <script>-->
+<!--        $(#data).mask("99/99/9999");-->
+<!--    </script>-->
 
     <!-- JANELA MODAL -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

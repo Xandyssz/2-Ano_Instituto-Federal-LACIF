@@ -59,7 +59,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM ifsp_lacif.carrossel order by idCarrossel";
+                                $query = "SELECT * FROM ifsp_lacif.patrocinadores order by idCarrossel";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
