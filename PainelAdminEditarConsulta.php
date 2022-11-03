@@ -7,7 +7,11 @@ if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
+}else if($_SESSION['tipo_acesso'] != "Administrador")
+{
+    header("location: lacif_home.php");
 }
+
 $id = $_GET['id'];
 
 if ($id > 0) {
@@ -88,15 +92,16 @@ if ($id > 0) {
                                             $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
-                                                ?>
-                                                <option value="<?php echo $linha['nomeConvenio'];?>"><?php echo $linha['nomeConvenio'];?></option>
-                                                <?php
+                                                if ($linha['idConvenio'] == $linha['idConvenio']) { ?>
+                                                    <option value="<?php echo $linha['idConvenio']; ?>" selected><?php echo $linha['nomeConvenio'];?></option>
+                                                <?php   } else { ?>
+                                                    <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
+                                                <?php   }
                                             }
                                             ?>
                                         </select>
                                     </div>
                                 </div>
-
 
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="celular">Digite o Celular</label>
@@ -122,11 +127,14 @@ if ($id > 0) {
                                             $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
-                                                ?>
-                                                <option value="<?php echo $linha['nomeExame'];?>"><?php echo $linha['nomeExame'];?></option>
-                                                <?php
+                                                if ($linha['idTipoExame'] == $linha['idTipoExame']) { ?>
+                                                    <option value="<?php echo $linha['idTipoExame']; ?>" selected><?php echo $linha['nomeExame'];?></option>
+                                                <?php   } else { ?>
+                                                    <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
+                                                <?php   }
                                             }
                                             ?>
+                                        </select>
                                         </select>
                                     </div>
                                 </div>

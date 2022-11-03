@@ -9,6 +9,9 @@ if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
+}else if($_SESSION['tipo_acesso'] != "Administrador")
+{
+    header("location: lacif_home.php");
 }
 
 ?>

@@ -83,19 +83,19 @@ create table usuarios
 # $senha = "123";
 # $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
 INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
-VALUES ('admin', '123', 'admin', '$senhaCript', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Administrador');
+VALUES ('admin', '123', 'admin', '$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Administrador');
 
 # # Nivel de Acesso: Laboratorista
 # $senha = "123";
 # $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
 INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
-VALUES ('laboratorista', '123', 'laboratorista', '$senhaCript', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Laboratorista');
+VALUES ('laboratorista', '123', 'laboratorista', '$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Laboratorista');
 
 # # Nivel de Acesso: Laboratorista
 # $senha = "123";
 # $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
 INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
-VALUES ('paciente', '123', 'paciente', '$senhaCript', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Paciente');
+VALUES ('paciente', '123', 'paciente', '$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Paciente');
 
 #################################################################################################################################################################################################################################
 

@@ -71,9 +71,9 @@
                         <ul class="sub-menu">
                             <li><a href="PainelAdminCadastrarCarrossel.php">Adicionar Patrocinador</a>
                             </li>
-                            <li><a href="PainelAdminListarCarrossel.php">Visualizar Noticias</a>
+                            <li><a href="PainelAdminListarCarrossel.php">Visualizar Patrocinadores</a>
                             </li>
-                            <li><a href="PainelAdminAcoesCarrossel.php">Editar Noticias</a>
+                            <li><a href="PainelAdminAcoesCarrossel.php">Editar Patrocinadores</a>
                             </li>
                         </ul>
                     </li>

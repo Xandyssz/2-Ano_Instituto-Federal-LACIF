@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="main-container">
     <div class="heading">
         <h1 class="heading__title">Visualizar Exames</h1>
@@ -21,10 +23,8 @@
 
                     <h2 class="card__title"><?php echo "<font color='black'>Status do Exame: " . $row['status'] . "</font>"; ?></h2>
 
-                    <a href="img/<?php echo $row['resultado'], '">Download do Resultado '?>
+                    <a href="img/<?php echo $row['resultado'], '">Download do Resultado '?><i class='fa fa-file-pdf-o'></i>"
 
-
-                    <a href="lacif_noticias.php" class="navbar-btn">LEIA MAIS</a>
                 </div>
 
             </div>
