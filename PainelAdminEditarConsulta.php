@@ -171,7 +171,7 @@ if ($id > 0) {
 
                                 <div class="col-sm-6">
                                     <p class="text-right">
-                                        <button class="btn btn-space btn-primary" name="update_outappointment" type="submit">Registrar</button>
+                                        <input type="submit" id="Atualizar" name="Atualizar" class="btn btn-primary pull-right" value="Atualizar">
                                         <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesConsulta.php'" value="Voltar">
                                     </p>
                                 </div>
@@ -219,38 +219,10 @@ if ($id > 0) {
 </script>
 
 </div>
-<script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
-<script type="text/javascript">
-    CKEDITOR.replace('editor')
-    CKEDITOR.replace('editor1')
-</script>
-<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="assets/js/app.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="assets/lib/canvas/canvasjs.min.js"></script>
-<script src="js/janelasModais.js"></script>
-<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
-<script type="text/javascript">
 
-    $(document).ready(function() {
-        //-initialize the javascript
-        App.init();
-        App.dashboard();
 
-    });
-</script>
 
+</div>
 <!-- JANELA MODAL -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -266,7 +238,7 @@ if ($id > 0) {
                 </button>
             </div>
             <div class="modal-body">
-                Registro cadastrado com sucesso!
+                Consulta Atualizada com Sucesso!
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
@@ -293,10 +265,36 @@ if ($id > 0) {
     </div>
 </div>
 
+
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/lib/canvas/canvasjs.min.js"></script>
+<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //-initialize the javascript
+        App.init();
+        App.dashboard();
+
+    });
+</script>
+
 </body>
 
 <?php
-if (isset($_POST['update_outappointment']))
+if (isset($_POST['Atualizar']))
 {
     if (isset($_FILES['arquivo']['name']) && $_FILES['arquivo']['error'] == 0) {
         $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
@@ -344,7 +342,7 @@ set title = '$title',
     $row = mysqli_query($conn, $result);
 
     echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminAcoesConsulta.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConsulta.php">';
 
 }
 ?>

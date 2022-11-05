@@ -82,8 +82,8 @@ if(!isset($_SESSION["tipo_acesso"]))
                                              id="visualizar" width="200px" height="200px">
                                         <br>
                                         <br>
+                                        <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
                                         <input type="button" name="listar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='PainelAdminAcoesNoticia.php'">
-                                        <input type="submit" id="salvar" name="salvar" class="btn btn-primary pull-right" value="Salvar">
                                         <br>
                                     </div>
                             </div>
@@ -98,24 +98,24 @@ if(!isset($_SESSION["tipo_acesso"]))
     </div>
     </div>
 
-    <!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-        $(function(){
-            var dtToday = new Date();
-
-            var month = dtToday.getMonth() + 1;
-            var day = dtToday.getDate();
-            var year = dtToday.getFullYear();
-            if(month < 10)
-                month = '0' + month.toString();
-            if(day < 10)
-                day = '0' + day.toString();
-            var maxDate = year + '-' + month + '-' + day;
-
-            $('#data').attr('min', maxDate);
-        });
-    </script>
+<!--     FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--    <script>-->
+<!--        $(function(){-->
+<!--            var dtToday = new Date();-->
+<!---->
+<!--            var month = dtToday.getMonth() + 1;-->
+<!--            var day = dtToday.getDate();-->
+<!--            var year = dtToday.getFullYear();-->
+<!--            if(month < 10)-->
+<!--                month = '0' + month.toString();-->
+<!--            if(day < 10)-->
+<!--                day = '0' + day.toString();-->
+<!--            var maxDate = year + '-' + month + '-' + day;-->
+<!---->
+<!--            $('#data').attr('min', maxDate);-->
+<!--        });-->
+<!--    </script>-->
 
 
     <!-- VISUALIZAR IMAGEM -->
@@ -140,7 +140,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 
     <script src="js/foto.js"></script>
 <!---->
-<!--    <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->-->
+<!--     FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->-->
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>-->
 <!--    <script>-->
@@ -165,7 +165,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                     </button>
                 </div>
                 <div class="modal-body">
-                    Registro cadastrado com sucesso!
+                    Noticia Cadastrada com Sucesso!
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
@@ -223,7 +223,7 @@ if(!isset($_SESSION["tipo_acesso"]))
     </html>
 <?php
 //se ele clicou no botão salvar
-if (isset($_POST['salvar'])) {
+if (isset($_POST['Registrar'])) {
 
     if (isset($_FILES['arquivo']['name']) && $_FILES['arquivo']['error'] == 0) {
         $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
@@ -255,13 +255,15 @@ if (isset($_POST['salvar'])) {
     $row = mysqli_query($conn, $query);
     if (mysqli_num_rows($row) > 0) {
         echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarNoticia.php">';
+
     } else {
         $result = "INSERT INTO ifsp_lacif.noticias (titulo, dataNoticia, descricao, img_user) 
             VALUES ('$titulo', '$dataBrasil', '$descricao', '$img_user')";
 
         $row = mysqli_query($conn, $result);
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminAcoesNoticia.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesNoticia.php">';
     }
 }
 ?>

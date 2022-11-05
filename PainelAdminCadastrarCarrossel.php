@@ -77,14 +77,15 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <br>
                                     <br>
 
-                                <div class="col-sm-6">
-                                    <p class="text-right">
-                                        <button class="btn btn-space btn-primary" name="add_outappointment" type="submit">Registrar</button>
-                                        <button class="btn btn-space btn-secondary">Cancelar</button>
-                                    </p>
+                                    <div class="col-sm-6">
+                                        <p class="text-right">
+                                            <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
+                                            <input type="button" name="listar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='PainelAdminAcoesConsulta.php'">
+                                            <br>
+                                    </div>
                                 </div>
-                        </div>
-                        </form>
+                                <br>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -143,7 +144,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                 </button>
             </div>
             <div class="modal-body">
-                Registro cadastrado com sucesso!
+                Patrocinador Cadastrado com Sucesso!
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
@@ -201,7 +202,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 </html>
 <?php
 //se ele clicou no botão salvar
-if (isset($_POST['add_outappointment']))
+if (isset($_POST['Registrar']))
 {
 
     if (isset($_FILES['arquivo']['name']) && $_FILES['arquivo']['error'] == 0) {
@@ -234,7 +235,7 @@ if (isset($_POST['add_outappointment']))
     {
         //echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
         echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=CrudCarrossel_Cadastrar.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarCarrossel.php">';
     } else
     {
         $result = "INSERT INTO ifsp_lacif.patrocinadores (titulo, descricao,  img_nome) 
@@ -243,7 +244,7 @@ if (isset($_POST['add_outappointment']))
         $row = mysqli_query($conn, $result);
 //        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarCarrossel.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarCarrossel.php">';
     }
 }
 ?>

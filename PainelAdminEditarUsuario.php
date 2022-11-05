@@ -269,7 +269,7 @@ if ($id > 0) {
 
                                 <div class="col-sm-6">
                                     <p class="text-right">
-                                        <button class="btn btn-space btn-primary" name="Atualizar" type="submit">Atualizar</button>
+                                        <input type="submit" id="Atualizar" name="Atualizar" class="btn btn-primary pull-right" value="Atualizar">
                                         <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesUsuario.php'" value="Voltar">
 
                                     </p>
@@ -283,25 +283,26 @@ if ($id > 0) {
     </div>
 </div>
 
-<!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-    $(function(){
-        var dtToday = new Date();
-
-        var month = dtToday.getMonth() + 1;
-        var day = dtToday.getDate();
-        var year = dtToday.getFullYear();
-        if(month < 10)
-            month = '0' + month.toString();
-        if(day < 10)
-            day = '0' + day.toString();
-        var maxDate = year + '-' + month + '-' + day;
-
-        $('#datanasc').attr('min', maxDate);
-
-    });
-</script>
+<!---->
+<!--<!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script>-->
+<!--    $(function(){-->
+<!--        var dtToday = new Date();-->
+<!---->
+<!--        var month = dtToday.getMonth() + 1;-->
+<!--        var day = dtToday.getDate();-->
+<!--        var year = dtToday.getFullYear();-->
+<!--        if(month < 10)-->
+<!--            month = '0' + month.toString();-->
+<!--        if(day < 10)-->
+<!--            day = '0' + day.toString();-->
+<!--        var maxDate = year + '-' + month + '-' + day;-->
+<!---->
+<!--        $('#datanasc').attr('min', maxDate);-->
+<!---->
+<!--    });-->
+<!--</script>-->
 
 
 <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
@@ -317,37 +318,9 @@ if ($id > 0) {
 </script>
 
 </div>
-<script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
-<script type="text/javascript">
-    CKEDITOR.replace('editor')
-    CKEDITOR.replace('editor1')
-</script>
-<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="assets/js/app.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="assets/lib/canvas/canvasjs.min.js"></script>
-<script src="js/janelasModais.js"></script>
-<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        //-initialize the javascript
-        App.init();
-        App.dashboard();
 
-    });
-</script>
 
+</div>
 <!-- JANELA MODAL -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -363,7 +336,7 @@ if ($id > 0) {
                 </button>
             </div>
             <div class="modal-body">
-                Registro cadastrado com sucesso!
+                Usuario Atualizado com Sucesso!
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
@@ -390,6 +363,31 @@ if ($id > 0) {
     </div>
 </div>
 
+
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/lib/canvas/canvasjs.min.js"></script>
+<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //-initialize the javascript
+        App.init();
+        App.dashboard();
+
+    });
+</script>
 </body>
 
 <?php
@@ -421,7 +419,7 @@ set nome = '$nome',
     $row = mysqli_query($conn, $result);
 
     echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminAcoesUsuario.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesUsuario.php">';
 
 }
 ?>

@@ -130,11 +130,12 @@ if(!isset($_SESSION["tipo_acesso"]))
 
                                     <div class="col-sm-6">
                                         <p class="text-right">
-                                            <button class="btn btn-space btn-primary" name="add_outpatient" type="submit">Registrar</button>
-                                            <button class="btn btn-space btn-secondary">Cancelar</button>
-                                        </p>
+                                            <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
+                                            <input type="button" name="listar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='PainelAdminAcoesUsuario.php'">
+                                            <br>
                                     </div>
-                            </div>
+                        </div>
+                        <br>
                             </form>
                         </div>
                     </div>
@@ -194,7 +195,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                 </button>
             </div>
             <div class="modal-body">
-                Registro cadastrado com sucesso!
+                Usuario Cadastrado com Sucesso!
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
@@ -252,7 +253,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 </html>
 <?php
 
-if (isset($_POST['add_outpatient'])){
+if (isset($_POST['Registrar'])){
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
     $email = $_POST['email'];
@@ -277,6 +278,8 @@ if (isset($_POST['add_outpatient'])){
     if(mysqli_num_rows($row) > 0)
     {
         echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarUsuario.php">';
+
     }
 
     else
@@ -287,7 +290,7 @@ if (isset($_POST['add_outpatient'])){
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarUsuario.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarUsuario.php">';
     }
 
 }

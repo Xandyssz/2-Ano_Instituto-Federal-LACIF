@@ -22,14 +22,14 @@ if (!empty($id)) {
 
     if (mysqli_affected_rows($conn)) {
         echo "<script>$(document).ready(function() { $('#msgDelete').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=PainelAdminListarConvenio.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConvenio.php">';
     } else {
         echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=PainelAdminListarConvenio.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConvenio.php">';
     }
 } else {
     echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=PainelAdminListarConvenio.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConvenio.php">';
 }
 ?>
 <div id="msgDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,7 +42,7 @@ if (!empty($id)) {
                 </button>
             </div>
             <div class="modal-body">
-                Registro alterado com sucesso!
+                Convênio Excluído com Sucesso!
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>

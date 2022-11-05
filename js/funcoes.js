@@ -44,50 +44,42 @@ function OpcaoMensagens($id){
 
 }
 function confirmacaoExclusaoUsuario(id) {
-    var resposta = confirm("Confirma Exclusão Usuario??");
+    var resposta = confirm("Confirmar Exclusão do Usuario??");
     if (resposta == true) {
-      //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
-
         window.location.href = "PainelAdminUsuarioDeletar.php?id=" + id;
     }
 }
 
 function confirmacaoExclusaoNoticia(id) {
-    var resposta = confirm("Confirma Exclusão da Noticia??");
+    var resposta = confirm("Confirmar Exclusão da Noticia??");
     if (resposta == true) {
-        //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
-
         window.location.href = "PainelAdminNoticiaDeletar.php?id=" + id;
     }
 }
 
 function confirmacaoExclusaoConvenio(id) {
-    var resposta = confirm("Confirma Exclusão do Convênio??");
+    var resposta = confirm("Confirmar Exclusão do Convênio??");
     if (resposta == true) {
-        //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
-
         window.location.href = "PainelAdminConvenioDeletar.php?id=" + id;
     }
 }
 
 function confirmacaoExclusaoConsulta(id) {
-    var resposta = confirm("Confirma Exclusão??");
+    var resposta = confirm("Confirmar Exclusão da Consulta??");
     if (resposta == true) {
-        //window.location.href = path+"/lacif_contact-us.php/CrudUsuarioDeletar.php?id="+id
-
         window.location.href = "PainelAdminConsultaDeletar.php?id=" + id;
     }
 }
 
 function confirmacaoExclusaoTipoExame(id){
-    var resposta = confirm("Confirma Exclusão do Tipo de Exame??");
+    var resposta = confirm("Confirmar Exclusão do Tipo de Exame??");
     if(resposta == true) {
         window.location.href = "PainelAdminTipoExameDeletar.php?id=" + id;
     }
 }
 
 function confirmacaoExclusaoCarrossel(id){
-    var resposta = confirm("Confirma Exclusão??");
+    var resposta = confirm("Confirmar Exclusão do Patrocinador??");
     if(resposta == true) {
         window.location.href = "PainelAdminCarrosselDeletar.php?id=" + id;
     }
