@@ -161,13 +161,13 @@ VALUE (11, 'Santa Helena Saúde');
 
 # PRESET DE INSERTS CONSULTAS ✔
 
-INSERT INTO ifsp_lacif.consultas(id, title, description, start, end, convenio, celular, cpf, tipo, resultado, status)
+INSERT INTO ifsp_lacif.consultas(id, title, description, start, horario, convenio, celular, cpf, tipo, resultado, status)
 VALUE (57, 'Admin', 'Dores na Lombar', '2022-10-08','2022-10-08', 'IFSP', '(00) 00000-0000','000.000.000-00', 'Sangue', '4c7f0516b95f9bc7836b1ca6611c1dc3..pdf', 'Finalizado');
 
-INSERT INTO ifsp_lacif.consultas(id, title, description, start, end, convenio, celular, cpf, tipo, resultado, status)
+INSERT INTO ifsp_lacif.consultas(id, title, description, start, horario, convenio, celular, cpf, tipo, resultado, status)
 VALUE (60, 'Alexandre Ferreira Pereira de Oliveira1', 'Exame de Sangue','2022-10-12','2022-10-13', 'IFSP', '(18) 98103-8758','111.111.111-11', 'Sangue', '', 'Pendente');
 
-INSERT INTO ifsp_lacif.consultas(id, title, description, start, end, convenio, celular, cpf, tipo, resultado, status)
+INSERT INTO ifsp_lacif.consultas(id, title, description, start, horario, convenio, celular, cpf, tipo, resultado, status)
 VALUE (61,'Everton Thomaz de Lima Silva', 'Desejo Realizar um CheckUp','2022-10-20','2022-10-22','IFSP', '(18) 98141-4149', '222.222.222-22','CheckuP', '97e5ac8f62bd686e9c9a667aa27cd59f..pdf', 'Pendente');
 
 

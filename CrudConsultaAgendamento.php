@@ -2,7 +2,7 @@
 session_start();
 include_once('conexao.php');
 include_once('sessao.php');
-// se ele clicou no botão agendar
+// se ele clicou no botão aghorarioar
 ?>
 
     <!DOCTYPE html>
@@ -43,10 +43,10 @@ include_once('sessao.php');
 
             <form action="" method="POST">
                 <h3>Agende sua consulta</h3>
-                <input type="text"              id="title"         name="title"        placeholder="Digite o Nome Completo"    class="box">
-                <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box">
-                <input type="date"              id="start"         name="start"                                                class="box">
-                <input type="date"              id="end"           name="end"                                                  class="box">
+                <input type="text"              id="title"         name="title"        placeholder="Digite o Nome Completo"    class="box" required>
+                <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box" required>
+                <input type="date"              id="start"         name="start"                                                class="box" required>
+                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                 class="box" required>
                 <select name="convenio" id="convenio" class="box" required>
                     <option value="" selected>Selecione o Convênio...</option>
                     <?php
@@ -59,8 +59,8 @@ include_once('sessao.php');
                     }
                     ?>
                 </select>
-                <input type="text"              id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box">
-                <input type="text"              id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box">
+                <input type="text"              id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box" required>
+                <input type="text"              id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box" required>
                 <select name="tipo" id="tipo" class="box" required>
                     <option value="" selected>Selecione o Tipo de Exame...</option>
                     <?php
@@ -102,7 +102,7 @@ include_once('sessao.php');
             var maxDate = year + '-' + month + '-' + day;
 
             $('#start').attr('min', maxDate);
-            $('#end').attr('min', maxDate);
+            $('#horario').attr('min', maxDate);
 
         });
     </script>
@@ -129,19 +129,19 @@ if (isset($_POST['agendar'])){
     $title = $_POST['title'];
     $description = $_POST['description'];
     $start = $_POST['start'];
-    $end = $_POST['end'];
+    $horario = $_POST['horario'];
     $convenio = $_POST['convenio'];
     $celular = $_POST['celular'];
     $cpf = $_POST['cpf'];
     $tipo = $_POST['tipo'];
 
 //    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
-//    $FimdataBrasil = implode('-', array_reverse(explode('/', $end)));
+//    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));
 
     // Fazer o insert  no banco de dados
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
-    AND cons.end = '$end' 
+    AND cons.horario = '$horario' 
     AND cons.cpf = '$cpf'";
     $row = mysqli_query($conn, $query);
 
@@ -151,8 +151,8 @@ if (isset($_POST['agendar'])){
     } else
     {
         $result = "INSERT INTO ifsp_lacif.consultas 
-            (title, description, start, end, convenio, celular, cpf, tipo) 
-            VALUES ('$title', '$description', '$start', '$end', '$convenio', '$celular', '$cpf', '$tipo')";
+            (title, description, start, horario, convenio, celular, cpf, tipo) 
+            VALUES ('$title', '$description', '$start', '$horario', '$convenio', '$celular', '$cpf', '$tipo')";
 
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";

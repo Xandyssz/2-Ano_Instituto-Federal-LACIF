@@ -33,7 +33,7 @@ if ($id > 0) {
 <title>LACIF - Editar Consulta</title>
 
 <?php include('includes/header.php'); ?>
-<!--End Header-->
+<!--horario Header-->
 
 <body>
 <div class="be-wrapper be-fixed-sidebar">
@@ -76,9 +76,9 @@ if ($id > 0) {
 
 
                                 <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="end">Digite a Data Fim</label>
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="horario">Digite a Data Fim</label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="end" name="end" value="<?php  echo $linhaUnica['end']; ?>" type="date" required>
+                                        <input class="form-control" id="horario" name="horario" min="07:00" max="18:00" value="<?php  echo $linhaUnica['horario']; ?>" type="time" required>
                                     </div>
                                 </div>
 
@@ -200,7 +200,7 @@ if ($id > 0) {
         var maxDate = year + '-' + month + '-' + day;
 
         $('#start').attr('min', maxDate);
-        $('#end').attr('min', maxDate);
+        $('#horario').attr('min', maxDate);
 
     });
 </script>
@@ -318,7 +318,7 @@ if (isset($_POST['Atualizar']))
     $title = $_POST['title'];
     $description = $_POST['description'];
     $start = $_POST['start'];
-    $end = $_POST['end'];
+    $horario = $_POST['horario'];
     $convenio = $_POST['convenio'];
     $celular = $_POST['celular'];
     $cpf = $_POST['cpf'];
@@ -331,7 +331,7 @@ if (isset($_POST['Atualizar']))
 set title = '$title', 
     description='$description', 
     start='$start', 
-    end='$end', 
+    horario='$horario', 
     convenio='$convenio', 
     celular='$celular', 
     cpf='$cpf',

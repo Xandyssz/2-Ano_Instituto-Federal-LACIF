@@ -59,7 +59,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <th style="width: 20%;">Nome</th>
                                     <th style="width: 20%;">Descrição</th>
                                     <th style="width: 20%;">Data Inicio</th>
-                                    <th style="width: 20%;">Data Fim</th>
+                                    <th style="width: 20%;">Horario</th>
                                     <th style="width: 20%;">Convenio</th>
                                     <th style="width: 20%;">Celular</th>
                                     <th style="width: 20%;">CPF</th>
@@ -82,7 +82,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <td><?php  echo $linha['title']; ?></td>
                                         <td><?php  echo $linha['description']; ?></td>
                                         <td><?php  echo $linha['start']; ?></td>
-                                        <td><?php  echo $linha['end']; ?></td>
+                                        <td><?php  echo $linha['horario']; ?></td>
                                         <td><?php  echo $linha['convenio']; ?></td>
                                         <td><?php  echo $linha['celular']; ?></td>
                                         <td><?php  echo $linha['cpf']; ?></td>

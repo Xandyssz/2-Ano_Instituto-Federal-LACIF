@@ -21,7 +21,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 <title>LACIF - Cadastrar Consultas</title>
 
 <?php include('includes/header.php'); ?>
-<!--End Header-->
+<!--horario Header-->
 
 <body>
 <div class="be-wrapper be-fixed-sidebar">
@@ -38,7 +38,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                 <div class="col-md-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="PainelAdminAgenda.php">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="PainelAdminAghorarioa.php">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="#">Exame</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Adicionar Exame</li>
                         </ol>
@@ -72,9 +72,9 @@ if(!isset($_SESSION["tipo_acesso"]))
 
 
                                     <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="end">Digite a Data Fim</label>
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="horario">Selecione o Horario</label>
                                         <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="end" name="end" type="date" required>
+                                            <input class="form-control" id="horario" name="horario" type="time" min="07:00" max="18:00" required>
                                         </div>
                                     </div>
 
@@ -165,7 +165,7 @@ if(!isset($_SESSION["tipo_acesso"]))
         var maxDate = year + '-' + month + '-' + day;
 
         $('#start').attr('min', maxDate);
-        $('#end').attr('min', maxDate);
+        $('#horario').attr('min', maxDate);
 
     });
 </script>
@@ -260,7 +260,7 @@ if (isset($_POST['Registrar'])){
     $title = $_POST['title'];
     $description = $_POST['description'];
     $start = $_POST['start'];
-    $end = $_POST['end'];
+    $horario = $_POST['horario'];
     $convenio = $_POST['convenio'];
     $celular = $_POST['celular'];
     $cpf = $_POST['cpf'];
@@ -268,11 +268,11 @@ if (isset($_POST['Registrar'])){
 
 //
 //    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
-//    $FimdataBrasil = implode('-', array_reverse(explode('/', $end)));    // Fazer o insert  no banco de dados
+//    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));    // Fazer o insert  no banco de dados
 
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
-    AND cons.end = '$end' 
+    AND cons.horario = '$horario' 
     AND cons.cpf = '$cpf'";
 
     $row = mysqli_query($conn, $query);
@@ -287,8 +287,8 @@ if (isset($_POST['Registrar'])){
     else
     {
         $result = "INSERT INTO ifsp_lacif.consultas 
-            (title, description, start, end, convenio, celular, cpf, tipo) 
-            VALUES ('$title', '$description', '$start', '$end', '$convenio', '$celular', '$cpf', '$tipo')";
+            (title, description, start, horario, convenio, celular, cpf, tipo) 
+            VALUES ('$title', '$description', '$start', '$horario', '$convenio', '$celular', '$cpf', '$tipo')";
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
