@@ -60,6 +60,13 @@ if ($id > 0) {
                                         </div>
                                     </div>
 
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="porcentagem">Digite o Desconto - [Em Porcentagem]</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input class="form-control" id="porcentagem" name="porcentagem" type="text" value="<?php  echo $linhaUnica['porcentagem']; ?>"required>
+                                        </div>
+                                    </div>
+
                                     <div class="col-sm-6">
                                         <p class="text-right">
                                             <input type="submit" id="Atualizar" name="Atualizar" class="btn btn-primary pull-right" value="Atualizar">
@@ -80,6 +87,17 @@ if ($id > 0) {
 
 
     </div>
+
+    <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script>
+        $("#porcentagem").mask("99,99%");
+    </script>
+    <script>
+        $(#porcentagem).mask("99,99%");
+    </script>
+
     <!-- JANELA MODAL -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -155,10 +173,11 @@ if ($id > 0) {
 //se ele clicou no botão alterar
 if (isset($_POST['Atualizar'])) {
      $nomeConvenio = $_POST['nomeConvenio'];
-
+     $porcentagem = $_POST['porcentagem'];
 //sql to inset the values to the database
     $result = "update ifsp_lacif.convenios 
-set nomeConvenio = '$nomeConvenio' 
+set nomeConvenio = '$nomeConvenio',
+    porcentagem = '$porcentagem'
     WHERE idConvenio = $id";
 
     $row = mysqli_query($conn, $result);

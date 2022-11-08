@@ -54,6 +54,13 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     </div>
                                 </div>
 
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="porcentagem">Digite o Desconto - [Em Porcentagem]</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="porcentagem" name="porcentagem" type="text" required>
+                                    </div>
+                                </div>
+
                                 <div class="col-sm-6">
                                     <p class="text-right">
                                         <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
@@ -71,6 +78,16 @@ if(!isset($_SESSION["tipo_acesso"]))
 </div>
 </div>
 </div>
+
+<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+    $("#porcentagem").mask("99,99%");
+</script>
+<script>
+    $(#porcentagem).mask("99,99%");
+</script>
 
 <!-- JANELA MODAL -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -147,6 +164,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 
 if (isset($_POST['Registrar'])){
     $nomeConvenio = $_POST['nomeConvenio'];
+    $porcentagem = $_POST['porcentagem'];
 
     $query = "SELECT * FROM ifsp_lacif.convenios conv 
     WHERE conv.nomeConvenio = '$nomeConvenio'";
@@ -163,7 +181,7 @@ if (isset($_POST['Registrar'])){
 
     else
     {
-        $result = "INSERT INTO ifsp_lacif.convenios (nomeConvenio) VALUES ('$nomeConvenio')";
+        $result = "INSERT INTO ifsp_lacif.convenios (nomeConvenio, porcentagem) VALUES ('$nomeConvenio', '$porcentagem')";
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";

@@ -58,6 +58,8 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 <tr>
                                     <th style="width:20%;">ID</th>
                                     <th style="width:20%;">Nome do Convenio</th>
+                                    <th style="width:20%;">Desconto do Convênio</th>
+
                                     <th style="width:20%;">Acoes</th>
 
                                 </tr>
@@ -73,6 +75,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <tr>
                                         <td><?php  echo $linha['idConvenio']; ?></td>
                                         <td><?php  echo $linha['nomeConvenio']; ?></td>
+                                        <td><?php  echo $linha['porcentagem']; ?></td>
                                         <td>
                                             <?php
                                             echo "<a href='PainelAdminEditarConvenio.php?id=".$linha['idConvenio']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";

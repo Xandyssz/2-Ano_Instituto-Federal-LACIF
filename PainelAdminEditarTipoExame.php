@@ -60,6 +60,13 @@ if ($id > 0) {
                                         </div>
                                     </div>
 
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="valor">Digite o Valor do Exame</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input class="form-control" id="valor" name="valor" type="text" value="<?php  echo $linhaUnica['valor']; ?>"required>
+                                        </div>
+                                    </div>
+
                                     <div class="col-sm-6">
                                         <p class="text-right">
                                             <input type="submit" id="Atualizar" name="Atualizar" class="btn btn-primary pull-right" value="Atualizar">
@@ -80,6 +87,18 @@ if ($id > 0) {
 
 
     </div>
+
+    <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script>
+        $("#valor").mask("R$999,99");
+
+    </script>
+    <script>
+        $(#valor).mask("R$999,99");
+    </script>
+
     <!-- JANELA MODAL -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -154,10 +173,11 @@ if ($id > 0) {
 //se ele clicou no botão alterar
 if (isset($_POST['Atualizar'])) {
     $nomeExame = $_POST['nomeExame'];
-
+    $valor = $_POST['valor'];
 //sql to inset the values to the database
     $result = "update ifsp_lacif.exames 
-set nomeExame = '$nomeExame' 
+set nomeExame = '$nomeExame',
+    valor = '$valor'
     WHERE idTipoExame = $id";
 
     $row = mysqli_query($conn, $result);

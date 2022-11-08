@@ -54,6 +54,8 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 <tr>
                                     <th style="width:20%;">ID</th>
                                     <th style="width:20%;">Tipo de Exame</th>
+                                    <th style="width:20%;">Valor do Exame</th>
+
                                 </tr>
                                 </thead>
                                 <?php
@@ -67,6 +69,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <tr>
                                         <td><?php  echo $linha['idTipoExame']; ?></td>
                                         <td><?php  echo $linha['nomeExame']; ?></td>
+                                        <td><?php  echo $linha['valor']; ?></td>
                                     </tr>
                                     <?php
                                 }

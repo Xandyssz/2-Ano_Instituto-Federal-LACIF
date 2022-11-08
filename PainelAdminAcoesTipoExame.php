@@ -58,6 +58,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 <tr>
                                     <th style="width:20%;">ID</th>
                                     <th style="width:20%;">Tipo do Exame</th>
+                                    <th style="width:20%;">Valor do Exame</th>
                                     <th style="width:20%;">Acoes</th>
 
                                 </tr>
@@ -73,6 +74,8 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <tr>
                                         <td><?php  echo $linha['idTipoExame']; ?></td>
                                         <td><?php  echo $linha['nomeExame']; ?></td>
+                                        <td><?php  echo $linha['valor']; ?></td>
+
                                         <td>
                                             <?php
                                             echo "<a href='PainelAdminEditarTipoExame.php?id=".$linha['idTipoExame']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";

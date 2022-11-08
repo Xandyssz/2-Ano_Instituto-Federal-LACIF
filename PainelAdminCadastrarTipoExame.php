@@ -54,6 +54,13 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     </div>
                                 </div>
 
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="valor">Digite o Valor do Exame</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="valor" name="valor" type="text" required>
+                                    </div>
+                                </div>
+
                                 <div class="col-sm-6">
                                     <p class="text-right">
 
@@ -72,6 +79,18 @@ if(!isset($_SESSION["tipo_acesso"]))
 </div>
 </div>
 </div>
+
+<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+    $("#valor").mask("R$999,99");
+
+</script>
+<script>
+    $(#valor).mask("R$999,99");
+</script>
+
 
 <!-- JANELA MODAL -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -148,6 +167,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 
 if (isset($_POST['Registrar'])){
     $nomeExame = $_POST['nomeExame'];
+    $valor = $_POST['valor'];
 
     $query = "SELECT * FROM ifsp_lacif.exames exam 
     WHERE exam.nomeExame = '$nomeExame'";
@@ -164,7 +184,7 @@ if (isset($_POST['Registrar'])){
 
     else
     {
-        $result = "INSERT INTO ifsp_lacif.exames (nomeExame) VALUES ('$nomeExame')";
+        $result = "INSERT INTO ifsp_lacif.exames (nomeExame, valor) VALUES ('$nomeExame', '$valor')";
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";

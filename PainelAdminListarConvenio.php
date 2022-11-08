@@ -54,7 +54,8 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 <thead>
                                 <tr>
                                     <th style="width:20%;">ID</th>
-                                    <th style="width:20%;">Nome do Convenio</th>
+                                    <th style="width:20%;">Nome do Convênio</th>
+                                    <th style="width:20%;">Desconto do Convênio</th>
                                 </tr>
                                 </thead>
                                 <?php
@@ -68,6 +69,8 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <tr>
                                         <td><?php  echo $linha['idConvenio']; ?></td>
                                         <td><?php  echo $linha['nomeConvenio']; ?></td>
+                                        <td><?php  echo $linha['porcentagem']; ?></td>
+
                                     </tr>
                                     <?php
                                 }
