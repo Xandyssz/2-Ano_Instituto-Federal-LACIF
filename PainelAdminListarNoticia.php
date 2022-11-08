@@ -67,14 +67,14 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
-//                                    $dataBrasil = implode('/', array_reverse(explode('-', $linha['datanasc'])));
+                                    $dataBrasil = implode('/', array_reverse(explode('-', $linha['dataNoticia'])));
 
                                     ?>
                                     <tr>
                                         <td><?php  echo $linha['idNoticia']; ?></td>
                                         <td><?php  echo $linha['titulo']; ?></td>
                                         <td><?php  echo $linha['descricao']; ?></td>
-                                        <td><?php  echo $linha['dataNoticia']; ?></td>
+                                        <td><?php  echo $dataBrasil; ?></td>
                                         <td>
                                             <img src="img/<?php echo $linha['img_user'];?>"
                                                  alt="Imagem" width="120px" heigth="120px">

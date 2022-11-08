@@ -74,14 +74,14 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
-//                                    $dataBrasil = implode('/', array_reverse(explode('-', $linha['datanasc'])));
+                                    $dataBrasil = implode('/', array_reverse(explode('-', $linha['start'])));
 
                                     ?>
                                     <tr>
                                         <td><?php  echo $linha['id']; ?></td>
                                         <td><?php  echo $linha['title']; ?></td>
                                         <td><?php  echo $linha['description']; ?></td>
-                                        <td><?php  echo $linha['start']; ?></td>
+                                        <td><?php  echo $dataBrasil; ?></td>
                                         <td><?php  echo $linha['horario']; ?></td>
                                         <td><?php  echo $linha['convenio']; ?></td>
                                         <td><?php  echo $linha['celular']; ?></td>
