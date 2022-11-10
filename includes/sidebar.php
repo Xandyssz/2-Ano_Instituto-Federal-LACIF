@@ -11,6 +11,10 @@
                     <li class="active"><a href="PainelAdminAgenda.php"><i class="icon mdi mdi-calendar"></i><span>Agenda</span></a>
                     </li>
 
+                    <?php
+                    if ($_SESSION["tipo_acesso"] == "Administrador"){
+
+                    ?>
 
                     <li class="parent active"><a href="#"><i class="icon mdi mdi-book"></i><span>Tipo de Exames</span></a>
                         <ul class="sub-menu">
@@ -34,6 +38,31 @@
                         </ul>
                     </li>
 
+                        <li class="parent active"><a href="#"><i class="icon mdi mdi-book-open-outline"></i><span>Noticias</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="PainelAdminCadastrarNoticia.php">Adicionar Noticia</a>
+                                </li>
+                                <li><a href="PainelAdminListarNoticia.php">Visualizar Noticias</a>
+                                </li>
+                                <li><a href="PainelAdminAcoesNoticia.php">Editar Noticias</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="parent active"><a href="#"><i class="icon mdi mdi-bullhorn"></i><span>Patrocinadores</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="PainelAdminCadastrarPatrocinador.php">Adicionar Patrocinador</a>
+                                </li>
+                                <li><a href="PainelAdminListarPatrocinador.php">Visualizar Patrocinadores</a>
+                                </li>
+                                <li><a href="PainelAdminAcoesPatrocinadores.php">Editar Patrocinadores</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    <?php
+                    }
+                    ?>
                   <li class="parent active"><a href="#"><i class="icon mdi mdi-wheelchair-accessibility"></i><span>Usuarios</span></a>
                     <ul class="sub-menu">
                       <li><a href="PainelAdminCadastrarUsuario.php">Adicionar Usuario</a>
@@ -56,27 +85,7 @@
                         </ul>
                     </li>
 
-                    <li class="parent active"><a href="#"><i class="icon mdi mdi-book-open-outline"></i><span>Noticias</span></a>
-                        <ul class="sub-menu">
-                            <li><a href="PainelAdminCadastrarNoticia.php">Adicionar Noticia</a>
-                            </li>
-                            <li><a href="PainelAdminListarNoticia.php">Visualizar Noticias</a>
-                            </li>
-                            <li><a href="PainelAdminAcoesNoticia.php">Editar Noticias</a>
-                            </li>
-                        </ul>
-                    </li>
 
-                    <li class="parent active"><a href="#"><i class="icon mdi mdi-bullhorn"></i><span>Patrocinadores</span></a>
-                        <ul class="sub-menu">
-                            <li><a href="PainelAdminCadastrarCarrossel.php">Adicionar Patrocinador</a>
-                            </li>
-                            <li><a href="PainelAdminListarCarrossel.php">Visualizar Patrocinadores</a>
-                            </li>
-                            <li><a href="PainelAdminAcoesCarrossel.php">Editar Patrocinadores</a>
-                            </li>
-                        </ul>
-                    </li>
 
                     <li class="active"><a href="sair.php"><i class="icon mdi mdi-walk"></i><span>Sair</span></a>
                     </li>

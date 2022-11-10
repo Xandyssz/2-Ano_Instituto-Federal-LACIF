@@ -46,7 +46,46 @@ include_once('sessao.php');
                 <input type="text"              id="title"         name="title"        placeholder="Digite o Nome Completo"    class="box" required>
                 <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box" required>
                 <input type="date"              id="start"         name="start"                                                class="box" required>
-                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                 class="box" required>
+<!--                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                     class="box" required>-->
+                <select name="horario" id="horario" class="box" required>
+                    <option value="07:00">07:00</option>
+                    <option value="07:15">07:15</option>
+                    <option value="07:30">07:30</option>
+                    <option value="07:45">07:45</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:15">08:15</option>
+                    <option value="08:30">08:30</option>
+                    <option value="08:45">08:45</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:15">09:15</option>
+                    <option value="09:30">09:30</option>
+                    <option value="09:45">09:45</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:15">10:15</option>
+                    <option value="10:30">10:30</option>
+                    <option value="10:45">10:45</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:15">11:15</option>
+                    <option value="11:30">11:30</option>
+                    <option value="11:45">11:45</option>
+                    <option value="11:45">14:00</option>
+                    <option value="14:15">14:15</option>
+                    <option value="14:30">14:30</option>
+                    <option value="14:45">14:45</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:15">15:15</option>
+                    <option value="15:30">15:30</option>
+                    <option value="15:45">15:45</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:15">16:15</option>
+                    <option value="16:30">16:30</option>
+                    <option value="16:45">16:45</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:15">17:15</option>
+                    <option value="17:30">17:30</option>
+                    <option value="17:45">17:45</option>
+                </select>
+
                 <select name="convenio" id="convenio" class="box" required>
                     <option value="" selected>Selecione o Convênio...</option>
                     <?php
@@ -59,6 +98,13 @@ include_once('sessao.php');
                     }
                     ?>
                 </select>
+
+                <?php
+                $result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.convenios WHERE idConvenio");
+                $sdda = mysqli_fetch_assoc($result);?>
+                <input type="text" id="porcentagem" name="porcentagem" placeholder="" value="<?php echo $sdda['porcentagem']?>" class="box" disabled>
+
+
                 <input type="text"              id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box" required>
                 <input type="text"              id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box" required>
                 <select name="tipo" id="tipo" class="box" required>
@@ -73,6 +119,11 @@ include_once('sessao.php');
                     }
                     ?>
                 </select>
+
+                <?php
+                $result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.exames WHERE idTipoExame");
+                $sdda = mysqli_fetch_assoc($result);?>
+                <input type="text" id="valor" name="valor" placeholder="" value="<?php echo $sdda['valor']?>" class="box" disabled>
 
                 <input type="button"  name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='lacif_home.php'" value="Voltar">
                 <input type="submit" name="agendar" class="btn btn-danger" value="agendar"/>
@@ -141,8 +192,7 @@ if (isset($_POST['agendar'])){
     // Fazer o insert  no banco de dados
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
-    AND cons.horario = '$horario' 
-    AND cons.cpf = '$cpf'";
+    AND cons.horario = '$horario' ";
     $row = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($row) > 0)

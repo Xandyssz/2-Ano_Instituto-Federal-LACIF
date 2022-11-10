@@ -83,7 +83,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                                  alt="Imagem" width="120px" heigth="120px">
                                         </td>                                        <td>
                                             <?php
-                                            echo "<a href='PainelAdminEditarCarrossel.php?id=".$linha['idCarrossel']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";
+                                            echo "<a href='PainelAdminEditarPatrocinador.php?id=".$linha['idCarrossel']."' title='Alterar'><i class='fa fa-pencil-square'></i></a>";
                                             echo " ";
                                             $id = $linha['idCarrossel'];
                                             echo "<a href='#' title='Excluir' onclick='confirmacaoExclusaoCarrossel($id);'><i class='fa fa-trash'></i></a>";

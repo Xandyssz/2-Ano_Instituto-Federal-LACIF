@@ -134,6 +134,25 @@ if(!isset($_SESSION["tipo_acesso"]))
     </div>
 </div>
 
+<div id="msgconflito" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-center">
+                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ocorreu um erro, Tipo de Exame já cadastrado!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
@@ -177,7 +196,7 @@ if (isset($_POST['Registrar'])){
 
     if(mysqli_num_rows($row) > 0)
     {
-        echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
+        echo "<script>$(document).ready(function() { $('#msgconflito').modal(); })</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarTipoExame.php">';
 
     }

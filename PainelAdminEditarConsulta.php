@@ -7,7 +7,8 @@ if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
-}else if($_SESSION['tipo_acesso'] != "Administrador")
+
+}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Laboratorista")
 {
     header("location: lacif_home.php");
 }
@@ -76,7 +77,7 @@ if ($id > 0) {
 
 
                                 <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="horario">Digite a Data Fim</label>
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="horario">Selecione o Horario</label>
                                     <div class="col-12 col-sm-8 col-lg-6">
                                         <input class="form-control" id="horario" name="horario" min="07:00" max="18:00" value="<?php  echo $linhaUnica['horario']; ?>" type="time" required>
                                     </div>
@@ -100,6 +101,13 @@ if ($id > 0) {
                                             }
                                             ?>
                                         </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="porcentagem">Desconto em %</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="porcentagem" name="porcentagem" type="text" disabled>
                                     </div>
                                 </div>
 
@@ -139,6 +147,12 @@ if ($id > 0) {
                                     </div>
                                 </div>
 
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="valor">Valor do Exame</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="valor" name="valor" type="text" disabled>
+                                    </div>
+                                </div>
 
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="status">Status do Exame: </label>
@@ -325,6 +339,8 @@ if (isset($_POST['Atualizar']))
     $tipo = $_POST['tipo'];
     $resultado = $novotitulo;
     $status = $_POST['status'];
+
+
 
 //sql to inset the values to the database
     $result = "update ifsp_lacif.consultas 

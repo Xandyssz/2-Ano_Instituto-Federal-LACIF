@@ -81,6 +81,6 @@ function confirmacaoExclusaoTipoExame(id){
 function confirmacaoExclusaoCarrossel(id){
     var resposta = confirm("Confirmar Exclusão do Patrocinador??");
     if(resposta == true) {
-        window.location.href = "PainelAdminCarrosselDeletar.php?id=" + id;
+        window.location.href = "PainelAdminPatrocinadorDeletar.php?id=" + id;
     }
 }

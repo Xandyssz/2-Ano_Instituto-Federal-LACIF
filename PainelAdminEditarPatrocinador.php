@@ -20,7 +20,7 @@ if ($id > 0) {
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
     echo "<script>OpcaoMensagens(5);</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarCarrossel.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=PainelAdminListarPatrocinador.php">';
 }
 ?>
 
@@ -103,7 +103,7 @@ if ($id > 0) {
                                 <div class="col-sm-6">
                                     <p class="text-right">
                                         <input type="submit" id="Atualizar" name="Atualizar" class="btn btn-primary pull-right" value="Atualizar">
-                                        <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesCarrossel.php'" value="Voltar">
+                                        <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesPatrocinadores.php'" value="Voltar">
                                     </p>
                                 </div>
                         </div>
@@ -236,6 +236,6 @@ if (isset($_POST['Atualizar'])) {
 
     $row = mysqli_query($conn, $result);
     echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesCarrossel.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesPatrocinadores.php">';
 }
 ?>
