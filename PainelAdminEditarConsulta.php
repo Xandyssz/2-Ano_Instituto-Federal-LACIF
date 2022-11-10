@@ -79,7 +79,1415 @@ if ($id > 0) {
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="horario">Selecione o Horario</label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="horario" name="horario" min="07:00" max="18:00" value="<?php  echo $linhaUnica['horario']; ?>" type="time" required>
+                                        <select class="form-control" id="horario" name="horario" value="<?php  echo $linhaUnica['horario']; ?>" required>
+                                            <?php
+                                            if ($linhaUnica['horario'] == "07:00:00") {
+                                                ?>
+                                                <option value="07:00"selected>07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+<!--                                                --><?php
+                                            } elseif ($linhaUnica['horario'] == "07:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15"selected>07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "07:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30"selected>07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "07:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45"selected>07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "08:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00"selected>08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "08:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15"selected>08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "08:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30"selected>08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "08:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45"selected>08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "09:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00"selected>09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+<!--                                                --><?php
+                                            } elseif ($linhaUnica['horario'] == "09:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15"selected>09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "09:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30"selected>09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "09:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45"selected>09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "10:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00"selected>10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "10:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15"selected>10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "10:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30"selected>10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "10:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45"selected>10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "11:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00"selected>11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "11:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15"selected>11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "11:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30"selected>11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "11:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45"selected>11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "14:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45"selected>14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "14:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15"selected>14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "14:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30"selected>14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "14:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45"selected>14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "15:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00"selected>15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "15:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15"selected>15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "15:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30"selected>15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "15:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45"selected>15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "16:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00"selected>16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "16:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15"selected>16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "16:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30"selected>16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "16:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45"selected>16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "17:00:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00"selected>17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "17:15:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15"selected>17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "17:30:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30"selected>17:30</option>
+                                                <option value="17:45">17:45</option>
+                                                <?php
+                                            } elseif ($linhaUnica['horario'] == "17:45:00") {
+                                                ?>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:15">07:15</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="07:45">07:45</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:15">08:15</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="08:45">08:45</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:15">09:15</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="09:45">09:45</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:15">10:15</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="10:45">10:45</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:15">11:15</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="11:45">11:45</option>
+                                                <option value="11:45">14:00</option>
+                                                <option value="14:15">14:15</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="14:45">14:45</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:15">15:15</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="15:45">15:45</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:15">16:15</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="16:45">16:45</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:15">17:15</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="17:45"selected>17:45</option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -278,6 +1686,24 @@ if ($id > 0) {
         </div>
     </div>
 </div>
+<div id="msgconflito" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-center">
+                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ocorreu um erro, data ou horario já ocupado. Tente Remarcar!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
@@ -340,7 +1766,18 @@ if (isset($_POST['Atualizar']))
     $resultado = $novotitulo;
     $status = $_POST['status'];
 
+    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
+    WHERE cons.start = '$start' 
+    AND cons.horario = '$horario'";
 
+    $row = mysqli_query($conn, $query);
+
+    if(mysqli_num_rows($row) > 0)
+    {
+        echo "<script>$(document).ready(function() { $('#msgconflito').modal(); })</script>";
+
+        exit;
+    }
 
 //sql to inset the values to the database
     $result = "update ifsp_lacif.consultas 
@@ -362,8 +1799,5 @@ set title = '$title',
 
 }
 ?>
-
-
-
 
 </html>

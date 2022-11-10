@@ -48,6 +48,7 @@ include_once('sessao.php');
                 <input type="date"              id="start"         name="start"                                                class="box" required>
 <!--                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                     class="box" required>-->
                 <select name="horario" id="horario" class="box" required>
+                    <option value="" selected>Selecione o Horario da Consulta...</option>
                     <option value="07:00">07:00</option>
                     <option value="07:15">07:15</option>
                     <option value="07:30">07:30</option>
@@ -133,6 +134,8 @@ include_once('sessao.php');
         </div>
 
     </section>
+
+
 
     <!-- ARQUIVOS JAVA SCRIPT -->
     <script src="js/validar.js"></script>

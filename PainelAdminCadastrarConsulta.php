@@ -300,6 +300,33 @@ if(!isset($_SESSION["tipo_acesso"]))
 
 
 <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        $("#convenio").change(()=>{
+            let conv = $("#convenio").val();
+            $("#porcentagem").val("Requisitando dados...");
+            $.get("getPercentByConvenio.php?convenio="+conv, function(data, status){
+                let dados = JSON.parse(data);
+
+                $("#porcentagem").val(dados[0].porcentagem)
+            });
+        })
+        $("#tipo").change(()=>{
+            let conv = $("#tipo").val();
+
+            $.get("getValorByExame.php?exame="+conv, function(data, status){
+                let dados = JSON.parse(data);
+
+                $("#valor").val(dados[0].valor)
+            });
+        })
+
+
+    });
+</script>
 <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
 <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="assets/js/app.js" type="text/javascript"></script>
@@ -320,6 +347,10 @@ if(!isset($_SESSION["tipo_acesso"]))
         //-initialize the javascript
         App.init();
         App.dashboard();
+
+
+        alert("asd");
+
 
     });
 </script>
@@ -364,6 +395,7 @@ if (isset($_POST['Registrar'])){
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
+//        var_dump($result);
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
     }
 
