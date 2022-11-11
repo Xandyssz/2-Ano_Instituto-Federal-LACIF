@@ -316,7 +316,7 @@ if(!isset($_SESSION["tipo_acesso"]))
         })
         $("#tipo").change(()=>{
             let conv = $("#tipo").val();
-
+            $("#valor").val("Requisitando dados...");
             $.get("getValorByExame.php?exame="+conv, function(data, status){
                 let dados = JSON.parse(data);
 
@@ -327,6 +327,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 
     });
 </script>
+
 <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
 <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="assets/js/app.js" type="text/javascript"></script>
@@ -347,11 +348,6 @@ if(!isset($_SESSION["tipo_acesso"]))
         //-initialize the javascript
         App.init();
         App.dashboard();
-
-
-        alert("asd");
-
-
     });
 </script>
 

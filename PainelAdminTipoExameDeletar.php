@@ -1,3 +1,9 @@
+<?php
+session_start();
+include 'sessao.php';
+include_once("conexao.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +17,6 @@
 </head>
 <body>
 <?php
-session_start();
-include 'sessao.php';
-include_once("conexao.php");
 $id = $_GET['id'];
 
 if (!empty($id)) {

@@ -1,6 +1,7 @@
 #Correções Necessárias para o MCT - 2022
-- <h4>Realizar Validação de Data na hora de Editar Consulta - [STATUS]
-- <h4>Janela Modal no Cadastro de Consultas Padrão - [STATUS]
+- Editar Consulta - Trazer valor do exame e % de desconto
+- Editar Noticia - Trazer a foto nova.
+- Editar Patrocinador - Trazer a foto nova.
 
 #Realizado
 - <h4>Painel para (Laboratorista/Admin) - [✔]
@@ -21,9 +22,21 @@
 - <h4>Inserir Select para os Horarios na parte de cadastro de consulta - [✔]
 - <h4>Criar Mensagens de Erro com Janela Modal para caso já tenha um cadastro igual no banco de dados - [✔]
 - <h4>Realizar o Editar Horarios "Painel Admin e Consulta Normal" - [✔]
-- <h4>Trazer a Porcentagem e o Valor de acordo com o SELECT(CONVENIO) e SELECT(EXAME) - [STATUS];
+- <h4>Trazer a Porcentagem e o Valor de acordo com o SELECT(CONVENIO) e SELECT(EXAME) - [✔]; "Falta Trazer no Editar"
+- Corrigir erro ao excluir algo [✔]
 
 #Parte Final
 - <H4>Tornar Funcional a aba (Contact-us) - [STATUS]
 - <h4>Realizar a otimização dos arquivos.php - [STATUS]
 - <h4>Realizar a retirada de arquivos/pastas (Desnecessários) - [STATUS]
+
+#Verificação Após subir o site para a host
+*Painel Administrativo
+- Painel Agenda - (Sumiu, falta adicionar a bibilioteca à HOST)
+- Painel Tipo de Exames - (OK)
+- Painel Convênios - (OK)
+- Painel Noticias (OK)
+- Painel Patrocinador (OK)
+- Painel Usuarios (OK)
+
+- Editar Imagem(Resultado) - OK

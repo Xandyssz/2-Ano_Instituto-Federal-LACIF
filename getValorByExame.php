@@ -1,10 +1,10 @@
 <?php
 include_once 'conexao.php';
-$convenioProcurado = $_GET['exame'];
+$exameProcurado = $_GET['exame'];
 
 
 
-$sql = "SELECT * FROM ifsp_lacif.exames WHERE ifsp_lacif.exames.nomeExame = '$convenioProcurado'";
+$sql = "SELECT * FROM ifsp_lacif.exames WHERE ifsp_lacif.exames.nomeExame = '$exameProcurado'";
 
 $comando = mysqli_query($conn, $sql);
 //$result = mysqli_fetch_assoc($comando);

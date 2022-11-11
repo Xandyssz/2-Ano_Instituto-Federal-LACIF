@@ -1731,6 +1731,33 @@ if ($id > 0) {
     });
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        $("#convenio").change(()=>{
+            let conv = $("#convenio").val();
+            $("#porcentagem").val("Requisitando dados...");
+            $.get("getPercentByConvenio.php?convenio="+conv, function(data, status){
+                let dados = JSON.parse(data);
+
+                $("#porcentagem").val(dados[0].porcentagem)
+            });
+        })
+        $("#tipo").change(()=>{
+            let conv = $("#tipo").val();
+            $("#valor").val("Requisitando dados...");
+            $.get("getValorByExame.php?exame="+conv, function(data, status){
+                let dados = JSON.parse(data);
+
+                $("#valor").val(dados[0].valor)
+            });
+        })
+
+
+    });
+</script>
+
 </body>
 
 <?php
@@ -1766,19 +1793,6 @@ if (isset($_POST['Atualizar']))
     $resultado = $novotitulo;
     $status = $_POST['status'];
 
-    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
-    WHERE cons.start = '$start' 
-    AND cons.horario = '$horario'";
-
-    $row = mysqli_query($conn, $query);
-
-    if(mysqli_num_rows($row) > 0)
-    {
-        echo "<script>$(document).ready(function() { $('#msgconflito').modal(); })</script>";
-
-        exit;
-    }
-
 //sql to inset the values to the database
     $result = "update ifsp_lacif.consultas 
 set title = '$title', 
@@ -1795,7 +1809,8 @@ set title = '$title',
     $row = mysqli_query($conn, $result);
 
     echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConsulta.php">';
+    var_dump($result);
+//    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConsulta.php">';
 
 }
 ?>

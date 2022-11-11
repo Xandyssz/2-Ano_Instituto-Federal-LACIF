@@ -25,6 +25,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
 
         <!-- ARQUIVOS JAVA SCRIPT -->
         <script src="js/dataRetograda.js"></script>
+            <script src="js/funcoes.js"></script>
 
     </head>
     <body>
@@ -132,7 +133,8 @@ if (isset($_POST['cadastrar'])){
     // Fazer o insert  no banco de dados
 
     $query = "SELECT * FROM ifsp_lacif.usuarios users 
-    WHERE users.email = '$email'";
+    WHERE users.cpf = '$cpf'
+    AND users.email = '$email'";
 
 
     $row = mysqli_query($conn, $query);

@@ -23,7 +23,7 @@
 
                     <h2 class="card__title"><?php echo "<font color='black'>Status do Exame: " . $row['status'] . "</font>"; ?></h2>
 
-                    <a href="img/<?php echo $row['resultado'], '">Download do Resultado '?><i class='fa fa-file-pdf-o'></i>"
+                    <a href="img/<?php echo $row['resultado'], '">Download do Resultado '?><i class='fa fa-file-pdf-o'></i></a>"
 
                 </div>
 
@@ -35,4 +35,5 @@
 
     </div>
 </div>
+
 

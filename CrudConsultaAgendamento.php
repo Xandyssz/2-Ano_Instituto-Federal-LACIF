@@ -124,7 +124,7 @@ include_once('sessao.php');
                 <?php
                 $result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.exames WHERE idTipoExame");
                 $sdda = mysqli_fetch_assoc($result);?>
-                <input type="text" id="valor" name="valor" placeholder="" value="<?php echo $sdda['valor']?>" class="box" disabled>
+                <input type="text" id="valor" name="valor" placeholder="" class="box" disabled>
 
                 <input type="button"  name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='lacif_home.php'" value="Voltar">
                 <input type="submit" name="agendar" class="btn btn-danger" value="agendar"/>
@@ -173,6 +173,35 @@ include_once('sessao.php');
         $(#celular).mask("(99) 99999-9999");
         $(#cpf).mask("999.999.999-99");
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            $("#convenio").change(()=>{
+                let conv = $("#convenio").val();
+                $("#porcentagem").val("Requisitando dados...");
+                $.get("getPercentByConvenio.php?convenio="+conv, function(data, status){
+                    let dados = JSON.parse(data);
+
+                    $("#porcentagem").val(dados[0].porcentagem)
+                });
+            })
+            $("#tipo").change(()=>{
+                let conv = $("#tipo").val();
+                $("#valor").val("Requisitando dados...");
+                $.get("getValorByExame.php?exame="+conv, function(data, status){
+                    let dados = JSON.parse(data);
+
+                    $("#valor").val(dados[0].valor)
+                });
+            })
+
+
+        });
+    </script>
+
+
     </body>
     </html>
 
@@ -195,7 +224,7 @@ if (isset($_POST['agendar'])){
     // Fazer o insert  no banco de dados
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
-    AND cons.horario = '$horario' ";
+    AND cons.horario = '$horario'";
     $row = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($row) > 0)

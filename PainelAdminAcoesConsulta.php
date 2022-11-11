@@ -62,12 +62,10 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <th style="width: 20%;">Data Inicio</th>
                                     <th style="width: 20%;">Horario</th>
                                     <th style="width: 20%;">Convenio</th>
-                                    <th style="width: 20%;">Desconto em %</th>
                                     <th style="width: 20%;">Celular</th>
                                     <th style="width: 20%;">CPF</th>
                                     <th style="width: 20%;">Tipo da Consulta</th>
                                     <th style="width: 20%;">Resultado do Exame</th>
-                                    <th style="width: 20%;">Valor do Exame</th>
                                     <th style="width: 20%;">Status</th>
                                     <th style="width: 20%;">Ação</th>
 
@@ -87,12 +85,10 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <td><?php  echo $dataBrasil; ?></td>
                                         <td><?php  echo $linha['horario']; ?></td>
                                         <td><?php  echo $linha['convenio']; ?></td>
-                                        <td><?php  echo "[Falta Corrigir]" ?></td>
                                         <td><?php  echo $linha['celular']; ?></td>
                                         <td><?php  echo $linha['cpf']; ?></td>
                                         <td><?php  echo $linha['tipo']; ?></td>
                                         <td><?php  echo $linha['resultado']; ?></td>
-                                        <td><?php  echo "[Falta Corrigir]" ?></td>
                                         <td><?php  echo $linha['status']; ?></td>
                                         <td>
                                             <?php
