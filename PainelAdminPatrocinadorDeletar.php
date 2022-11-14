@@ -19,7 +19,7 @@ include_once("conexao.php");
 $id = $_GET['id'];
 
 if (!empty($id)) {
-    $result_usuario = "DELETE FROM ifsp_lacif.patrocinadores WHERE idCarrossel = $id";
+    $result_usuario = "DELETE FROM ifsp_lacif.patrocinadores WHERE idPatrocinador = $id";
     mysqli_query($conn, $result_usuario);
 
     if (mysqli_affected_rows($conn)) {

@@ -62,13 +62,13 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM ifsp_lacif.patrocinadores order by idCarrossel";
+                                $query = "SELECT * FROM ifsp_lacif.patrocinadores order by idPatrocinador";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
                                     ?>
                                     <tr>
-                                        <td><?php  echo $linha['idCarrossel']; ?></td>
+                                        <td><?php  echo $linha['idPatrocinador']; ?></td>
                                         <td><?php  echo $linha['titulo']; ?></td>
                                         <td><?php  echo $linha['descricao']; ?></td>
                                         <td><?php  echo $linha['ativo']; ?></td>

@@ -13,21 +13,21 @@ if(!isset($_SESSION["tipo_acesso"]))
 }
 ?>
 
-    <!doctype html>
-    <html lang="en">
-    <head>
-        <?php include('includes/header.php'); ?>
-        <!-- ARQUIVOS FAVICON -->
-        <title>LACIF - Gerenciar Consultas</title>
-        <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-        <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-        <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-        <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-        <link href="ico/favicon.png" rel="shortcut icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="js/funcoes.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+    <?php include('includes/header.php'); ?>
+    <!-- ARQUIVOS FAVICON -->
+    <title>LACIF - Gerenciar Consultas</title>
+    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="ico/favicon.png" rel="shortcut icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/funcoes.js"></script>
 
-    </head>
+</head>
 <body>
 <div class="be-wrapper be-fixed-sidebar">
     <!--Navigation bar-->

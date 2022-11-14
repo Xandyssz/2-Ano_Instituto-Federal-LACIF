@@ -78,7 +78,7 @@ if ($id > 0) {
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="senha">Digite a Senha</label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="senha" name="senha" value="<?php  echo $linhaUnica['senha']; ?>" type="password" required>
+                                        <input class="form-control" id="senha" name="senha" value="<?php  echo $linhaUnica['senha']; ?>" type="password" disabled>
                                     </div>
                                 </div>
 
@@ -283,26 +283,26 @@ if ($id > 0) {
     </div>
 </div>
 
-<!---->
-<!--<!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->-->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
-<!--<script>-->
-<!--    $(function(){-->
-<!--        var dtToday = new Date();-->
-<!---->
-<!--        var month = dtToday.getMonth() + 1;-->
-<!--        var day = dtToday.getDate();-->
-<!--        var year = dtToday.getFullYear();-->
-<!--        if(month < 10)-->
-<!--            month = '0' + month.toString();-->
-<!--        if(day < 10)-->
-<!--            day = '0' + day.toString();-->
-<!--        var maxDate = year + '-' + month + '-' + day;-->
-<!---->
-<!--        $('#datanasc').attr('min', maxDate);-->
-<!---->
-<!--    });-->
-<!--</script>-->
+<!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        var dtToday = new Date();
+
+        var month = dtToday.getMonth() + 1;
+        var day = dtToday.getDate();
+        var year = dtToday.getFullYear();
+        if(month < 10)
+            month = '0' + month.toString();
+        if(day < 10)
+            day = '0' + day.toString();
+        var maxDate = year + '-' + month + '-' + day;
+
+        $('#datanasc').attr('max', maxDate);
+
+    });
+</script>
+
 
 
 <!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->

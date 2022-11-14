@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('conexao.php');  // se ele clicou no botão salvar
+include_once('conexao.php');  // se ele clicou no bot達o salvar
 ?>
 
     <!DOCTYPE html>
@@ -25,7 +25,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
 
         <!-- ARQUIVOS JAVA SCRIPT -->
         <script src="js/dataRetograda.js"></script>
-            <script src="js/funcoes.js"></script>
+        <script src="js/funcoes.js"></script>
 
     </head>
     <body>
@@ -40,7 +40,7 @@ include_once('conexao.php');  // se ele clicou no botão salvar
                 <img src="img/images/book2-img.svg" alt="">
             </div>
 
-            <form action="" method="POST"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se não não grava no BANCO -->
+            <form action="" method="POST"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se n達o n達o grava no BANCO -->
                 <h3>Cadastro</h3>
                 <input type="text"  name="nome" id="nome" placeholder="Digite o Nome Completo" class="box" required>
                 <input type="text" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box" required>
@@ -135,7 +135,6 @@ if (isset($_POST['cadastrar'])){
     $query = "SELECT * FROM ifsp_lacif.usuarios users 
     WHERE users.cpf = '$cpf'
     AND users.email = '$email'";
-
 
     $row = mysqli_query($conn, $query);
 

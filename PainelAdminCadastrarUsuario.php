@@ -45,104 +45,104 @@ if(!isset($_SESSION["tipo_acesso"]))
                     <div class="card card-border-color card-border-color-primary">
                         <div class="card-header card-header-divider">Adicionar Detalhes do Usuario<span class="card-subtitle">Por favor, preencha os dados necessários.</span></div>
                         <div class="card-body">
-                                <form method="POST">
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="nome">Digite o Nome Completo</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="nome" name="nome" type="text" required>
-                                        </div>
+                            <form method="POST">
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="nome">Digite o Nome Completo</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="nome" name="nome" type="text" required>
                                     </div>
+                                </div>
 
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="cpf">Digite o CPF</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="cpf" name="cpf" type="text" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="cpf">Digite o CPF</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="cpf" name="cpf" type="text" required>
                                     </div>
+                                </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="email">Digite o Email</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="email" name="email" type="email" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="email">Digite o Email</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="email" name="email" type="email" required>
                                     </div>
+                                </div>
 
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="senha">Digite a Senha</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="senha" name="senha" type="password" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="senha">Digite a Senha</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="senha" name="senha" type="password" required>
                                     </div>
+                                </div>
 
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="celular">Digite o Celular</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="celular" name="celular" type="text" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="celular">Digite o Celular</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="celular" name="celular" type="text" required>
                                     </div>
+                                </div>
 
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="endereco">Digite o Endereco</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="endereco" name="endereco" type="text" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="endereco">Digite o Endereco</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="endereco" name="endereco" type="text" required>
                                     </div>
+                                </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Sanguineo: </label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <select class="form-control" id="tiposanguineo" name="tiposanguineo" required>
-                                                <option value=""selected>Selecione o tipo sanguineo...</option>
-                                                <option value="O-">O-</option>
-                                                <option value="O">O+</option>
-                                                <option value="AB-">AB-</option>
-                                                <option value="AB">AB+</option>
-                                                <option value="B-">B-</option>
-                                                <option value="B">B+</option>
-                                                <option value="A-">A-</option>
-                                                <option value="A">A+</option>
-                                            </select>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Sanguineo: </label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <select class="form-control" id="tiposanguineo" name="tiposanguineo" required>
+                                            <option value=""selected>Selecione o tipo sanguineo...</option>
+                                            <option value="O-">O-</option>
+                                            <option value="O">O+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="AB">AB+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="B">B+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="A">A+</option>
+                                        </select>
                                     </div>
+                                </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Exame: </label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <select class="form-control" id="sexo" name="sexo" required>
-                                                <option value="" selected>Selecione o sexo...</option>
-                                                <option value="Masculino">Masculino</option>
-                                                <option value="Feminino">Feminino</option>
-                                            </select>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Exame: </label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <select class="form-control" id="sexo" name="sexo" required>
+                                            <option value="" selected>Selecione o sexo...</option>
+                                            <option value="Masculino">Masculino</option>
+                                            <option value="Feminino">Feminino</option>
+                                        </select>
                                     </div>
+                                </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="datanasc">Data de Nascimento</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="datanasc" name="datanasc" type="date" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="datanasc">Data de Nascimento</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="datanasc" name="datanasc" type="date" required>
                                     </div>
+                                </div>
 
 
-                                    <div class="col-sm-6">
-                                        <p class="text-right">
-                                            <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
-                                            <input type="button" name="listar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='PainelAdminAcoesUsuario.php'">
-                                            <br>
-                                    </div>
+                                <div class="col-sm-6">
+                                    <p class="text-right">
+                                        <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
+                                        <input type="button" name="listar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='PainelAdminAcoesUsuario.php'">
+                                        <br>
+                                </div>
                         </div>
                         <br>
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 
@@ -291,14 +291,12 @@ if (isset($_POST['Registrar'])){
     $query = "SELECT * FROM ifsp_lacif.usuarios users 
     WHERE users.cpf = '$cpf'";
 
-
     $row = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($row) > 0)
     {
         echo "<script>$(document).ready(function() { $('#msgconflito').modal(); })</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarUsuario.php">';
-
     }
 
     else

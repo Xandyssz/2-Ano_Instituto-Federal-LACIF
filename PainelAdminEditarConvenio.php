@@ -172,8 +172,8 @@ if ($id > 0) {
 <?php
 //se ele clicou no botão alterar
 if (isset($_POST['Atualizar'])) {
-     $nomeConvenio = $_POST['nomeConvenio'];
-     $porcentagem = $_POST['porcentagem'];
+    $nomeConvenio = $_POST['nomeConvenio'];
+    $porcentagem = $_POST['porcentagem'];
 //sql to inset the values to the database
     $result = "update ifsp_lacif.convenios 
 set nomeConvenio = '$nomeConvenio',

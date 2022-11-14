@@ -47,160 +47,174 @@ if(!isset($_SESSION["tipo_acesso"]))
                     <div class="card card-border-color card-border-color-primary">
                         <div class="card-header card-header-divider">Adicionar Detalhes do Exame<span class="card-subtitle">Por favor, preencha os dados necessários.</span></div>
                         <div class="card-body">
-                                <form method="POST">
+                            <form method="POST">
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="title">Digite o Nome Completo</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="title" name="title" type="text" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="title">Digite o Nome Completo</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="title" name="title" type="text" required>
                                     </div>
+                                </div>
 
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="description">Digite a Descricao</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="description" name="description" type="text" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="description">Digite a Descricao</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="description" name="description" type="text" required>
                                     </div>
+                                </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="start">Digite a Data Inicio</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="start" name="start" type="date" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="start">Digite a Data Inicio</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="start" name="start" type="date" required>
                                     </div>
+                                </div>
 
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="horario">Selecione o Horario</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-<!--                                            <input class="form-control" id="horario" name="horario" type="time" min="07:00" max="18:00" required>-->
-                                            <select class="form-control" id="horario" name="horario" required>
-                                                <option value="07:00">07:00</option>
-                                                <option value="07:15">07:15</option>
-                                                <option value="07:30">07:30</option>
-                                                <option value="07:45">07:45</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="08:15">08:15</option>
-                                                <option value="08:30">08:30</option>
-                                                <option value="08:45">08:45</option>
-                                                <option value="09:00">09:00</option>
-                                                <option value="09:15">09:15</option>
-                                                <option value="09:30">09:30</option>
-                                                <option value="09:45">09:45</option>
-                                                <option value="10:00">10:00</option>
-                                                <option value="10:15">10:15</option>
-                                                <option value="10:30">10:30</option>
-                                                <option value="10:45">10:45</option>
-                                                <option value="11:00">11:00</option>
-                                                <option value="11:15">11:15</option>
-                                                <option value="11:30">11:30</option>
-                                                <option value="11:45">11:45</option>
-                                                <option value="11:45">14:00</option>
-                                                <option value="14:15">14:15</option>
-                                                <option value="14:30">14:30</option>
-                                                <option value="14:45">14:45</option>
-                                                <option value="15:00">15:00</option>
-                                                <option value="15:15">15:15</option>
-                                                <option value="15:30">15:30</option>
-                                                <option value="15:45">15:45</option>
-                                                <option value="16:00">16:00</option>
-                                                <option value="16:15">16:15</option>
-                                                <option value="16:30">16:30</option>
-                                                <option value="16:45">16:45</option>
-                                                <option value="17:00">17:00</option>
-                                                <option value="17:15">17:15</option>
-                                                <option value="17:30">17:30</option>
-                                                <option value="17:45">17:45</option>
-                                            </select>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="horario">Selecione o Horario</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <!--                                            <input class="form-control" id="horario" name="horario" type="time" min="07:00" max="18:00" required>-->
+                                        <select class="form-control" id="horario" name="horario" required>
+                                            <option value="07:00">07:00</option>
+                                            <option value="07:15">07:15</option>
+                                            <option value="07:30">07:30</option>
+                                            <option value="07:45">07:45</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="08:15">08:15</option>
+                                            <option value="08:30">08:30</option>
+                                            <option value="08:45">08:45</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="09:15">09:15</option>
+                                            <option value="09:30">09:30</option>
+                                            <option value="09:45">09:45</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="10:15">10:15</option>
+                                            <option value="10:30">10:30</option>
+                                            <option value="10:45">10:45</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="11:15">11:15</option>
+                                            <option value="11:30">11:30</option>
+                                            <option value="11:45">11:45</option>
+                                            <option value="11:45">14:00</option>
+                                            <option value="14:15">14:15</option>
+                                            <option value="14:30">14:30</option>
+                                            <option value="14:45">14:45</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="15:15">15:15</option>
+                                            <option value="15:30">15:30</option>
+                                            <option value="15:45">15:45</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="16:15">16:15</option>
+                                            <option value="16:30">16:30</option>
+                                            <option value="16:45">16:45</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="17:15">17:15</option>
+                                            <option value="17:30">17:30</option>
+                                            <option value="17:45">17:45</option>
+                                        </select>
                                     </div>
+                                </div>
 
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Convênio: </label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <select class="form-control" name="convenio" id="convenio" class="box" required>
-                                                <option value="" selected>Selecione o Convênio...</option>
-                                                <?php
-                                                $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
-                                                $resultado = mysqli_query($conn, $query);
-                                                while ($linha = mysqli_fetch_assoc($resultado)) {
-                                                    ?>
-                                                    <option value="<?php echo $linha['nomeConvenio'];?>"><?php echo $linha['nomeConvenio'];?></option>
-                                                    <?php
-                                                }
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Convênio: </label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <select class="form-control" name="convenio" id="convenio" class="box" required>
+                                            <option value="" selected>Selecione o Convênio...</option>
+                                            <?php
+                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
+                                            $resultado = mysqli_query($conn, $query);
+                                            while ($linha = mysqli_fetch_assoc($resultado)) {
                                                 ?>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="porcentagem">Desconto em %</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="porcentagem" name="porcentagem" type="text" disabled>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="celular">Digite o Celular</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="celular" name="celular" type="text" required>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="cpf">Digite o CPF</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="cpf" name="cpf" type="text" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Exame: </label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <select class="form-control" name="tipo" id="tipo" class="box" required>
-                                                <option value="" selected>Selecione o Tipo de Exame...</option>
+                                                <option value="<?php echo $linha['nomeConvenio'];?>"><?php echo $linha['nomeConvenio'];?></option>
                                                 <?php
-                                                $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
-                                                $resultado = mysqli_query($conn, $query);
-                                                while ($linha = mysqli_fetch_assoc($resultado)) {
-                                                    ?>
-                                                    <option value="<?php echo $linha['nomeExame'];?>"><?php echo $linha['nomeExame'];?></option>
-                                                    <?php
-                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="porcentagem">Desconto em %</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="porcentagem" name="porcentagem" type="text" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="celular">Digite o Celular</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="celular" name="celular" type="text" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="cpf">Digite o CPF</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="cpf" name="cpf" type="text" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Exame: </label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <select class="form-control" name="tipo" id="tipo" class="box" required>
+                                            <option value="" selected>Selecione o Tipo de Exame...</option>
+                                            <?php
+                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
+                                            $resultado = mysqli_query($conn, $query);
+                                            while ($linha = mysqli_fetch_assoc($resultado)) {
                                                 ?>
-                                            </select>
-                                        </div>
+                                                <option value="<?php echo $linha['nomeExame'];?>"><?php echo $linha['nomeExame'];?></option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
+                                </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="valor">Valor do Exame</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input class="form-control" id="valor" name="valor" type="text" disabled>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="valor">Valor do Exame</label>
+                                    <div class="col-12 col-sm-8 col-lg-6">
+                                        <input class="form-control" id="valor" name="valor" type="text" disabled>
                                     </div>
+                                </div>
 
-                                    <div class="col-sm-6">
-                                        <p class="text-right">
-                                            <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
-                                            <input type="button" name="listar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='PainelAdminAcoesConsulta.php'">
-                                            <br>
-                                    </div>
+                                <div class="col-sm-6">
+                                    <p class="text-right">
+                                        <input type="submit" id="Registrar" name="Registrar" class="btn btn-primary pull-right" value="Registrar">
+                                        <input type="button" name="listar" class="btn btn-primary pull-right" value="Cancelar" onclick="window.location.href='PainelAdminAcoesConsulta.php'">
+                                        <br>
+                                </div>
                         </div>
                         <br>
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 </div>
+
+
+
+<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+    $("#celular").mask("(99) 99999-9999");
+    $("#cpf").mask("999.999.999-99");
+</script>
+<script>
+    $(#celular).mask("(99) 99999-9999");
+    $(#cpf).mask("999.999.999-99");
+</script>
 
 <!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -221,19 +235,6 @@ if(!isset($_SESSION["tipo_acesso"]))
         $('#horario').attr('min', maxDate);
 
     });
-</script>
-
-
-<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script>
-    $("#celular").mask("(99) 99999-9999");
-    $("#cpf").mask("999.999.999-99");
-</script>
-<script>
-    $(#celular).mask("(99) 99999-9999");
-    $(#cpf).mask("999.999.999-99");
 </script>
 
 <!-- JANELA MODAL -->
@@ -316,7 +317,7 @@ if(!isset($_SESSION["tipo_acesso"]))
         })
         $("#tipo").change(()=>{
             let conv = $("#tipo").val();
-            $("#valor").val("Requisitando dados...");
+
             $.get("getValorByExame.php?exame="+conv, function(data, status){
                 let dados = JSON.parse(data);
 
@@ -327,7 +328,6 @@ if(!isset($_SESSION["tipo_acesso"]))
 
     });
 </script>
-
 <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
 <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="assets/js/app.js" type="text/javascript"></script>

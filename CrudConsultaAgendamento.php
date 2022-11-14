@@ -46,7 +46,7 @@ include_once('sessao.php');
                 <input type="text"              id="title"         name="title"        placeholder="Digite o Nome Completo"    class="box" required>
                 <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box" required>
                 <input type="date"              id="start"         name="start"                                                class="box" required>
-<!--                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                     class="box" required>-->
+                <!--                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                     class="box" required>-->
                 <select name="horario" id="horario" class="box" required>
                     <option value="" selected>Selecione o Horario da Consulta...</option>
                     <option value="07:00">07:00</option>
@@ -201,7 +201,6 @@ include_once('sessao.php');
         });
     </script>
 
-
     </body>
     </html>
 
@@ -224,7 +223,7 @@ if (isset($_POST['agendar'])){
     // Fazer o insert  no banco de dados
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
-    AND cons.horario = '$horario'";
+    AND cons.horario = '$horario' ";
     $row = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($row) > 0)

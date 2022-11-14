@@ -98,24 +98,24 @@ if(!isset($_SESSION["tipo_acesso"]))
     </div>
     </div>
 
-<!--     FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
-<!--    <script>-->
-<!--        $(function(){-->
-<!--            var dtToday = new Date();-->
-<!---->
-<!--            var month = dtToday.getMonth() + 1;-->
-<!--            var day = dtToday.getDate();-->
-<!--            var year = dtToday.getFullYear();-->
-<!--            if(month < 10)-->
-<!--                month = '0' + month.toString();-->
-<!--            if(day < 10)-->
-<!--                day = '0' + day.toString();-->
-<!--            var maxDate = year + '-' + month + '-' + day;-->
-<!---->
-<!--            $('#data').attr('min', maxDate);-->
-<!--        });-->
-<!--    </script>-->
+    <!--     FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->-->
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+    <!--    <script>-->
+    <!--        $(function(){-->
+    <!--            var dtToday = new Date();-->
+    <!---->
+    <!--            var month = dtToday.getMonth() + 1;-->
+    <!--            var day = dtToday.getDate();-->
+    <!--            var year = dtToday.getFullYear();-->
+    <!--            if(month < 10)-->
+    <!--                month = '0' + month.toString();-->
+    <!--            if(day < 10)-->
+    <!--                day = '0' + day.toString();-->
+    <!--            var maxDate = year + '-' + month + '-' + day;-->
+    <!---->
+    <!--            $('#data').attr('min', maxDate);-->
+    <!--        });-->
+    <!--    </script>-->
 
 
     <!-- VISUALIZAR IMAGEM -->
@@ -139,16 +139,16 @@ if(!isset($_SESSION["tipo_acesso"]))
 
 
     <script src="js/foto.js"></script>
-<!---->
-<!--     FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>-->
-<!--    <script>-->
-<!--        $("#data").mask("99/99/9999");-->
-<!--    </script>-->
-<!--    <script>-->
-<!--        $(#data).mask("99/99/9999");-->
-<!--    </script>-->
+    <!---->
+    <!--     FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->-->
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>-->
+    <!--    <script>-->
+    <!--        $("#data").mask("99/99/9999");-->
+    <!--    </script>-->
+    <!--    <script>-->
+    <!--        $(#data).mask("99/99/9999");-->
+    <!--    </script>-->
 
     <!-- JANELA MODAL -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -270,7 +270,7 @@ if (isset($_POST['Registrar'])) {
     $dataBrasil = implode('-', array_reverse(explode('/', "$dataNoticia")));// 1980-01-19
 
     //Fazer o insert no banco de dados
-    $query = "SELECT titulo FROM ifsp_lacif.noticias WHERE titulo = '$titulo'";
+    $query = "SELECT descricao FROM ifsp_lacif.noticias WHERE descricao = '$descricao'";
     $row = mysqli_query($conn, $query);
     if (mysqli_num_rows($row) > 0) {
         echo "<script>$(document).ready(function() { $('#msgconflito').modal(); })</script>";

@@ -119,7 +119,7 @@ if ($id > 0) {
                                                 <option value="17:15">17:15</option>
                                                 <option value="17:30">17:30</option>
                                                 <option value="17:45">17:45</option>
-<!--                                                --><?php
+                                                <!--                                                --><?php
                                             } elseif ($linhaUnica['horario'] == "07:15:00") {
                                                 ?>
                                                 <option value="07:00">07:00</option>
@@ -431,7 +431,7 @@ if ($id > 0) {
                                                 <option value="17:15">17:15</option>
                                                 <option value="17:30">17:30</option>
                                                 <option value="17:45">17:45</option>
-<!--                                                --><?php
+                                                <!--                                                --><?php
                                             } elseif ($linhaUnica['horario'] == "09:15:00") {
                                                 ?>
                                                 <option value="07:00">07:00</option>
@@ -1495,16 +1495,16 @@ if ($id > 0) {
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Convênio: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <select class="form-control" name="convenio" id="convenio" class="box" required>
+                                        <select class="form-control" name="convenio" id="convenio" class="box" value="<?php echo $linha['nomeConvenio']?>"required>
                                             <option value="" selected>Selecione o Convênio...</option>
                                             <?php
                                             $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
-                                                if ($linha['idConvenio'] == $linha['idConvenio']) { ?>
-                                                    <option value="<?php echo $linha['idConvenio']; ?>" selected><?php echo $linha['nomeConvenio'];?></option>
+                                                if ($linha['nomeConvenio'] == $linha['nomeConvenio']) { ?>
+                                                    <option value="<?php echo $linha['nomeConvenio']; ?>" selected><?php echo $linha['nomeConvenio'];?></option>
                                                 <?php   } else { ?>
-                                                    <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
+                                                    <option value="<?php echo $linha['nomeConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
                                                 <?php   }
                                             }
                                             ?>
@@ -1543,10 +1543,10 @@ if ($id > 0) {
                                             $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
-                                                if ($linha['idTipoExame'] == $linha['idTipoExame']) { ?>
-                                                    <option value="<?php echo $linha['idTipoExame']; ?>" selected><?php echo $linha['nomeExame'];?></option>
+                                                if ($linha['nomeExame'] == $linha['nomeExame']) { ?>
+                                                    <option value="<?php echo $linha['nomeExame']; ?>" selected><?php echo $linha['nomeExame'];?></option>
                                                 <?php   } else { ?>
-                                                    <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
+                                                    <option value="<?php echo $linha['nomeExame']; ?>"><?php echo $linha['nomeExame'];?></option>
                                                 <?php   }
                                             }
                                             ?>
@@ -1606,6 +1606,19 @@ if ($id > 0) {
     </div>
 </div>
 
+
+<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+    $("#celular").mask("(99) 99999-9999");
+    $("#cpf").mask("999.999.999-99");
+</script>
+<script>
+    $(#celular).mask("(99) 99999-9999");
+    $(#cpf).mask("999.999.999-99");
+</script>
+
 <!-- FORMATAR - IMPOSSIBILITAR O USUARIO DE SELECIONAR DATA ANTIGA (DATA) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
@@ -1625,19 +1638,6 @@ if ($id > 0) {
         $('#horario').attr('min', maxDate);
 
     });
-</script>
-
-
-<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script>
-    $("#celular").mask("(99) 99999-9999");
-    $("#cpf").mask("999.999.999-99");
-</script>
-<script>
-    $(#celular).mask("(99) 99999-9999");
-    $(#cpf).mask("999.999.999-99");
 </script>
 
 </div>
@@ -1706,6 +1706,33 @@ if ($id > 0) {
 </div>
 
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        $("#convenio").change(()=>{
+            let conv = $("#convenio").val();
+            $("#porcentagem").val("Requisitando dados...");
+            $.get("getPercentByConvenio.php?convenio="+conv, function(data, status){
+                let dados = JSON.parse(data);
+
+                $("#porcentagem").val(dados[0].porcentagem)
+            });
+        })
+        $("#tipo").change(()=>{
+            let conv = $("#tipo").val();
+
+            $.get("getValorByExame.php?exame="+conv, function(data, status){
+                let dados = JSON.parse(data);
+
+                $("#valor").val(dados[0].valor)
+            });
+        })
+
+
+    });
+</script>
+
 <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
 <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
@@ -1731,32 +1758,6 @@ if ($id > 0) {
     });
 </script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-
-
-        $("#convenio").change(()=>{
-            let conv = $("#convenio").val();
-            $("#porcentagem").val("Requisitando dados...");
-            $.get("getPercentByConvenio.php?convenio="+conv, function(data, status){
-                let dados = JSON.parse(data);
-
-                $("#porcentagem").val(dados[0].porcentagem)
-            });
-        })
-        $("#tipo").change(()=>{
-            let conv = $("#tipo").val();
-            $("#valor").val("Requisitando dados...");
-            $.get("getValorByExame.php?exame="+conv, function(data, status){
-                let dados = JSON.parse(data);
-
-                $("#valor").val(dados[0].valor)
-            });
-        })
-
-
-    });
-</script>
 
 </body>
 
@@ -1782,6 +1783,7 @@ if (isset($_POST['Atualizar']))
     }
 
 
+
     $title = $_POST['title'];
     $description = $_POST['description'];
     $start = $_POST['start'];
@@ -1792,6 +1794,7 @@ if (isset($_POST['Atualizar']))
     $tipo = $_POST['tipo'];
     $resultado = $novotitulo;
     $status = $_POST['status'];
+
 
 //sql to inset the values to the database
     $result = "update ifsp_lacif.consultas 
@@ -1809,8 +1812,8 @@ set title = '$title',
     $row = mysqli_query($conn, $result);
 
     echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-    var_dump($result);
-//    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConsulta.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConsulta.php">';
+
 
 }
 ?>

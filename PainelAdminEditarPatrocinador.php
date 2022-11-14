@@ -15,7 +15,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM ifsp_lacif.patrocinadores WHERE idCarrossel = $id";
+    $query = "SELECT * FROM ifsp_lacif.patrocinadores WHERE idPatrocinador = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -25,168 +25,186 @@ if ($id > 0) {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<script src="js/funcoes.js"></script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <script src="js/funcoes.js"></script>
 
-<!--Header-->
-<title>LACIF - Editar Patrocinador</title>
+    <!--Header-->
+    <title>LACIF - Editar Patrocinador</title>
 
-<?php include('includes/header.php'); ?>
-<!--End Header-->
+    <?php include('includes/header.php'); ?>
+    <!--End Header-->
 
-<body>
-<div class="be-wrapper be-fixed-sidebar">
-    <!--Navigation bar-->
-    <?php include("includes/navbar.php"); ?>
-    <!--Navigation-->
+    <body>
+    <div class="be-wrapper be-fixed-sidebar">
+        <!--Navigation bar-->
+        <?php include("includes/navbar.php"); ?>
+        <!--Navigation-->
 
-    <!--Sidebar-->
-    <?php include("includes/sidebar.php"); ?>
-    <!--Sidebar-->
-    <div class="be-content">
-        <div class="main-content container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card card-border-color card-border-color-primary">
-                        <div class="card-header card-header-divider">Atualizar dados do Patrocinador<span class="card-subtitle">Por favor, preencha os dados necessários.</span></div>
-                        <div class="card-body">
-                            <form method="POST">
-                                
-                                <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="titulo">Digite o Titulo da Noticia</label>
-                                    <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="titulo" name="titulo" type="text" value="<?php  echo $linhaUnica['titulo']; ?>" required>
+        <!--Sidebar-->
+        <?php include("includes/sidebar.php"); ?>
+        <!--Sidebar-->
+        <div class="be-content">
+            <div class="main-content container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-border-color card-border-color-primary">
+                            <div class="card-header card-header-divider">Atualizar dados do Patrocinador<span class="card-subtitle">Por favor, preencha os dados necessários.</span></div>
+                            <div class="card-body">
+                                <form method="POST">
+
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="titulo">Digite o Nome do Patrocinador</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input class="form-control" id="titulo" name="titulo" type="text" value="<?php  echo $linhaUnica['titulo']; ?>" required>
+                                        </div>
                                     </div>
-                                </div>
 
 
-                                <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="descricao">Digite a Descricao da Noticia</label>
-                                    <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="descricao" name="descricao" type="text" value="<?php  echo $linhaUnica['descricao']; ?>" required>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="descricao">Digite a Descricao do Patrocinador</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input class="form-control" id="descricao" name="descricao" type="text" value="<?php  echo $linhaUnica['descricao']; ?>" required>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="ativo">Ativo  0[Visualizar] - [1 Ocultar]:</label>
-                                    <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="ativo" name="ativo" type="number" min="0" max="1" value="<?php  echo $linhaUnica['ativo']; ?>" required>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="ativo">Ativo  0[Visualizar] - [1 Ocultar]:</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input class="form-control" id="ativo" name="ativo" type="number" min="0" max="1" value="<?php  echo $linhaUnica['ativo']; ?>" required>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="arquivo" class="form-label">Imagem:</label>
-                                    <div class="col-12 col-sm-8 col-lg-6">
-                                        <input type="file" class="form-control" name="arquivo"
-                                               onchange="previewImagem();">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right" for="arquivo" class="form-label">Imagem:</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input type="file" class="form-control" name="arquivo"
+                                                   onchange="previewImagem();">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group col-sm-12" style="text-align:center;">
-                                    <br>
-                                    <?php
-                                    if ($linhaUnica['img_nome'] == "") {
-                                        $imagemVelha = "";
-                                        ?>
-                                        <img src="img/userpadrao.png" name="visualizar" id="visualizar" width="200px" height="200px">
+                                    <div class="form-group col-sm-12" style="text-align:center;">
+                                        <br>
                                         <?php
-                                    } else {
-                                        $imagemVelha = $linhaUnica['img_nome'];
+                                        if ($linhaUnica['img_nome'] == "") {
+                                            $imagemVelha = "";
+                                            ?>
+                                            <img src="img/userpadrao.png" name="visualizar" id="visualizar" width="200px" height="200px">
+                                            <?php
+                                        } else {
+                                            $imagemVelha = $linhaUnica['img_nome'];
+                                            ?>
+                                            <img src="img/<?php echo $linhaUnica['img_nome'];?>" name="visualizar" id="visualizar" width="200px" height="200px">
+                                            <?php
+                                        }
                                         ?>
-                                        <img src="img/<?php echo $linhaUnica['img_nome'];?>" name="visualizar" id="visualizar" width="200px" height="200px">
-                                        <?php
-                                    }
-                                    ?>
-                                </div>
+                                    </div>
 
-                                <div class="col-sm-6">
-                                    <p class="text-right">
-                                        <input type="submit" id="Atualizar" name="Atualizar" class="btn btn-primary pull-right" value="Atualizar">
-                                        <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesPatrocinadores.php'" value="Voltar">
-                                    </p>
-                                </div>
+                                    <div class="col-sm-6">
+                                        <p class="text-right">
+                                            <input type="submit" id="Atualizar" name="Atualizar" class="btn btn-primary pull-right" value="Atualizar">
+                                            <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" onclick="location.href='PainelAdminAcoesPatrocinadores.php'" value="Voltar">
+                                        </p>
+                                    </div>
+                            </div>
+                            </form>
                         </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- VISUALIZAR IMAGEM -->
+    <script>
+        function previewImagem(){
+            var imagem = document.querySelector('input[name=arquivo]').files[0];
+            var preview = document.querySelector('img[name=visualizar]');
+            var reader = new FileReader();
 
-</div>
-<!-- JANELA MODAL -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+            reader.onloadend = function() {
+                preview.src = reader.result;
+            }
 
-<div id="msgInsert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-success text-center">
-                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Patrocinador Atualizado com Sucesso!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+            if(imagem){
+                reader.readAsDataURL(imagem);
+            } else {
+                preview.src = "";
+            }
+        }
+    </script>
+
+    </div>
+    <!-- JANELA MODAL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <div id="msgInsert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-center">
+                    <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Patrocinador Atualizado com Sucesso!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div id="msgErro" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-danger text-center">
-                <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Ocorreu um erro!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+    <div id="msgErro" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-center">
+                    <h5 class="modal-title" id="visulUsuarioModalLabel">Informação!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ocorreu um erro!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="assets/js/app.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="assets/lib/canvas/canvasjs.min.js"></script>
-<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        //-initialize the javascript
-        App.init();
-        App.dashboard();
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/lib/canvas/canvasjs.min.js"></script>
+    <script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //-initialize the javascript
+            App.init();
+            App.dashboard();
 
-    });
-</script>
-</body>
+        });
+    </script>
+    </body>
 
-</html>
+    </html>
 
 <?php
 //se ele clicou no botão alterar
@@ -232,7 +250,7 @@ if (isset($_POST['Atualizar'])) {
         descricao = '$descricao',
         ativo = '$ativo', 
         img_nome = '$img_nome'  
-        WHERE idCarrossel = $id";
+        WHERE idPatrocinador = $id";
 
     $row = mysqli_query($conn, $result);
     echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";

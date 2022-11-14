@@ -4,65 +4,74 @@ CREATE DATABASE ifsp_lacif;
 
 USE ifsp_lacif;
 
-
 create table consultas
 (
-    id          int auto_increment             primary key,
+    id          int auto_increment
+        primary key,
     title       varchar(90)                    not null,
     description text                           not null,
     start       date                           not null,
-    end         date                           not null,
+    horario     time                           not null,
     convenio    varchar(50)                    not null,
     celular     varchar(40)                    not null,
     cpf         varchar(40)                    not null,
     tipo        varchar(50)                    not null,
     resultado   text                           null,
-    status      varchar(50) default 'Pendente' not null
+    status      varchar(50) default 'Pendente' not null,
+    teste       text                           not null
 );
 
 create table convenios
 (
-    idConvenio   int auto_increment     primary key,
-    nomeConvenio varchar(50)            not null
+    idConvenio   int auto_increment
+        primary key,
+    nomeConvenio varchar(50) not null,
+    porcentagem  text        not null
 );
 
 create table exames
 (
-    idTipoExame int auto_increment      primary key,
-    nomeExame   varchar(50)             not null
+    idTipoExame int auto_increment
+        primary key,
+    nomeExame   varchar(50) not null,
+    valor       text        not null
 );
 
 create table noticias
 (
-    idNoticia   int auto_increment      primary key,
-    titulo      varchar(50)             not null,
-    descricao   varchar(500)            not null,
-    dataNoticia date                    not null,
-    img_user    text                    not null
+    idNoticia   int auto_increment
+        primary key,
+    titulo      varchar(50)  not null,
+    descricao   varchar(500) not null,
+    dataNoticia date         not null,
+    img_user    text         not null
 );
 
 create table pagamento
 (
-    idpagamento      int auto_increment primary key,
-    status           int                not null,
-    metodo_pagamento varchar(45)        not null,
-    valor            double             not null,
-    valor_pago       double             not null,
-    data_pagamento   date               not null
+    idpagamento      int auto_increment
+        primary key,
+    status           varchar(50) not null,
+    metodo_pagamento varchar(45) not null,
+    valor            double      not null,
+    valor_pago       double      not null,
+    data_pagamento   date        not null
 );
 
 create table patrocinadores
 (
-    idCarrossel int auto_increment      primary key,
-    titulo      varchar(50)             not null,
-    descricao   varchar(50)             not null,
-    ativo       int default 0           not null,
-    img_nome    text                    not null
+    idCarrossel int auto_increment
+        primary key,
+    titulo      varchar(50)   not null,
+    descricao   varchar(50)   not null,
+    ativo       int default 0 not null,
+    img_nome    text          not null
 );
 
 create table usuarios
 (
-    idusuario     int auto_increment             primary key,
+    idusuario     int auto_increment
+        primary key,
     nome          varchar(50)                    not null,
     cpf           varchar(40)                    not null,
     email         varchar(200)                   not null,
@@ -77,101 +86,13 @@ create table usuarios
 
 #################################################################################################################################################################################################################################
 
-# PRESET DE INSERTS USUARIO ✔
-
-# # Nivel de Acesso: Administrador
-# $senha = "123";
-# $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
-INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
-VALUES ('admin', '123', 'admin', '$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Administrador');
-
-# # Nivel de Acesso: Laboratorista
-# $senha = "123";
-# $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
-INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
-VALUES ('laboratorista', '123', 'laboratorista', '$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Laboratorista');
-
-# # Nivel de Acesso: Laboratorista
-# $senha = "123";
-# $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
-INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
-VALUES ('paciente', '123', 'paciente', '$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Paciente');
-
-#################################################################################################################################################################################################################################
-
-# PRESET DE INSERTS PATROCINADORES ✔
-
-INSERT INTO ifsp_lacif.patrocinadores(idCarrossel, titulo, descricao, ativo, img_nome)
-VALUE (8, 'Teste 1', 'Teste 1',0, 'd7d19b204796676b3ab11dd13ff77c93..png');
-
-INSERT INTO ifsp_lacif.patrocinadores(idCarrossel, titulo, descricao, ativo, img_nome)
-VALUE (9, 'Teste 2', 'Teste 2',0, 'b5da7d090b19fec976a289e64d927d23..png');
-
-INSERT INTO ifsp_lacif.patrocinadores(idCarrossel, titulo, descricao, ativo, img_nome)
-VALUE (10, 'Teste 3', 'Teste 3',0, 'b8b4d892c50e71964e4a795c87587a97..png');
-
-#################################################################################################################################################################################################################################
-
-# PRESET DE INSERTS NOTICIAS ✔
-INSERT INTO ifsp_lacif.noticias(idNoticia, titulo, descricao, dataNoticia, img_user)
-VALUE (100, 'Teste 1', 'Teste 1', '2022-10-29','0ff0a5af0081b7f0f759c02c4be15205..png');
-
-INSERT INTO ifsp_lacif.noticias(idNoticia, titulo, descricao, dataNoticia, img_user)
-VALUE (101, 'Teste 2', 'Teste 2', '2022-10-29','d0a2ad089b74860f9b219504bc3652e1..png');
-
-INSERT INTO ifsp_lacif.noticias(idNoticia, titulo, descricao, dataNoticia, img_user)
-VALUE (102, 'Teste 3', 'Teste 3', '2022-10-29','bc7bfb78aa6d618b6a38319a96d5a04d..png');
-
-#################################################################################################################################################################################################################################
-
-# PRESET DE INSERTS EXAMES ✔
-INSERT INTO ifsp_lacif.exames(idTipoExame, nomeExame)
-VALUE (8, 'Covid 19');
-
-INSERT INTO ifsp_lacif.exames(idTipoExame, nomeExame)
-VALUE (9, 'Check-Up');
-
-INSERT INTO ifsp_lacif.exames(idTipoExame, nomeExame)
-VALUE (10, 'Sangue');
-
-INSERT INTO ifsp_lacif.exames(idTipoExame, nomeExame)
-VALUE (11, 'Fezes');
-
-
-#################################################################################################################################################################################################################################
-
-# PRESET DE INSERTS CONVENIO ✔
-
-INSERT INTO ifsp_lacif.convenios(idConvenio, nomeConvenio)
-VALUE (7, 'UNIMED');
-
-INSERT INTO ifsp_lacif.convenios(idConvenio, nomeConvenio)
-VALUE (8, 'Allianz Saúde');
-
-INSERT INTO ifsp_lacif.convenios(idConvenio, nomeConvenio)
-VALUE (9, 'Bradesco Saúde');
-
-INSERT INTO ifsp_lacif.convenios(idConvenio, nomeConvenio)
-VALUE (10, 'Prevent Senior');
-
-INSERT INTO ifsp_lacif.convenios(idConvenio, nomeConvenio)
-VALUE (11, 'Santa Helena Saúde');
-
-#################################################################################################################################################################################################################################
-
-# PRESET DE INSERTS CONSULTAS ✔
-
-INSERT INTO ifsp_lacif.consultas(id, title, description, start, horario, convenio, celular, cpf, tipo, resultado, status)
-VALUE (57, 'Admin', 'Dores na Lombar', '2022-10-08','2022-10-08', 'IFSP', '(00) 00000-0000','000.000.000-00', 'Sangue', '4c7f0516b95f9bc7836b1ca6611c1dc3..pdf', 'Finalizado');
-
-INSERT INTO ifsp_lacif.consultas(id, title, description, start, horario, convenio, celular, cpf, tipo, resultado, status)
-VALUE (60, 'Alexandre Ferreira Pereira de Oliveira1', 'Exame de Sangue','2022-10-12','2022-10-13', 'IFSP', '(18) 98103-8758','111.111.111-11', 'Sangue', '', 'Pendente');
-
-INSERT INTO ifsp_lacif.consultas(id, title, description, start, horario, convenio, celular, cpf, tipo, resultado, status)
-VALUE (61,'Everton Thomaz de Lima Silva', 'Desejo Realizar um CheckUp','2022-10-20','2022-10-22','IFSP', '(18) 98141-4149', '222.222.222-22','CheckuP', '97e5ac8f62bd686e9c9a667aa27cd59f..pdf', 'Pendente');
-
-
-
+# PRESET DE INSERTS  ✔
+INSERT INTO `usuarios` (`idusuario`, `nome`, `cpf`, `email`, `senha`, `celular`, `endereco`, `tiposanguineo`, `sexo`, `datanasc`, `tipo_acesso`) VALUES (1,'admin','000.000.000-00','admin','$2y$10$hEM7mnj1qpjd9r8yeQ6DDua0baj7ifoICC7YWoJDqWrPrCmFX9D8i','123','avenida','AB','Masculino','2022-05-12','Administrador'),(6,'laboratorista','222.222.222-22','laboratorista','$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO','123','avenida','AB','Masculino','2022-05-12','Laboratorista'),(7,'paciente','333.333.333-33','paciente','$2y$10$0IbNQOXseDMSGERfgr1hsuV7mhp/al6IPeuFMZWjao0Zmii7B.gjO','123','avenida','AB','Masculino','2022-05-12','Paciente'),(8,'Kawanygiovanna69@gmail.com ','495.495.738-93','kawanygiovanna69@gmail.com','$2y$10$rn0YKQaeK32n/JH0CDHWOuHFN5BjB2uriP9U4Ka7Zy.JL0Tri3.za','(18) 98117-4052','Rua Paraná 18-64 ','A','Feminino','2022-11-10','Paciente'),(9,'Maria Eduarda Franco candia ','432.619.748-00','Mariaeduardafrencocandia@gmail.com','$2y$10$oa.gtB1nh9h3ncBfy1xyh.Y.WQ8XO4FMYc2C/Sbd8rQNvHLJjBww.','(18) 98120-7201','899888','O','Feminino','2022-11-11','Paciente'),(10,'Giovanna Maria','111.111.111-11','paradparadscha@gmail.com','$2y$10$SL5MHlDgHRcn02FdcPEOZe2RUhJPuhJgb0Di2z0Esq/xYcRMehIMy','(11) 11111-1111','Aaaaaa','B','Feminino','2022-02-04','Paciente'),(11,'Ryan Costa de Brito ','410.949.978-03','ryan@gmail.com','$2y$10$azF9pzgO/Uzy.vzmTblG8e1iIfFCeZMxyml0nRywXTlReiAmNqvbu','(18) 99698-0680','Rua vai Corinthians ','AB','Feminino','2022-11-09','Paciente'),(12,'Kevin Yuri Macera ','123.456.789-13','kevinmacera12@gmail.com','$2y$10$ivvO/gyebLkDv..jNMlp7.HP9zuYO8n6sHmPEGdKRfCJWjkYtAFRm','(18) 99749-0996','Aaa','A','Masculino','2022-11-11','Paciente'),(13,'Victor Lucas Alves de Ataide','666.666.666-66','victorlucas0602@gmail.com','$2y$10$hYnhPLYBy.eThVBJPPjRk.lGtk/VqeDItXWPPito.c0qTn3UVNaZq','(18) 99807-1940','Quebrada Bordon','O','Feminino','2022-11-11','Paciente'),(14,'jorg','333.333.333-33','jorgg@gmail.com','$2y$10$voeINO0I6lgqROVdHdpJOeCA3eJqBiyrYzXkrkog6zBxhNvwLgl7O','(18','rua 11','A','Masculino','2005-01-18','Paciente'),(15,'Paolla Alexandre Costa da Silva ','709.709.194-09','polappaola@gmail.com','$2y$10$EJZqJak3uONjKt2bbLLtreRhPL0YrQadHNyWCE0PyBgoR6dyILtHa','(18) 98112-0559','Rua Florianópolis 840','A','Feminino','2005-10-06','Paciente');
+INSERT INTO `consultas` (`id`, `title`, `description`, `start`, `horario`, `convenio`, `celular`, `cpf`, `tipo`, `resultado`, `status`) VALUES (63,'Giovanna kawany Silva costa','Eu estou com um problema pois sou mt linda','2022-11-12','16:15:00','11','(18) 98117-4052','495.495.738-93','11','2867cf5c16f5534a45a80e1f58d82b1e..pdf','Pendente'),(64,'Mariaeduardafrencocandia@gmail.com ','Ioooo','2022-11-11','08:15:00','11','(18) 98120-7201','432.619.748-00','11','fdbb84e8d64bf6c417346e31a48abb79..pdf','Finalizado'),(65,'Giovanna Maria','tipo sanguíneo','2022-11-12','07:45:00','11','(11) 11111-1111','111.111.111-11','11','6a5d7d16cbf7a9d84d77766628694e8c..pdf','Pendente'),(66,'Ryan Costa','Vai Corinthians ','2022-11-17','08:00:00','11','(16) 36262-2662','410.949.978-03','11','60ef2ef66df62376dd8cc81389ab3fd8..pdf','Pendente'),(67,'Ryan Costa','Aaaaaaa','2022-11-17','08:15:00','Bradesco Saúde','(26) 26262-6262','410.949.978-03','Fezes',NULL,'Pendente'),(68,'Kevin Yuri Macera ','Despreção','2023-02-15','11:15:00','11','(18) 99749-0996','123.456.789-13','11','533f3620183c02d7016e92c19e382191..pdf','Finalizado'),(69,'jjorg','to passando mal','2022-11-11','07:30:00','11','(18','333.333.333-33','11','','Finalizado'),(74,'Teste','Teste','2022-11-11','08:45:00','11','(99) 99999-9999','527.550.908-12','11','','Pendente'),(76,'Everton Teste Input','Everton Teste Input','2022-11-29','16:30:00','Allianz Saúde','(18) 98103-8758','456.643.251-56','Covid 19',NULL,'Pendente');
+INSERT INTO `convenios` (`idConvenio`, `nomeConvenio`, `porcentagem`) VALUES (7,'UNIMED','12,00%'),(8,'Allianz Saúde','04,00%'),(9,'Bradesco Saúde','06,00%'),(10,'Prevent Senior','08,00%'),(11,'Santa Helena Saúde','05,00%');
+INSERT INTO `exames` (`idTipoExame`, `nomeExame`, `valor`) VALUES (8,'Covid 19','R$85,00'),(9,'Check-Up','R$350,00'),(10,'Sangue','R$15,00'),(11,'Fezes','R$45,00');
+INSERT INTO `noticias` (`idNoticia`, `titulo`, `descricao`, `dataNoticia`, `img_user`) VALUES (100,'Teste 1','Teste 1','2022-10-29','0ff0a5af0081b7f0f759c02c4be15205..png'),(101,'Teste 2','Teste 2','2022-10-29','d0a2ad089b74860f9b219504bc3652e1..png'),(102,'Teste 3','Teste 3','2022-10-29','bc7bfb78aa6d618b6a38319a96d5a04d..png');
+INSERT INTO `patrocinadores` (idPatrocinador, `titulo`, `descricao`, `ativo`, `img_nome`) VALUES (8,'Teste 1','Teste 1',0,'d7d19b204796676b3ab11dd13ff77c93..png'),(9,'Teste 2','Teste 2',0,'b5da7d090b19fec976a289e64d927d23..png'),(10,'Teste 3','Teste 3',0,'b8b4d892c50e71964e4a795c87587a97..png');
 
 
 
