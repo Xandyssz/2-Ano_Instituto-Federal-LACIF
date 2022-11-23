@@ -51,8 +51,7 @@ if ($id > 0) {
                         <div class="card card-border-color card-border-color-primary">
                             <div class="card-header card-header-divider">Atualizar dados do Patrocinador<span class="card-subtitle">Por favor, preencha os dados necessários.</span></div>
                             <div class="card-body">
-                                <form method="POST">
-
+                                <form action="" method="POST" enctype="multipart/form-data"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se não não grava no BANCO -->
                                     <div class="form-group row">
                                         <label class="col-12 col-sm-3 col-form-label text-sm-right" for="titulo">Digite o Nome do Patrocinador</label>
                                         <div class="col-12 col-sm-8 col-lg-6">

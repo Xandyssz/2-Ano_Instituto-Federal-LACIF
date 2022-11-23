@@ -18,21 +18,22 @@
 - <h4>Criar Mensagens de Erro com Janela Modal para caso já tenha um cadastro igual no banco de dados - [✔]
 - <h4>Realizar o Editar Horarios "Painel Admin e Consulta Normal" - [✔]
 - <h4>Trazer a Porcentagem e o Valor de acordo com o SELECT(CONVENIO) e SELECT(EXAME) - [✔]; "Falta Trazer no Editar"
-- Corrigir erro ao excluir algo - [✔]
-  Painel Admin - Agenda - [✔]
-- Painel Admin - Convênios - [✔]
-- Painel Admin - Usuarios - [✔]
-- Painel Admin - Consultas - [✔]
-- Agendar Consultas Usuario - [✔]
-- Visualizar Exames/Resultados Usuario - [✔]
+- <h4>Corrigir erro ao excluir algo - [✔]
+- <h4>Painel Admin - Agenda - [✔]
+- <h4>Painel Admin - Convênios - [✔]
+- <h4>Painel Admin - Usuarios - [✔]
+- <h4>Painel Admin - Consultas - [✔]
+- <h4>Agendar Consultas Usuario - [✔]
+- <h4>Visualizar Exames/Resultados Usuario - [✔]
+- 
 #Parte Final
 - <H4>Tornar Funcional a aba (Contact-us) - [STATUS]
 - <h4>Realizar a otimização dos arquivos.php - [STATUS]
 - <h4>Realizar a retirada de arquivos/pastas (Desnecessários) - [STATUS]
 
-#Verificação Após subir o site para a host
-*Fazer até QUINTA-FEIRA:
-- Alterar Permissões do Nível de Acesso | Laboratorista → Novo Nivel de Acesso [Recepcionista]
-- Acrescentar Carrossel c/ Banco de Dados
-- Painel Admin - Noticias | [❌ - Imagem não atualiza no banco.]
-- Painel Admin - Patrocinadores | [❌ - Imagem não atualiza no banco.]
+#Verificação Após subir o site para a host | Fazer até QUINTA-FEIRA:
+- <h4>select do editar vindo errado
+- <h4>Painel Admin - Noticias | [❌ - Imagem não atualiza no banco.]
+- <h4>Painel Admin - Patrocinadores | [❌ - Imagem não atualiza no banco.]
+
+

@@ -30,13 +30,22 @@
 
 
                             <?php
-                        }elseif($_SESSION["tipo_acesso"] == "Laboratorista"){
+                        }elseif($_SESSION["tipo_acesso"] == "Recepcionista"){
                             ?>
-                            <li><a href="PainelAdminAgenda.php">Painel Laboratorista</a></li>
-                            <li><a href="lacif_exames.php">Visualizar Exames</a></li>
+                            <li><a href="PainelAdminAgenda.php">Painel Recepcionista</a></li>
+                            <li><a href="lacif_exames.php">Meus Exames</a></li>
+                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
                             <li><a href="PainelAdminListarConsulta.php">Visualizar Consultas</a></li>
                             <li><a><?php echo "Acesso:" . $_SESSION['tipo_acesso']; ?></a></li>
 
+                            <?php
+                        }elseif($_SESSION["tipo_acesso"] == "Laboratorista"){
+                            ?>
+                            <li><a href="PainelAdminAgenda.php">Painel Laboratorista</a></li>
+                            <li><a href="lacif_exames.php">Meus Exames</a></li>
+                            <li><a href="CrudConsultaAgendamento.php">Agendar Consulta</a></li>
+                            <li><a href="PainelAdminListarConsultaLab.php">Visualizar Consultas</a></li>
+                            <li><a><?php echo "Acesso:" . $_SESSION['tipo_acesso']; ?></a></li>
 
                             <?php
                         }

@@ -63,6 +63,11 @@
                     <?php
                     }
                     ?>
+
+                    <?php
+                    if ($_SESSION["tipo_acesso"] == "Recepcionista" || $_SESSION["tipo_acesso"] == "Administrador"){
+
+                    ?>
                   <li class="parent active"><a href="#"><i class="icon mdi mdi-wheelchair-accessibility"></i><span>Usuarios</span></a>
                     <ul class="sub-menu">
                       <li><a href="PainelAdminCadastrarUsuario.php">Adicionar Usuario</a>
@@ -85,8 +90,20 @@
                         </ul>
                     </li>
 
+                    <?php }?>
 
+                    <?php
+                    if ($_SESSION["tipo_acesso"] == "Laboratorista"){
 
+                    ?>
+                    <li class="parent active"><a href="#"><i class="icon mdi mdi-flask"></i><span>Consultas</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="PainelAdminListarConsultaLab.php">Visualizar Consultas</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <?php }?>
                     <li class="active"><a href="sair.php"><i class="icon mdi mdi-walk"></i><span>Sair</span></a>
                     </li>
 

@@ -7,19 +7,21 @@ if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
-}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Recepcionista")
+
+}else if($_SESSION['tipo_acesso'] != "Laboratorista")
 {
     header("location: lacif_home.php");
 }
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- ARQUIVOS JAVA SCRIPT -->
 <script src="js/funcoes.js"></script>
 <!--Header-->
-<title>LACIF - Visualizar Usuarios</title>
+<title>LACIF - Visualizar Consultas</title>
 
 <?php include('includes/header.php'); ?>
 <!--End Header-->
@@ -39,54 +41,52 @@ if(!isset($_SESSION["tipo_acesso"]))
                 <div class="col-12 col-lg-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="PainelAdminAgenda.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="#">Usuario</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Visualizar Usuarios</li>
+                            <li class="breadcrumb-item"><a href="../../PainelAdminAgenda.php">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="#">Exame</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Visualizar Exames</li>
                         </ol>
                     </nav>
                     <div class="card card-table">
                         <div class="card-header">
-                            <div class="title">Registro Geral dos Usuarios</div>
+                            <div class="title">Registro Geral de Exames</div>
                         </div>
                         <div class="card-body table-responsive">
                             <table class="table table-striped table-borderless">
                                 <thead>
                                 <tr>
-                                    <th style="width:20%;">ID</th>
-                                    <th style="width:20%;">Nome</th>
-                                    <th style="width:20%;">CPF</th>
-                                    <th style="width:20%;">Email</th>
-                                    <th style="width:20%;">Senha</th>
-                                    <th style="width:20%;">Celular</th>
-                                    <th style="width:20%;">Endereço</th>
-                                    <th style="width:20%;">Tipo Sanguineo</th>
-                                    <th style="width:20%;">Sexo</th>
-                                    <th style="width:20%;">Data Nascimento</th>
-                                    <th style="width:20%;">Nivel Acesso</th>
-
-
+                                    <th style="width: 20%;">ID</th>
+                                    <th style="width: 20%;">Nome</th>
+                                    <th style="width: 20%;">Descrição</th>
+                                    <th style="width: 20%;">Data Inicio</th>
+                                    <th style="width: 20%;">Horario</th>
+                                    <th style="width: 20%;">Convenio</th>
+                                    <th style="width: 20%;">Celular</th>
+                                    <th style="width: 20%;">CPF</th>
+                                    <th style="width: 20%;">Tipo da Consulta</th>
+                                    <th style="width: 20%;">Resultado do Exame</th>
+                                    <th style="width: 20%;">Status</th>
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM ifsp_lacif.usuarios order by idusuario";
+                                $query = "SELECT * FROM ifsp_lacif.consultas WHERE status like 'pendente'";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
-                                    $dataBrasil = implode('/', array_reverse(explode('-', $linha['datanasc'])));
+                                    $dataBrasil = implode('/', array_reverse(explode('-', $linha['start'])));
 
                                     ?>
                                     <tr>
-                                        <td><?php  echo $linha['idusuario']; ?></td>
-                                        <td><?php  echo $linha['nome']; ?></td>
-                                        <td><?php  echo $linha['cpf']; ?></td>
-                                        <td><?php  echo $linha['email']; ?></td>
-                                        <td><?php  echo $linha['senha']; ?></td>
-                                        <td><?php  echo $linha['celular']; ?></td>
-                                        <td><?php  echo $linha['endereco']; ?></td>
-                                        <td><?php  echo $linha['tiposanguineo']; ?></td>
-                                        <td><?php  echo $linha['sexo']; ?></td>
+                                        <td><?php  echo $linha['id']; ?></td>
+                                        <td><?php  echo $linha['title']; ?></td>
+                                        <td><?php  echo $linha['description']; ?></td>
                                         <td><?php  echo $dataBrasil; ?></td>
-                                        <td><?php  echo $linha['tipo_acesso'];?></td>
+                                        <td><?php  echo $linha['horario']; ?></td>
+                                        <td><?php  echo $linha['convenio']; ?></td>
+                                        <td><?php  echo $linha['celular']; ?></td>
+                                        <td><?php  echo $linha['cpf']; ?></td>
+                                        <td><?php  echo $linha['tipo']; ?></td>
+                                        <td><?php  echo $linha['resultado']; ?></td>
+                                        <td><?php  echo $linha['status']; ?></td>
                                     </tr>
                                     <?php
                                 }

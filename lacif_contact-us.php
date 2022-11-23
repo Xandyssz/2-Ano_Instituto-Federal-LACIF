@@ -3,6 +3,8 @@ session_start();
 include_once('sessao.php');
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,98 +55,7 @@ if (isset($_SESSION['cpf'])) {
 
 
 <!-- INICIO SCRIPT CONTATO -->
-<script type="text/javascript">
-    // validate contact form
-    $(function () {
-        $("#contact-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                surname: {
-                    required: true,
-                    minlength: 2
-                },
-                phone: {
-                    required: true,
-                    minlength: 2
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-                city: {
-                    required: true,
-                    minlength: 2
-                },
-                state: {
-                    required: true,
-                    minlength: 2
-                },
-                subject: {
-                    required: true
-                },
-                message: {
-                    required: true
-                }
-            },
-            messages: {
-                name: {
-                    required: "Please type your name",
-                    minlength: "Please type your name correctly"
-                },
-                surname: {
-                    required: "Please type your surname",
-                    minlength: "Please type your surname correctly"
-                },
-                phone: {
-                    required: "Please type your phone number",
-                    minlength: "Please type your phone number correctly"
-                },
-                email: {
-                    required: "Please type your e-mail correctly"
-                },
-                city: {
-                    required: "Please type your city",
-                    minlength: "Please type your city correctly"
-                },
-                state: {
-                    required: "Please type your state",
-                    minlength: "Please type your state correctly"
-                },
-                subject: {
-                    required: "Please type about subject",
-                    minlength: "To short subject"
-                },
-                message: {
-                    required: "Please type your message",
-                    minlength: "To short message"
-                }
-            },
-            submitHandler: function (form) {
-                $(form).ajaxSubmit({
-                    type: "POST",
-                    data: $(form).serialize(),
-                    url: "process.php",
-                    success: function () {
-                        $('#contact-form :input').attr('disabled', 'disabled');
-                        $('#contact-form').fadeTo("slow", 0, function () {
-                            $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor', 'default');
-                            $('#success').fadeIn();
-                        });
-                    },
-                    error: function () {
-                        $('#contact-form').fadeTo("slow", 0, function () {
-                            $('#error').fadeIn();
-                        });
-                    }
-                });
-            }
-        });
-    });
-</script>
+
 <!-- FINAL SCRIPT CONTATO -->
 
 

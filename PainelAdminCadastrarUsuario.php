@@ -7,7 +7,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
-}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Laboratorista")
+}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Recepcionista")
 {
     header("location: lacif_home.php");
 }
@@ -307,6 +307,7 @@ if (isset($_POST['Registrar'])){
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
+//        var_dump($result);
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarUsuario.php">';
     }
 

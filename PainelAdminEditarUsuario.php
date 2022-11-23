@@ -7,7 +7,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 {
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
-}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Laboratorista")
+}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Recepcionista")
 {
     header("location: lacif_home.php");
 }
@@ -78,7 +78,7 @@ if ($id > 0) {
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="senha">Digite a Senha</label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <input class="form-control" id="senha" name="senha" value="<?php  echo $linhaUnica['senha']; ?>" type="password" disabled>
+                                        <input class="form-control" id="senha" name="senha" value="<?php  echo $linhaUnica['senha']; ?>" type="password">
                                     </div>
                                 </div>
 
@@ -244,7 +244,7 @@ if ($id > 0) {
                                                 <option value="Paciente"selected>Paciente</option>
                                                 <option value="Laboratorista">Laboratorista</option>
                                                 <option value="Administrador">Administrador</option>
-
+                                                <option value="Recepcionista">Recepcionista</option>
 
                                                 <?php
                                             }
@@ -253,6 +253,8 @@ if ($id > 0) {
                                                 <option value="Paciente">Paciente</option>
                                                 <option value="Laboratorista"selected>Laboratorista</option>
                                                 <option value="Administrador">Administrador</option>
+                                                <option value="Recepcionista">Recepcionista</option>
+
 
                                                 <?php
                                             } elseif ($linhaUnica['tipo_acesso'] == "Administrador") {
@@ -260,6 +262,16 @@ if ($id > 0) {
                                                 <option value="Paciente">Paciente</option>
                                                 <option value="Laboratorista">Laboratorista</option>
                                                 <option value="Administrador"selected>Administrador</option>
+                                                <option value="Recepcionista">Recepcionista</option>
+
+
+                                                <?php
+                                            } elseif ($linhaUnica['tipo_acesso'] == "Recepcionista") {
+                                                ?>
+                                                <option value="Paciente">Paciente</option>
+                                                <option value="Laboratorista">Laboratorista</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Recepcionista"selected>Recepcionista</option>
                                                 <?php
                                             }
                                             ?>
@@ -397,6 +409,7 @@ if (isset($_POST['Atualizar']))
     $cpf = $_POST['cpf'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
     $celular = $_POST['celular'];
     $endereco = $_POST['endereco'];
     $tiposanguineo = $_POST['tiposanguineo'];
@@ -409,7 +422,7 @@ if (isset($_POST['Atualizar']))
 set nome = '$nome', 
     cpf='$cpf', 
     email='$email',
-    senha='$senha', 
+    senha='$senhaCript', 
     celular='$celular', 
     endereco='$endereco',
     tiposanguineo='$tiposanguineo',
