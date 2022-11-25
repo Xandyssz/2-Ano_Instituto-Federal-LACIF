@@ -16,15 +16,15 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-
-//$teste = "SELECT c.*, co.*, u.*, te.* FROM ifsp_lacif.consultas c, ifsp_lacif.convenios co, ifsp_lacif.usuarios u, ifsp_lacif.exames te
-//WHERE c.id = $id
-//AND c.idConvenio = co.idConvenio
 //AND c.idUsuario = u.idUsuario
-//AND c.idTipoExame = te.idTipoExame
-//ORDER BY c.start";
 
-    $query = "SELECT * FROM ifsp_lacif.consultas WHERE id = $id";
+$query = "SELECT c.*, co.*, u.*, te.* FROM ifsp_lacif.consultas c, ifsp_lacif.convenios co, ifsp_lacif.usuarios u, ifsp_lacif.exames te
+WHERE c.id = $id
+AND c.idconvenio = co.idConvenio
+AND c.idTipoExame = te.idTipoExame
+ORDER BY c.start";
+
+//    $query = "SELECT * FROM ifsp_lacif.consultas WHERE id = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -1501,10 +1501,9 @@ if ($id > 0) {
 
 
                                 <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Convênio: </label>
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="idConvenio">Convênio: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <select class="form-control" name="convenio" id="convenio" class="box" value="<?php echo $linhaUnica['idConvenio']?>"required>
-                                            <option value="">Selecione o Convênio...</option>
+                                        <select class="form-control" name="idConvenio" id="idConvenio" class="box" value="<?php echo $linhaUnica['idConvenio']?>"required>
                                             <?php
                                             $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
                                             $resultado = mysqli_query($conn, $query);
@@ -1543,22 +1542,20 @@ if ($id > 0) {
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="tipo">Tipo Exame: </label>
+                                    <label class="col-12 col-sm-3 col-form-label text-sm-right" for="idTipoExame">Tipo Exame: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <select class="form-control" name="tipo" id="tipo" class="box" required>
-                                            <option value="" selected>Selecione o Tipo de Exame...</option>
+                                        <select class="form-control" name="idTipoExame" id="idTipoExame" class="box" required>
                                             <?php
                                             $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
-                                                if ($linha['nomeExame'] == $linha['nomeExame']) { ?>
-                                                    <option value="<?php echo $linha['nomeExame']; ?>" selected><?php echo $linha['nomeExame'];?></option>
+                                                if ($linha['idTipoExame'] == $linhaUnica['idTipoExame']) { ?>
+                                                    <option value="<?php echo $linha['idTipoExame']; ?>" selected><?php echo $linha['nomeExame'];?></option>
                                                 <?php   } else { ?>
-                                                    <option value="<?php echo $linha['nomeExame']; ?>"><?php echo $linha['nomeExame'];?></option>
+                                                    <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
                                                 <?php   }
                                             }
                                             ?>
-                                        </select>
                                         </select>
                                     </div>
                                 </div>
@@ -1595,6 +1592,17 @@ if ($id > 0) {
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="descricao">Upload do Resultado do Exame</label>
                                     <div class="col-12 col-sm-8 col-lg-6">
+                                        <?php
+                                        if ($linhaUnica['resultado'] == "") {
+                                        $imagemVelha = "";
+                                        ?>
+                                            <?php
+                                        } else {
+                                        $imagemVelha = $linhaUnica['resultado'];
+                                        ?>
+                                            <?php
+                                        }
+                                        ?>
                                         <input class="form-control" type="file" id="arquivo" name="arquivo">
                                     </div>
                                 </div>
@@ -1718,19 +1726,19 @@ if ($id > 0) {
     $(document).ready(function() {
 
 
-        $("#convenio").change(()=>{
-            let conv = $("#convenio").val();
+        $("#idConvenio").change(()=>{
+            let conv = $("#idConvenio").val();
             $("#porcentagem").val("Requisitando dados...");
-            $.get("getPercentByConvenio.php?convenio="+conv, function(data, status){
+            $.get("getPercentByConvenio.php?idConvenio="+conv, function(data, status){
                 let dados = JSON.parse(data);
 
                 $("#porcentagem").val(dados[0].porcentagem)
             });
         })
-        $("#tipo").change(()=>{
-            let conv = $("#tipo").val();
+        $("#idTipoExame").change(()=>{
+            let conv = $("#idTipoExame").val();
 
-            $.get("getValorByExame.php?exame="+conv, function(data, status){
+            $.get("getValorByExame.php?idTipoExame="+conv, function(data, status){
                 let dados = JSON.parse(data);
 
                 $("#valor").val(dados[0].valor)
@@ -1770,37 +1778,43 @@ if ($id > 0) {
 </body>
 
 <?php
-if (isset($_POST['Atualizar']))
-{
-    if (isset($_FILES['arquivo']['name']) && $_FILES['arquivo']['error'] == 0) {
-        $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
-        $titulo = $_FILES['arquivo']['name'];//images.png
-        $extensao = strrchr($titulo, '.');//png
-        $extensao = strtolower($extensao);
-        if (strstr('.pdf', $extensao)) {
-            $novotitulo = md5(microtime()) . '.' . $extensao;
-            $destino = 'img/' . $novotitulo;
-            if (@move_uploaded_file($arquivo_tmp, $destino)) {
-                //echo "Arquivo salvo com sucesso";
+//se ele clicou no botão alterar
+if (isset($_POST['Atualizar'])) {
+    $novoNome = $imagemVelha;
+    /* EXCLUIR A IMAGEM ANTIGA */
+    if (isset($_FILES['arquivo'])) {
+        if (isset($_POST['imagemVelha'])) {
+            echo unlink("img/" . $imagemVelha);//APAGA A IMAGEM NO DIRETÓRIO
+        }
+
+        if (isset($_FILES['arquivo']['name']) && $_FILES['arquivo']['error'] == 0) {
+            $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
+            $nome = $_FILES['arquivo']['name'];//images.png
+            $extensao = strrchr($nome, '.');//png
+            $extensao = strtolower($extensao);
+            if (strstr('.svg;.pdf;.png;.jpg;.jpeg;.gif', $extensao)) {
+                $novoNome = md5(microtime()) . '.' . $extensao;
+                $destino = 'img/' . $novoNome;
+                if (@move_uploaded_file($arquivo_tmp, $destino)) {
+                    //echo "Arquivo salvo com sucesso";
+                } else {
+                    echo "Erro ao salvar o arquivo";
+                }
             } else {
-                echo "Erro ao salvar o arquivo";
+                echo "Formato de arquivo invalido!";
             }
-        } else {
-            echo "Formato de arquivo invalido!";
         }
     }
-
-
 
     $title = $_POST['title'];
     $description = $_POST['description'];
     $start = $_POST['start'];
     $horario = $_POST['horario'];
-    $convenio = $_POST['convenio'];
+    $idConvenio = $_POST['idConvenio'];
     $celular = $_POST['celular'];
     $cpf = $_POST['cpf'];
-    $tipo = $_POST['tipo'];
-    $resultado = $novotitulo;
+    $idTipoExame = $_POST['idTipoExame'];
+    $resultado = $novoNome;
     $status = $_POST['status'];
 
 
@@ -1810,10 +1824,10 @@ set title = '$title',
     description='$description', 
     start='$start', 
     horario='$horario', 
-    convenio='$convenio', 
+    idConvenio='$idConvenio', 
     celular='$celular', 
     cpf='$cpf',
-    tipo='$tipo',
+    idTipoExame='$idTipoExame',
     resultado='$resultado',
     status='$status' WHERE id = $id";
 

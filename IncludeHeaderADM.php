@@ -10,6 +10,9 @@
 
                 <div class="menuzinho">
 
+                 <?php echo "Acesso:" . $_SESSION['tipo_acesso']; ?>
+
+
                     <ul class="language">
                         <?php
                         if ($_SESSION["tipo_acesso"] == "Administrador"){
