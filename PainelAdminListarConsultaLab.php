@@ -8,7 +8,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
 
-}else if($_SESSION['tipo_acesso'] != "Laboratorista")
+}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Laboratorista")
 {
     header("location: lacif_home.php");
 }
@@ -41,7 +41,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                 <div class="col-12 col-lg-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../../PainelAdminAgenda.php">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="PainelAdminAgenda.php">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="#">Exame</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Visualizar Exames</li>
                         </ol>

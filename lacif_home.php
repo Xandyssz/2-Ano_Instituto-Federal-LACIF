@@ -31,10 +31,12 @@ if(!isset($_SESSION["tipo_acesso"]))
     <link href="ico/favicon.png" rel="shortcut icon">
 
     <!-- ARQUIVOS CSS -->
-    <link href="css/ionicons.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
 

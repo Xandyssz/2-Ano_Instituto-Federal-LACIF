@@ -18,7 +18,7 @@ $id = $_GET['id'];
 if ($id > 0) {
 //AND c.idUsuario = u.idUsuario
 
-$query = "SELECT c.*, co.*, u.*, te.* FROM ifsp_lacif.consultas c, ifsp_lacif.convenios co, ifsp_lacif.usuarios u, ifsp_lacif.exames te
+    $query = "SELECT c.*, co.*, u.*, te.* FROM ifsp_lacif.consultas c, ifsp_lacif.convenios co, ifsp_lacif.usuarios u, ifsp_lacif.exames te
 WHERE c.id = $id
 AND c.idconvenio = co.idConvenio
 AND c.idTipoExame = te.idTipoExame
@@ -1594,12 +1594,12 @@ ORDER BY c.start";
                                     <div class="col-12 col-sm-8 col-lg-6">
                                         <?php
                                         if ($linhaUnica['resultado'] == "") {
-                                        $imagemVelha = "";
-                                        ?>
+                                            $imagemVelha = "";
+                                            ?>
                                             <?php
                                         } else {
-                                        $imagemVelha = $linhaUnica['resultado'];
-                                        ?>
+                                            $imagemVelha = $linhaUnica['resultado'];
+                                            ?>
                                             <?php
                                         }
                                         ?>

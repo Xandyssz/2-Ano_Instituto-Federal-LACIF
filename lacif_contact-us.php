@@ -35,7 +35,6 @@ include_once('sessao.php');
     <script type='text/javascript' src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-
 </head>
 <body>
 
@@ -61,6 +60,7 @@ if (isset($_SESSION['cpf'])) {
 
 <!-- INICIO - CONTATO -->
 <?php include_once('IncludeContato.php'); ?>
+
 <!-- FIM - CONTATO -->
 
 
@@ -74,6 +74,17 @@ if (isset($_SESSION['cpf'])) {
 <!-- INICIO - RODA PÉ -->
 <?php include_once('IncludeRodaPe.php'); ?>
 <!-- FIM - RODA PÉ -->
+
+
+<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+    $("#Celular").mask("(99) 99999-9999");
+</script>
+<script>
+    $(#Celular).mask("(99) 99999-9999");
+</script>
 
 
 </body>

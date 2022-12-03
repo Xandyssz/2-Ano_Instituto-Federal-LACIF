@@ -107,95 +107,95 @@ if ($id > 0) {
                                             if ($linhaUnica['tiposanguineo'] == "O-") {
                                                 ?>
                                                 <option value="O-"selected>O-</option>
-                                                <option value="O">O+</option>
+                                                <option value="O+">O+</option>
                                                 <option value="AB-">AB-</option>
-                                                <option value="AB">AB+</option>
+                                                <option value="AB+">AB+</option>
                                                 <option value="B-">B-</option>
-                                                <option value="B">B+</option>
+                                                <option value="B+">B+</option>
                                                 <option value="A-">A-</option>
-                                                <option value="A">A+</option>
+                                                <option value="A+">A+</option>
                                                 <?php
                                             }
-                                            elseif ($linhaUnica['tiposanguineo'] == "O") {
+                                            elseif ($linhaUnica['tiposanguineo'] == "O+") {
                                                 ?>
                                                 <option value="O-">O-</option>
-                                                <option value="O"selected>O+</option>
+                                                <option value="O+"selected>O+</option>
                                                 <option value="AB-">AB-</option>
-                                                <option value="AB">AB+</option>
+                                                <option value="AB+">AB+</option>
                                                 <option value="B-">B-</option>
-                                                <option value="B">B+</option>
+                                                <option value="B+">B+</option>
                                                 <option value="A-">A-</option>
-                                                <option value="A">A+</option>
+                                                <option value="A+">A+</option>
                                                 <?php
                                             } elseif ($linhaUnica['tiposanguineo'] == "AB-") {
                                                 ?>
                                                 <option value="O-">O-</option>
-                                                <option value="O">O+</option>
+                                                <option value="O+">O+</option>
                                                 <option value="AB-"selected>AB-</option>
-                                                <option value="AB">AB+</option>
+                                                <option value="AB+">AB+</option>
                                                 <option value="B-">B-</option>
-                                                <option value="B">B+</option>
+                                                <option value="B+">B+</option>
                                                 <option value="A-">A-</option>
-                                                <option value="A">A+</option>
+                                                <option value="A+">A+</option>
                                                 <?php
-                                            } elseif ($linhaUnica['tiposanguineo'] == "AB") {
+                                            } elseif ($linhaUnica['tiposanguineo'] == "AB+") {
                                                 ?>
                                                 <option value="O-">O-</option>
-                                                <option value="O">O+</option>
+                                                <option value="O+">O+</option>
                                                 <option value="AB-">AB-</option>
-                                                <option value="AB"selected>AB+</option>
+                                                <option value="AB+"selected>AB+</option>
                                                 <option value="B-">B-</option>
-                                                <option value="B">B+</option>
+                                                <option value="B+">B+</option>
                                                 <option value="A-">A-</option>
-                                                <option value="A">A+</option>
+                                                <option value="A+">A+</option>
 
                                                 <?php
                                             } elseif ($linhaUnica['tiposanguineo'] == "B-") {
                                                 ?>
                                                 <option value="O-">O-</option>
-                                                <option value="O">O+</option>
+                                                <option value="O+">O+</option>
                                                 <option value="AB-">AB-</option>
-                                                <option value="AB">AB+</option>
+                                                <option value="AB+">AB+</option>
                                                 <option value="B-"selected>B-</option>
-                                                <option value="B">B+</option>
+                                                <option value="B+">B+</option>
                                                 <option value="A-">A-</option>
-                                                <option value="A">A+</option>
+                                                <option value="A+">A+</option>
 
                                                 <?php
-                                            } elseif ($linhaUnica['tiposanguineo'] == "B") {
+                                            } elseif ($linhaUnica['tiposanguineo'] == "B+") {
                                                 ?>
                                                 <option value="O-">O-</option>
-                                                <option value="O">O+</option>
+                                                <option value="O+">O+</option>
                                                 <option value="AB-">AB-</option>
-                                                <option value="AB">AB+</option>
+                                                <option value="AB+">AB+</option>
                                                 <option value="B-">B-</option>
-                                                <option value="B"selected>B+</option>
+                                                <option value="B+"selected>B+</option>
                                                 <option value="A-">A-</option>
-                                                <option value="A">A+</option>
+                                                <option value="A+">A+</option>
 
                                                 <?php
                                             } elseif ($linhaUnica['tiposanguineo'] == "A-") {
                                                 ?>
                                                 <option value="O-">O-</option>
-                                                <option value="O">O+</option>
+                                                <option value="O+">O+</option>
                                                 <option value="AB-">AB-</option>
-                                                <option value="AB">AB+</option>
+                                                <option value="AB+">AB+</option>
                                                 <option value="B-">B-</option>
-                                                <option value="B">B+</option>
+                                                <option value="B+">B+</option>
                                                 <option value="A-"selected>A-</option>
-                                                <option value="A">A+</option>
+                                                <option value="A+">A+</option>
 
                                                 <?php
-                                            } elseif ($linhaUnica['tiposanguineo'] == "A") {
+                                            } elseif ($linhaUnica['tiposanguineo'] == "A+") {
                                                 ?>
                                                 <option value="O-">O-</option>
-                                                <option value="O">O+</option>
+                                                <option value="O+">O+</option>
                                                 <option value="AB-">AB-</option>
-                                                <option value="AB">AB+</option>
+                                                <option value="AB+">AB+</option>
                                                 <option value="B-">B-</option>
-                                                <option value="B">B+</option>
+                                                <option value="B+">B+</option>
                                                 <option value="A-">A-</option>
-                                                <option value="A"selected>A+</option>
+                                                <option value="A+"selected>A+</option>
                                                 <?php
                                             }
                                             ?>

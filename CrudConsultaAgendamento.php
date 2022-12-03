@@ -87,7 +87,7 @@ include_once('sessao.php');
                     <option value="17:45">17:45</option>
                 </select>
 
-                <select name="convenio" id="convenio" class="box" required>
+                <select name="idConvenio" id="idConvenio" class="box" required>
                     <option value="" selected>Selecione o Convênio...</option>
                     <?php
                     $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
@@ -108,7 +108,7 @@ include_once('sessao.php');
 
                 <input type="text"              id="celular"       name="celular"      placeholder="Digite Numero de Contato"  class="box" required>
                 <input type="text"              id="cpf"           name="cpf"          placeholder="Digite o CPF"              class="box" required>
-                <select name="tipo" id="tipo" class="box" required>
+                <select name="idTipoExame" id="idTipoExame" class="box" required>
                     <option value="" selected>Selecione o Tipo de Exame...</option>
                     <?php
                     $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
@@ -178,19 +178,19 @@ include_once('sessao.php');
         $(document).ready(function() {
 
 
-            $("#convenio").change(()=>{
-                let conv = $("#convenio").val();
+            $("#idConvenio").change(()=>{
+                let conv = $("#idConvenio").val();
                 $("#porcentagem").val("Requisitando dados...");
-                $.get("getPercentByConvenio.php?convenio="+conv, function(data, status){
+                $.get("getPercentByConvenio.php?idConvenio="+conv, function(data, status){
                     let dados = JSON.parse(data);
 
                     $("#porcentagem").val(dados[0].porcentagem)
                 });
             })
-            $("#tipo").change(()=>{
-                let conv = $("#tipo").val();
-                $("#valor").val("Requisitando dados...");
-                $.get("getValorByExame.php?exame="+conv, function(data, status){
+            $("#idTipoExame").change(()=>{
+                let conv = $("#idTipoExame").val();
+
+                $.get("getValorByExame.php?idTipoExame="+conv, function(data, status){
                     let dados = JSON.parse(data);
 
                     $("#valor").val(dados[0].valor)
@@ -212,10 +212,10 @@ if (isset($_POST['agendar'])){
     $description = $_POST['description'];
     $start = $_POST['start'];
     $horario = $_POST['horario'];
-    $convenio = $_POST['convenio'];
+    $idConvenio = $_POST['idConvenio'];
     $celular = $_POST['celular'];
     $cpf = $_POST['cpf'];
-    $tipo = $_POST['tipo'];
+    $idTipoExame = $_POST['idTipoExame'];
 
 //    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
 //    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));
@@ -232,8 +232,8 @@ if (isset($_POST['agendar'])){
     } else
     {
         $result = "INSERT INTO ifsp_lacif.consultas 
-            (title, description, start, horario, convenio, celular, cpf, tipo) 
-            VALUES ('$title', '$description', '$start', '$horario', '$convenio', '$celular', '$cpf', '$tipo')";
+            (title, description, start, horario, idconvenio, celular, cpf, idTipoExame) 
+            VALUES ('$title', '$description', '$start', '$horario', '$idConvenio', '$celular', '$cpf', '$idTipoExame')";
 
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";

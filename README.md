@@ -25,8 +25,9 @@
 - <h4>Painel Admin - Consultas - [✔]
 - <h4>Agendar Consultas Usuario - [✔]
 - <h4>Visualizar Exames/Resultados Usuario - [✔]
-- - <h4>Painel Admin - Noticias | [✔]
+- <h4>Painel Admin - Noticias | [✔]
 - <h4>Painel Admin - Patrocinadores | [✔]
+- <h4>Corrigido Cadastrar/Visualizar Tipo Sanguineo | [✔]
 
 #Parte Final
 - <H4>Tornar Funcional a aba (Contact-us) - [STATUS]
@@ -34,7 +35,8 @@
 - <h4>Realizar a retirada de arquivos/pastas (Desnecessários) - [STATUS]
 
 #Verificação Após subir o site para a host | Fazer até QUINTA-FEIRA:
-- <h4>select do editar vindo errado - [STATUS]
+- <h4> Editar PDF, "Colocar um *SubTotal* / *Total* no PDF
+- <h4> Select provavelmente errado pois está trazendo dados errados;
 
 
 
