@@ -81,11 +81,26 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <td><?php  echo $linha['description']; ?></td>
                                         <td><?php  echo $dataBrasil; ?></td>
                                         <td><?php  echo $linha['horario']; ?></td>
-                                        <td><?php  echo $linha['convenio']; ?></td>
+                                        <td><?php
+                                            $select = "SELECT * from ifsp_lacif.convenios where idConvenio =".$linha['idConvenio'];
+                                            $linhaa = mysqli_query($conn,$select);
+
+                                            $vet = mysqli_fetch_assoc($linhaa);
+
+                                            echo $vet['nomeConvenio'];
+                                            ?>
+                                        </td>
                                         <td><?php  echo $linha['celular']; ?></td>
                                         <td><?php  echo $linha['cpf']; ?></td>
-                                        <td><?php  echo $linha['tipo']; ?></td>
-                                        <td><?php  echo $linha['resultado']; ?></td>
+                                        <td><?php
+                                            $select = "SELECT * from ifsp_lacif.exames where idTipoExame =".$linha['idTipoExame'];
+                                            $linhaa = mysqli_query($conn,$select);
+
+                                            $vet = mysqli_fetch_assoc($linhaa);
+
+                                            echo $vet['nomeExame'];
+                                            ?>
+                                        </td>                                        <td><?php  echo $linha['resultado']; ?></td>
                                         <td><?php  echo $linha['status']; ?></td>
                                     </tr>
                                     <?php

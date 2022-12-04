@@ -290,7 +290,7 @@ if (isset($_POST['alterar'])) {
     description = '$description',
     start = '$start',
     horario = '$end',
-    convenio = '$convenio',
+    idconvenio = '$convenio',
     celular = '$celular',
     cpf = '$cpf',
     tiposanguineo = '$tiposanguineo',

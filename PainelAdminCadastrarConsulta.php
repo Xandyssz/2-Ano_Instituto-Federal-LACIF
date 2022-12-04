@@ -124,7 +124,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <select class="form-control" name="idConvenio" id="idConvenio" class="box" required>
                                             <option value="" selected>Selecione o Convênio...</option>
                                             <?php
-                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY nomeConvenio";
+                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) { ?>
                                                 <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
@@ -163,7 +163,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <select class="form-control" name="idTipoExame" id="idTipoExame" class="box" required>
                                             <option value="" selected>Selecione o Tipo de Exame...</option>
                                             <?php
-                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY nomeExame";
+                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) { ?>
                                                 <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
@@ -390,8 +390,8 @@ if (isset($_POST['Registrar'])){
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        // var_dump($result);
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
+         var_dump($result);
+//        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
     }
 
 }
