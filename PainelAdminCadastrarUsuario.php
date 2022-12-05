@@ -98,13 +98,13 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <select class="form-control" id="tiposanguineo" name="tiposanguineo" required>
                                             <option value=""selected>Selecione o tipo sanguineo...</option>
                                             <option value="O-">O-</option>
-                                            <option value="O">O+</option>
+                                            <option value="O+">O+</option>
                                             <option value="AB-">AB-</option>
-                                            <option value="AB">AB+</option>
+                                            <option value="AB+">AB+</option>
                                             <option value="B-">B-</option>
-                                            <option value="B">B+</option>
+                                            <option value="B+">B+</option>
                                             <option value="A-">A-</option>
-                                            <option value="A">A+</option>
+                                            <option value="A+">A+</option>
                                         </select>
                                     </div>
                                 </div>
@@ -308,7 +308,7 @@ if (isset($_POST['Registrar'])){
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
 //        var_dump($result);
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarUsuario.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesUsuario.php">';
     }
 
 }

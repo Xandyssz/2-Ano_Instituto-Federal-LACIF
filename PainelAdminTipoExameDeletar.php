@@ -25,14 +25,14 @@ if (!empty($id)) {
 
     if (mysqli_affected_rows($conn)) {
         echo "<script>$(document).ready(function() { $('#msgDelete').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarTipoExame.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesTipoExame.php">';
     } else {
         echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarTipoExame.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesTipoExame.php">';
     }
 } else {
     echo "<script>$(document).ready(function() { $('#msgErro').modal(); })</script>";
-    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarTipoExame.php">';
+    echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesTipoExame.php">';
 }
 ?>
 <div id="msgDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

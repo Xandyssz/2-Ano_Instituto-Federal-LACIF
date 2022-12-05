@@ -204,7 +204,7 @@ if (isset($_POST['Registrar'])){
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConvenio.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConvenio.php">';
     }
 
 }

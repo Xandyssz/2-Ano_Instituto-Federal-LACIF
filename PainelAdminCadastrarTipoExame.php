@@ -175,7 +175,6 @@ if(!isset($_SESSION["tipo_acesso"]))
         //-initialize the javascript
         App.init();
         App.dashboard();
-
     });
 </script>
 
@@ -207,7 +206,7 @@ if (isset($_POST['Registrar'])){
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarTipoExame.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesTipoExame.php">';
     }
 
 }

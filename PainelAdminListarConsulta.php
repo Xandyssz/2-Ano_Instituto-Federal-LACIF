@@ -42,13 +42,13 @@ if(!isset($_SESSION["tipo_acesso"]))
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="PainelAdminAgenda.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="#">Exame</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Visualizar Exames</li>
+                            <li class="breadcrumb-item"><a href="#">Consulta</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Visualizar Consultas</li>
                         </ol>
                     </nav>
                     <div class="card card-table">
                         <div class="card-header">
-                            <div class="title">Registro Geral de Exames</div>
+                            <div class="title">Registro Geral de Consultas</div>
                         </div>
                         <div class="card-body table-responsive">
                             <table class="table table-striped table-borderless">

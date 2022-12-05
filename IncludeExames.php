@@ -10,17 +10,7 @@
 
         <?php
         include 'conexao.php';
-        $query =
-            "SELECT
-    ifsp_lacif.consultas.idTipoExame,
-    ifsp_lacif.exames.idTipoExame,
-    ifsp_lacif.consultas.id, title, description, start, horario, idconvenio, celular, resultado, status,
-    ifsp_lacif.exames.nomeExame, valor
-FROM ifsp_lacif.consultas
-         INNER JOIN ifsp_lacif.exames ON ifsp_lacif.consultas.idTipoExame = ifsp_lacif.exames.idTipoExame;";
-
-
-
+        $query = "SELECT * FROM ifsp_lacif.consultas WHERE consultas.cpf ='". $_SESSION['cpf']."' order by id";
 
         $resultado = mysqli_query($conn, $query);
         while($row = mysqli_fetch_assoc($resultado)) {
@@ -31,7 +21,16 @@ FROM ifsp_lacif.consultas
             <div class="box">
                 <div class="card card-1">
 
-                    <div class="card__icon"><?php echo "<font color='black'>Tipo do Exame: " . $row['nomeExame'] . "</font>"; ?></div>
+
+                    <div class="card__icon">
+                        <?php
+                        $select = "SELECT * from ifsp_lacif.exames where idTipoExame =". $row['idTipoExame'];
+                        $linhaa = mysqli_query($conn,$select);
+
+                        $vet = mysqli_fetch_assoc($linhaa);
+
+                         echo "<font color='black'>Tipo do Exame: " . $vet['nomeExame'] . "</font>"; ?>
+                    </div>
 
                     <p class="card__exit"><?php echo "<font color='black'>Data do Exame: " . $row['start'] . "</font>"; ?></p>
 

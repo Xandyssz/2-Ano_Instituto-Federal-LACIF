@@ -391,7 +391,7 @@ if (isset($_POST['Registrar'])){
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
          var_dump($result);
-//        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
+//        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConsulta.php">';
     }
 
 }

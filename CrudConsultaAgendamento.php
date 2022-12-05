@@ -92,9 +92,8 @@ include_once('sessao.php');
                     <?php
                     $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
                     $resultado = mysqli_query($conn, $query);
-                    while ($linha = mysqli_fetch_assoc($resultado)) {
-                        ?>
-                        <option value="<?php echo $linha['nomeConvenio'];?>"><?php echo $linha['nomeConvenio'];?></option>
+                    while ($linha = mysqli_fetch_assoc($resultado)) { ?>
+                        <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
                         <?php
                     }
                     ?>
@@ -113,9 +112,8 @@ include_once('sessao.php');
                     <?php
                     $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
                     $resultado = mysqli_query($conn, $query);
-                    while ($linha = mysqli_fetch_assoc($resultado)) {
-                        ?>
-                        <option value="<?php echo $linha['nomeExame'];?>"><?php echo $linha['nomeExame'];?></option>
+                    while ($linha = mysqli_fetch_assoc($resultado)) { ?>
+                        <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
                         <?php
                     }
                     ?>
@@ -232,12 +230,12 @@ if (isset($_POST['agendar'])){
     } else
     {
         $result = "INSERT INTO ifsp_lacif.consultas 
-            (title, description, start, horario, idconvenio, celular, cpf, idTipoExame) 
+            (title, description, start, horario, idConvenio, celular, cpf, idTipoExame) 
             VALUES ('$title', '$description', '$start', '$horario', '$idConvenio', '$celular', '$cpf', '$idTipoExame')";
-
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=lacif_home.php">';
+        var_dump($result);
+//        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=lacif_home.php">';
 
     }
 }
