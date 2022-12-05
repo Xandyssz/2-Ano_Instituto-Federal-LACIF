@@ -14,11 +14,11 @@ include_once('conexao.php');  // se ele clicou no bot達o salvar
         <title> LACIF | Registro Usuario </title>
 
         <!-- ARQUIVOS FAVICON -->
-        <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-        <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-        <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-        <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-        <link href="ico/favicon.png" rel="shortcut icon">
+        <link href="css/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+        <link href="css/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+        <link href="css/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+        <link href="css/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+        <link href="css/ico/favicon.png" rel="shortcut icon">
 
         <!-- ARQUIVOS CSS -->
         <link rel="stylesheet" href="css/tabelacss.css">
