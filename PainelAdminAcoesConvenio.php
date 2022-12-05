@@ -107,8 +107,8 @@ if(!isset($_SESSION["tipo_acesso"]))
         $(#cpf).mask("999.999.999-99");
     </script>
 
-    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
 
 
     <script type="text/javascript">
