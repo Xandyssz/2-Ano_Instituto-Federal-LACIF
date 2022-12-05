@@ -33,8 +33,6 @@ if(!isset($_SESSION["tipo_acesso"]))
     <!-- ARQUIVOS CSS -->
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
     <link href="css/ionicons.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet">

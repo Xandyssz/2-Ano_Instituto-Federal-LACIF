@@ -39,15 +39,11 @@ VALUES ('admin', '123', 'admin', '$senhaCript', '123', 'avenida', 'AB', 'Masculi
     <link href="css/ionicons.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/datepicker.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <noscript>
-        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css"/>
-    </noscript>
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

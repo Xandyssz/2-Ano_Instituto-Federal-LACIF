@@ -260,7 +260,6 @@ if (isset($_POST['Registrar']))
                 VALUES ('$titulo', '$descricao', '$img_nome')";
 
         $row = mysqli_query($conn, $result);
-//        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesPatrocinadores.php">';
     }

@@ -16,13 +16,6 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-//AND c.idUsuario = u.idUsuario
-//
-//    $query = "SELECT c.*, co.*, u.*, te.* FROM ifsp_lacif.consultas c, ifsp_lacif.convenios co, ifsp_lacif.usuarios u, ifsp_lacif.exames te
-//WHERE c.id = $id
-//AND c.idconvenio = co.idConvenio
-//AND c.idTipoExame = te.idTipoExame
-//ORDER BY c.start";
 
     $query = "SELECT * FROM ifsp_lacif.consultas WHERE id = $id";
 

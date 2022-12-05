@@ -18,7 +18,7 @@
                         <div class="bg-img bg-img-2"></div>
                         <div class="content">
                             <h2><u></u> <br>
-                                </h2>
+                            </h2>
                             <img src="img/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
@@ -28,7 +28,7 @@
                         <div class="bg-img bg-img-3"></div>
                         <div class="content">
                             <h2> <u></u> <br>
-                                </h2>
+                            </h2>
                             <img src="/img/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>
@@ -38,7 +38,7 @@
                         <div class="bg-img bg-img-4"></div>
                         <div class="content">
                             <h2> <u> </u>  <br>
-                                   </h2>
+                            </h2>
                             <img src="img/images/pulse.png" alt="Image"><br>
                             <a href="#" class="btn-turquaz-lg">SAIBA MAIS</a> </div>
                     </div>

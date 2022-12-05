@@ -42,27 +42,23 @@
                         $result_carousel = "SELECT * FROM ifsp_lacif.patrocinadores WHERE ativo = 0 ORDER BY titulo";
                         $resultado_carousel = mysqli_query($conn, $result_carousel);
                         while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){
-                            if($controle_ativo == 2){
-                                ?>
-                                <div class="carousel-item active">
-                                    <img class="bd-placeholder-img" width="100%" height="100%" src="img/<?php echo $row_carousel['img_nome'];?>" alt="">
-                                    </div>
-                                </div>
-                                <?php
-                                $controle_ativo = 1;
-                            } else {
-                                ?>
-                                <div class="carousel-item">
-                                    <img class="bd-placeholder-img" width="100%" height="100%" src="img/<?php echo $row_carousel['img_nome'];?>" alt="">
-                                </div>
-                                <?php
-                            }
-                        }
+                        if($controle_ativo == 2){
                         ?>
-                    <!--                    <div class="item1"> <img src="img/images/patrocinadores/unimed.png" alt=""> </div>  PARA ALTERAR FOTO DO CARROSSEL-->
-<!--                    <div class="item2"> <img src="img/images/patrocinadores/Allianz.png" alt=""> </div>  PARA ALTERAR FOTO DO CARROSSEL-->
-<!--                    <div class="item3"> <img src="img/images/patrocinadores/bradesco.png" alt="" width="" height=""> </div>  PARA ALTERAR FOTO DO CARROSSEL-->
-<!--                    <div class="item4"> <img src="img/images/patrocinadores/prevent_senior.png" alt=""> </div>  PARA ALTERAR FOTO DO CARROSSEL-->
+                        <div class="carousel-item active">
+                            <img class="bd-placeholder-img" width="100%" height="100%" src="img/<?php echo $row_carousel['img_nome'];?>" alt="">
+                        </div>
+                    </div>
+                    <?php
+                    $controle_ativo = 1;
+                    } else {
+                        ?>
+                        <div class="carousel-item">
+                            <img class="bd-placeholder-img" width="100%" height="100%" src="img/<?php echo $row_carousel['img_nome'];?>" alt="">
+                        </div>
+                        <?php
+                    }
+                    }
+                    ?>
 
                 </div>
             </div>

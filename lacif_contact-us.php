@@ -52,12 +52,6 @@ if (isset($_SESSION['cpf'])) {
 ?>
 <!-- FIM - MENU CABEÇALHO -->
 
-
-<!-- INICIO SCRIPT CONTATO -->
-
-<!-- FINAL SCRIPT CONTATO -->
-
-
 <!-- INICIO - CONTATO -->
 <?php include_once('IncludeContato.php'); ?>
 

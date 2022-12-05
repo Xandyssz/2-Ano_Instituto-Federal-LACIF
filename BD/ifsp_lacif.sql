@@ -139,11 +139,11 @@ INSERT INTO `usuarios` (`idusuario`, `nome`, `cpf`, `email`, `senha`, `celular`,
 --
 
 INSERT INTO `patrocinadores` (`idPatrocinador`, `titulo`, `descricao`, `ativo`, `img_nome`) VALUES
-                                                                                                (1, 'AstraZeneca', 'AstraZeneca PLC é um conglomerado farmacêutico', 0, '1ad090d944453f5095fbe85385c48edd..png'),
-                                                                                                (2, 'Pfizer', 'Pfizer, Inc. é uma empresa farmacêutica multinacio', 0, '9b3f17a9f4bdea54c2520074cc9df91f..png'),
-                                                                                                (3, 'unimed', 'unimed', 0, '5a3c93cd27820f25e02a88ea94b501db..png'),
-                                                                                                (4, 'Allianz Saúde', 'Allianz Saúde', 0, '99560740ce020c0f3d104fb6b2a71ab3..png'),
-                                                                                                (5, 'Bradesco Saúde', 'Bradesco Saúde', 0, '644048d5f6f761dacefaffe1a037af2e..png');
+                                                                                                (1, 'AstraZeneca', 'AstraZeneca PLC é um conglomerado farmacêutico', 0, '0ef4a2bf45723c07e23b9bbcd3905e88..png'),
+                                                                                                (2, 'Pfizer', 'Pfizer, Inc. é uma empresa farmacêutica multinacio', 0, '73cd41c87226e0cd21a2b28c9263066a..png'),
+                                                                                                (3, 'unimed', 'unimed', 0, '43c20994bf88df4ea276a4b1cda0d388..png'),
+                                                                                                (4, 'Allianz Saúde', 'Allianz Saúde', 0, '9a47d156403735afbdd4d5414977c272..png'),
+                                                                                                (5, 'Bradesco Saúde', 'Bradesco Saúde', 0, '6387ef2692a549714b2c8ffe3f63dba5..png');
 # -------
 
 --
@@ -151,9 +151,9 @@ INSERT INTO `patrocinadores` (`idPatrocinador`, `titulo`, `descricao`, `ativo`, 
 --
 
 INSERT INTO `noticias` (`idNoticia`, `titulo`, `descricao`, `dataNoticia`, `img_user`) VALUES
-                                                                                           (1, 'COVID 19', 'Butantan entrega 1 milhão de doses da CoronaVac ao Ministério da Saúde nesta quinta para vacinação de crianças de 3 e 4 anos', '2022-11-10', '03c23df12c63efa67a210b37571cfa88..jpg'),
-                                                                                           (2, 'COVID 19', 'Brasil registra 45 mortes por Covid na média móvel. São 34.954.680 casos conhecidos de Covid-19 registrados desde o início da pandemia e 688.735 mortes pela doença.', '2022-11-12', '678aff14130cf48222bf2ad59e2b0533..jpg'),
-                                                                                           (3, 'SAÚDE', 'Dia Mundial do Diabetes: Estima-se que quase 17 milhões de pessoas vivam com diabetes no Brasil, quinto país no ranking mundial da doença.', '2022-11-14', '1c06d1600b4133581f68dc30aeece352..jpg');
+                                                                                           (1, 'COVID 19', 'Butantan entrega 1 milhão de doses da CoronaVac ao Ministério da Saúde nesta quinta para vacinação de crianças de 3 e 4 anos', '2022-11-10', 'de2a8005f1008542b2c79edf0019ec19..jpg'),
+                                                                                           (2, 'COVID 19', 'Brasil registra 45 mortes por Covid na média móvel. São 34.954.680 casos conhecidos de Covid-19 registrados desde o início da pandemia e 688.735 mortes pela doença.', '2022-11-12', '2c723f7c15367ed95a2be135718529d5..jpg'),
+                                                                                           (3, 'SAÚDE', 'Dia Mundial do Diabetes: Estima-se que quase 17 milhões de pessoas vivam com diabetes no Brasil, quinto país no ranking mundial da doença.', '2022-11-14', 'd91c6c2480fd2f6b3a42c98b1d0a16e4..jpg');
 # -------
 
 --

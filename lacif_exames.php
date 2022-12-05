@@ -1,6 +1,13 @@
 <?php
 session_start();
 include_once('sessao.php');
+
+// Verifica se existe os dados da sessão de login
+if(!isset($_SESSION["tipo_acesso"]))
+{
+// Usuário não logado! Redireciona para a página de login
+    header("location: lacif_index.php");
+}
 ?>
 
 

@@ -6,7 +6,6 @@
     </div>
     <div class="cards">
 
-<!--        WHERE consultas.cpf ='". $_SESSION['cpf']."'order by id";-->
 
         <?php
         include 'conexao.php';
@@ -29,7 +28,7 @@
 
                         $vet = mysqli_fetch_assoc($linhaa);
 
-                         echo "<font color='black'>Tipo do Exame: " . $vet['nomeExame'] . "</font>"; ?>
+                        echo "<font color='black'>Tipo do Exame: " . $vet['nomeExame'] . "</font>"; ?>
                     </div>
 
                     <p class="card__exit"><?php echo "<font color='black'>Data do Exame: " . $row['start'] . "</font>"; ?></p>

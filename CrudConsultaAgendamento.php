@@ -2,7 +2,6 @@
 session_start();
 include_once('conexao.php');
 include_once('sessao.php');
-// se ele clicou no botão aghorarioar
 ?>
 
     <!DOCTYPE html>
@@ -46,7 +45,6 @@ include_once('sessao.php');
                 <input type="text"              id="title"         name="title"        placeholder="Digite o Nome Completo"    class="box" required>
                 <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box" required>
                 <input type="date"              id="start"         name="start"                                                class="box" required>
-                <!--                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                     class="box" required>-->
                 <select name="horario" id="horario" class="box" required>
                     <option value="" selected>Selecione o Horario da Consulta...</option>
                     <option value="07:00">07:00</option>
@@ -215,9 +213,6 @@ if (isset($_POST['agendar'])){
     $cpf = $_POST['cpf'];
     $idTipoExame = $_POST['idTipoExame'];
 
-//    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
-//    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));
-
     // Fazer o insert  no banco de dados
     $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
@@ -234,8 +229,7 @@ if (isset($_POST['agendar'])){
             VALUES ('$title', '$description', '$start', '$horario', '$idConvenio', '$celular', '$cpf', '$idTipoExame')";
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
-        var_dump($result);
-//        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=lacif_home.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=lacif_home.php">';
 
     }
 }
