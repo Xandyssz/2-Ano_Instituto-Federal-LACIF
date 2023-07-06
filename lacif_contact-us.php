@@ -20,11 +20,11 @@ include_once('sessao.php');
     <meta name="author" content="...">
 
     <!-- ARQUIVOS FAVICON -->
-    <link href="css/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="css/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="css/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="css/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="css/ico/favicon.png" rel="shortcut icon">
+    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="ico/favicon.png" rel="shortcut icon">
 
     <!-- ARQUIVOS CSS -->
     <link href="css/ionicons.min.css" rel="stylesheet">
@@ -34,6 +34,7 @@ include_once('sessao.php');
     <!-- ARQUIVOS SCRIPT -->
     <script type='text/javascript' src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
@@ -52,9 +53,14 @@ if (isset($_SESSION['cpf'])) {
 ?>
 <!-- FIM - MENU CABEÇALHO -->
 
+
+<!-- INICIO SCRIPT CONTATO -->
+
+<!-- FINAL SCRIPT CONTATO -->
+
+
 <!-- INICIO - CONTATO -->
 <?php include_once('IncludeContato.php'); ?>
-
 <!-- FIM - CONTATO -->
 
 
@@ -68,17 +74,6 @@ if (isset($_SESSION['cpf'])) {
 <!-- INICIO - RODA PÉ -->
 <?php include_once('IncludeRodaPe.php'); ?>
 <!-- FIM - RODA PÉ -->
-
-
-<!-- FORMATAR (TELEFONE FIXO, TELEFONE CELULAR, CEP, CNPJ, CPF E DATA) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script>
-    $("#Celular").mask("(99) 99999-9999");
-</script>
-<script>
-    $(#Celular).mask("(99) 99999-9999");
-</script>
 
 
 </body>

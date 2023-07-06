@@ -19,11 +19,11 @@ if(!isset($_SESSION["tipo_acesso"]))
     <?php include('includes/header.php'); ?>
     <!-- ARQUIVOS FAVICON -->
     <title>LACIF - Gerenciar Consultas</title>
-    <link href="css/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="css/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="css/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="css/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="css/ico/favicon.png" rel="shortcut icon">
+    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="ico/favicon.png" rel="shortcut icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/funcoes.js"></script>
 
@@ -61,10 +61,10 @@ if(!isset($_SESSION["tipo_acesso"]))
                                     <th style="width: 20%;">Descrição</th>
                                     <th style="width: 20%;">Data Inicio</th>
                                     <th style="width: 20%;">Horario</th>
-                                    <th style="width: 20%;">Convenio</th>
+                                    <th style="width: 20%;">ID Convenio</th>
                                     <th style="width: 20%;">Celular</th>
                                     <th style="width: 20%;">CPF</th>
-                                    <th style="width: 20%;">Exame</th>
+                                    <th style="width: 20%;">ID Tipo de Exame</th>
                                     <th style="width: 20%;">Resultado do Exame</th>
                                     <th style="width: 20%;">Status</th>
                                     <th style="width: 20%;">Ação</th>
@@ -72,7 +72,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM ifsp_lacif.consultas order by id";
+                                $query = "SELECT * FROM lacifs93_ifsp_lacif.consultas order by id";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
@@ -84,26 +84,11 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <td><?php  echo $linha['description']; ?></td>
                                         <td><?php  echo $dataBrasil; ?></td>
                                         <td><?php  echo $linha['horario']; ?></td>
-                                        <td><?php
-                                            $select = "SELECT * from ifsp_lacif.convenios where idConvenio =".$linha['idConvenio'];
-                                            $linhaa = mysqli_query($conn,$select);
-
-                                            $vet = mysqli_fetch_assoc($linhaa);
-
-                                            echo $vet['nomeConvenio'];
-                                            ?>
-                                        </td>
+                                        <td><?php  echo $linha['idconvenio']; ?></td>
                                         <td><?php  echo $linha['celular']; ?></td>
                                         <td><?php  echo $linha['cpf']; ?></td>
-                                        <td><?php
-                                            $select = "SELECT * from ifsp_lacif.exames where idTipoExame =".$linha['idTipoExame'];
-                                            $linhaa = mysqli_query($conn,$select);
-
-                                            $vet = mysqli_fetch_assoc($linhaa);
-
-                                            echo $vet['nomeExame'];
-                                            ?>
-                                        </td>                                        <td><?php  echo $linha['resultado']; ?></td>
+                                        <td><?php  echo $linha['idTipoExame']; ?></td>
+                                        <td><?php  echo $linha['resultado']; ?></td>
                                         <td><?php  echo $linha['status']; ?></td>
                                         <td>
                                             <?php
@@ -139,8 +124,8 @@ if(!isset($_SESSION["tipo_acesso"]))
     $(#cpf).mask("999.999.999-99");
 </script>
 
-<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="js/app.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
 
 
 <script type="text/javascript">

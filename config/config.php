@@ -1,15 +1,15 @@
 <?php
 #Caminhos absolutos
 $dirInt="";
-define('DIRPAGE',"http://{$_SERVER['HTTP_HOST']}/{$dirInt}");
+define('DIRPAGE',"https://{$_SERVER['HTTP_HOST']}/{$dirInt}");
 $bar=(substr($_SERVER['DOCUMENT_ROOT'],-1)=='/')?"":"/";
 define('DIRREQ',"{$_SERVER['DOCUMENT_ROOT']}{$bar}{$dirInt}");
 
 #Banco de Dados
-define('HOST','localhost:3307');
-define('DB','ifsp_lacif');
-define('USER','root');
-define('PASS','87d95fwq');
+define('HOST','localhost');
+define('DB','lacifs93_ifsp_lacif');
+define('USER','lacifs93_user');
+define('PASS','87d95fwQ!243');
 
 #Incluir arquivos
 include(DIRREQ.'lib/composer/vendor/autoload.php');

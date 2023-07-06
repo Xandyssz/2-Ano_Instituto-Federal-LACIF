@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('conexao.php');  // se ele clicou no bot達o salvar
+include_once('conexao.php');  // se ele clicou no botão salvar
 ?>
 
     <!DOCTYPE html>
@@ -14,11 +14,11 @@ include_once('conexao.php');  // se ele clicou no bot達o salvar
         <title> LACIF | Registro Usuario </title>
 
         <!-- ARQUIVOS FAVICON -->
-        <link href="css/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-        <link href="css/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-        <link href="css/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-        <link href="css/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-        <link href="css/ico/favicon.png" rel="shortcut icon">
+        <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+        <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+        <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+        <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+        <link href="ico/favicon.png" rel="shortcut icon">
 
         <!-- ARQUIVOS CSS -->
         <link rel="stylesheet" href="css/tabelacss.css">
@@ -40,7 +40,7 @@ include_once('conexao.php');  // se ele clicou no bot達o salvar
                 <img src="img/images/book2-img.svg" alt="">
             </div>
 
-            <form action="" method="POST"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se n達o n達o grava no BANCO -->
+            <form action="" method="POST"> <!-- PARA LISTAR NO BANCO DE DADOS NO [ACTION - PRECISA SER # se não não grava no BANCO -->
                 <h3>Cadastro</h3>
                 <input type="text"  name="nome" id="nome" placeholder="Digite o Nome Completo" class="box" required>
                 <input type="text" name="cpf"  id="cpf" placeholder="Digite o CPF" class="box" required>
@@ -52,13 +52,13 @@ include_once('conexao.php');  // se ele clicou no bot達o salvar
                 <select id="tiposanguineo "name="tiposanguineo" class="box">
                     <option value=""selected>Selecione o tipo sanguineo...</option>
                     <option value="O-">O-</option>
-                    <option value="O">O+</option>
+                    <option value="O+">O+</option>
                     <option value="AB-">AB-</option>
-                    <option value="AB">AB+</option>
+                    <option value="AB+">AB+</option>
                     <option value="B-">B-</option>
-                    <option value="B">B+</option>
+                    <option value="B+">B+</option>
                     <option value="A-">A-</option>
-                    <option value="A">A+</option>
+                    <option value="A+">A+</option>
                 </select>
 
                 <select id="sexo" name="sexo" class="box">
@@ -132,7 +132,7 @@ if (isset($_POST['cadastrar'])){
     $dataBrasil = implode('-', array_reverse(explode('/', $datanasc)));
     // Fazer o insert  no banco de dados
 
-    $query = "SELECT * FROM ifsp_lacif.usuarios users 
+    $query = "SELECT * FROM lacifs93_ifsp_lacif.usuarios users 
     WHERE users.cpf = '$cpf'
     AND users.email = '$email'";
 
@@ -145,7 +145,7 @@ if (isset($_POST['cadastrar'])){
 
     else
     {
-        $result = "INSERT INTO ifsp_lacif.usuarios 
+        $result = "INSERT INTO lacifs93_ifsp_lacif.usuarios 
         (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc) 
         VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$tiposanguineo', '$sexo', '$dataBrasil')";
         $row = mysqli_query($conn, $result);

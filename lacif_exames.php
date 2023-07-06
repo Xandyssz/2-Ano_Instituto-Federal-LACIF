@@ -1,13 +1,6 @@
 <?php
 session_start();
 include_once('sessao.php');
-
-// Verifica se existe os dados da sessão de login
-if(!isset($_SESSION["tipo_acesso"]))
-{
-// Usuário não logado! Redireciona para a página de login
-    header("location: lacif_index.php");
-}
 ?>
 
 
@@ -26,11 +19,11 @@ if(!isset($_SESSION["tipo_acesso"]))
     <meta name="author" content="...">
 
     <!-- ARQUIVOS FAVICON -->
-    <link href="css/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="css/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="css/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="css/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="css/ico/favicon.png" rel="shortcut icon">
+    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="ico/favicon.png" rel="shortcut icon">
 
 
     <!-- ARQUIVOS CSS -->

@@ -1,13 +1,13 @@
 <?php
 include_once('conexao.php');
-$sqlUser = "SELECT COUNT(*) AS qtd FROM ifsp_lacif.usuarios";
+$sqlUser = "SELECT COUNT(*) AS qtd FROM lacifs93_ifsp_lacif.usuarios";
 $result = mysqli_query($conn, $sqlUser);
 $rowBusca = mysqli_fetch_assoc($result);
 $qntBD = $rowBusca['qtd'];
 if ($qntBD == 0) {
     $senha = "123";
     $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
-    $sqlInsereUser = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
+    $sqlInsereUser = "INSERT INTO lacifs93_ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
 VALUES ('admin', '123', 'admin', '$senhaCript', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Administrador')";
     echo "<br>";
     mysqli_query($conn, $sqlInsereUser);
@@ -29,21 +29,25 @@ VALUES ('admin', '123', 'admin', '$senhaCript', '123', 'avenida', 'AB', 'Masculi
     <meta name="author" content="...">
 
     <!-- ARQUIVOS FAVICON -->
-    <link href="css/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="css/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="css/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="css/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="css/ico/favicon.png" rel="shortcut icon">
+    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="ico/favicon.png" rel="shortcut icon">
 
     <!-- ARQUIVOS CSS -->
     <link href="css/ionicons.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="css/styleNoJS.css"/>
+    </noscript>
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

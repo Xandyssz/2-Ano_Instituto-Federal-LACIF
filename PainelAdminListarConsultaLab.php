@@ -8,7 +8,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 // Usuário não logado! Redireciona para a página de login
     header("location: lacif_index.php");
 
-}else if($_SESSION['tipo_acesso'] != "Administrador" && $_SESSION['tipo_acesso'] != "Laboratorista")
+}else if($_SESSION['tipo_acesso'] != "Laboratorista")
 {
     header("location: lacif_home.php");
 }
@@ -68,7 +68,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM ifsp_lacif.consultas WHERE status like 'pendente'";
+                                $query = "SELECT * FROM lacifs93_ifsp_lacif.consultas WHERE status like 'pendente'";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
@@ -81,26 +81,11 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <td><?php  echo $linha['description']; ?></td>
                                         <td><?php  echo $dataBrasil; ?></td>
                                         <td><?php  echo $linha['horario']; ?></td>
-                                        <td><?php
-                                            $select = "SELECT * from ifsp_lacif.convenios where idConvenio =".$linha['idConvenio'];
-                                            $linhaa = mysqli_query($conn,$select);
-
-                                            $vet = mysqli_fetch_assoc($linhaa);
-
-                                            echo $vet['nomeConvenio'];
-                                            ?>
-                                        </td>
+                                        <td><?php  echo $linha['convenio']; ?></td>
                                         <td><?php  echo $linha['celular']; ?></td>
                                         <td><?php  echo $linha['cpf']; ?></td>
-                                        <td><?php
-                                            $select = "SELECT * from ifsp_lacif.exames where idTipoExame =".$linha['idTipoExame'];
-                                            $linhaa = mysqli_query($conn,$select);
-
-                                            $vet = mysqli_fetch_assoc($linhaa);
-
-                                            echo $vet['nomeExame'];
-                                            ?>
-                                        </td>                                        <td><?php  echo $linha['resultado']; ?></td>
+                                        <td><?php  echo $linha['tipo']; ?></td>
+                                        <td><?php  echo $linha['resultado']; ?></td>
                                         <td><?php  echo $linha['status']; ?></td>
                                     </tr>
                                     <?php
@@ -115,22 +100,22 @@ if(!isset($_SESSION["tipo_acesso"]))
     </div>
 
 </div>
-<script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="js/app.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-<script src="lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="lib/countup/countUp.min.js" type="text/javascript"></script>
-<script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="lib/canvas/canvasjs.min.js"></script>
-<script src="lib/canvas/jquery.canvasjs.min.js"></script>
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/lib/canvas/canvasjs.min.js"></script>
+<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         //-initialize the javascript

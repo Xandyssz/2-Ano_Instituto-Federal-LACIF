@@ -2,6 +2,7 @@
 session_start();
 include_once('conexao.php');
 include_once('sessao.php');
+// se ele clicou no botão aghorarioar
 ?>
 
     <!DOCTYPE html>
@@ -12,11 +13,11 @@ include_once('sessao.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- ARQUIVOS FAVICON -->
-        <link href="css/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-        <link href="css/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-        <link href="css/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-        <link href="css/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-        <link href="css/ico/favicon.png" rel="shortcut icon">
+        <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+        <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+        <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+        <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+        <link href="ico/favicon.png" rel="shortcut icon">
 
         <!-- TITULO DA PAGINA-->
         <title> LACIF - Agendar Consulta</title>
@@ -45,6 +46,7 @@ include_once('sessao.php');
                 <input type="text"              id="title"         name="title"        placeholder="Digite o Nome Completo"    class="box" required>
                 <input type="text"              id="description"   name="description"  placeholder="Digite a Descricao"        class="box" required>
                 <input type="date"              id="start"         name="start"                                                class="box" required>
+                <!--                <input type="time"              id="horario"       name="horario"  min="07:00" max="18:00"                     class="box" required>-->
                 <select name="horario" id="horario" class="box" required>
                     <option value="" selected>Selecione o Horario da Consulta...</option>
                     <option value="07:00">07:00</option>
@@ -88,17 +90,18 @@ include_once('sessao.php');
                 <select name="idConvenio" id="idConvenio" class="box" required>
                     <option value="" selected>Selecione o Convênio...</option>
                     <?php
-                    $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
+                    $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios ORDER BY idConvenio";
                     $resultado = mysqli_query($conn, $query);
-                    while ($linha = mysqli_fetch_assoc($resultado)) { ?>
-                        <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
+                    while ($linha = mysqli_fetch_assoc($resultado)) {
+                        ?>
+                        <option value="<?php echo $linha['nomeConvenio'];?>"><?php echo $linha['nomeConvenio'];?></option>
                         <?php
                     }
                     ?>
                 </select>
 
                 <?php
-                $result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.convenios WHERE idConvenio");
+                $result = mysqli_query($conn, "SELECT * FROM lacifs93_ifsp_lacif.convenios WHERE idConvenio");
                 $sdda = mysqli_fetch_assoc($result);?>
                 <input type="text" id="porcentagem" name="porcentagem" placeholder="" value="<?php echo $sdda['porcentagem']?>" class="box" disabled>
 
@@ -108,17 +111,18 @@ include_once('sessao.php');
                 <select name="idTipoExame" id="idTipoExame" class="box" required>
                     <option value="" selected>Selecione o Tipo de Exame...</option>
                     <?php
-                    $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
+                    $query = "SELECT * FROM lacifs93_ifsp_lacif.exames ORDER BY idTipoExame";
                     $resultado = mysqli_query($conn, $query);
-                    while ($linha = mysqli_fetch_assoc($resultado)) { ?>
-                        <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
+                    while ($linha = mysqli_fetch_assoc($resultado)) {
+                        ?>
+                        <option value="<?php echo $linha['nomeExame'];?>"><?php echo $linha['nomeExame'];?></option>
                         <?php
                     }
                     ?>
                 </select>
 
                 <?php
-                $result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.exames WHERE idTipoExame");
+                $result = mysqli_query($conn, "SELECT * FROM lacifs93_ifsp_lacif.exames WHERE idTipoExame");
                 $sdda = mysqli_fetch_assoc($result);?>
                 <input type="text" id="valor" name="valor" placeholder="" class="box" disabled>
 
@@ -213,8 +217,11 @@ if (isset($_POST['agendar'])){
     $cpf = $_POST['cpf'];
     $idTipoExame = $_POST['idTipoExame'];
 
+//    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
+//    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));
+
     // Fazer o insert  no banco de dados
-    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
+    $query = "SELECT cons.* FROM lacifs93_ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
     AND cons.horario = '$horario' ";
     $row = mysqli_query($conn, $query);
@@ -224,9 +231,10 @@ if (isset($_POST['agendar'])){
         echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
     } else
     {
-        $result = "INSERT INTO ifsp_lacif.consultas 
-            (title, description, start, horario, idConvenio, celular, cpf, idTipoExame) 
+        $result = "INSERT INTO lacifs93_ifsp_lacif.consultas 
+            (title, description, start, horario, idconvenio, celular, cpf, idTipoExame) 
             VALUES ('$title', '$description', '$start', '$horario', '$idConvenio', '$celular', '$cpf', '$idTipoExame')";
+
         $row = mysqli_query($conn, $result);
         echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=lacif_home.php">';

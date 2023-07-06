@@ -16,9 +16,15 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
+//AND c.idUsuario = u.idUsuario
 
-    $query = "SELECT * FROM ifsp_lacif.consultas WHERE id = $id";
+$query = "SELECT c.*, co.*, u.*, te.* FROM lacifs93_ifsp_lacif.consultas c, lacifs93_ifsp_lacif.convenios co, lacifs93_ifsp_lacif.usuarios u, lacifs93_ifsp_lacif.exames te
+WHERE c.id = $id
+AND c.idconvenio = co.idConvenio
+AND c.idTipoExame = te.idTipoExame
+ORDER BY c.start";
 
+//    $query = "SELECT * FROM ifsp_lacif.consultas WHERE id = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -1497,29 +1503,17 @@ if ($id > 0) {
                                 <div class="form-group row">
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="idConvenio">Convênio: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
-                                        <select class="form-control" name="idConvenio" id="idConvenio" class="box" required>
-                                            <option value="<?php echo $linhaUnica['idConvenio']?>" selected><?php
-                                                $select = "SELECT * from ifsp_lacif.convenios where idConvenio = ".$linhaUnica['idConvenio'];
-
-                                                $q = mysqli_query($conn,$select);
-
-                                                $row = mysqli_fetch_assoc($q);
-
-                                                echo $row['nomeConvenio'];
-                                                ?>
-                                            </option>
+                                        <select class="form-control" name="idConvenio" id="idConvenio" class="box" value="<?php echo $linhaUnica['idConvenio']?>"required>
                                             <?php
-                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio ASC";
+                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios ORDER BY idConvenio";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
-
-                                                if ($linha['idConvenio'] != $linhaUnica['idConvenio']){
-                                                    ?>
-                                                    <option value="<?php echo $linha['idConvenio'];?>">
-                                                        <?php echo $linha['nomeConvenio'];?>
-                                                    </option>
-                                                    <?php
-                                                }}
+                                                if ($linha['idConvenio'] == $linhaUnica['idConvenio']) { ?>
+                                                    <option value="<?php echo $linha['idConvenio']; ?>" selected><?php echo $linha['nomeConvenio'];?></option>
+                                                <?php   } else { ?>
+                                                    <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
+                                                <?php   }
+                                            }
                                             ?>
                                         </select>
                                     </div>
@@ -1551,28 +1545,16 @@ if ($id > 0) {
                                     <label class="col-12 col-sm-3 col-form-label text-sm-right" for="idTipoExame">Tipo Exame: </label>
                                     <div class="col-12 col-sm-8 col-lg-6">
                                         <select class="form-control" name="idTipoExame" id="idTipoExame" class="box" required>
-                                            <option value="<?php echo $linhaUnica['idTipoExame']?>" selected><?php
-                                                $select = "SELECT * from ifsp_lacif.exames where idTipoExame = ".$linhaUnica['idTipoExame'];
-
-                                                $q = mysqli_query($conn,$select);
-
-                                                $row = mysqli_fetch_assoc($q);
-
-                                                echo $row['nomeExame'];
-                                                ?>
-                                            </option>
                                             <?php
-                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame ASC";
+                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.exames ORDER BY idTipoExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
-
-                                                if ($linha['idTipoExame'] != $linhaUnica['idTipoExame']){
-                                                    ?>
-                                                    <option value="<?php echo $linha['idTipoExame'];?>">
-                                                        <?php echo $linha['nomeExame'];?>
-                                                    </option>
-                                                    <?php
-                                                }}
+                                                if ($linha['idTipoExame'] == $linhaUnica['idTipoExame']) { ?>
+                                                    <option value="<?php echo $linha['idTipoExame']; ?>" selected><?php echo $linha['nomeExame'];?></option>
+                                                <?php   } else { ?>
+                                                    <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
+                                                <?php   }
+                                            }
                                             ?>
                                         </select>
                                     </div>
@@ -1612,12 +1594,12 @@ if ($id > 0) {
                                     <div class="col-12 col-sm-8 col-lg-6">
                                         <?php
                                         if ($linhaUnica['resultado'] == "") {
-                                            $imagemVelha = "";
-                                            ?>
+                                        $imagemVelha = "";
+                                        ?>
                                             <?php
                                         } else {
-                                            $imagemVelha = $linhaUnica['resultado'];
-                                            ?>
+                                        $imagemVelha = $linhaUnica['resultado'];
+                                        ?>
                                             <?php
                                         }
                                         ?>
@@ -1767,22 +1749,22 @@ if ($id > 0) {
     });
 </script>
 
-<script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="js/app.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-<script src="lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="lib/countup/countUp.min.js" type="text/javascript"></script>
-<script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="lib/canvas/canvasjs.min.js"></script>
-<script src="lib/canvas/jquery.canvasjs.min.js"></script>
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/lib/canvas/canvasjs.min.js"></script>
+<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         //-initialize the javascript
@@ -1837,7 +1819,7 @@ if (isset($_POST['Atualizar'])) {
 
 
 //sql to inset the values to the database
-    $result = "update ifsp_lacif.consultas 
+    $result = "update lacifs93_ifsp_lacif.consultas 
 set title = '$title', 
     description='$description', 
     start='$start', 

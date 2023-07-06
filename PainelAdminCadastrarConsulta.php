@@ -124,11 +124,11 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <select class="form-control" name="idConvenio" id="idConvenio" class="box" required>
                                             <option value="" selected>Selecione o Convênio...</option>
                                             <?php
-                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
+                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios ORDER BY nomeConvenio";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) { ?>
                                                 <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
-                                                <?php
+                                            <?php
                                             }
                                             ?>
                                         </select>
@@ -163,7 +163,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <select class="form-control" name="idTipoExame" id="idTipoExame" class="box" required>
                                             <option value="" selected>Selecione o Tipo de Exame...</option>
                                             <?php
-                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
+                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.exames ORDER BY nomeExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) { ?>
                                                 <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
@@ -298,7 +298,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 </div>
 
 
-<script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -327,21 +327,21 @@ if(!isset($_SESSION["tipo_acesso"]))
     });
 </script>
 
-<script src="lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="js/app.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-<script src="lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="lib/countup/countUp.min.js" type="text/javascript"></script>
-<script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="lib/canvas/canvasjs.min.js"></script>
-<script src="lib/canvas/jquery.canvasjs.min.js"></script>
+<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/lib/canvas/canvasjs.min.js"></script>
+<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         //-initialize the javascript
@@ -369,7 +369,7 @@ if (isset($_POST['Registrar'])){
 //    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
 //    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));    // Fazer o insert  no banco de dados
 
-    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
+    $query = "SELECT cons.* FROM lacifs93_ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
     AND cons.horario = '$horario'";
 
@@ -384,13 +384,14 @@ if (isset($_POST['Registrar'])){
 
     else
     {
-        $result = "INSERT INTO ifsp_lacif.consultas 
+        $result = "INSERT INTO lacifs93_ifsp_lacif.consultas 
             (title, description, start, horario, idConvenio, celular, cpf, idTipoExame) 
             VALUES ('$title', '$description', '$start', '$horario', '$idConvenio', '$celular', '$cpf', '$idTipoExame')";
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesConsulta.php">';
+        // var_dump($result);
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
     }
 
 }

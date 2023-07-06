@@ -14,7 +14,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM ifsp_lacif.usuarios WHERE idusuario = $id";
+    $query = "SELECT * FROM lacifs93_ifsp_lacif.usuarios WHERE idusuario = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -376,22 +376,22 @@ if ($id > 0) {
 </div>
 
 
-<script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="js/app.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-<script src="lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-<script src="lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="lib/countup/countUp.min.js" type="text/javascript"></script>
-<script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="lib/canvas/canvasjs.min.js"></script>
-<script src="lib/canvas/jquery.canvasjs.min.js"></script>
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/lib/canvas/canvasjs.min.js"></script>
+<script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         //-initialize the javascript
@@ -418,7 +418,7 @@ if (isset($_POST['Atualizar']))
     $tipo_acesso = $_POST['tipo_acesso'];
 
 //sql to inset the values to the database
-    $result = "update ifsp_lacif.usuarios 
+    $result = "update lacifs93_ifsp_lacif.usuarios 
 set nome = '$nome', 
     cpf='$cpf', 
     email='$email',

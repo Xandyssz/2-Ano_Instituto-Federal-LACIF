@@ -190,22 +190,22 @@ if(!isset($_SESSION["tipo_acesso"]))
         </div>
     </div>
 
-    <script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <script src="js/app.js" type="text/javascript"></script>
-    <script src="lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-    <script src="lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-    <script src="lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-    <script src="lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-    <script src="lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-    <script src="lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-    <script src="lib/countup/countUp.min.js" type="text/javascript"></script>
-    <script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="lib/canvas/canvasjs.min.js"></script>
-    <script src="lib/canvas/jquery.canvasjs.min.js"></script>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/lib/canvas/canvasjs.min.js"></script>
+    <script src="assets/lib/canvas/jquery.canvasjs.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             //-initialize the javascript
@@ -246,7 +246,7 @@ if (isset($_POST['Registrar']))
     $img_nome          = $novotitulo;
 
     //Fazer o insert no banco de dados
-    $query = "SELECT titulo FROM ifsp_lacif.patrocinadores WHERE titulo = '$titulo'";
+    $query = "SELECT titulo FROM lacifs93_ifsp_lacif.patrocinadores WHERE titulo = '$titulo'";
     $row = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($row) > 0)
@@ -256,12 +256,13 @@ if (isset($_POST['Registrar']))
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarPatrocinador.php">';
     } else
     {
-        $result = "INSERT INTO ifsp_lacif.patrocinadores (titulo, descricao,  img_nome) 
+        $result = "INSERT INTO lacifs93_ifsp_lacif.patrocinadores (titulo, descricao,  img_nome) 
                 VALUES ('$titulo', '$descricao', '$img_nome')";
 
         $row = mysqli_query($conn, $result);
+//        echo "<script type='text/javascript'>OpcaoMensagens(1);</script>";
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminAcoesPatrocinadores.php">';
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarPatrocinador.php">';
     }
 }
 ?>

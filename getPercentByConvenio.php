@@ -4,9 +4,10 @@
 
 
 
-    $sql = "SELECT * FROM ifsp_lacif.convenios WHERE ifsp_lacif.convenios.idConvenio = '$convenioProcurado'";
+    $sql = "SELECT * FROM lacifs93_ifsp_lacif.convenios WHERE lacifs93_ifsp_lacif.convenios.idConvenio = '$convenioProcurado'";
 
     $comando = mysqli_query($conn, $sql);
+    //$result = mysqli_fetch_assoc($comando);
 
     $array = Array();
     $result = mysqli_fetch_assoc($comando);

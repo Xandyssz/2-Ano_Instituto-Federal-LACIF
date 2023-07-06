@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autenticador</title>
-    <script src="js/funcoes.js"></script>
-</head>
-<body>
 <?php
 include_once("conexao.php");
 $email = $_POST['email'];
@@ -20,7 +10,7 @@ if (!empty($_POST) && (empty($_POST['email']) || empty($_POST['senha']))) {
     $email_escape = addslashes($email);
     $senha_escape = addslashes($senha);
 
-    $sql = "SELECT * FROM ifsp_lacif.usuarios
+    $sql = "SELECT * FROM lacifs93_ifsp_lacif.usuarios
                 WHERE email = '{$email_escape}' LIMIT 1";
     $query = mysqli_query($conn, $sql);
     $nivel = mysqli_fetch_assoc($query);
@@ -66,5 +56,3 @@ if (!empty($_POST) && (empty($_POST['email']) || empty($_POST['senha']))) {
     }
 }
 ?>
-</body>
-</html>

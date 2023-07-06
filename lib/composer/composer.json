@@ -1,7 +1,7 @@
 {
     "name": "wef/calendar",
-    "description": "Calendario Agenda de Exames",
-    "authors": [
+    "description": "Agenda LACIF",
+        "authors": [
         {
             "name": "LACIF"
         }
@@ -10,7 +10,9 @@
 	"autoload": {
 		"psr-4": {
 			"Classes\\": "../../class",
-			"Models\\": "../../model"
+			"Models\\": "../../model",
+            "phpmailer/phpmailer": "^6.6"
+
 		}
 	}
 }
