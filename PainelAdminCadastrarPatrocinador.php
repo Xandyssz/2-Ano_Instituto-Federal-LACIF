@@ -246,7 +246,7 @@ if (isset($_POST['Registrar']))
     $img_nome          = $novotitulo;
 
     //Fazer o insert no banco de dados
-    $query = "SELECT titulo FROM lacifs93_ifsp_lacif.patrocinadores WHERE titulo = '$titulo'";
+    $query = "SELECT titulo FROM ifsp_lacif.patrocinadores WHERE titulo = '$titulo'";
     $row = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($row) > 0)
@@ -256,7 +256,7 @@ if (isset($_POST['Registrar']))
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarPatrocinador.php">';
     } else
     {
-        $result = "INSERT INTO lacifs93_ifsp_lacif.patrocinadores (titulo, descricao,  img_nome) 
+        $result = "INSERT INTO ifsp_lacif.patrocinadores (titulo, descricao,  img_nome) 
                 VALUES ('$titulo', '$descricao', '$img_nome')";
 
         $row = mysqli_query($conn, $result);

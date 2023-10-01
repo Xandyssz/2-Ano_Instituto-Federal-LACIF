@@ -14,7 +14,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.usuarios WHERE idusuario = $id";
+    $query = "SELECT * FROM ifsp_lacif.usuarios WHERE idusuario = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -418,7 +418,7 @@ if (isset($_POST['Atualizar']))
     $tipo_acesso = $_POST['tipo_acesso'];
 
 //sql to inset the values to the database
-    $result = "update lacifs93_ifsp_lacif.usuarios 
+    $result = "update ifsp_lacif.usuarios 
 set nome = '$nome', 
     cpf='$cpf', 
     email='$email',

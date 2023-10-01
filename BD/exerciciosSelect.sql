@@ -21,3 +21,6 @@ FROM ifsp_lacif.consultas, ifsp_lacif.usuarios, ifsp_lacif.convenios
 WHERE ifsp_lacif.usuarios.cpf = ifsp_lacif.consultas.cpf
   AND ifsp_lacif.convenios.idConvenio = ifsp_lacif.consultas.idConvenio
   AND ifsp_lacif.consultas.status like 'Finalizado';
+
+
+SELECT * FROM ifsp_lacif.patrocinadores order by idPatrocinador

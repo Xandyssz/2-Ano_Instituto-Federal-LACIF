@@ -1,6 +1,6 @@
 <?php
 
-define('HOST', 'localhost:3307');
+define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', '87d95fwq');
 define('DBNAME', 'ifsp_lacif');

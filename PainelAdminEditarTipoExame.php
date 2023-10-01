@@ -15,7 +15,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.exames WHERE idTipoExame = $id";
+    $query = "SELECT * FROM ifsp_lacif.exames WHERE idTipoExame = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -175,7 +175,7 @@ if (isset($_POST['Atualizar'])) {
     $nomeExame = $_POST['nomeExame'];
     $valor = $_POST['valor'];
 //sql to inset the values to the database
-    $result = "update lacifs93_ifsp_lacif.exames 
+    $result = "update ifsp_lacif.exames 
 set nomeExame = '$nomeExame',
     valor = '$valor'
     WHERE idTipoExame = $id";

@@ -19,7 +19,7 @@ include_once("conexao.php");
 $id = $_GET['id'];
 
 if (!empty($id)) {
-    $result_usuario = "DELETE FROM lacifs93_ifsp_lacif.consultas WHERE id = $id";
+    $result_usuario = "DELETE FROM ifsp_lacif.consultas WHERE id = $id";
     mysqli_query($conn, $result_usuario);
     if (mysqli_affected_rows($conn)) {
         echo "<script>$(document).ready(function() { $('#msgDelete').modal(); })</script>";

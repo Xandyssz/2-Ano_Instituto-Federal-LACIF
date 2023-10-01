@@ -270,14 +270,14 @@ if (isset($_POST['Registrar'])) {
     $dataBrasil = implode('-', array_reverse(explode('/', "$dataNoticia")));// 1980-01-19
 
     //Fazer o insert no banco de dados
-    $query = "SELECT descricao FROM lacifs93_ifsp_lacif.noticias WHERE descricao = '$descricao'";
+    $query = "SELECT descricao FROM ifsp_lacif.noticias WHERE descricao = '$descricao'";
     $row = mysqli_query($conn, $query);
     if (mysqli_num_rows($row) > 0) {
         echo "<script>$(document).ready(function() { $('#msgconflito').modal(); })</script>";
         echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminCadastrarNoticia.php">';
 
     } else {
-        $result = "INSERT INTO lacifs93_ifsp_lacif.noticias (titulo, dataNoticia, descricao, img_user) 
+        $result = "INSERT INTO ifsp_lacif.noticias (titulo, dataNoticia, descricao, img_user) 
             VALUES ('$titulo', '$dataBrasil', '$descricao', '$img_user')";
 
         $row = mysqli_query($conn, $result);

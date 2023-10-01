@@ -185,7 +185,7 @@ if (isset($_POST['Registrar'])){
     $nomeConvenio = $_POST['nomeConvenio'];
     $porcentagem = $_POST['porcentagem'];
 
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios conv 
+    $query = "SELECT * FROM ifsp_lacif.convenios conv 
     WHERE conv.nomeConvenio = '$nomeConvenio'";
 
 
@@ -200,7 +200,7 @@ if (isset($_POST['Registrar'])){
 
     else
     {
-        $result = "INSERT INTO lacifs93_ifsp_lacif.convenios (nomeConvenio, porcentagem) VALUES ('$nomeConvenio', '$porcentagem')";
+        $result = "INSERT INTO ifsp_lacif.convenios (nomeConvenio, porcentagem) VALUES ('$nomeConvenio', '$porcentagem')";
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";

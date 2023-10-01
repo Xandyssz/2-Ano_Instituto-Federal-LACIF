@@ -18,7 +18,7 @@ $id = $_GET['id'];
 if ($id > 0) {
 //AND c.idUsuario = u.idUsuario
 
-$query = "SELECT c.*, co.*, u.*, te.* FROM lacifs93_ifsp_lacif.consultas c, lacifs93_ifsp_lacif.convenios co, lacifs93_ifsp_lacif.usuarios u, lacifs93_ifsp_lacif.exames te
+$query = "SELECT c.*, co.*, u.*, te.* FROM ifsp_lacif.consultas c, ifsp_lacif.convenios co, ifsp_lacif.usuarios u, ifsp_lacif.exames te
 WHERE c.id = $id
 AND c.idconvenio = co.idConvenio
 AND c.idTipoExame = te.idTipoExame
@@ -1505,7 +1505,7 @@ ORDER BY c.start";
                                     <div class="col-12 col-sm-8 col-lg-6">
                                         <select class="form-control" name="idConvenio" id="idConvenio" class="box" value="<?php echo $linhaUnica['idConvenio']?>"required>
                                             <?php
-                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios ORDER BY idConvenio";
+                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
                                                 if ($linha['idConvenio'] == $linhaUnica['idConvenio']) { ?>
@@ -1546,7 +1546,7 @@ ORDER BY c.start";
                                     <div class="col-12 col-sm-8 col-lg-6">
                                         <select class="form-control" name="idTipoExame" id="idTipoExame" class="box" required>
                                             <?php
-                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.exames ORDER BY idTipoExame";
+                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) {
                                                 if ($linha['idTipoExame'] == $linhaUnica['idTipoExame']) { ?>
@@ -1819,7 +1819,7 @@ if (isset($_POST['Atualizar'])) {
 
 
 //sql to inset the values to the database
-    $result = "update lacifs93_ifsp_lacif.consultas 
+    $result = "update ifsp_lacif.consultas 
 set title = '$title', 
     description='$description', 
     start='$start', 

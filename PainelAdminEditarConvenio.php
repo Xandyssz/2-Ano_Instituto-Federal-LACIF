@@ -15,7 +15,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios WHERE idConvenio = $id";
+    $query = "SELECT * FROM ifsp_lacif.convenios WHERE idConvenio = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -175,7 +175,7 @@ if (isset($_POST['Atualizar'])) {
     $nomeConvenio = $_POST['nomeConvenio'];
     $porcentagem = $_POST['porcentagem'];
 //sql to inset the values to the database
-    $result = "update lacifs93_ifsp_lacif.convenios 
+    $result = "update ifsp_lacif.convenios 
 set nomeConvenio = '$nomeConvenio',
     porcentagem = '$porcentagem'
     WHERE idConvenio = $id";

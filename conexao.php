@@ -1,8 +1,8 @@
 <?php
 $servidor = "localhost";
-$usuario = "lacifs93_user";
-$senha = "87d95fwQ!243";
-$dbname = "lacifs93_ifsp_lacif";
+$usuario = "root";
+$senha = "87d95fwq";
+$dbname = "ifsp_lacif";
 
 // Criar a conexão
 

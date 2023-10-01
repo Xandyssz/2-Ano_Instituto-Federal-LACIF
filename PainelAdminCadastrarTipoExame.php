@@ -188,7 +188,7 @@ if (isset($_POST['Registrar'])){
     $nomeExame = $_POST['nomeExame'];
     $valor = $_POST['valor'];
 
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.exames exam 
+    $query = "SELECT * FROM ifsp_lacif.exames exam 
     WHERE exam.nomeExame = '$nomeExame'";
 
 
@@ -203,7 +203,7 @@ if (isset($_POST['Registrar'])){
 
     else
     {
-        $result = "INSERT INTO lacifs93_ifsp_lacif.exames (nomeExame, valor) VALUES ('$nomeExame', '$valor')";
+        $result = "INSERT INTO ifsp_lacif.exames (nomeExame, valor) VALUES ('$nomeExame', '$valor')";
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";

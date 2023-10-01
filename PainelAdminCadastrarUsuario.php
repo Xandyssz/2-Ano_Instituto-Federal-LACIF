@@ -288,7 +288,7 @@ if (isset($_POST['Registrar'])){
     $dataBrasil = implode('-', array_reverse(explode('/', $datanasc)));
     // Fazer o insert  no banco de dados
 
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.usuarios users 
+    $query = "SELECT * FROM ifsp_lacif.usuarios users 
     WHERE users.cpf = '$cpf'";
 
     $row = mysqli_query($conn, $query);
@@ -301,7 +301,7 @@ if (isset($_POST['Registrar'])){
 
     else
     {
-        $result = "INSERT INTO lacifs93_ifsp_lacif.usuarios 
+        $result = "INSERT INTO ifsp_lacif.usuarios 
         (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc) 
         VALUES ('$nome', '$cpf', '$email', '$senhaCript', '$celular', '$endereco', '$tiposanguineo', '$sexo', '$dataBrasil')";
         $row = mysqli_query($conn, $result);

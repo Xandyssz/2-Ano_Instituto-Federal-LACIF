@@ -66,7 +66,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM lacifs93_ifsp_lacif.patrocinadores order by idPatrocinador";
+                                $query = "SELECT * FROM ifsp_lacif.patrocinadores order by idPatrocinador";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){

@@ -20,7 +20,7 @@ include_once("conexao.php");
 $id = $_GET['id'];
 
 if (!empty($id)) {
-    $result_usuario = "DELETE FROM lacifs93_ifsp_lacif.convenios WHERE idConvenio = $id";
+    $result_usuario = "DELETE FROM ifsp_lacif.convenios WHERE idConvenio = $id";
     mysqli_query($conn, $result_usuario);
 
     if (mysqli_affected_rows($conn)) {

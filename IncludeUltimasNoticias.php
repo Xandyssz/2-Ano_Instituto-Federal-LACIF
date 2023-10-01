@@ -13,7 +13,7 @@
 
             <?php
             include 'conexao.php';
-            $query = "SELECT * FROM lacifs93_ifsp_lacif.noticias order by idNoticia DESC LIMIT 2";
+            $query = "SELECT * FROM ifsp_lacif.noticias order by idNoticia DESC LIMIT 2";
             $resultado = mysqli_query($conn, $query);
             while($row = mysqli_fetch_assoc($resultado)) {
                 ?>

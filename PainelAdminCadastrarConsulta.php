@@ -124,7 +124,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <select class="form-control" name="idConvenio" id="idConvenio" class="box" required>
                                             <option value="" selected>Selecione o Convênio...</option>
                                             <?php
-                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios ORDER BY nomeConvenio";
+                                            $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY nomeConvenio";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) { ?>
                                                 <option value="<?php echo $linha['idConvenio']; ?>"><?php echo $linha['nomeConvenio'];?></option>
@@ -163,7 +163,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <select class="form-control" name="idTipoExame" id="idTipoExame" class="box" required>
                                             <option value="" selected>Selecione o Tipo de Exame...</option>
                                             <?php
-                                            $query = "SELECT * FROM lacifs93_ifsp_lacif.exames ORDER BY nomeExame";
+                                            $query = "SELECT * FROM ifsp_lacif.exames ORDER BY nomeExame";
                                             $resultado = mysqli_query($conn, $query);
                                             while ($linha = mysqli_fetch_assoc($resultado)) { ?>
                                                 <option value="<?php echo $linha['idTipoExame']; ?>"><?php echo $linha['nomeExame'];?></option>
@@ -369,7 +369,7 @@ if (isset($_POST['Registrar'])){
 //    $IniciodataBrasil = implode('-', array_reverse(explode('/', $start)));
 //    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));    // Fazer o insert  no banco de dados
 
-    $query = "SELECT cons.* FROM lacifs93_ifsp_lacif.consultas cons 
+    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
     AND cons.horario = '$horario'";
 
@@ -384,14 +384,14 @@ if (isset($_POST['Registrar'])){
 
     else
     {
-        $result = "INSERT INTO lacifs93_ifsp_lacif.consultas 
+        $result = "INSERT INTO ifsp_lacif.consultas 
             (title, description, start, horario, idConvenio, celular, cpf, idTipoExame) 
             VALUES ('$title', '$description', '$start', '$horario', '$idConvenio', '$celular', '$cpf', '$idTipoExame')";
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-        // var_dump($result);
-        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
+       var_dump($result);
+        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
     }
 
 }

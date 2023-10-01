@@ -15,7 +15,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.patrocinadores WHERE idPatrocinador = $id";
+    $query = "SELECT * FROM ifsp_lacif.patrocinadores WHERE idPatrocinador = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -248,7 +248,7 @@ if (isset($_POST['Atualizar'])) {
 
 //Fazer o update no banco de dados
 
-    $result = "UPDATE lacifs93_ifsp_lacif.patrocinadores 
+    $result = "UPDATE ifsp_lacif.patrocinadores 
     SET titulo = '$titulo', 
         descricao = '$descricao',
         ativo = '$ativo', 

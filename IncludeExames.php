@@ -12,17 +12,17 @@
         include 'conexao.php';
         $query =
             "SELECT
-    lacifs93_ifsp_lacif.consultas.idTipoExame,
-    lacifs93_ifsp_lacif.exames.idTipoExame,
-    lacifs93_ifsp_lacif.consultas.id, title, description, start, horario, idconvenio, celular, resultado, status,
-    lacifs93_ifsp_lacif.exames.nomeExame, valor
-FROM lacifs93_ifsp_lacif.consultas
-         INNER JOIN lacifs93_ifsp_lacif.exames ON lacifs93_ifsp_lacif.consultas.idTipoExame = lacifs93_ifsp_lacif.exames.idTipoExame;";
+    ifsp_lacif.consultas.idTipoExame,
+    ifsp_lacif.exames.idTipoExame,
+    ifsp_lacif.consultas.id, title, description, start, horario, idconvenio, celular, resultado, status,
+    ifsp_lacif.exames.nomeExame, valor
+FROM ifsp_lacif.consultas
+         INNER JOIN ifsp_lacif.exames ON ifsp_lacif.consultas.idTipoExame = ifsp_lacif.exames.idTipoExame;";
 
-        $query2 = "SELECT lacifs93_ifsp_lacif.consultas.cpf,
-       lacifs93_ifsp_lacif.usuarios.cpf, id, title, description, start, horario, idconvenio, idTipoExame, resultado, status, idusuario, nome, email, senha, endereco, tiposanguineo, sexo, datanasc, tipo_acesso
-FROM lacifs93_ifsp_lacif.consultas
-         INNER JOIN lacifs93_ifsp_lacif.usuarios ON lacifs93_ifsp_lacif.consultas.cpf = lacifs93_ifsp_lacif.usuarios.cpf;";
+        $query2 = "SELECT ifsp_lacif.consultas.cpf,
+       ifsp_lacif.usuarios.cpf, id, title, description, start, horario, idconvenio, idTipoExame, resultado, status, idusuario, nome, email, senha, endereco, tiposanguineo, sexo, datanasc, tipo_acesso
+FROM ifsp_lacif.consultas
+         INNER JOIN ifsp_lacif.usuarios ON ifsp_lacif.consultas.cpf = ifsp_lacif.usuarios.cpf;";
 
 
         $resultado = mysqli_query($conn, $query);

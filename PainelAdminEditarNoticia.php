@@ -15,7 +15,7 @@ if(!isset($_SESSION["tipo_acesso"]))
 $id = $_GET['id'];
 
 if ($id > 0) {
-    $query = "SELECT * FROM lacifs93_ifsp_lacif.noticias WHERE idNoticia = $id";
+    $query = "SELECT * FROM ifsp_lacif.noticias WHERE idNoticia = $id";
     $dados = mysqli_query($conn, $query);
     $linhaUnica = mysqli_fetch_assoc($dados);
 } else {
@@ -245,7 +245,7 @@ if (isset($_POST['Atualizar'])) {
 
 //Fazer o update no banco de dados
 
-    $result = "UPDATE lacifs93_ifsp_lacif.noticias 
+    $result = "UPDATE ifsp_lacif.noticias 
     SET titulo = '$titulo', 
         descricao = '$descricao',
         dataNoticia = '$dataBrasil', 

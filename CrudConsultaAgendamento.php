@@ -90,7 +90,7 @@ include_once('sessao.php');
                 <select name="idConvenio" id="idConvenio" class="box" required>
                     <option value="" selected>Selecione o Convênio...</option>
                     <?php
-                    $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios ORDER BY idConvenio";
+                    $query = "SELECT * FROM ifsp_lacif.convenios ORDER BY idConvenio";
                     $resultado = mysqli_query($conn, $query);
                     while ($linha = mysqli_fetch_assoc($resultado)) {
                         ?>
@@ -101,7 +101,7 @@ include_once('sessao.php');
                 </select>
 
                 <?php
-                $result = mysqli_query($conn, "SELECT * FROM lacifs93_ifsp_lacif.convenios WHERE idConvenio");
+                $result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.convenios WHERE idConvenio");
                 $sdda = mysqli_fetch_assoc($result);?>
                 <input type="text" id="porcentagem" name="porcentagem" placeholder="" value="<?php echo $sdda['porcentagem']?>" class="box" disabled>
 
@@ -111,7 +111,7 @@ include_once('sessao.php');
                 <select name="idTipoExame" id="idTipoExame" class="box" required>
                     <option value="" selected>Selecione o Tipo de Exame...</option>
                     <?php
-                    $query = "SELECT * FROM lacifs93_ifsp_lacif.exames ORDER BY idTipoExame";
+                    $query = "SELECT * FROM ifsp_lacif.exames ORDER BY idTipoExame";
                     $resultado = mysqli_query($conn, $query);
                     while ($linha = mysqli_fetch_assoc($resultado)) {
                         ?>
@@ -122,7 +122,7 @@ include_once('sessao.php');
                 </select>
 
                 <?php
-                $result = mysqli_query($conn, "SELECT * FROM lacifs93_ifsp_lacif.exames WHERE idTipoExame");
+                $result = mysqli_query($conn, "SELECT * FROM ifsp_lacif.exames WHERE idTipoExame");
                 $sdda = mysqli_fetch_assoc($result);?>
                 <input type="text" id="valor" name="valor" placeholder="" class="box" disabled>
 
@@ -221,7 +221,7 @@ if (isset($_POST['agendar'])){
 //    $FimdataBrasil = implode('-', array_reverse(explode('/', $horario)));
 
     // Fazer o insert  no banco de dados
-    $query = "SELECT cons.* FROM lacifs93_ifsp_lacif.consultas cons 
+    $query = "SELECT cons.* FROM ifsp_lacif.consultas cons 
     WHERE cons.start = '$start' 
     AND cons.horario = '$horario' ";
     $row = mysqli_query($conn, $query);
@@ -231,7 +231,7 @@ if (isset($_POST['agendar'])){
         echo "<script type='text/javascript'>OpcaoMensagens(4);</script>";
     } else
     {
-        $result = "INSERT INTO lacifs93_ifsp_lacif.consultas 
+        $result = "INSERT INTO ifsp_lacif.consultas 
             (title, description, start, horario, idconvenio, celular, cpf, idTipoExame) 
             VALUES ('$title', '$description', '$start', '$horario', '$idConvenio', '$celular', '$cpf', '$idTipoExame')";
 

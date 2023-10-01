@@ -72,7 +72,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM lacifs93_ifsp_lacif.consultas order by id";
+                                $query = "SELECT * FROM ifsp_lacif.consultas order by id";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
@@ -84,7 +84,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                         <td><?php  echo $linha['description']; ?></td>
                                         <td><?php  echo $dataBrasil; ?></td>
                                         <td><?php  echo $linha['horario']; ?></td>
-                                        <td><?php  echo $linha['idconvenio']; ?></td>
+                                        <td><?php  echo $linha['idConvenio']; ?></td>
                                         <td><?php  echo $linha['celular']; ?></td>
                                         <td><?php  echo $linha['cpf']; ?></td>
                                         <td><?php  echo $linha['idTipoExame']; ?></td>

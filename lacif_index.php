@@ -1,13 +1,13 @@
 <?php
 include_once('conexao.php');
-$sqlUser = "SELECT COUNT(*) AS qtd FROM lacifs93_ifsp_lacif.usuarios";
+$sqlUser = "SELECT COUNT(*) AS qtd FROM ifsp_lacif.usuarios";
 $result = mysqli_query($conn, $sqlUser);
 $rowBusca = mysqli_fetch_assoc($result);
 $qntBD = $rowBusca['qtd'];
 if ($qntBD == 0) {
     $senha = "123";
     $senhaCript = password_hash($senha, PASSWORD_DEFAULT);
-    $sqlInsereUser = "INSERT INTO lacifs93_ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
+    $sqlInsereUser = "INSERT INTO ifsp_lacif.usuarios (nome, cpf, email, senha, celular, endereco, tiposanguineo, sexo, datanasc, tipo_acesso)
 VALUES ('admin', '123', 'admin', '$senhaCript', '123', 'avenida', 'AB', 'Masculino', '2022-05-12', 'Administrador')";
     echo "<br>";
     mysqli_query($conn, $sqlInsereUser);

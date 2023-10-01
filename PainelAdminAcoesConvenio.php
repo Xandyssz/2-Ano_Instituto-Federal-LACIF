@@ -65,7 +65,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM lacifs93_ifsp_lacif.convenios order by idConvenio";
+                                $query = "SELECT * FROM ifsp_lacif.convenios order by idConvenio";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){

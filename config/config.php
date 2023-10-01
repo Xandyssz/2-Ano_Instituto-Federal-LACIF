@@ -7,7 +7,7 @@ define('DIRREQ',"{$_SERVER['DOCUMENT_ROOT']}{$bar}{$dirInt}");
 
 #Banco de Dados
 define('HOST','localhost');
-define('DB','lacifs93_ifsp_lacif');
+define('DB','ifsp_lacif');
 define('USER','lacifs93_user');
 define('PASS','87d95fwQ!243');
 

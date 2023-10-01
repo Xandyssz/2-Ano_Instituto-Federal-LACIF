@@ -68,7 +68,7 @@ if(!isset($_SESSION["tipo_acesso"]))
                                 </tr>
                                 </thead>
                                 <?php
-                                $query = "SELECT * FROM lacifs93_ifsp_lacif.consultas WHERE status like 'pendente'";
+                                $query = "SELECT * FROM ifsp_lacif.consultas WHERE status like 'pendente'";
                                 $dados = mysqli_query($conn, $query ); // comando transação bd
 
                                 while ($linha = mysqli_fetch_assoc($dados)){
