@@ -9,7 +9,7 @@ define('DIRREQ',"{$_SERVER['DOCUMENT_ROOT']}{$bar}{$dirInt}");
 define('HOST','localhost');
 define('DB','ifsp_lacif');
 define('USER','lacifs93_user');
-define('PASS','87d95fwQ!243');
+define('PASS','');
 
 #Incluir arquivos
 include(DIRREQ.'lib/composer/vendor/autoload.php');
