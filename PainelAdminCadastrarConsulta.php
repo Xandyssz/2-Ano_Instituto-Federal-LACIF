@@ -390,8 +390,8 @@ if (isset($_POST['Registrar'])){
         $row = mysqli_query($conn, $result);
 
         echo "<script>$(document).ready(function() { $('#msgInsert').modal(); })</script>";
-       var_dump($result);
-        // echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
+        // var_dump($result);
+        echo '<meta HTTP-EQUIV="Refresh" CONTENT="2; URL=PainelAdminListarConsulta.php">';
     }
 
 }

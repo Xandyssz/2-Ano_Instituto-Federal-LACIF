@@ -10,22 +10,16 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="owl-logos">
-                    <div class="item1"> <img src="img/images/patrocinadores/astrazenca.png" alt=""> </div> <!-- PARA ALTERAR FOTO DO CARROSSEL-->
-
-
-
-                    <div class="item2"> <img src="img/images/patrocinadores/neoquimica.png" alt=""> </div> <!-- PARA ALTERAR FOTO DO CARROSSEL-->
-
-
-
-                    <div class="item3"> <img src="img/images/patrocinadores/JJ.png" alt="" width="" height=""> </div> <!-- PARA ALTERAR FOTO DO CARROSSEL-->
-
-
-
-                    <div class="item4"> <img src="img/images/patrocinadores/pfizer.png" alt=""> </div> <!-- PARA ALTERAR FOTO DO CARROSSEL-->
-
-
-
+                    <?php
+                    include 'conexao.php';
+                    $query = "SELECT * FROM ifsp_lacif.patrocinadores WHERE ativo = 0 order by idPatrocinador";
+                    $resultado = mysqli_query($conn, $query);
+                    while($row = mysqli_fetch_assoc($resultado)) {
+                    ?>
+                    <div class="item1">
+                        <div class="article-image"><img src="img/<?php echo $row['img_nome']?>" alt=""></div>
+                    </div>
+                    <?php }?>
                 </div>
             </div>
         </div>

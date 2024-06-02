@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost";
 $usuario = "root";
-$senha = "";
+$senha = "#suasenha";
 $dbname = "ifsp_lacif";
 
 // Criar a conexão
